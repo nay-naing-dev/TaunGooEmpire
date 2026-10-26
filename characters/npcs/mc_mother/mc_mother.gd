@@ -6,6 +6,7 @@ extends CharacterBody2D
 ##   Inside she is only seen when the player is inside the house too.
 ## - No Home: walks slowly between Patrol Points (world positions) and waits at each.
 ## - Stops and turns to the player when the player comes close.
+##   An "E" shows over her head then; press it and she says one of Lines.
 ## - crying = true: she stands, hides her face in her hands and sobs.
 ##   Call set_crying(true / false) from story scripts.
 
@@ -22,7 +23,13 @@ extends CharacterBody2D
 @export var notice_radius := 64.0
 @export var start_facing := "s"
 @export var crying := false
+## What she says when you talk to her (one at random each time).
+@export var lines: PackedStringArray = PackedStringArray([
+	"Have you eaten my son? There's rice by the fire.",
+	"Check in on your aunt. I've heard she's not well.",
+])
 
+const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 enum Trip { INSIDE, TO_DOOR, TO_YARD, YARD, TO_STAIRS, TO_HEARTH }
 const DIRS := ["e", "se", "s", "sw", "w", "nw", "n", "ne"]
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -38,11 +45,16 @@ var _clock := 0.0
 var _leg_t := 0.0
 var _inside := false
 var _layer := 1
+var _bubble: SpeechBubble
 
 
 func _ready() -> void:
 	add_to_group("actor")
 	add_to_group("npc")
+	add_to_group("interactable")
+	_bubble = SpeechBubble.new()
+	_bubble.head_height = 76.0
+	add_child(_bubble)
 	_base = sprite.offset
 	_layer = collision_layer
 	facing = start_facing
@@ -57,6 +69,20 @@ func _ready() -> void:
 func set_crying(on: bool) -> void:
 	crying = on
 	_play("cry" if on else "idle")
+
+
+func _near(p: Node2D) -> bool:
+	return visible and p != null and Vector2(p.global_position.x - global_position.x, (p.global_position.y - global_position.y) * 2.0).length() < notice_radius
+
+
+## Game.interact() asks these when the player presses E.
+func can_interact(who: Node2D) -> bool:
+	return not crying and not lines.is_empty() and _near(who)
+
+
+func interact(who: Node2D) -> void:
+	_face(who.global_position - global_position)
+	_bubble.say(lines[randi() % lines.size()])
 
 
 func _play(kind: String) -> void:
@@ -153,6 +179,8 @@ func _physics_process(delta: float) -> void:
 		# inside the room she is only there for a player who is in the room too
 		visible = not _inside or _house.is_inside
 		collision_layer = _layer if visible else 0
+	var p := get_tree().get_first_node_in_group("player") as Node2D
+	_bubble.hint(p != null and can_interact(p))
 	if crying:
 		# shoulders shake with each sob, now and then a deeper breath
 		var sob := maxf(0.0, sin(_t * 9.0)) * (0.6 + 0.4 * sin(_t * 0.7))
@@ -160,10 +188,10 @@ func _physics_process(delta: float) -> void:
 		_play("cry")
 		return
 	var moving := false
-	var p := get_tree().get_first_node_in_group("player") as Node2D
-	var near := visible and p != null and Vector2(p.global_position.x - global_position.x, (p.global_position.y - global_position.y) * 2.0).length() < notice_radius
-	if near:
+	if _near(p):
 		_face(p.global_position - global_position)
+	elif _bubble.is_talking():
+		pass  # finish the sentence before walking off
 	elif _house:
 		moving = _home_step(delta)
 	elif patrol_points.size() > 1:

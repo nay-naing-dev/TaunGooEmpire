@@ -231,6 +231,19 @@ func go(scene_path: String) -> void:
 	get_tree().change_scene_to_file(scene_path)
 
 
+## E: talk to / use the closest node in group "interactable" that is in reach of who
+## (it decides with can_interact(who), then gets interact(who)).
+## False when nothing is in reach, so the player can do its own E thing instead.
+func interact(who: Node2D) -> bool:
+	var best: Node2D = null
+	for n in get_tree().get_nodes_in_group("interactable"):
+		if n.can_interact(who) and (best == null or who.global_position.distance_to(n.global_position) < who.global_position.distance_to(best.global_position)):
+			best = n
+	if best:
+		best.interact(who)
+	return best != null
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_F2:

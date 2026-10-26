@@ -4,6 +4,7 @@ extends CharacterBody2D
 ##   hold Shift    : run
 ##   C             : sit down / stand up  (it also sits by itself after a few idle seconds)
 ##   J             : pounce - leaps forward and swipes whatever it lands on
+##   E             : talk to whoever is in reach (Game.interact)
 ## Same player API as the other characters (group "player", health, take_hit,
 ## health_changed, died), so the HUD, boss, grass, water and lighting all work.
 
@@ -66,7 +67,9 @@ func _physics_process(delta: float) -> void:
 	var wade := 0.65 if _in_water() else 1.0
 	match mode:
 		Mode.MOVE:
-			if Input.is_action_just_pressed("attack"):
+			if Input.is_action_just_pressed("interact") and _interact():
+				_move(Vector2.ZERO, wade, delta)
+			elif Input.is_action_just_pressed("attack"):
 				_start_pounce(input)
 			elif Input.is_action_just_pressed("sit") and input == Vector2.ZERO:
 				_sit()
@@ -197,6 +200,11 @@ func _in_water() -> bool:
 	return game != null and game.has_method("is_water") and game.is_water(global_position)
 
 
+func _interact() -> bool:
+	var game := get_node_or_null("/root/Game")
+	return game != null and game.has_method("interact") and game.interact(self)
+
+
 func _ensure_input_actions() -> void:
 	_add("move_up", [KEY_W, KEY_UP])
 	_add("move_down", [KEY_S, KEY_DOWN])
@@ -205,6 +213,7 @@ func _ensure_input_actions() -> void:
 	_add("attack", [KEY_J])
 	_add("run", [KEY_SHIFT])
 	_add("sit", [KEY_C])
+	_add("interact", [KEY_E])
 
 
 func _add(action: StringName, keys: Array) -> void:
