@@ -17,6 +17,8 @@ var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
 var indoors := false
+## Camera zoom picked with the mouse wheel (world.gd); 0 = the map's own default.
+var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
 var next_spawn := ""
 ## 0 = morning (golden sunrise), 1 = day, 2 = night.  F3 cycles through them.
