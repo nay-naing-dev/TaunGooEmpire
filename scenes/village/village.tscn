@@ -773,7 +773,7 @@ start_facing = "se"
 
 [node name="McMother" parent="Objects" instance=ExtResource("p_mom")]
 position = Vector2(1150, 890)
-patrol_points = PackedVector2Array(1150, 890, 1270, 880, 1330, 930, 1270, 880)
+home = NodePath("../McHome1")
 start_facing = "se"
 
 [node name="RicePorter" parent="Objects" instance=ExtResource("p_porter")]
