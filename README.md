@@ -7,7 +7,7 @@ This is the whole project with only what the game uses: about 83 MB (was 104 MB)
 2. Rename your old project folder (for example `yangon_game_old`) as a backup.
 3. Unzip this into a new folder and open it in Godot. The first import takes a while.
 4. Press Play, then Explore. You start in the village.
-
+gg
 ## Maps
 - **Village** (`scenes/village/village.tscn`): the MC's home. Houses can be entered.
   - East end of the road: Forest road.
