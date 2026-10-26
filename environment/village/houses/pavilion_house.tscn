@@ -1,0 +1,155 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/house.gd" id="1_s"]
+[ext_resource type="Texture2D" path="pavilion_house_ext.png" id="2_e"]
+[ext_resource type="Texture2D" path="pavilion_house_ext_n.png" id="3_en"]
+[ext_resource type="Texture2D" path="pavilion_house_room.png" id="4_i"]
+[ext_resource type="Texture2D" path="pavilion_house_room_n.png" id="5_in"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/prayer_table.tscn" id="i_prayer_table"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/candle_stand.tscn" id="i_candle_stand"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/incense.tscn" id="i_incense"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/books.tscn" id="i_books"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/table.tscn" id="i_table"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/ink_pot.tscn" id="i_ink_pot"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/brush.tscn" id="i_brush"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/chest.tscn" id="i_chest"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/potted_plant.tscn" id="i_potted_plant"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/vase.tscn" id="i_vase"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/bench.tscn" id="i_bench"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/beads.tscn" id="i_beads"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/oil_lamp_l.tscn" id="i_oil_lamp_l"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/lantern_bamboo.tscn" id="i_lantern_bamboo"]
+
+[sub_resource type="CanvasTexture" id="CTE"]
+diffuse_texture = ExtResource("2_e")
+normal_texture = ExtResource("3_en")
+
+[sub_resource type="CanvasTexture" id="CTI"]
+diffuse_texture = ExtResource("4_i")
+normal_texture = ExtResource("5_in")
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="PavilionHouse" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s")
+
+[node name="Outside" type="StaticBody2D" parent="."]
+
+[node name="CastShadow" type="Sprite2D" parent="Outside"]
+modulate = Color(0.04, 0.03, 0.1, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_e")
+centered = false
+offset = Vector2(-218, -306)
+
+[node name="Sprite2D" type="Sprite2D" parent="Outside"]
+texture_filter = 1
+texture = SubResource("CTE")
+centered = false
+offset = Vector2(-218, -306)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
+polygon = PackedVector2Array(-145, -28, -35, -77, 79, -47, -62, -1)
+
+[node name="Inside" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(-168.0, -208.0)
+
+[node name="Dim" type="Polygon2D" parent="Inside"]
+z_index = 39
+z_as_relative = false
+color = Color(0.02, 0.015, 0.03, 0.68)
+polygon = PackedVector2Array(-4000, -3000, 4000, -3000, 4000, 3000, -4000, 3000)
+
+[node name="Room" type="Sprite2D" parent="Inside"]
+z_index = 40
+z_as_relative = false
+texture_filter = 1
+texture = SubResource("CTI")
+centered = false
+offset = Vector2(-198, -136)
+
+[node name="HearthLight" type="PointLight2D" parent="Inside"]
+position = Vector2(0, 40)
+color = Color(1, 0.7, 0.4, 1)
+energy = 0.6
+texture = SubResource("TL")
+texture_scale = 2.6
+
+[node name="Walls" type="StaticBody2D" parent="Inside"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inside/Walls"]
+build_mode = 1
+disabled = true
+polygon = PackedVector2Array(0, 12, 168, 96, 24, 168, -144, 84)
+
+[node name="DoorIn" type="Marker2D" parent="Inside"]
+position = Vector2(90.0, 129.0)
+
+[node name="Furniture" type="Node2D" parent="Inside"]
+z_index = 41
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="PrayerTable1" parent="Inside/Furniture" instance=ExtResource("i_prayer_table")]
+position = Vector2(28, 46)
+
+[node name="CandleStand1" parent="Inside/Furniture" instance=ExtResource("i_candle_stand")]
+position = Vector2(12, 30)
+
+[node name="CandleStand2" parent="Inside/Furniture" instance=ExtResource("i_candle_stand")]
+position = Vector2(60, 58)
+
+[node name="Incense1" parent="Inside/Furniture" instance=ExtResource("i_incense")]
+position = Vector2(36, 60)
+lift = 18.0
+
+[node name="Books1" parent="Inside/Furniture" instance=ExtResource("i_books")]
+position = Vector2(4, 128)
+lift = 22.0
+
+[node name="Table1" parent="Inside/Furniture" instance=ExtResource("i_table")]
+position = Vector2(4, 122)
+
+[node name="InkPot1" parent="Inside/Furniture" instance=ExtResource("i_ink_pot")]
+position = Vector2(24, 126)
+lift = 22.0
+
+[node name="Brush1" parent="Inside/Furniture" instance=ExtResource("i_brush")]
+position = Vector2(8, 118)
+lift = 22.0
+
+[node name="Chest1" parent="Inside/Furniture" instance=ExtResource("i_chest")]
+position = Vector2(-68, 66)
+
+[node name="PottedPlant1" parent="Inside/Furniture" instance=ExtResource("i_potted_plant")]
+position = Vector2(-132, 90)
+
+[node name="Vase1" parent="Inside/Furniture" instance=ExtResource("i_vase")]
+position = Vector2(148, 102)
+
+[node name="Bench1" parent="Inside/Furniture" instance=ExtResource("i_bench")]
+position = Vector2(60, 150)
+
+[node name="Beads1" parent="Inside/Furniture" instance=ExtResource("i_beads")]
+position = Vector2(60, 158)
+lift = 16.0
+
+[node name="OilLampL1" parent="Inside/Furniture" instance=ExtResource("i_oil_lamp_l")]
+position = Vector2(92, 106)
+
+[node name="LanternBamboo1" parent="Inside/Furniture" instance=ExtResource("i_lantern_bamboo")]
+position = Vector2(-44, 42)

@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/palace/fade_behind.gd" id="1_s"]
+[ext_resource type="Texture2D" path="pavilion.png" id="2_t"]
+[ext_resource type="Texture2D" path="pavilion_n.png" id="3_n"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[node name="Pavilion" type="StaticBody2D"]
+script = ExtResource("1_s")
+
+[node name="CastShadow" type="Sprite2D" parent="."]
+modulate = Color(0.04, 0.03, 0.1, 0.3)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.4)
+texture = ExtResource("2_t")
+centered = false
+offset = Vector2(-124, -182)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-124, -182)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(89, -24, 77, -4, 45, 11, 0, 16, -45, 11, -77, -4, -89, -24, -77, -44, -45, -59, 0, -64, 45, -59, 77, -44)

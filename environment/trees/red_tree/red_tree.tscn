@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="sway_tree.gd" id="1_script"]
+[ext_resource type="Texture2D" path="tree_sway_sheet.png" id="2_sheet"]
+[ext_resource type="Texture2D" path="tree_sway_sheet_n.png" id="3_norm"]
+[ext_resource type="Script" path="tree_fade.gd" id="4_fade"]
+
+[sub_resource type="CanvasTexture" id="CT_tree"]
+diffuse_texture = ExtResource("2_sheet")
+normal_texture = ExtResource("3_norm")
+
+[sub_resource type="RectangleShape2D" id="Rect_fade"]
+size = Vector2(240, 280)
+
+[sub_resource type="Shader" id="Shader_ripple"]
+code = "shader_type canvas_item;
+uniform float strength = 0.0008;
+uniform float waves = 90.0;
+uniform float speed = 2.0;
+void fragment() {
+	vec2 uv = UV;
+	uv.x += sin(uv.y * waves + TIME * speed) * strength;
+	COLOR = texture(TEXTURE, uv) * COLOR;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ripple"]
+shader = SubResource("Shader_ripple")
+
+[sub_resource type="Gradient" id="Gradient_leaf"]
+offsets = PackedFloat32Array(0, 0.8, 1)
+colors = PackedColorArray(0.85, 0.06, 0.12, 1, 0.85, 0.06, 0.12, 1, 0.85, 0.06, 0.12, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trunk"]
+size = Vector2(40, 16)
+
+[node name="RedTree" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -1
+modulate = Color(0.05, 0.08, 0.04, 0.38)
+texture_filter = 1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_sheet")
+centered = false
+offset = Vector2(-180, -345)
+hframes = 8
+
+[node name="Reflection" type="Sprite2D" parent="."]
+visible = false
+z_index = -2
+modulate = Color(0.75, 0.8, 1, 0.35)
+texture_filter = 1
+material = SubResource("ShaderMaterial_ripple")
+texture = ExtResource("2_sheet")
+centered = false
+offset = Vector2(-180, -38)
+flip_v = true
+hframes = 8
+
+[node name="Tree" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CT_tree")
+centered = false
+offset = Vector2(-180, -345)
+hframes = 8
+
+[node name="Leaves" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -225)
+amount = 6
+lifetime = 5.0
+preprocess = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(120, 50)
+direction = Vector2(1, 0.3)
+spread = 30.0
+gravity = Vector2(0, 14)
+initial_velocity_min = 4.0
+initial_velocity_max = 12.0
+angular_velocity_min = -90.0
+angular_velocity_max = 90.0
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_leaf")
+
+[node name="Trunk" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trunk"]
+shape = SubResource("RectangleShape2D_trunk")
+
+[node name="FadeZone" type="Area2D" parent="."]
+position = Vector2(0, -190)
+script = ExtResource("4_fade")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FadeZone"]
+shape = SubResource("Rect_fade")

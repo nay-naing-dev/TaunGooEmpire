@@ -1,0 +1,117 @@
+[gd_resource type="SpriteFrames" load_steps=25 format=3]
+
+[ext_resource type="Texture2D" path="frames/e.png" id="d0"]
+[ext_resource type="Texture2D" path="frames/e_n.png" id="n0"]
+[ext_resource type="Texture2D" path="frames/se.png" id="d1"]
+[ext_resource type="Texture2D" path="frames/se_n.png" id="n1"]
+[ext_resource type="Texture2D" path="frames/s.png" id="d2"]
+[ext_resource type="Texture2D" path="frames/s_n.png" id="n2"]
+[ext_resource type="Texture2D" path="frames/sw.png" id="d3"]
+[ext_resource type="Texture2D" path="frames/sw_n.png" id="n3"]
+[ext_resource type="Texture2D" path="frames/w.png" id="d4"]
+[ext_resource type="Texture2D" path="frames/w_n.png" id="n4"]
+[ext_resource type="Texture2D" path="frames/nw.png" id="d5"]
+[ext_resource type="Texture2D" path="frames/nw_n.png" id="n5"]
+[ext_resource type="Texture2D" path="frames/n.png" id="d6"]
+[ext_resource type="Texture2D" path="frames/n_n.png" id="n6"]
+[ext_resource type="Texture2D" path="frames/ne.png" id="d7"]
+[ext_resource type="Texture2D" path="frames/ne_n.png" id="n7"]
+
+[sub_resource type="CanvasTexture" id="C0"]
+diffuse_texture = ExtResource("d0")
+normal_texture = ExtResource("n0")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C6"]
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
+
+[sub_resource type="CanvasTexture" id="C7"]
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C0")
+}],
+"loop": true,
+"name": &"e",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": true,
+"name": &"se",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C2")
+}],
+"loop": true,
+"name": &"s",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C3")
+}],
+"loop": true,
+"name": &"sw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": true,
+"name": &"w",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}],
+"loop": true,
+"name": &"nw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C6")
+}],
+"loop": true,
+"name": &"n",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C7")
+}],
+"loop": true,
+"name": &"ne",
+"speed": 1.0
+}]

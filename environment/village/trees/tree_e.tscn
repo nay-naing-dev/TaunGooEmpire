@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/tree_dry.gd" id="1_s"]
+[ext_resource type="Texture2D" path="tree_e.png" id="2_t"]
+[ext_resource type="Texture2D" path="tree_e_n.png" id="3_n"]
+[ext_resource type="Shader" path="res://environment/fx/sway.gdshader" id="4_sw"]
+
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[sub_resource type="ShaderMaterial" id="Sway"]
+shader = ExtResource("4_sw")
+shader_parameter/strength = 1.2
+shader_parameter/speed = 1.1
+shader_parameter/phase = 0.0
+shader_parameter/gust_strength = 1.5
+shader_parameter/rustle = 0.04
+
+[sub_resource type="Gradient" id="GR"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="TR"]
+gradient = SubResource("GR")
+width = 64
+height = 64
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="TreeE" type="StaticBody2D"]
+script = ExtResource("1_s")
+
+[node name="ContactShadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = -1
+scale = Vector2(2.33, 0.82)
+texture = SubResource("TR")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("Sway")
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-100, -237)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(10, 0, 9, 2, 5, 4, 0, 4, -5, 4, -9, 2, -10, 0, -9, -2, -5, -4, 0, -4, 5, -4, 9, -2)

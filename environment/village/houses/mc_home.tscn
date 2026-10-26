@@ -1,0 +1,159 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/house.gd" id="1_s"]
+[ext_resource type="Texture2D" path="mc_home_ext.png" id="2_e"]
+[ext_resource type="Texture2D" path="mc_home_ext_n.png" id="3_en"]
+[ext_resource type="Texture2D" path="mc_home_room.png" id="4_i"]
+[ext_resource type="Texture2D" path="mc_home_room_n.png" id="5_in"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/stove.tscn" id="i_stove"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/pot.tscn" id="i_pot"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/shelf.tscn" id="i_shelf"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/bed.tscn" id="i_bed"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/table.tscn" id="i_table"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/kettle.tscn" id="i_kettle"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/bowl.tscn" id="i_bowl"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/chest.tscn" id="i_chest"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/prayer_table.tscn" id="i_prayer_table"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/candle.tscn" id="i_candle"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/incense.tscn" id="i_incense"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/jar_l.tscn" id="i_jar_l"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/rice_sack.tscn" id="i_rice_sack"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/basket_m.tscn" id="i_basket_m"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/stool.tscn" id="i_stool"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/lantern_wood.tscn" id="i_lantern_wood"]
+
+[sub_resource type="CanvasTexture" id="CTE"]
+diffuse_texture = ExtResource("2_e")
+normal_texture = ExtResource("3_en")
+
+[sub_resource type="CanvasTexture" id="CTI"]
+diffuse_texture = ExtResource("4_i")
+normal_texture = ExtResource("5_in")
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="McHome" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s")
+
+[node name="Outside" type="StaticBody2D" parent="."]
+
+[node name="CastShadow" type="Sprite2D" parent="Outside"]
+modulate = Color(0.04, 0.03, 0.1, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_e")
+centered = false
+offset = Vector2(-280, -238)
+
+[node name="Sprite2D" type="Sprite2D" parent="Outside"]
+texture_filter = 1
+texture = SubResource("CTE")
+centered = false
+offset = Vector2(-280, -238)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
+polygon = PackedVector2Array(-236, -67, -89, -104, 57, -49, -77, -18)
+
+[node name="Inside" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(-174.0, -213.0)
+
+[node name="Dim" type="Polygon2D" parent="Inside"]
+z_index = 39
+z_as_relative = false
+color = Color(0.02, 0.015, 0.03, 0.68)
+polygon = PackedVector2Array(-4000, -3000, 4000, -3000, 4000, 3000, -4000, 3000)
+
+[node name="Room" type="Sprite2D" parent="Inside"]
+z_index = 40
+z_as_relative = false
+texture_filter = 1
+texture = SubResource("CTI")
+centered = false
+offset = Vector2(-202, -136)
+
+[node name="HearthLight" type="PointLight2D" parent="Inside"]
+position = Vector2(132, 74)
+color = Color(1, 0.7, 0.4, 1)
+energy = 0.6
+texture = SubResource("TL")
+texture_scale = 2.6
+
+[node name="Walls" type="StaticBody2D" parent="Inside"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inside/Walls"]
+build_mode = 1
+disabled = true
+polygon = PackedVector2Array(0, 12, 176, 100, 28, 174, -148, 86)
+
+[node name="DoorIn" type="Marker2D" parent="Inside"]
+position = Vector2(96.0, 134.0)
+
+[node name="Furniture" type="Node2D" parent="Inside"]
+z_index = 41
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Stove1" parent="Inside/Furniture" instance=ExtResource("i_stove")]
+position = Vector2(136, 116)
+
+[node name="Pot1" parent="Inside/Furniture" instance=ExtResource("i_pot")]
+position = Vector2(100, 78)
+
+[node name="Shelf1" parent="Inside/Furniture" instance=ExtResource("i_shelf")]
+position = Vector2(52, 46)
+
+[node name="Bed1" parent="Inside/Furniture" instance=ExtResource("i_bed")]
+position = Vector2(-68, 118)
+
+[node name="Table1" parent="Inside/Furniture" instance=ExtResource("i_table")]
+position = Vector2(16, 124)
+
+[node name="Kettle1" parent="Inside/Furniture" instance=ExtResource("i_kettle")]
+position = Vector2(16, 134)
+lift = 22.0
+
+[node name="Bowl1" parent="Inside/Furniture" instance=ExtResource("i_bowl")]
+position = Vector2(16, 122)
+lift = 22.0
+
+[node name="Chest1" parent="Inside/Furniture" instance=ExtResource("i_chest")]
+position = Vector2(-32, 52)
+
+[node name="PrayerTable1" parent="Inside/Furniture" instance=ExtResource("i_prayer_table")]
+position = Vector2(-76, 62)
+
+[node name="Candle1" parent="Inside/Furniture" instance=ExtResource("i_candle")]
+position = Vector2(-72, 74)
+lift = 18.0
+
+[node name="Incense1" parent="Inside/Furniture" instance=ExtResource("i_incense")]
+position = Vector2(-66, 81)
+lift = 18.0
+
+[node name="JarL1" parent="Inside/Furniture" instance=ExtResource("i_jar_l")]
+position = Vector2(-144, 96)
+
+[node name="RiceSack1" parent="Inside/Furniture" instance=ExtResource("i_rice_sack")]
+position = Vector2(-116, 110)
+
+[node name="BasketM1" parent="Inside/Furniture" instance=ExtResource("i_basket_m")]
+position = Vector2(24, 172)
+
+[node name="Stool1" parent="Inside/Furniture" instance=ExtResource("i_stool")]
+position = Vector2(36, 142)
+
+[node name="LanternWood1" parent="Inside/Furniture" instance=ExtResource("i_lantern_wood")]
+position = Vector2(40, 72)

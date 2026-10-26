@@ -1,0 +1,103 @@
+[gd_resource type="SpriteFrames" load_steps=25 format=3]
+
+[ext_resource type="Texture2D" path="frames/crow_1.png" id="d1"]
+[ext_resource type="Texture2D" path="frames/crow_1_n.png" id="n1"]
+[ext_resource type="Texture2D" path="frames/crow_2.png" id="d2"]
+[ext_resource type="Texture2D" path="frames/crow_2_n.png" id="n2"]
+[ext_resource type="Texture2D" path="frames/crow_3.png" id="d3"]
+[ext_resource type="Texture2D" path="frames/crow_3_n.png" id="n3"]
+[ext_resource type="Texture2D" path="frames/crow_4.png" id="d4"]
+[ext_resource type="Texture2D" path="frames/crow_4_n.png" id="n4"]
+[ext_resource type="Texture2D" path="frames/crow_5.png" id="d5"]
+[ext_resource type="Texture2D" path="frames/crow_5_n.png" id="n5"]
+[ext_resource type="Texture2D" path="frames/crow_6.png" id="d6"]
+[ext_resource type="Texture2D" path="frames/crow_6_n.png" id="n6"]
+[ext_resource type="Texture2D" path="frames/crow_7.png" id="d7"]
+[ext_resource type="Texture2D" path="frames/crow_7_n.png" id="n7"]
+[ext_resource type="Texture2D" path="frames/crow_8.png" id="d8"]
+[ext_resource type="Texture2D" path="frames/crow_8_n.png" id="n8"]
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C6"]
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
+
+[sub_resource type="CanvasTexture" id="C7"]
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
+
+[sub_resource type="CanvasTexture" id="C8"]
+diffuse_texture = ExtResource("d8")
+normal_texture = ExtResource("n8")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}, {
+"duration": 1.0,
+"texture": SubResource("C2")
+}, {
+"duration": 1.0,
+"texture": SubResource("C3")
+}, {
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}, {
+"duration": 1.0,
+"texture": SubResource("C6")
+}, {
+"duration": 1.0,
+"texture": SubResource("C7")
+}, {
+"duration": 1.0,
+"texture": SubResource("C8")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C8")
+}],
+"loop": true,
+"name": &"glide",
+"speed": 1.0
+}]

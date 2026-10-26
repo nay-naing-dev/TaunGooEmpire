@@ -1,0 +1,181 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/house.gd" id="1_s"]
+[ext_resource type="Texture2D" path="kitchen_house_ext.png" id="2_e"]
+[ext_resource type="Texture2D" path="kitchen_house_ext_n.png" id="3_en"]
+[ext_resource type="Texture2D" path="kitchen_house_room.png" id="4_i"]
+[ext_resource type="Texture2D" path="kitchen_house_room_n.png" id="5_in"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/stove.tscn" id="i_stove"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/wok.tscn" id="i_wok"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/shelf.tscn" id="i_shelf"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/table.tscn" id="i_table"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/cutting_board.tscn" id="i_cutting_board"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/veg_basket.tscn" id="i_veg_basket"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/fruit_basket.tscn" id="i_fruit_basket"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/rice_container.tscn" id="i_rice_container"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/mortar.tscn" id="i_mortar"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/pestle.tscn" id="i_pestle"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/jar_l.tscn" id="i_jar_l"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/jar_s.tscn" id="i_jar_s"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/barrel.tscn" id="i_barrel"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/firewood.tscn" id="i_firewood"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/bench.tscn" id="i_bench"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/dried_fish.tscn" id="i_dried_fish"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/chili.tscn" id="i_chili"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/garlic.tscn" id="i_garlic"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/onion.tscn" id="i_onion"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/eggs.tscn" id="i_eggs"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/kettle.tscn" id="i_kettle"]
+
+[sub_resource type="CanvasTexture" id="CTE"]
+diffuse_texture = ExtResource("2_e")
+normal_texture = ExtResource("3_en")
+
+[sub_resource type="CanvasTexture" id="CTI"]
+diffuse_texture = ExtResource("4_i")
+normal_texture = ExtResource("5_in")
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="KitchenHouse" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s")
+
+[node name="Outside" type="StaticBody2D" parent="."]
+
+[node name="CastShadow" type="Sprite2D" parent="Outside"]
+modulate = Color(0.04, 0.03, 0.1, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_e")
+centered = false
+offset = Vector2(-158, -267)
+
+[node name="Sprite2D" type="Sprite2D" parent="Outside"]
+texture_filter = 1
+texture = SubResource("CTE")
+centered = false
+offset = Vector2(-158, -267)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
+polygon = PackedVector2Array(-116, -43, 9, -92, 126, -49, -58, -3)
+
+[node name="Inside" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(-164.0, -202.0)
+
+[node name="Dim" type="Polygon2D" parent="Inside"]
+z_index = 39
+z_as_relative = false
+color = Color(0.02, 0.015, 0.03, 0.68)
+polygon = PackedVector2Array(-4000, -3000, 4000, -3000, 4000, 3000, -4000, 3000)
+
+[node name="Room" type="Sprite2D" parent="Inside"]
+z_index = 40
+z_as_relative = false
+texture_filter = 1
+texture = SubResource("CTI")
+centered = false
+offset = Vector2(-190, -136)
+
+[node name="HearthLight" type="PointLight2D" parent="Inside"]
+position = Vector2(112, 68)
+color = Color(1, 0.7, 0.4, 1)
+energy = 0.6
+texture = SubResource("TL")
+texture_scale = 2.6
+
+[node name="Walls" type="StaticBody2D" parent="Inside"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inside/Walls"]
+build_mode = 1
+disabled = true
+polygon = PackedVector2Array(0, 12, 160, 92, 24, 160, -136, 80)
+
+[node name="DoorIn" type="Marker2D" parent="Inside"]
+position = Vector2(86.0, 123.0)
+
+[node name="Furniture" type="Node2D" parent="Inside"]
+z_index = 41
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Stove1" parent="Inside/Furniture" instance=ExtResource("i_stove")]
+position = Vector2(120, 108)
+
+[node name="Wok1" parent="Inside/Furniture" instance=ExtResource("i_wok")]
+position = Vector2(96, 72)
+
+[node name="Shelf1" parent="Inside/Furniture" instance=ExtResource("i_shelf")]
+position = Vector2(40, 40)
+
+[node name="Table1" parent="Inside/Furniture" instance=ExtResource("i_table")]
+position = Vector2(-4, 110)
+
+[node name="CuttingBoard1" parent="Inside/Furniture" instance=ExtResource("i_cutting_board")]
+position = Vector2(0, 122)
+lift = 22.0
+
+[node name="VegBasket1" parent="Inside/Furniture" instance=ExtResource("i_veg_basket")]
+position = Vector2(12, 136)
+lift = 22.0
+
+[node name="FruitBasket1" parent="Inside/Furniture" instance=ExtResource("i_fruit_basket")]
+position = Vector2(-52, 62)
+
+[node name="RiceContainer1" parent="Inside/Furniture" instance=ExtResource("i_rice_container")]
+position = Vector2(-20, 38)
+
+[node name="Mortar1" parent="Inside/Furniture" instance=ExtResource("i_mortar")]
+position = Vector2(0, 80)
+
+[node name="Pestle1" parent="Inside/Furniture" instance=ExtResource("i_pestle")]
+position = Vector2(8, 84)
+
+[node name="JarL1" parent="Inside/Furniture" instance=ExtResource("i_jar_l")]
+position = Vector2(-132, 86)
+
+[node name="JarS1" parent="Inside/Furniture" instance=ExtResource("i_jar_s")]
+position = Vector2(-112, 100)
+
+[node name="Barrel1" parent="Inside/Furniture" instance=ExtResource("i_barrel")]
+position = Vector2(28, 162)
+
+[node name="Firewood1" parent="Inside/Furniture" instance=ExtResource("i_firewood")]
+position = Vector2(-20, 142)
+
+[node name="Bench1" parent="Inside/Furniture" instance=ExtResource("i_bench")]
+position = Vector2(-92, 106)
+
+[node name="DriedFish1" parent="Inside/Furniture" instance=ExtResource("i_dried_fish")]
+position = Vector2(-92, 114)
+lift = 16.0
+
+[node name="Chili1" parent="Inside/Furniture" instance=ExtResource("i_chili")]
+position = Vector2(-68, 122)
+lift = 16.0
+
+[node name="Garlic1" parent="Inside/Furniture" instance=ExtResource("i_garlic")]
+position = Vector2(-96, 104)
+lift = 16.0
+
+[node name="Onion1" parent="Inside/Furniture" instance=ExtResource("i_onion")]
+position = Vector2(-68, 82)
+
+[node name="Eggs1" parent="Inside/Furniture" instance=ExtResource("i_eggs")]
+position = Vector2(-4, 112)
+lift = 22.0
+
+[node name="Kettle1" parent="Inside/Furniture" instance=ExtResource("i_kettle")]
+position = Vector2(72, 92)

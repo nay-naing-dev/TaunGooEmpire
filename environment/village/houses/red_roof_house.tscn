@@ -1,0 +1,144 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/house.gd" id="1_s"]
+[ext_resource type="Texture2D" path="red_roof_house_ext.png" id="2_e"]
+[ext_resource type="Texture2D" path="red_roof_house_ext_n.png" id="3_en"]
+[ext_resource type="Texture2D" path="red_roof_house_room.png" id="4_i"]
+[ext_resource type="Texture2D" path="red_roof_house_room_n.png" id="5_in"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/crate.tscn" id="i_crate"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/storage_box.tscn" id="i_storage_box"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/woven_box.tscn" id="i_woven_box"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/barrel.tscn" id="i_barrel"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/grain_sack.tscn" id="i_grain_sack"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/rice_sack.tscn" id="i_rice_sack"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/basket_l.tscn" id="i_basket_l"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/basket_m.tscn" id="i_basket_m"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/jar_clay.tscn" id="i_jar_clay"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/ladder.tscn" id="i_ladder"]
+[ext_resource type="PackedScene" path="res://environment/village/interior/items/lantern_bamboo.tscn" id="i_lantern_bamboo"]
+
+[sub_resource type="CanvasTexture" id="CTE"]
+diffuse_texture = ExtResource("2_e")
+normal_texture = ExtResource("3_en")
+
+[sub_resource type="CanvasTexture" id="CTI"]
+diffuse_texture = ExtResource("4_i")
+normal_texture = ExtResource("5_in")
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="RedRoofHouse" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s")
+
+[node name="Outside" type="StaticBody2D" parent="."]
+
+[node name="CastShadow" type="Sprite2D" parent="Outside"]
+modulate = Color(0.04, 0.03, 0.1, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_e")
+centered = false
+offset = Vector2(-211, -294)
+
+[node name="Sprite2D" type="Sprite2D" parent="Outside"]
+texture_filter = 1
+texture = SubResource("CTE")
+centered = false
+offset = Vector2(-211, -294)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
+polygon = PackedVector2Array(-142, -36, -29, -85, 57, -49, -50, -9)
+
+[node name="Inside" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(-174.0, -213.0)
+
+[node name="Dim" type="Polygon2D" parent="Inside"]
+z_index = 39
+z_as_relative = false
+color = Color(0.02, 0.015, 0.03, 0.68)
+polygon = PackedVector2Array(-4000, -3000, 4000, -3000, 4000, 3000, -4000, 3000)
+
+[node name="Room" type="Sprite2D" parent="Inside"]
+z_index = 40
+z_as_relative = false
+texture_filter = 1
+texture = SubResource("CTI")
+centered = false
+offset = Vector2(-202, -136)
+
+[node name="HearthLight" type="PointLight2D" parent="Inside"]
+position = Vector2(0, 80)
+color = Color(1, 0.7, 0.4, 1)
+energy = 0.6
+texture = SubResource("TL")
+texture_scale = 2.6
+
+[node name="Walls" type="StaticBody2D" parent="Inside"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inside/Walls"]
+build_mode = 1
+disabled = true
+polygon = PackedVector2Array(0, 12, 176, 100, 28, 174, -148, 86)
+
+[node name="DoorIn" type="Marker2D" parent="Inside"]
+position = Vector2(96.0, 134.0)
+
+[node name="Furniture" type="Node2D" parent="Inside"]
+z_index = 41
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Crate1" parent="Inside/Furniture" instance=ExtResource("i_crate")]
+position = Vector2(8, 36)
+
+[node name="StorageBox1" parent="Inside/Furniture" instance=ExtResource("i_storage_box")]
+position = Vector2(52, 54)
+
+[node name="WovenBox1" parent="Inside/Furniture" instance=ExtResource("i_woven_box")]
+position = Vector2(-36, 54)
+
+[node name="Barrel1" parent="Inside/Furniture" instance=ExtResource("i_barrel")]
+position = Vector2(96, 72)
+
+[node name="GrainSack1" parent="Inside/Furniture" instance=ExtResource("i_grain_sack")]
+position = Vector2(132, 94)
+
+[node name="RiceSack1" parent="Inside/Furniture" instance=ExtResource("i_rice_sack")]
+position = Vector2(140, 114)
+
+[node name="RiceSack2" parent="Inside/Furniture" instance=ExtResource("i_rice_sack")]
+position = Vector2(44, 166)
+
+[node name="GrainSack2" parent="Inside/Furniture" instance=ExtResource("i_grain_sack")]
+position = Vector2(-88, 72)
+
+[node name="BasketL1" parent="Inside/Furniture" instance=ExtResource("i_basket_l")]
+position = Vector2(-124, 94)
+
+[node name="BasketM1" parent="Inside/Furniture" instance=ExtResource("i_basket_m")]
+position = Vector2(-92, 114)
+
+[node name="JarClay1" parent="Inside/Furniture" instance=ExtResource("i_jar_clay")]
+position = Vector2(0, 68)
+
+[node name="Ladder1" parent="Inside/Furniture" instance=ExtResource("i_ladder")]
+position = Vector2(64, 92)
+
+[node name="LanternBamboo1" parent="Inside/Furniture" instance=ExtResource("i_lantern_bamboo")]
+position = Vector2(-12, 102)
+
+[node name="Crate2" parent="Inside/Furniture" instance=ExtResource("i_crate")]
+position = Vector2(-36, 98)

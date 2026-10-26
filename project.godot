@@ -1,0 +1,57 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="Taungoo 1550"
+run/main_scene="res://scenes/title/title_screen.tscn"
+config/features=PackedStringArray("4.7")
+
+[autoload]
+
+Game="*res://scripts/game.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+
+[shader_globals]
+
+world_shade={
+"type": "sampler2D",
+"value": ""
+}
+world_shade_rect={
+"type": "vec4",
+"value": Vector4(0, 0, 1, 1)
+}
+world_water={
+"type": "sampler2D",
+"value": ""
+}
+world_water_rect={
+"type": "vec4",
+"value": Vector4(0, 0, 1, 1)
+}
+shadow_dir={
+"type": "vec2",
+"value": Vector2(-0.4, -0.3)
+}

@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+
+[ext_resource type="Texture2D" path="palms.png" id="2_t"]
+[ext_resource type="Texture2D" path="palms_n.png" id="3_n"]
+[ext_resource type="Shader" path="res://environment/fx/sway.gdshader" id="4_sw"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[sub_resource type="ShaderMaterial" id="Sway"]
+shader = ExtResource("4_sw")
+shader_parameter/strength = 1.6
+shader_parameter/speed = 1.2
+shader_parameter/phase = 0.0
+
+[node name="Palms" type="StaticBody2D"]
+
+[node name="CastShadow" type="Sprite2D" parent="."]
+modulate = Color(0.04, 0.03, 0.1, 0.22)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.4)
+texture = ExtResource("2_t")
+centered = false
+offset = Vector2(-94, -180)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("Sway")
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-94, -180)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(19, -5, 16, -1, 9, 2, 0, 3, -9, 2, -16, -1, -19, -5, -16, -9, -9, -12, 0, -14, 9, -12, 16, -9)

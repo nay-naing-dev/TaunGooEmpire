@@ -1,0 +1,41 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/forest/forest_plant.gd" id="1_s"]
+[ext_resource type="Texture2D" path="tree_green_f.png" id="2_t"]
+[ext_resource type="Texture2D" path="tree_green_f_n.png" id="3_n"]
+[ext_resource type="Shader" path="res://environment/fx/sway.gdshader" id="4_sw"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[sub_resource type="ShaderMaterial" id="Sway"]
+shader = ExtResource("4_sw")
+shader_parameter/strength = 1.2
+shader_parameter/speed = 1.0
+shader_parameter/phase = 0.0
+shader_parameter/gust_strength = 1.5
+shader_parameter/rustle = 0.05
+
+[node name="TreeGreenF" type="StaticBody2D"]
+script = ExtResource("1_s")
+fade = true
+
+[node name="CastShadow" type="Sprite2D" parent="."]
+modulate = Color(0.04, 0.05, 0.03, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.42)
+texture = ExtResource("2_t")
+centered = false
+offset = Vector2(-75, -219)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("Sway")
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-75, -219)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(9, -2, 6, 1, 0, 3, -6, 1, -9, -2, -6, -5, 0, -6, 6, -5)

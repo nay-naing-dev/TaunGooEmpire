@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+
+[ext_resource type="Texture2D" path="r_armor_rack.png" id="2_t"]
+[ext_resource type="Texture2D" path="r_armor_rack_n.png" id="3_n"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[node name="RArmorRack" type="StaticBody2D"]
+
+[node name="CastShadow" type="Sprite2D" parent="."]
+modulate = Color(0.04, 0.03, 0.1, 0.22)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.4)
+texture = ExtResource("2_t")
+centered = false
+offset = Vector2(-53, -69)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-53, -69)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(42, -11, 36, -2, 21, 5, 0, 8, -21, 5, -36, -2, -42, -11, -36, -21, -21, -28, 0, -30, 21, -28, 36, -21)

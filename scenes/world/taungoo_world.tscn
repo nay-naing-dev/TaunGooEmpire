@@ -1,0 +1,1194 @@
+[gd_scene load_steps=91 format=3]
+
+[ext_resource type="Script" path="res://scripts/world.gd" id="sc_w"]
+
+[ext_resource type="Texture2D" path="art_palace/ground.png" id="t_g"]
+
+[ext_resource type="Texture2D" path="art_palace/ground_n.png" id="t_gn"]
+
+[ext_resource type="Texture2D" path="art_palace/water_map.png" id="t_w"]
+
+[ext_resource type="Shader" path="res://environment/fx/water_natural.gdshader" id="s_w"]
+
+[ext_resource type="Texture2D" path="art_palace/jetty.png" id="t_j"]
+
+[ext_resource type="Texture2D" path="art_palace/jetty_n.png" id="t_jn"]
+
+[ext_resource type="Texture2D" path="art_palace/grass_mask.png" id="t_gm"]
+
+[ext_resource type="Shader" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
+
+[ext_resource type="Script" path="res://environment/fx/flicker.gd" id="sc_fl"]
+
+[ext_resource type="PackedScene" path="res://environment/grass/grass_field.tscn" id="p_grass"]
+
+[ext_resource type="PackedScene" path="res://environment/weather/weather.tscn" id="p_weather"]
+
+[ext_resource type="Script" path="res://scripts/map_exit.gd" id="sc_exit"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_ur.tscn" id="k_palace_wall_ur"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_dr.tscn" id="k_palace_wall_dr"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_gate_open.tscn" id="k_palace_gate"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_ur.tscn" id="k_palisade_ur"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_dr.tscn" id="k_palisade_dr"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/walls/training_gate_open.tscn" id="k_training_gate_dr"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/houses/royal_hall.tscn" id="h_royal_hall"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/houses/king_res.tscn" id="h_king_res"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/houses/queen_res.tscn" id="h_queen_res"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/houses/princess_res.tscn" id="h_princess_res"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/houses/guest_house.tscn" id="h_guest_house"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/shrine.tscn" id="k_shrine"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/guard_tower.tscn" id="k_guard_tower"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/pavilion.tscn" id="k_pavilion"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/storage.tscn" id="k_storage"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_a.tscn" id="k_flag_a"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_b.tscn" id="k_flag_b"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_c.tscn" id="k_flag_c"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_d.tscn" id="k_flag_d"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_e.tscn" id="k_flag_e"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/umbrella.tscn" id="k_umbrella"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/fire_bowl.tscn" id="k_fire_bowl"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/lantern_post.tscn" id="k_lantern_post"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/drum.tscn" id="k_drum"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/potted_tree.tscn" id="k_potted_tree"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_a.tscn" id="k_flower_pot_a"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_b.tscn" id="k_flower_pot_b"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/royal_bench.tscn" id="k_royal_bench"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/table.tscn" id="k_table"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/bushes.tscn" id="k_bushes"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/palms.tscn" id="k_palms"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/jars.tscn" id="k_jars"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/crates.tscn" id="k_crates"]
+
+[ext_resource type="PackedScene" path="res://environment/trees/red_tree/red_tree.tscn" id="k_red_tree"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_pavilion.tscn" id="k_r_pavilion"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/t_barrack.tscn" id="k_t_barrack"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_brazier.tscn" id="k_r_brazier"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_chests.tscn" id="k_r_chests"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_target.tscn" id="k_t_target"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_target.tscn" id="k_r_target"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_dummy.tscn" id="k_r_dummy"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_dummy.tscn" id="k_t_dummy"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_sword_post.tscn" id="k_r_sword_post"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_sword_post.tscn" id="k_t_sword_post"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_spear_rack.tscn" id="k_r_spear_rack"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_armor_rack.tscn" id="k_t_armor_rack"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_armor_rack.tscn" id="k_r_armor_rack"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_campfire.tscn" id="k_t_campfire"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_logs.tscn" id="k_t_logs"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_logs.tscn" id="k_r_logs"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_stones.tscn" id="k_t_stones"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_obstacle.tscn" id="k_t_obstacle"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_obstacle.tscn" id="k_r_obstacle"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_crates.tscn" id="k_t_crates"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_stones.tscn" id="k_r_stones"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/stable.tscn" id="k_stable"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_barracks.tscn" id="k_r_barracks"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/tent.tscn" id="k_tent"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/props/cooking_pot.tscn" id="k_cooking_pot"]
+
+[ext_resource type="PackedScene" path="res://environment/taungoo/nature/palm.tscn" id="k_palm"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/boats/sea_boat.tscn" id="p_boat"]
+
+[ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
+
+[sub_resource type="CanvasTexture" id="CT_g"]
+diffuse_texture = ExtResource("t_g")
+normal_texture = ExtResource("t_gn")
+
+[sub_resource type="CanvasTexture" id="CT_j"]
+diffuse_texture = ExtResource("t_j")
+normal_texture = ExtResource("t_jn")
+
+[sub_resource type="ShaderMaterial" id="M_w"]
+shader = ExtResource("s_w")
+shader_parameter/shallow = Color(0.27, 0.52, 0.52, 1)
+shader_parameter/deep = Color(0.05, 0.2, 0.32, 1)
+shader_parameter/sky = Color(0.86, 0.84, 0.74, 1)
+shader_parameter/flow = Vector2(-1, 0.15)
+
+[sub_resource type="ShaderMaterial" id="M_atm"]
+shader = ExtResource("s_atm")
+
+[sub_resource type="CanvasItemMaterial" id="M_add"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="G_beam"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="T_beam"]
+gradient = SubResource("G_beam")
+width = 16
+height = 64
+fill_from = Vector2(0, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="G_leaf"]
+offsets = PackedFloat32Array(0, 0.1, 0.85, 1)
+colors = PackedColorArray(0.55, 0.65, 0.25, 0, 0.55, 0.65, 0.25, 1, 0.7, 0.55, 0.2, 1, 0.7, 0.55, 0.2, 0)
+
+[sub_resource type="Gradient" id="G_fly"]
+offsets = PackedFloat32Array(0, 0.2, 0.8, 1)
+colors = PackedColorArray(1, 0.95, 0.6, 0, 1, 0.95, 0.6, 1, 0.8, 1, 0.6, 1, 0.8, 1, 0.6, 0)
+
+[sub_resource type="Gradient" id="G_dust"]
+offsets = PackedFloat32Array(0, 0.3, 0.7, 1)
+colors = PackedColorArray(1, 0.88, 0.6, 0, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0)
+
+[sub_resource type="SegmentShape2D" id="Seg0"]
+a = Vector2(0, 0)
+b = Vector2(3600, 0)
+
+[sub_resource type="SegmentShape2D" id="Seg1"]
+a = Vector2(3600, 0)
+b = Vector2(3600, 2300)
+
+[sub_resource type="SegmentShape2D" id="Seg2"]
+a = Vector2(3600, 2300)
+b = Vector2(0, 2300)
+
+[sub_resource type="SegmentShape2D" id="Seg3"]
+a = Vector2(0, 2300)
+b = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="ExitR"]
+size = Vector2(24, 160)
+
+[node name="PalaceWorld" type="Node2D"]
+script = ExtResource("sc_w")
+map_size = Vector2(3600, 2300)
+camera_zoom = 2.4
+morning_strength = 0.6
+
+[node name="Atmosphere" type="CanvasModulate" parent="."]
+color = Color(0.88, 0.87, 0.84, 1)
+
+[node name="Grade" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Screen" type="ColorRect" parent="Grade"]
+material = SubResource("M_atm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Ground" type="Sprite2D" parent="."]
+z_index = -10
+texture_filter = 1
+texture = SubResource("CT_g")
+centered = false
+
+[node name="Water" type="Sprite2D" parent="."]
+z_index = -9
+material = SubResource("M_w")
+texture = ExtResource("t_w")
+centered = false
+
+[node name="Jetty" type="Sprite2D" parent="."]
+z_index = -8
+texture_filter = 1
+position = Vector2(3026, 1347)
+texture = SubResource("CT_j")
+centered = false
+
+[node name="WaterEdges" type="StaticBody2D" parent="."]
+
+[node name="Sea0" type="CollisionPolygon2D" parent="WaterEdges"]
+polygon = PackedVector2Array(3262, 0, 3268, 92, 3267, 169, 3248, 398, 3211, 690, 3148, 1020, 3140, 1089, 3139, 1159, 3155, 1268, 3198, 1423, 3342, 1495, 3347, 1501, 3326, 1539, 3212, 1482, 3265, 1784, 3272, 1859, 3273, 1918, 3269, 1983, 3257, 2068, 3209, 2299, 3599, 2299, 3599, 0)
+
+[node name="MapEdges" type="StaticBody2D" parent="."]
+
+[node name="Edge0" type="CollisionShape2D" parent="MapEdges"]
+shape = SubResource("Seg0")
+
+[node name="Edge1" type="CollisionShape2D" parent="MapEdges"]
+shape = SubResource("Seg1")
+
+[node name="Edge2" type="CollisionShape2D" parent="MapEdges"]
+shape = SubResource("Seg2")
+
+[node name="Edge3" type="CollisionShape2D" parent="MapEdges"]
+shape = SubResource("Seg3")
+
+[node name="Objects" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="PalaceWallUr1" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(472, 864)
+
+[node name="PalaceWallUr2" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(679, 760)
+
+[node name="PalaceWallUr3" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(885, 657)
+
+[node name="PalaceWallUr4" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(1092, 554)
+
+[node name="PalaceWallUr5" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(1299, 450)
+
+[node name="PalaceWallUr6" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(1505, 347)
+
+[node name="PalaceWallDr1" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(1712, 355)
+
+[node name="PalaceWallDr2" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(1919, 458)
+
+[node name="PalaceWallDr3" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(2125, 561)
+
+[node name="PalaceWallDr4" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(2332, 665)
+
+[node name="PalaceWallDr5" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(2539, 768)
+
+[node name="PalaceWallDr6" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(2745, 871)
+
+[node name="PalaceWallDr7" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(472, 975)
+
+[node name="PalaceWallDr8" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(679, 1078)
+
+[node name="PalaceWallDr9" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(885, 1181)
+
+[node name="PalaceWallDr10" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(1092, 1285)
+
+[node name="PalaceWallDr11" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(1299, 1388)
+
+[node name="PalaceWallUr7" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(1919, 1380)
+
+[node name="PalaceWallUr8" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(2125, 1277)
+
+[node name="PalaceWallUr9" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(2332, 1174)
+
+[node name="PalaceWallUr10" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(2539, 1070)
+
+[node name="PalaceWallUr11" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(2745, 967)
+
+[node name="PalaceWallDr12" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+position = Vector2(1392, 1435)
+
+[node name="PalaceWallUr12" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+position = Vector2(1808, 1436)
+
+[node name="PalaceGate1" parent="Objects" instance=ExtResource("k_palace_gate")]
+position = Vector2(1600, 1486)
+
+[node name="PalisadeUr1" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(316, 1881)
+
+[node name="PalisadeUr2" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(409, 1834)
+
+[node name="PalisadeUr3" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(502, 1788)
+
+[node name="PalisadeUr4" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(596, 1741)
+
+[node name="PalisadeUr5" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(689, 1694)
+
+[node name="PalisadeUr6" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(782, 1648)
+
+[node name="PalisadeDr1" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(876, 1656)
+
+[node name="PalisadeDr2" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(969, 1702)
+
+[node name="PalisadeDr3" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(1249, 1842)
+
+[node name="PalisadeDr4" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(1342, 1889)
+
+[node name="PalisadeDr5" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(316, 1936)
+
+[node name="PalisadeDr6" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(409, 1982)
+
+[node name="PalisadeDr7" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(502, 2029)
+
+[node name="PalisadeDr8" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(596, 2076)
+
+[node name="PalisadeDr9" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(689, 2122)
+
+[node name="PalisadeDr10" parent="Objects" instance=ExtResource("k_palisade_dr")]
+position = Vector2(782, 2169)
+
+[node name="PalisadeUr7" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(876, 2161)
+
+[node name="PalisadeUr8" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(969, 2114)
+
+[node name="PalisadeUr9" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(1062, 2068)
+
+[node name="PalisadeUr10" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(1156, 2021)
+
+[node name="PalisadeUr11" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(1249, 1974)
+
+[node name="PalisadeUr12" parent="Objects" instance=ExtResource("k_palisade_ur")]
+position = Vector2(1342, 1928)
+
+[node name="TrainingGateDr1" parent="Objects" instance=ExtResource("k_training_gate_dr")]
+position = Vector2(1101, 1773)
+
+[node name="RoyalHall1" parent="Objects" instance=ExtResource("h_royal_hall")]
+position = Vector2(1600, 905)
+
+[node name="KingRes1" parent="Objects" instance=ExtResource("h_king_res")]
+position = Vector2(980, 930)
+
+[node name="QueenRes1" parent="Objects" instance=ExtResource("h_queen_res")]
+position = Vector2(2300, 930)
+
+[node name="PrincessRes1" parent="Objects" instance=ExtResource("h_princess_res")]
+position = Vector2(1150, 1230)
+
+[node name="GuestHouse1" parent="Objects" instance=ExtResource("h_guest_house")]
+position = Vector2(2080, 1250)
+
+[node name="Shrine1" parent="Objects" instance=ExtResource("k_shrine")]
+position = Vector2(2420, 1180)
+
+[node name="Shrine2" parent="Objects" instance=ExtResource("k_shrine")]
+position = Vector2(790, 1180)
+
+[node name="GuardTower1" parent="Objects" instance=ExtResource("k_guard_tower")]
+position = Vector2(520, 880)
+
+[node name="GuardTower2" parent="Objects" instance=ExtResource("k_guard_tower")]
+position = Vector2(2690, 880)
+
+[node name="Pavilion1" parent="Objects" instance=ExtResource("k_pavilion")]
+position = Vector2(1600, 470)
+
+[node name="Storage1" parent="Objects" instance=ExtResource("k_storage")]
+position = Vector2(2050, 560)
+
+[node name="FlagA1" parent="Objects" instance=ExtResource("k_flag_a")]
+position = Vector2(1540, 990)
+
+[node name="FlagA2" parent="Objects" instance=ExtResource("k_flag_a")]
+position = Vector2(1662, 990)
+
+[node name="FlagB1" parent="Objects" instance=ExtResource("k_flag_b")]
+position = Vector2(1540, 1070)
+
+[node name="FlagB2" parent="Objects" instance=ExtResource("k_flag_b")]
+position = Vector2(1662, 1070)
+
+[node name="FlagC1" parent="Objects" instance=ExtResource("k_flag_c")]
+position = Vector2(1540, 1150)
+
+[node name="FlagC2" parent="Objects" instance=ExtResource("k_flag_c")]
+position = Vector2(1662, 1150)
+
+[node name="FlagD1" parent="Objects" instance=ExtResource("k_flag_d")]
+position = Vector2(1540, 1230)
+
+[node name="FlagD2" parent="Objects" instance=ExtResource("k_flag_d")]
+position = Vector2(1662, 1230)
+
+[node name="FlagE1" parent="Objects" instance=ExtResource("k_flag_e")]
+position = Vector2(1540, 1310)
+
+[node name="FlagE2" parent="Objects" instance=ExtResource("k_flag_e")]
+position = Vector2(1662, 1310)
+
+[node name="FlagA3" parent="Objects" instance=ExtResource("k_flag_a")]
+position = Vector2(1540, 1390)
+
+[node name="FlagA4" parent="Objects" instance=ExtResource("k_flag_a")]
+position = Vector2(1662, 1390)
+
+[node name="Umbrella1" parent="Objects" instance=ExtResource("k_umbrella")]
+position = Vector2(1500, 940)
+
+[node name="Umbrella2" parent="Objects" instance=ExtResource("k_umbrella")]
+position = Vector2(1705, 940)
+
+[node name="FireBowl1" parent="Objects" instance=ExtResource("k_fire_bowl")]
+position = Vector2(1540, 1450)
+
+[node name="FireBowl2" parent="Objects" instance=ExtResource("k_fire_bowl")]
+position = Vector2(1662, 1450)
+
+[node name="LanternPost1" parent="Objects" instance=ExtResource("k_lantern_post")]
+position = Vector2(1440, 980)
+
+[node name="LanternPost2" parent="Objects" instance=ExtResource("k_lantern_post")]
+position = Vector2(1765, 980)
+
+[node name="Drum1" parent="Objects" instance=ExtResource("k_drum")]
+position = Vector2(1380, 950)
+
+[node name="Drum2" parent="Objects" instance=ExtResource("k_drum")]
+position = Vector2(1820, 950)
+
+[node name="PottedTree1" parent="Objects" instance=ExtResource("k_potted_tree")]
+position = Vector2(1280, 1040)
+
+[node name="PottedTree2" parent="Objects" instance=ExtResource("k_potted_tree")]
+position = Vector2(1920, 1040)
+
+[node name="FlowerPotA1" parent="Objects" instance=ExtResource("k_flower_pot_a")]
+position = Vector2(1220, 1070)
+
+[node name="FlowerPotB1" parent="Objects" instance=ExtResource("k_flower_pot_b")]
+position = Vector2(1980, 1070)
+
+[node name="RoyalBench1" parent="Objects" instance=ExtResource("k_royal_bench")]
+position = Vector2(1000, 1080)
+
+[node name="Table1" parent="Objects" instance=ExtResource("k_table")]
+position = Vector2(1060, 1110)
+
+[node name="RoyalBench2" parent="Objects" instance=ExtResource("k_royal_bench")]
+position = Vector2(2200, 1080)
+
+[node name="Table2" parent="Objects" instance=ExtResource("k_table")]
+position = Vector2(2140, 1110)
+
+[node name="PottedTree3" parent="Objects" instance=ExtResource("k_potted_tree")]
+position = Vector2(1420, 1340)
+
+[node name="PottedTree4" parent="Objects" instance=ExtResource("k_potted_tree")]
+position = Vector2(1780, 1340)
+
+[node name="FlowerPotA2" parent="Objects" instance=ExtResource("k_flower_pot_a")]
+position = Vector2(1380, 1380)
+
+[node name="FlowerPotB2" parent="Objects" instance=ExtResource("k_flower_pot_b")]
+position = Vector2(1820, 1380)
+
+[node name="Bushes1" parent="Objects" instance=ExtResource("k_bushes")]
+position = Vector2(700, 1020)
+
+[node name="Bushes2" parent="Objects" instance=ExtResource("k_bushes")]
+position = Vector2(2500, 1020)
+
+[node name="Palms1" parent="Objects" instance=ExtResource("k_palms")]
+position = Vector2(640, 900)
+
+[node name="Palms2" parent="Objects" instance=ExtResource("k_palms")]
+position = Vector2(2560, 900)
+
+[node name="FireBowl3" parent="Objects" instance=ExtResource("k_fire_bowl")]
+position = Vector2(1420, 1460)
+
+[node name="FireBowl4" parent="Objects" instance=ExtResource("k_fire_bowl")]
+position = Vector2(1780, 1460)
+
+[node name="Jars1" parent="Objects" instance=ExtResource("k_jars")]
+position = Vector2(2130, 600)
+
+[node name="Crates1" parent="Objects" instance=ExtResource("k_crates")]
+position = Vector2(1960, 600)
+
+[node name="RedTree1" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(760, 760)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree2" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2440, 760)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree3" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1240, 560)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree4" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1960, 560)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree5" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(900, 1060)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree6" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2300, 1070)
+scale = Vector2(0.5, 0.5)
+
+[node name="RPavilion1" parent="Objects" instance=ExtResource("k_r_pavilion")]
+position = Vector2(830, 1718)
+
+[node name="TBarrack1" parent="Objects" instance=ExtResource("k_t_barrack")]
+position = Vector2(496, 1847)
+
+[node name="TBarrack2" parent="Objects" instance=ExtResource("k_t_barrack")]
+position = Vector2(604, 1998)
+
+[node name="RBrazier1" parent="Objects" instance=ExtResource("k_r_brazier")]
+position = Vector2(712, 1750)
+
+[node name="RBrazier2" parent="Objects" instance=ExtResource("k_r_brazier")]
+position = Vector2(949, 1750)
+
+[node name="RChests1" parent="Objects" instance=ExtResource("k_r_chests")]
+position = Vector2(1057, 1788)
+
+[node name="TTarget1" parent="Objects" instance=ExtResource("k_t_target")]
+position = Vector2(1036, 1863)
+
+[node name="RTarget1" parent="Objects" instance=ExtResource("k_r_target")]
+position = Vector2(1111, 1901)
+
+[node name="TTarget2" parent="Objects" instance=ExtResource("k_t_target")]
+position = Vector2(1187, 1934)
+
+[node name="RDummy1" parent="Objects" instance=ExtResource("k_r_dummy")]
+position = Vector2(744, 1890)
+
+[node name="TDummy1" parent="Objects" instance=ExtResource("k_t_dummy")]
+position = Vector2(820, 1928)
+
+[node name="RDummy2" parent="Objects" instance=ExtResource("k_r_dummy")]
+position = Vector2(895, 1966)
+
+[node name="RSwordPost1" parent="Objects" instance=ExtResource("k_r_sword_post")]
+position = Vector2(690, 1961)
+
+[node name="TSwordPost1" parent="Objects" instance=ExtResource("k_t_sword_post")]
+position = Vector2(755, 2009)
+
+[node name="RSpearRack1" parent="Objects" instance=ExtResource("k_r_spear_rack")]
+position = Vector2(928, 1815)
+
+[node name="TArmorRack1" parent="Objects" instance=ExtResource("k_t_armor_rack")]
+position = Vector2(625, 1804)
+
+[node name="RArmorRack1" parent="Objects" instance=ExtResource("k_r_armor_rack")]
+position = Vector2(982, 2031)
+
+[node name="TCampfire1" parent="Objects" instance=ExtResource("k_t_campfire")]
+position = Vector2(517, 1934)
+
+[node name="TLogs1" parent="Objects" instance=ExtResource("k_t_logs")]
+position = Vector2(398, 1901)
+
+[node name="RLogs1" parent="Objects" instance=ExtResource("k_r_logs")]
+position = Vector2(690, 2085)
+
+[node name="TStones1" parent="Objects" instance=ExtResource("k_t_stones")]
+position = Vector2(550, 2052)
+
+[node name="TObstacle1" parent="Objects" instance=ExtResource("k_t_obstacle")]
+position = Vector2(841, 2074)
+
+[node name="RObstacle1" parent="Objects" instance=ExtResource("k_r_obstacle")]
+position = Vector2(906, 2106)
+
+[node name="TCrates1" parent="Objects" instance=ExtResource("k_t_crates")]
+position = Vector2(442, 1966)
+
+[node name="RStones1" parent="Objects" instance=ExtResource("k_r_stones")]
+position = Vector2(1165, 1847)
+
+[node name="Stable1" parent="Objects" instance=ExtResource("k_stable")]
+position = Vector2(1900, 1830)
+
+[node name="Storage2" parent="Objects" instance=ExtResource("k_storage")]
+position = Vector2(2200, 1800)
+
+[node name="RBarracks1" parent="Objects" instance=ExtResource("k_r_barracks")]
+position = Vector2(2500, 1760)
+
+[node name="RPavilion2" parent="Objects" instance=ExtResource("k_r_pavilion")]
+position = Vector2(2900, 1000)
+
+[node name="Tent1" parent="Objects" instance=ExtResource("k_tent")]
+position = Vector2(1560, 1950)
+
+[node name="Tent2" parent="Objects" instance=ExtResource("k_tent")]
+position = Vector2(1700, 2030)
+
+[node name="Tent3" parent="Objects" instance=ExtResource("k_tent")]
+position = Vector2(1450, 2080)
+
+[node name="Crates2" parent="Objects" instance=ExtResource("k_crates")]
+position = Vector2(2050, 1900)
+
+[node name="Jars2" parent="Objects" instance=ExtResource("k_jars")]
+position = Vector2(2350, 1880)
+
+[node name="CookingPot1" parent="Objects" instance=ExtResource("k_cooking_pot")]
+position = Vector2(1620, 2130)
+
+[node name="FireBowl5" parent="Objects" instance=ExtResource("k_fire_bowl")]
+position = Vector2(2950, 1060)
+
+[node name="LanternPost3" parent="Objects" instance=ExtResource("k_lantern_post")]
+position = Vector2(2990, 1350)
+
+[node name="LanternPost4" parent="Objects" instance=ExtResource("k_lantern_post")]
+position = Vector2(2990, 1420)
+
+[node name="Palm1" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3067, 135)
+
+[node name="Palm2" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3052, 239)
+
+[node name="Palm3" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3068, 394)
+
+[node name="Palm4" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3072, 522)
+
+[node name="Palm5" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3007, 638)
+
+[node name="Palm6" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3015, 761)
+
+[node name="Palm7" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(2992, 897)
+
+[node name="Palm8" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(2953, 1032)
+
+[node name="Palm9" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(2917, 1171)
+
+[node name="Palm10" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(2960, 1309)
+
+[node name="Palm11" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3052, 1554)
+
+[node name="Palm12" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3082, 1661)
+
+[node name="Palm13" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3074, 1808)
+
+[node name="Palm14" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3054, 1945)
+
+[node name="Palm15" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3062, 2069)
+
+[node name="Palm16" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(3051, 2180)
+
+[node name="RedTree7" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(556, 615)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree8" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2670, 210)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree9" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2153, 136)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree10" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1366, 2251)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree11" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2123, 1391)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree12" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(348, 2226)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree13" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2383, 302)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree14" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(523, 442)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree15" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2309, 1310)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree16" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1885, 2007)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree17" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2710, 1864)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree18" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1846, 1669)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree19" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(815, 456)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree20" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(977, 2189)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree21" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1600, 2254)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree22" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2901, 1555)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree23" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2581, 1448)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree24" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(182, 489)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree25" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(404, 1388)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree26" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2261, 1461)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree27" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(662, 142)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree28" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1481, 1757)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree29" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2934, 1678)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree30" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(407, 2100)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree31" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2887, 2018)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree32" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(72, 581)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree33" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(688, 1321)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree34" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(142, 1843)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree35" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(182, 778)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree36" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1144, 259)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree37" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2869, 297)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree38" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2599, 1994)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree39" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(96, 1496)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree40" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2709, 1331)
+scale = Vector2(0.5, 0.5)
+
+[node name="BoatDocked" parent="Objects" instance=ExtResource("p_boat")]
+position = Vector2(3290, 1560)
+facing = "se"
+
+[node name="BoatA" parent="Objects" instance=ExtResource("p_boat")]
+position = Vector2(3400, 300)
+route = PackedVector2Array(3400, 300, 3440, 1000, 3380, 1950, 3460, 1200)
+speed = 16.0
+
+[node name="BoatB" parent="Objects" instance=ExtResource("p_boat")]
+position = Vector2(3500, 1700)
+route = PackedVector2Array(3500, 1700, 3330, 2050, 3520, 2200, 3520, 1800)
+speed = 11.0
+
+[node name="Crow0" parent="Objects" instance=ExtResource("p_crow")]
+position = Vector2(1000, 2150)
+
+[node name="Crow1" parent="Objects" instance=ExtResource("p_crow")]
+position = Vector2(1300, 1700)
+
+[node name="Crow2" parent="Objects" instance=ExtResource("p_crow")]
+position = Vector2(2900, 500)
+
+[node name="Moon" type="DirectionalLight2D" parent="."]
+rotation = -2.3
+color = Color(0.6, 0.72, 1, 1)
+energy = 0.0
+height = 0.6
+
+[node name="SunShafts" type="Node2D" parent="."]
+
+[node name="Shaft0" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.040)
+material = SubResource("M_add")
+position = Vector2(428, 467)
+rotation = 0.95
+scale = Vector2(2.80, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft1" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.029)
+material = SubResource("M_add")
+position = Vector2(457, 855)
+rotation = 0.95
+scale = Vector2(2.16, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft2" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.038)
+material = SubResource("M_add")
+position = Vector2(2619, 224)
+rotation = 0.95
+scale = Vector2(1.98, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft3" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.049)
+material = SubResource("M_add")
+position = Vector2(1592, 1158)
+rotation = 0.95
+scale = Vector2(2.68, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft4" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.032)
+material = SubResource("M_add")
+position = Vector2(1098, 1281)
+rotation = 0.95
+scale = Vector2(2.59, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft5" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.033)
+material = SubResource("M_add")
+position = Vector2(144, 1922)
+rotation = 0.95
+scale = Vector2(1.80, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft6" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.044)
+material = SubResource("M_add")
+position = Vector2(3150, 1155)
+rotation = 0.95
+scale = Vector2(2.14, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft7" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.027)
+material = SubResource("M_add")
+position = Vector2(242, 1396)
+rotation = 0.95
+scale = Vector2(1.95, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft8" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.041)
+material = SubResource("M_add")
+position = Vector2(2369, 1840)
+rotation = 0.95
+scale = Vector2(1.61, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft9" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.030)
+material = SubResource("M_add")
+position = Vector2(1146, 1464)
+rotation = 0.95
+scale = Vector2(2.64, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft10" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.046)
+material = SubResource("M_add")
+position = Vector2(2940, 1299)
+rotation = 0.95
+scale = Vector2(2.57, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft11" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.028)
+material = SubResource("M_add")
+position = Vector2(1585, 1498)
+rotation = 0.95
+scale = Vector2(2.96, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft12" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.029)
+material = SubResource("M_add")
+position = Vector2(3007, 778)
+rotation = 0.95
+scale = Vector2(2.16, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft13" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.032)
+material = SubResource("M_add")
+position = Vector2(2496, 576)
+rotation = 0.95
+scale = Vector2(2.94, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft14" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.030)
+material = SubResource("M_add")
+position = Vector2(2035, 788)
+rotation = 0.95
+scale = Vector2(2.43, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="Shaft15" type="Sprite2D" parent="SunShafts"]
+modulate = Color(1, 0.88, 0.6, 0.039)
+material = SubResource("M_add")
+position = Vector2(748, 1475)
+rotation = 0.95
+scale = Vector2(2.70, 11.0)
+texture = SubResource("T_beam")
+script = ExtResource("sc_fl")
+amount = 0.4
+speed = 0.1
+
+[node name="FallingLeaves" type="CPUParticles2D" parent="."]
+position = Vector2(1800, 1150)
+amount = 40
+lifetime = 9.0
+preprocess = 9.0
+emission_shape = 3
+emission_rect_extents = Vector2(1800, 1150)
+direction = Vector2(-0.4, 1)
+spread = 30.0
+gravity = Vector2(-2, 6)
+initial_velocity_min = 3.0
+initial_velocity_max = 9.0
+angular_velocity_min = -120.0
+angular_velocity_max = 120.0
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+color_ramp = SubResource("G_leaf")
+
+[node name="Fireflies" type="CPUParticles2D" parent="."]
+material = SubResource("M_add")
+position = Vector2(1800, 1150)
+amount = 90
+lifetime = 7.0
+preprocess = 7.0
+emission_shape = 3
+emission_rect_extents = Vector2(1800, 1150)
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, -1)
+initial_velocity_min = 1.0
+initial_velocity_max = 5.0
+scale_amount_min = 1.0
+scale_amount_max = 1.5
+color_ramp = SubResource("G_fly")
+
+[node name="PlayerSpawn" type="Marker2D" parent="."]
+position = Vector2(1600, 1570)
+
+[node name="FromVillage" type="Marker2D" parent="."]
+position = Vector2(70, 1562)
+
+[node name="Sun" type="DirectionalLight2D" parent="."]
+rotation = 2.356
+color = Color(1, 0.86, 0.66, 1)
+energy = 0.5
+height = 0.5
+
+[node name="Dust" type="CPUParticles2D" parent="."]
+material = SubResource("M_add")
+position = Vector2(1800, 1150)
+amount = 110
+lifetime = 10.0
+preprocess = 10.0
+emission_shape = 3
+emission_rect_extents = Vector2(1800, 1150)
+direction = Vector2(-1, -0.3)
+spread = 40.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 6.0
+color_ramp = SubResource("G_dust")
+
+[node name="GrassField" parent="." instance=ExtResource("p_grass")]
+mask = ExtResource("t_gm")
+map_size = Vector2(3600, 2300)
+density = 0.8
+leaf_light = Color(0.72, 0.72, 0.4, 1)
+leaf_dark = Color(0.42, 0.46, 0.22, 1)
+leaf_base = Color(0.26, 0.28, 0.13, 1)
+tip_dry = Color(0.88, 0.8, 0.5, 1)
+
+[node name="Weather" parent="." instance=ExtResource("p_weather")]
+
+[node name="ExitToVillage" type="Area2D" parent="."]
+position = Vector2(6, 1562)
+script = ExtResource("sc_exit")
+target_scene = "res://scenes/forest/forest_road.tscn"
+spawn_marker = "FromPalace"
+
+[node name="Shape" type="CollisionShape2D" parent="ExitToVillage"]
+shape = SubResource("ExitR")
+
+[node name="Sign" type="Label" parent="ExitToVillage"]
+offset_left = 12.0
+offset_top = -70.0
+offset_right = 112.0
+offset_bottom = -54.0
+theme_override_colors/font_color = Color(1, 0.93, 0.75, 1)
+theme_override_colors/font_outline_color = Color(0.15, 0.1, 0.05, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 10
+text = "<  Forest road"

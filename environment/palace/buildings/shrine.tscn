@@ -1,0 +1,30 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/palace/fade_behind.gd" id="1_s"]
+[ext_resource type="Texture2D" path="shrine.png" id="2_t"]
+[ext_resource type="Texture2D" path="shrine_n.png" id="3_n"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[node name="Shrine" type="StaticBody2D"]
+script = ExtResource("1_s")
+
+[node name="CastShadow" type="Sprite2D" parent="."]
+modulate = Color(0.04, 0.03, 0.1, 0.3)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.4)
+texture = ExtResource("2_t")
+centered = false
+offset = Vector2(-72, -267)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-72, -267)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(43, -12, 37, -2, 22, 5, 0, 8, -22, 5, -37, -2, -43, -12, -37, -21, -22, -28, 0, -31, 22, -28, 37, -21)
