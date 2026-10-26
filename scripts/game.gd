@@ -17,6 +17,8 @@ var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
 var indoors := false
+## Camera zoom picked with the mouse wheel (world.gd); 0 = the map's own default.
+var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
 var next_spawn := ""
 ## 0 = morning (golden sunrise), 1 = day, 2 = night.  F3 cycles through them.
@@ -229,6 +231,19 @@ func go(scene_path: String) -> void:
 			n.queue_free()
 	_moved.clear()
 	get_tree().change_scene_to_file(scene_path)
+
+
+## E: talk to / use the closest node in group "interactable" that is in reach of who
+## (it decides with can_interact(who), then gets interact(who)).
+## False when nothing is in reach, so the player can do its own E thing instead.
+func interact(who: Node2D) -> bool:
+	var best: Node2D = null
+	for n in get_tree().get_nodes_in_group("interactable"):
+		if n.can_interact(who) and (best == null or who.global_position.distance_to(n.global_position) < who.global_position.distance_to(best.global_position)):
+			best = n
+	if best:
+		best.interact(who)
+	return best != null
 
 
 func _unhandled_input(event: InputEvent) -> void:

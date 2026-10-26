@@ -2,7 +2,7 @@ extends CharacterBody2D
 ## Main character (village boy). 8 directions, walk / run / idle.
 ##   WASD / arrows : walk
 ##   hold Shift    : run
-##   E             : wave hello (NPCs nearby wave back... if they could)
+##   E             : talk to whoever is in reach (Game.interact), else wave hello
 ## Same player API as the other characters (group "player", health, take_hit,
 ## health_changed, died), so the HUD, boss, grass, water and lighting all work.
 
@@ -50,7 +50,8 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if Input.is_action_just_pressed("wave") and not waving and sprite.sprite_frames.has_animation("wave"):
+	var talked := Input.is_action_just_pressed("interact") and _interact()
+	if not talked and Input.is_action_just_pressed("wave") and not waving and sprite.sprite_frames.has_animation("wave"):
 		waving = true
 		velocity = Vector2.ZERO
 		sprite.play("wave")
@@ -128,6 +129,11 @@ func _in_water() -> bool:
 	return game != null and game.has_method("is_water") and game.is_water(global_position)
 
 
+func _interact() -> bool:
+	var game := get_node_or_null("/root/Game")
+	return game != null and game.has_method("interact") and game.interact(self)
+
+
 func _ensure_input_actions() -> void:
 	_add("move_up", [KEY_W, KEY_UP])
 	_add("move_down", [KEY_S, KEY_DOWN])
@@ -135,6 +141,7 @@ func _ensure_input_actions() -> void:
 	_add("move_right", [KEY_D, KEY_RIGHT])
 	_add("run", [KEY_SHIFT])
 	_add("wave", [KEY_E])
+	_add("interact", [KEY_E])
 
 
 func _add(action: StringName, keys: Array) -> void:
