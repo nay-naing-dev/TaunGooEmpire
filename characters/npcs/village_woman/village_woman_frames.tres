@@ -1,45 +1,25 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://4ad3lcihj4tt"]
 
-[ext_resource type="Texture2D" path="frames/e.png" id="d0"]
-[ext_resource type="Texture2D" path="frames/e_n.png" id="n0"]
-[ext_resource type="Texture2D" path="frames/se.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/se_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/s.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/s_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/sw.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/sw_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/w.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/w_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/nw.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/nw_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/n.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/n_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/ne.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/ne_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://cs43kpc56165p" path="res://characters/npcs/village_woman/frames/e.png" id="d0"]
+[ext_resource type="Texture2D" uid="uid://3prninbkbcjt" path="res://characters/npcs/village_woman/frames/se.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://daf3m7uwdkcqt" path="res://characters/npcs/village_woman/frames/s.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://b3ik3brr8wmd2" path="res://characters/npcs/village_woman/frames/sw.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://dphym7x5tj3hx" path="res://characters/npcs/village_woman/frames/w.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://b13wvek3lns5o" path="res://characters/npcs/village_woman/frames/nw.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://cq48tdsbaj4ia" path="res://characters/npcs/village_woman/frames/n.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://cvnh64ligddvg" path="res://characters/npcs/village_woman/frames/ne.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://bp806v4x00kl5" path="res://characters/npcs/village_woman/frames/e_n.png" id="n0"]
+[ext_resource type="Texture2D" uid="uid://dus8amqm6pwbj" path="res://characters/npcs/village_woman/frames/se_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://cqfom0630esmi" path="res://characters/npcs/village_woman/frames/s_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://cyvu8rd7ewpb7" path="res://characters/npcs/village_woman/frames/sw_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://qcaxod278nka" path="res://characters/npcs/village_woman/frames/w_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://cljr23u653fgd" path="res://characters/npcs/village_woman/frames/nw_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://b20kabp15hu2u" path="res://characters/npcs/village_woman/frames/n_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://dytk8a47esc06" path="res://characters/npcs/village_woman/frames/ne_n.png" id="n7"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
 normal_texture = ExtResource("n0")
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
-
-[sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
-
-[sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
-
-[sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
 
 [sub_resource type="CanvasTexture" id="C6"]
 diffuse_texture = ExtResource("d6")
@@ -49,61 +29,41 @@ normal_texture = ExtResource("n6")
 diffuse_texture = ExtResource("d7")
 normal_texture = ExtResource("n7")
 
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"e",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C1")
-}],
-"loop": true,
-"name": &"se",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C2")
-}],
-"loop": true,
-"name": &"s",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C3")
-}],
-"loop": true,
-"name": &"sw",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C4")
-}],
-"loop": true,
-"name": &"w",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}],
-"loop": true,
-"name": &"nw",
 "speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"n",
 "speed": 1.0
 }, {
@@ -111,7 +71,47 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"ne",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}],
+"loop": 1,
+"name": &"nw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C2")
+}],
+"loop": 1,
+"name": &"s",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": 1,
+"name": &"se",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C3")
+}],
+"loop": 1,
+"name": &"sw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": 1,
+"name": &"w",
 "speed": 1.0
 }]

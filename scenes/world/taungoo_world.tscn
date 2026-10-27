@@ -1,204 +1,138 @@
-[gd_scene load_steps=107 format=3]
-
-[ext_resource type="Script" path="res://scripts/world.gd" id="sc_w"]
-
-[ext_resource type="Texture2D" path="art_palace/ground.png" id="t_g"]
-
-[ext_resource type="Texture2D" path="art_palace/ground_n.png" id="t_gn"]
-
-[ext_resource type="Texture2D" path="art_palace/water_map.png" id="t_w"]
-
-[ext_resource type="Shader" path="res://environment/fx/water_natural.gdshader" id="s_w"]
-
-[ext_resource type="Texture2D" path="art_palace/jetty.png" id="t_j"]
-
-[ext_resource type="Texture2D" path="art_palace/jetty_n.png" id="t_jn"]
-
-[ext_resource type="Texture2D" path="art_palace/grass_mask.png" id="t_gm"]
-
-[ext_resource type="Shader" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
-
-[ext_resource type="Script" path="res://environment/fx/flicker.gd" id="sc_fl"]
-
-[ext_resource type="PackedScene" path="res://environment/grass/grass_field.tscn" id="p_grass"]
-
-[ext_resource type="PackedScene" path="res://environment/weather/weather.tscn" id="p_weather"]
-
-[ext_resource type="Script" path="res://scripts/map_exit.gd" id="sc_exit"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_ur.tscn" id="k_palace_wall_ur"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_dr.tscn" id="k_palace_wall_dr"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_gate_open.tscn" id="k_palace_gate"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_ur.tscn" id="k_palisade_ur"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_dr.tscn" id="k_palisade_dr"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/walls/training_gate_open.tscn" id="k_training_gate_dr"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/houses/main_palace.tscn" id="h_main_palace"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/houses/king_res.tscn" id="h_king_res"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/houses/queen_res.tscn" id="h_queen_res"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/houses/princess_res.tscn" id="h_princess_res"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/houses/guest_house.tscn" id="h_guest_house"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/shrine.tscn" id="k_shrine"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/guard_tower.tscn" id="k_guard_tower"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/storage.tscn" id="k_storage"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flag_a.tscn" id="k_flag_a"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flag_b.tscn" id="k_flag_b"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flag_c.tscn" id="k_flag_c"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flag_d.tscn" id="k_flag_d"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flag_e.tscn" id="k_flag_e"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/umbrella.tscn" id="k_umbrella"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/fire_bowl.tscn" id="k_fire_bowl"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/lantern_post.tscn" id="k_lantern_post"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/drum.tscn" id="k_drum"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/potted_tree.tscn" id="k_potted_tree"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_a.tscn" id="k_flower_pot_a"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_b.tscn" id="k_flower_pot_b"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/royal_bench.tscn" id="k_royal_bench"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/table.tscn" id="k_table"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/bushes.tscn" id="k_bushes"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/palms.tscn" id="k_palms"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/jars.tscn" id="k_jars"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/crates.tscn" id="k_crates"]
-
-[ext_resource type="PackedScene" path="res://environment/trees/red_tree/red_tree.tscn" id="k_red_tree"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/pavilion.tscn" id="k_tg_pavilion"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/hut.tscn" id="k_tg_hut"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tower.tscn" id="k_tg_tower"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_a.tscn" id="k_tg_banner_a"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_b.tscn" id="k_tg_banner_b"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/firepit.tscn" id="k_tg_firepit"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/rack.tscn" id="k_tg_rack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_a.tscn" id="k_tg_dummy_a"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_b.tscn" id="k_tg_dummy_b"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_c.tscn" id="k_tg_dummy_c"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_d.tscn" id="k_tg_dummy_d"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_a.tscn" id="k_tg_target_a"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_b.tscn" id="k_tg_target_b"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/drum.tscn" id="k_tg_drum"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tent.tscn" id="k_tg_tent"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/crates.tscn" id="k_tg_crates"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/t_barrack.tscn" id="k_t_barrack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_obstacle.tscn" id="k_t_obstacle"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_obstacle.tscn" id="k_r_obstacle"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/stable.tscn" id="k_stable"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_barracks.tscn" id="k_r_barracks"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_pavilion.tscn" id="k_r_pavilion"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/tent.tscn" id="k_tent"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/props/cooking_pot.tscn" id="k_cooking_pot"]
-
-[ext_resource type="PackedScene" path="res://environment/taungoo/temple/golden_temple.tscn" id="k_golden_temple"]
-
-[ext_resource type="PackedScene" path="res://environment/taungoo/nature/torch.tscn" id="k_torch"]
-
-[ext_resource type="PackedScene" path="res://environment/taungoo/nature/palm.tscn" id="k_palm"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_green.tscn" id="k_tree_green"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_olive.tscn" id="k_tree_olive"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_green_f.tscn" id="k_tree_green_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_olive_f.tscn" id="k_tree_olive_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_tall_f.tscn" id="k_tree_tall_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_tall.tscn" id="k_tree_tall"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/boats/sea_boat.tscn" id="p_boat"]
-
-[ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
-
-[ext_resource type="PackedScene" path="res://characters/palace/king_bayinnaung/king_bayinnaung.tscn" id="c_king_bayinnaung"]
-
-[ext_resource type="PackedScene" path="res://characters/palace/spear_guard/spear_guard.tscn" id="c_spear_guard"]
+[gd_scene format=3 uid="uid://xddrpaeolrfu"]
 
 [ext_resource type="PackedScene" path="res://characters/palace/archer/archer.tscn" id="c_archer"]
-
-[ext_resource type="PackedScene" path="res://characters/palace/flag_bearer/flag_bearer.tscn" id="c_flag_bearer"]
-
 [ext_resource type="PackedScene" path="res://characters/palace/cavalry_rider/cavalry_rider.tscn" id="c_cavalry_rider"]
-
+[ext_resource type="PackedScene" path="res://characters/army/war_elephant/war_elephant.tscn" id="c_eleph"]
+[ext_resource type="PackedScene" path="res://characters/palace/flag_bearer/flag_bearer.tscn" id="c_flag_bearer"]
 [ext_resource type="PackedScene" path="res://characters/palace/royal_horse/royal_horse.tscn" id="c_royal_horse"]
-
-[ext_resource type="PackedScene" path="res://characters/palace/elephant_rider/elephant_rider.tscn" id="c_elephant_rider"]
-
+[ext_resource type="PackedScene" path="res://characters/palace/spear_guard/spear_guard.tscn" id="c_spear_guard"]
 [ext_resource type="PackedScene" path="res://characters/palace/trainer/trainer.tscn" id="c_trainer"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/guest_house.tscn" id="h_guest_house"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/king_res.tscn" id="h_king_res"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/main_palace.tscn" id="h_main_palace"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/princess_res.tscn" id="h_princess_res"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/queen_res.tscn" id="h_queen_res"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/bushes.tscn" id="k_bushes"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/cooking_pot.tscn" id="k_cooking_pot"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/crates.tscn" id="k_crates"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/drum.tscn" id="k_drum"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/fire_bowl.tscn" id="k_fire_bowl"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_a.tscn" id="k_flag_a"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_b.tscn" id="k_flag_b"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_c.tscn" id="k_flag_c"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_d.tscn" id="k_flag_d"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flag_e.tscn" id="k_flag_e"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_a.tscn" id="k_flower_pot_a"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/flower_pot_b.tscn" id="k_flower_pot_b"]
+[ext_resource type="PackedScene" path="res://environment/taungoo/temple/golden_temple.tscn" id="k_golden_temple"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/guard_tower.tscn" id="k_guard_tower"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/jars.tscn" id="k_jars"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/lantern_post.tscn" id="k_lantern_post"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_gate_open.tscn" id="k_palace_gate"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_dr.tscn" id="k_palace_wall_dr"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_ur.tscn" id="k_palace_wall_ur"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_dr.tscn" id="k_palisade_dr"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/palisade_ur.tscn" id="k_palisade_ur"]
+[ext_resource type="PackedScene" path="res://environment/taungoo/nature/palm.tscn" id="k_palm"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/palms.tscn" id="k_palms"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/potted_tree.tscn" id="k_potted_tree"]
+[ext_resource type="PackedScene" path="res://environment/trees/red_tree/red_tree.tscn" id="k_red_tree"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/royal_bench.tscn" id="k_royal_bench"]
+[ext_resource type="PackedScene" path="res://environment/palace/training/r_obstacle.tscn" id="k_r_obstacle"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/shrine.tscn" id="k_shrine"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/stable.tscn" id="k_stable"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/storage.tscn" id="k_storage"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/table.tscn" id="k_table"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/tent.tscn" id="k_tent"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_a.tscn" id="k_tg_banner_a"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_b.tscn" id="k_tg_banner_b"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/crates.tscn" id="k_tg_crates"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/drum.tscn" id="k_tg_drum"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_a.tscn" id="k_tg_dummy_a"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_b.tscn" id="k_tg_dummy_b"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_c.tscn" id="k_tg_dummy_c"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_d.tscn" id="k_tg_dummy_d"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/firepit.tscn" id="k_tg_firepit"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/hut.tscn" id="k_tg_hut"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/pavilion.tscn" id="k_tg_pavilion"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/rack.tscn" id="k_tg_rack"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_a.tscn" id="k_tg_target_a"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_b.tscn" id="k_tg_target_b"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tent.tscn" id="k_tg_tent"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tower.tscn" id="k_tg_tower"]
+[ext_resource type="PackedScene" path="res://environment/taungoo/nature/torch.tscn" id="k_torch"]
+[ext_resource type="PackedScene" path="res://environment/palace/walls/training_gate_open.tscn" id="k_training_gate_dr"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_green.tscn" id="k_tree_green"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_green_f.tscn" id="k_tree_green_f"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive.tscn" id="k_tree_olive"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive_f.tscn" id="k_tree_olive_f"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_tall.tscn" id="k_tree_tall"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_tall_f.tscn" id="k_tree_tall_f"]
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/t_barrack.tscn" id="k_t_barrack"]
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_obstacle.tscn" id="k_t_obstacle"]
+[ext_resource type="PackedScene" path="res://environment/palace/props/umbrella.tscn" id="k_umbrella"]
+[ext_resource type="PackedScene" path="res://environment/palace/boats/sea_boat.tscn" id="p_boat"]
+[ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
+[ext_resource type="PackedScene" path="res://environment/grass/grass_field.tscn" id="p_grass"]
+[ext_resource type="PackedScene" path="res://environment/weather/weather.tscn" id="p_weather"]
+[ext_resource type="Script" uid="uid://daw7flvnn4fcx" path="res://scripts/map_exit.gd" id="sc_exit"]
+[ext_resource type="Script" uid="uid://dp4jcyfb1ead7" path="res://environment/fx/flicker.gd" id="sc_fl"]
+[ext_resource type="Script" uid="uid://cv7spkwydyp44" path="res://scripts/world.gd" id="sc_w"]
+[ext_resource type="Shader" uid="uid://bne2lf5p8byq1" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
+[ext_resource type="Shader" uid="uid://b4wtdo1h25tog" path="res://environment/fx/water_natural.gdshader" id="s_w"]
+[ext_resource type="Texture2D" uid="uid://dj5vgb12v8nb8" path="res://scenes/world/art_palace/ground.png" id="t_g"]
+[ext_resource type="Texture2D" uid="uid://bjic78eet3o0o" path="res://scenes/world/art_palace/grass_mask.png" id="t_gm"]
+[ext_resource type="Texture2D" uid="uid://cvdgynf6a4f5c" path="res://scenes/world/art_palace/ground_n.png" id="t_gn"]
+[ext_resource type="Texture2D" uid="uid://cqefl6kuqrn7q" path="res://scenes/world/art_palace/jetty.png" id="t_j"]
+[ext_resource type="Texture2D" uid="uid://1nqbwpu03bi4" path="res://scenes/world/art_palace/jetty_n.png" id="t_jn"]
+[ext_resource type="Texture2D" uid="uid://buujnhrh50eta" path="res://scenes/world/art_palace/water_map.png" id="t_w"]
+
+[sub_resource type="ShaderMaterial" id="M_atm"]
+shader = ExtResource("s_atm")
+shader_parameter/bloom = 0.14
+shader_parameter/warmth = 0.05
+shader_parameter/shade_tint = 0.1
+shader_parameter/vignette = 0.32
+shader_parameter/saturation = 1.06
+shader_parameter/contrast = 1.06
+shader_parameter/sun_glow = 0.06
+shader_parameter/glow_color = Color(1, 0.8, 0.5, 1)
+shader_parameter/haze = 0.0
 
 [sub_resource type="CanvasTexture" id="CT_g"]
 diffuse_texture = ExtResource("t_g")
 normal_texture = ExtResource("t_gn")
 
-[sub_resource type="CanvasTexture" id="CT_j"]
-diffuse_texture = ExtResource("t_j")
-normal_texture = ExtResource("t_jn")
-
 [sub_resource type="ShaderMaterial" id="M_w"]
 shader = ExtResource("s_w")
 shader_parameter/shallow = Color(0.27, 0.52, 0.52, 1)
 shader_parameter/deep = Color(0.05, 0.2, 0.32, 1)
+shader_parameter/moat_tint = Color(0.16, 0.3, 0.28, 1)
 shader_parameter/sky = Color(0.86, 0.84, 0.74, 1)
+shader_parameter/foam_color = Color(0.88, 0.92, 0.88, 1)
 shader_parameter/flow = Vector2(-1, 0.15)
+shader_parameter/color_levels = 18.0
 
-[sub_resource type="ShaderMaterial" id="M_atm"]
-shader = ExtResource("s_atm")
+[sub_resource type="CanvasTexture" id="CT_j"]
+diffuse_texture = ExtResource("t_j")
+normal_texture = ExtResource("t_jn")
+
+[sub_resource type="SegmentShape2D" id="Seg0"]
+b = Vector2(3600, 0)
+
+[sub_resource type="SegmentShape2D" id="Seg1"]
+a = Vector2(3600, 0)
+b = Vector2(3600, 2300)
+
+[sub_resource type="SegmentShape2D" id="Seg2"]
+a = Vector2(3600, 2300)
+b = Vector2(0, 2300)
+
+[sub_resource type="SegmentShape2D" id="Seg3"]
+a = Vector2(0, 2300)
+b = Vector2(0, 0)
 
 [sub_resource type="CanvasItemMaterial" id="M_add"]
 blend_mode = 1
@@ -211,7 +145,6 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 [sub_resource type="GradientTexture2D" id="T_beam"]
 gradient = SubResource("G_beam")
 width = 16
-height = 64
 fill_from = Vector2(0, 0.5)
 fill_to = Vector2(1, 0.5)
 
@@ -227,1559 +160,1527 @@ colors = PackedColorArray(1, 0.95, 0.6, 0, 1, 0.95, 0.6, 1, 0.8, 1, 0.6, 1, 0.8,
 offsets = PackedFloat32Array(0, 0.3, 0.7, 1)
 colors = PackedColorArray(1, 0.88, 0.6, 0, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0)
 
-[sub_resource type="SegmentShape2D" id="Seg0"]
-a = Vector2(0, 0)
-b = Vector2(3600, 0)
-
-[sub_resource type="SegmentShape2D" id="Seg1"]
-a = Vector2(3600, 0)
-b = Vector2(3600, 2300)
-
-[sub_resource type="SegmentShape2D" id="Seg2"]
-a = Vector2(3600, 2300)
-b = Vector2(0, 2300)
-
-[sub_resource type="SegmentShape2D" id="Seg3"]
-a = Vector2(0, 2300)
-b = Vector2(0, 0)
-
 [sub_resource type="RectangleShape2D" id="ExitR"]
 size = Vector2(24, 160)
 
-[node name="PalaceWorld" type="Node2D"]
+[node name="PalaceWorld" type="Node2D" unique_id=2109295432]
 script = ExtResource("sc_w")
 map_size = Vector2(3600, 2300)
-camera_zoom = 2.4
 morning_strength = 0.6
 
-[node name="Atmosphere" type="CanvasModulate" parent="."]
+[node name="Atmosphere" type="CanvasModulate" parent="." unique_id=287539532]
 color = Color(0.88, 0.87, 0.84, 1)
 
-[node name="Grade" type="CanvasLayer" parent="."]
+[node name="Grade" type="CanvasLayer" parent="." unique_id=539410902]
 layer = 2
 
-[node name="Screen" type="ColorRect" parent="Grade"]
+[node name="Screen" type="ColorRect" parent="Grade" unique_id=558279523]
 material = SubResource("M_atm")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="Ground" type="Sprite2D" parent="."]
+[node name="Ground" type="Sprite2D" parent="." unique_id=1196398711]
 z_index = -10
 texture_filter = 1
 texture = SubResource("CT_g")
 centered = false
 
-[node name="Water" type="Sprite2D" parent="."]
+[node name="Water" type="Sprite2D" parent="." unique_id=1424754150]
 z_index = -9
 material = SubResource("M_w")
 texture = ExtResource("t_w")
 centered = false
 
-[node name="Jetty" type="Sprite2D" parent="."]
+[node name="Jetty" type="Sprite2D" parent="." unique_id=186464627]
 z_index = -8
 texture_filter = 1
 position = Vector2(3026, 1347)
 texture = SubResource("CT_j")
 centered = false
 
-[node name="WaterEdges" type="StaticBody2D" parent="."]
+[node name="WaterEdges" type="StaticBody2D" parent="." unique_id=1481882776]
 
-[node name="Sea0" type="CollisionPolygon2D" parent="WaterEdges"]
+[node name="Sea0" type="CollisionPolygon2D" parent="WaterEdges" unique_id=177657558]
 polygon = PackedVector2Array(3262, 0, 3268, 92, 3267, 169, 3248, 398, 3211, 690, 3148, 1020, 3140, 1089, 3139, 1159, 3155, 1268, 3198, 1423, 3342, 1495, 3347, 1501, 3326, 1539, 3212, 1482, 3265, 1784, 3272, 1859, 3273, 1918, 3269, 1983, 3257, 2068, 3209, 2299, 3599, 2299, 3599, 0)
 
-[node name="MapEdges" type="StaticBody2D" parent="."]
+[node name="MapEdges" type="StaticBody2D" parent="." unique_id=939001222]
 
-[node name="Edge0" type="CollisionShape2D" parent="MapEdges"]
+[node name="Edge0" type="CollisionShape2D" parent="MapEdges" unique_id=1202772520]
 shape = SubResource("Seg0")
 
-[node name="Edge1" type="CollisionShape2D" parent="MapEdges"]
+[node name="Edge1" type="CollisionShape2D" parent="MapEdges" unique_id=1133482925]
 shape = SubResource("Seg1")
 
-[node name="Edge2" type="CollisionShape2D" parent="MapEdges"]
+[node name="Edge2" type="CollisionShape2D" parent="MapEdges" unique_id=1680984809]
 shape = SubResource("Seg2")
 
-[node name="Edge3" type="CollisionShape2D" parent="MapEdges"]
+[node name="Edge3" type="CollisionShape2D" parent="MapEdges" unique_id=1359751740]
 shape = SubResource("Seg3")
 
-[node name="Objects" type="Node2D" parent="."]
+[node name="Objects" type="Node2D" parent="." unique_id=1592948832]
 y_sort_enabled = true
 
-[node name="PalaceWallUr1" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr1" parent="Objects" unique_id=1388878822 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(472, 864)
 
-[node name="PalaceWallUr2" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr2" parent="Objects" unique_id=1588409551 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(679, 760)
 
-[node name="PalaceWallUr3" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr3" parent="Objects" unique_id=2125631770 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(885, 657)
 
-[node name="PalaceWallUr4" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr4" parent="Objects" unique_id=927848329 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(1092, 554)
 
-[node name="PalaceWallUr5" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr5" parent="Objects" unique_id=1288414860 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(1299, 450)
 
-[node name="PalaceWallUr6" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr6" parent="Objects" unique_id=488768853 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(1505, 347)
 
-[node name="PalaceWallDr1" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr1" parent="Objects" unique_id=757268842 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(1712, 355)
 
-[node name="PalaceWallDr2" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr2" parent="Objects" unique_id=1152614644 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(1919, 458)
 
-[node name="PalaceWallDr3" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr3" parent="Objects" unique_id=1012376074 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(2125, 561)
 
-[node name="PalaceWallDr4" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr4" parent="Objects" unique_id=1515975319 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(2332, 665)
 
-[node name="PalaceWallDr5" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr5" parent="Objects" unique_id=812196506 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(2539, 768)
 
-[node name="PalaceWallDr6" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr6" parent="Objects" unique_id=1791129314 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(2745, 871)
 
-[node name="PalaceWallDr7" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr7" parent="Objects" unique_id=1340041609 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(472, 975)
 
-[node name="PalaceWallDr8" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr8" parent="Objects" unique_id=1872905173 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(679, 1078)
 
-[node name="PalaceWallDr9" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr9" parent="Objects" unique_id=20377615 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(885, 1181)
 
-[node name="PalaceWallDr10" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr10" parent="Objects" unique_id=1185183483 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(1092, 1285)
 
-[node name="PalaceWallDr11" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr11" parent="Objects" unique_id=2109578347 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(1299, 1388)
 
-[node name="PalaceWallUr7" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr7" parent="Objects" unique_id=1774573052 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(1919, 1380)
 
-[node name="PalaceWallUr8" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr8" parent="Objects" unique_id=1308415756 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(2125, 1277)
 
-[node name="PalaceWallUr9" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr9" parent="Objects" unique_id=1601369012 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(2332, 1174)
 
-[node name="PalaceWallUr10" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr10" parent="Objects" unique_id=618953511 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(2539, 1070)
 
-[node name="PalaceWallUr11" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr11" parent="Objects" unique_id=1524749163 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(2745, 967)
 
-[node name="PalaceWallDr12" parent="Objects" instance=ExtResource("k_palace_wall_dr")]
+[node name="PalaceWallDr12" parent="Objects" unique_id=879339291 instance=ExtResource("k_palace_wall_dr")]
 position = Vector2(1392, 1435)
 
-[node name="PalaceWallUr12" parent="Objects" instance=ExtResource("k_palace_wall_ur")]
+[node name="PalaceWallUr12" parent="Objects" unique_id=2110791807 instance=ExtResource("k_palace_wall_ur")]
 position = Vector2(1808, 1436)
 
-[node name="PalaceGate1" parent="Objects" instance=ExtResource("k_palace_gate")]
-position = Vector2(1600, 1486)
+[node name="PalaceGate1" parent="Objects" unique_id=1666833167 instance=ExtResource("k_palace_gate")]
+position = Vector2(1599, 1439)
 
-[node name="PalisadeUr1" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr1" parent="Objects" unique_id=432695308 instance=ExtResource("k_palisade_ur")]
 position = Vector2(316, 1881)
 
-[node name="PalisadeUr2" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr2" parent="Objects" unique_id=1130593658 instance=ExtResource("k_palisade_ur")]
 position = Vector2(409, 1834)
 
-[node name="PalisadeUr3" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr3" parent="Objects" unique_id=1778998120 instance=ExtResource("k_palisade_ur")]
 position = Vector2(502, 1788)
 
-[node name="PalisadeUr4" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr4" parent="Objects" unique_id=546654155 instance=ExtResource("k_palisade_ur")]
 position = Vector2(596, 1741)
 
-[node name="PalisadeUr5" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr5" parent="Objects" unique_id=1272994368 instance=ExtResource("k_palisade_ur")]
 position = Vector2(689, 1694)
 
-[node name="PalisadeUr6" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr6" parent="Objects" unique_id=1407917413 instance=ExtResource("k_palisade_ur")]
 position = Vector2(782, 1648)
 
-[node name="PalisadeDr1" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr1" parent="Objects" unique_id=1729591725 instance=ExtResource("k_palisade_dr")]
 position = Vector2(876, 1656)
 
-[node name="PalisadeDr2" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr2" parent="Objects" unique_id=231699551 instance=ExtResource("k_palisade_dr")]
 position = Vector2(969, 1702)
 
-[node name="PalisadeDr3" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr3" parent="Objects" unique_id=1511916549 instance=ExtResource("k_palisade_dr")]
 position = Vector2(1249, 1842)
 
-[node name="PalisadeDr4" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr4" parent="Objects" unique_id=1957753759 instance=ExtResource("k_palisade_dr")]
 position = Vector2(1342, 1889)
 
-[node name="PalisadeDr5" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr5" parent="Objects" unique_id=629175936 instance=ExtResource("k_palisade_dr")]
 position = Vector2(316, 1936)
 
-[node name="PalisadeDr6" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr6" parent="Objects" unique_id=415920355 instance=ExtResource("k_palisade_dr")]
 position = Vector2(409, 1982)
 
-[node name="PalisadeDr7" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr7" parent="Objects" unique_id=451820505 instance=ExtResource("k_palisade_dr")]
 position = Vector2(502, 2029)
 
-[node name="PalisadeDr8" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr8" parent="Objects" unique_id=380685850 instance=ExtResource("k_palisade_dr")]
 position = Vector2(596, 2076)
 
-[node name="PalisadeDr9" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr9" parent="Objects" unique_id=922248123 instance=ExtResource("k_palisade_dr")]
 position = Vector2(689, 2122)
 
-[node name="PalisadeDr10" parent="Objects" instance=ExtResource("k_palisade_dr")]
+[node name="PalisadeDr10" parent="Objects" unique_id=1054461511 instance=ExtResource("k_palisade_dr")]
 position = Vector2(782, 2169)
 
-[node name="PalisadeUr7" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr7" parent="Objects" unique_id=1187120183 instance=ExtResource("k_palisade_ur")]
 position = Vector2(876, 2161)
 
-[node name="PalisadeUr8" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr8" parent="Objects" unique_id=1216423940 instance=ExtResource("k_palisade_ur")]
 position = Vector2(969, 2114)
 
-[node name="PalisadeUr9" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr9" parent="Objects" unique_id=1748917007 instance=ExtResource("k_palisade_ur")]
 position = Vector2(1062, 2068)
 
-[node name="PalisadeUr10" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr10" parent="Objects" unique_id=1135915285 instance=ExtResource("k_palisade_ur")]
 position = Vector2(1156, 2021)
 
-[node name="PalisadeUr11" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr11" parent="Objects" unique_id=620519675 instance=ExtResource("k_palisade_ur")]
 position = Vector2(1249, 1974)
 
-[node name="PalisadeUr12" parent="Objects" instance=ExtResource("k_palisade_ur")]
+[node name="PalisadeUr12" parent="Objects" unique_id=1288844237 instance=ExtResource("k_palisade_ur")]
 position = Vector2(1342, 1928)
 
-[node name="TrainingGateDr1" parent="Objects" instance=ExtResource("k_training_gate_dr")]
+[node name="TrainingGateDr1" parent="Objects" unique_id=2076205123 instance=ExtResource("k_training_gate_dr")]
 position = Vector2(1101, 1773)
 
-[node name="MainPalace1" parent="Objects" instance=ExtResource("h_main_palace")]
+[node name="MainPalace1" parent="Objects" unique_id=1594972845 instance=ExtResource("h_main_palace")]
 position = Vector2(1807, 868)
 
-[node name="KingRes1" parent="Objects" instance=ExtResource("h_king_res")]
+[node name="KingRes1" parent="Objects" unique_id=1223957546 instance=ExtResource("h_king_res")]
 position = Vector2(980, 930)
 
-[node name="QueenRes1" parent="Objects" instance=ExtResource("h_queen_res")]
+[node name="QueenRes1" parent="Objects" unique_id=1613676483 instance=ExtResource("h_queen_res")]
 position = Vector2(2420, 930)
 
-[node name="PrincessRes1" parent="Objects" instance=ExtResource("h_princess_res")]
+[node name="PrincessRes1" parent="Objects" unique_id=1198391921 instance=ExtResource("h_princess_res")]
 position = Vector2(1150, 1230)
 
-[node name="GuestHouse1" parent="Objects" instance=ExtResource("h_guest_house")]
-position = Vector2(2080, 1250)
+[node name="GuestHouse1" parent="Objects" unique_id=1899242077 instance=ExtResource("h_guest_house")]
+position = Vector2(2041, 1213)
 
-[node name="Shrine1" parent="Objects" instance=ExtResource("k_shrine")]
+[node name="Shrine1" parent="Objects" unique_id=1343801887 instance=ExtResource("k_shrine")]
 position = Vector2(2440, 1200)
 
-[node name="Shrine2" parent="Objects" instance=ExtResource("k_shrine")]
-position = Vector2(790, 1180)
+[node name="Shrine2" parent="Objects" unique_id=1609402864 instance=ExtResource("k_shrine")]
+position = Vector2(692, 1169)
 
-[node name="GuardTower1" parent="Objects" instance=ExtResource("k_guard_tower")]
+[node name="GuardTower1" parent="Objects" unique_id=231403294 instance=ExtResource("k_guard_tower")]
 position = Vector2(520, 880)
 
-[node name="GuardTower2" parent="Objects" instance=ExtResource("k_guard_tower")]
+[node name="GuardTower2" parent="Objects" unique_id=1193387093 instance=ExtResource("k_guard_tower")]
 position = Vector2(2690, 880)
 
-[node name="Storage1" parent="Objects" instance=ExtResource("k_storage")]
+[node name="Storage1" parent="Objects" unique_id=753359002 instance=ExtResource("k_storage")]
 position = Vector2(2560, 640)
 
-[node name="FlagA1" parent="Objects" instance=ExtResource("k_flag_a")]
+[node name="FlagA1" parent="Objects" unique_id=1706756543 instance=ExtResource("k_flag_a")]
 position = Vector2(1540, 990)
 
-[node name="FlagA2" parent="Objects" instance=ExtResource("k_flag_a")]
+[node name="FlagA2" parent="Objects" unique_id=315646419 instance=ExtResource("k_flag_a")]
 position = Vector2(1662, 990)
 
-[node name="FlagB1" parent="Objects" instance=ExtResource("k_flag_b")]
+[node name="FlagB1" parent="Objects" unique_id=2053245985 instance=ExtResource("k_flag_b")]
 position = Vector2(1540, 1070)
 
-[node name="FlagB2" parent="Objects" instance=ExtResource("k_flag_b")]
+[node name="FlagB2" parent="Objects" unique_id=1620034474 instance=ExtResource("k_flag_b")]
 position = Vector2(1662, 1070)
 
-[node name="FlagC1" parent="Objects" instance=ExtResource("k_flag_c")]
+[node name="FlagC1" parent="Objects" unique_id=983757947 instance=ExtResource("k_flag_c")]
 position = Vector2(1540, 1150)
 
-[node name="FlagC2" parent="Objects" instance=ExtResource("k_flag_c")]
+[node name="FlagC2" parent="Objects" unique_id=687195719 instance=ExtResource("k_flag_c")]
 position = Vector2(1662, 1150)
 
-[node name="FlagD1" parent="Objects" instance=ExtResource("k_flag_d")]
+[node name="FlagD1" parent="Objects" unique_id=343260218 instance=ExtResource("k_flag_d")]
 position = Vector2(1540, 1230)
 
-[node name="FlagD2" parent="Objects" instance=ExtResource("k_flag_d")]
+[node name="FlagD2" parent="Objects" unique_id=1149955994 instance=ExtResource("k_flag_d")]
 position = Vector2(1662, 1230)
 
-[node name="FlagE1" parent="Objects" instance=ExtResource("k_flag_e")]
+[node name="FlagE1" parent="Objects" unique_id=1994004720 instance=ExtResource("k_flag_e")]
 position = Vector2(1540, 1310)
 
-[node name="FlagE2" parent="Objects" instance=ExtResource("k_flag_e")]
+[node name="FlagE2" parent="Objects" unique_id=881474735 instance=ExtResource("k_flag_e")]
 position = Vector2(1662, 1310)
 
-[node name="FlagA3" parent="Objects" instance=ExtResource("k_flag_a")]
+[node name="FlagA3" parent="Objects" unique_id=722014641 instance=ExtResource("k_flag_a")]
 position = Vector2(1540, 1390)
 
-[node name="FlagA4" parent="Objects" instance=ExtResource("k_flag_a")]
+[node name="FlagA4" parent="Objects" unique_id=942865150 instance=ExtResource("k_flag_a")]
 position = Vector2(1662, 1390)
 
-[node name="Umbrella1" parent="Objects" instance=ExtResource("k_umbrella")]
+[node name="Umbrella1" parent="Objects" unique_id=526373443 instance=ExtResource("k_umbrella")]
 position = Vector2(1500, 940)
 
-[node name="Umbrella2" parent="Objects" instance=ExtResource("k_umbrella")]
+[node name="Umbrella2" parent="Objects" unique_id=157468406 instance=ExtResource("k_umbrella")]
 position = Vector2(1705, 940)
 
-[node name="FireBowl1" parent="Objects" instance=ExtResource("k_fire_bowl")]
+[node name="FireBowl1" parent="Objects" unique_id=1564578871 instance=ExtResource("k_fire_bowl")]
 position = Vector2(1540, 1450)
 
-[node name="FireBowl2" parent="Objects" instance=ExtResource("k_fire_bowl")]
+[node name="FireBowl2" parent="Objects" unique_id=1436590607 instance=ExtResource("k_fire_bowl")]
 position = Vector2(1662, 1450)
 
-[node name="LanternPost1" parent="Objects" instance=ExtResource("k_lantern_post")]
+[node name="LanternPost1" parent="Objects" unique_id=604911960 instance=ExtResource("k_lantern_post")]
 position = Vector2(1440, 980)
 
-[node name="LanternPost2" parent="Objects" instance=ExtResource("k_lantern_post")]
+[node name="LanternPost2" parent="Objects" unique_id=1501303757 instance=ExtResource("k_lantern_post")]
 position = Vector2(1765, 980)
 
-[node name="Drum1" parent="Objects" instance=ExtResource("k_drum")]
+[node name="Drum1" parent="Objects" unique_id=1923771650 instance=ExtResource("k_drum")]
 position = Vector2(1380, 950)
 
-[node name="Drum2" parent="Objects" instance=ExtResource("k_drum")]
+[node name="Drum2" parent="Objects" unique_id=49925228 instance=ExtResource("k_drum")]
 position = Vector2(1820, 950)
 
-[node name="PottedTree1" parent="Objects" instance=ExtResource("k_potted_tree")]
+[node name="PottedTree1" parent="Objects" unique_id=1944601809 instance=ExtResource("k_potted_tree")]
 position = Vector2(1280, 1040)
 
-[node name="PottedTree2" parent="Objects" instance=ExtResource("k_potted_tree")]
+[node name="PottedTree2" parent="Objects" unique_id=1398451793 instance=ExtResource("k_potted_tree")]
 position = Vector2(1920, 1040)
 
-[node name="FlowerPotA1" parent="Objects" instance=ExtResource("k_flower_pot_a")]
+[node name="FlowerPotA1" parent="Objects" unique_id=1388240359 instance=ExtResource("k_flower_pot_a")]
 position = Vector2(1220, 1070)
 
-[node name="FlowerPotB1" parent="Objects" instance=ExtResource("k_flower_pot_b")]
+[node name="FlowerPotB1" parent="Objects" unique_id=407129979 instance=ExtResource("k_flower_pot_b")]
 position = Vector2(1980, 1070)
 
-[node name="RoyalBench1" parent="Objects" instance=ExtResource("k_royal_bench")]
+[node name="RoyalBench1" parent="Objects" unique_id=1002026870 instance=ExtResource("k_royal_bench")]
 position = Vector2(1000, 1080)
 
-[node name="Table1" parent="Objects" instance=ExtResource("k_table")]
+[node name="Table1" parent="Objects" unique_id=355049131 instance=ExtResource("k_table")]
 position = Vector2(1060, 1110)
 
-[node name="RoyalBench2" parent="Objects" instance=ExtResource("k_royal_bench")]
-position = Vector2(2200, 1080)
+[node name="RoyalBench2" parent="Objects" unique_id=249344500 instance=ExtResource("k_royal_bench")]
+position = Vector2(1908, 1157)
 
-[node name="Table2" parent="Objects" instance=ExtResource("k_table")]
+[node name="Table2" parent="Objects" unique_id=1276277574 instance=ExtResource("k_table")]
 position = Vector2(2140, 1110)
 
-[node name="PottedTree3" parent="Objects" instance=ExtResource("k_potted_tree")]
+[node name="PottedTree3" parent="Objects" unique_id=975529146 instance=ExtResource("k_potted_tree")]
 position = Vector2(1420, 1340)
 
-[node name="PottedTree4" parent="Objects" instance=ExtResource("k_potted_tree")]
+[node name="PottedTree4" parent="Objects" unique_id=104301968 instance=ExtResource("k_potted_tree")]
 position = Vector2(1780, 1340)
 
-[node name="FlowerPotA2" parent="Objects" instance=ExtResource("k_flower_pot_a")]
+[node name="FlowerPotA2" parent="Objects" unique_id=2068815928 instance=ExtResource("k_flower_pot_a")]
 position = Vector2(1380, 1380)
 
-[node name="FlowerPotB2" parent="Objects" instance=ExtResource("k_flower_pot_b")]
+[node name="FlowerPotB2" parent="Objects" unique_id=840300455 instance=ExtResource("k_flower_pot_b")]
 position = Vector2(1820, 1380)
 
-[node name="Bushes1" parent="Objects" instance=ExtResource("k_bushes")]
+[node name="Bushes1" parent="Objects" unique_id=444470883 instance=ExtResource("k_bushes")]
 position = Vector2(700, 1020)
 
-[node name="Bushes2" parent="Objects" instance=ExtResource("k_bushes")]
+[node name="Bushes2" parent="Objects" unique_id=1373296458 instance=ExtResource("k_bushes")]
 position = Vector2(2500, 1020)
 
-[node name="Palms1" parent="Objects" instance=ExtResource("k_palms")]
+[node name="Palms1" parent="Objects" unique_id=232493729 instance=ExtResource("k_palms")]
 position = Vector2(640, 900)
 
-[node name="Palms2" parent="Objects" instance=ExtResource("k_palms")]
+[node name="Palms2" parent="Objects" unique_id=2038523374 instance=ExtResource("k_palms")]
 position = Vector2(2560, 900)
 
-[node name="FireBowl3" parent="Objects" instance=ExtResource("k_fire_bowl")]
+[node name="FireBowl3" parent="Objects" unique_id=1778808796 instance=ExtResource("k_fire_bowl")]
 position = Vector2(1420, 1460)
 
-[node name="FireBowl4" parent="Objects" instance=ExtResource("k_fire_bowl")]
+[node name="FireBowl4" parent="Objects" unique_id=960761329 instance=ExtResource("k_fire_bowl")]
 position = Vector2(1780, 1460)
 
-[node name="Jars1" parent="Objects" instance=ExtResource("k_jars")]
+[node name="Jars1" parent="Objects" unique_id=320394028 instance=ExtResource("k_jars")]
 position = Vector2(2620, 700)
 
-[node name="Crates1" parent="Objects" instance=ExtResource("k_crates")]
+[node name="Crates1" parent="Objects" unique_id=333028814 instance=ExtResource("k_crates")]
 position = Vector2(2480, 700)
 
-[node name="RedTree1" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree1" parent="Objects" unique_id=1554213631 instance=ExtResource("k_red_tree")]
 position = Vector2(760, 760)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree2" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree2" parent="Objects" unique_id=1686381391 instance=ExtResource("k_red_tree")]
 position = Vector2(2560, 820)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree3" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree3" parent="Objects" unique_id=234629213 instance=ExtResource("k_red_tree")]
 position = Vector2(1180, 560)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree4" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2120, 520)
+[node name="RedTree4" parent="Objects" unique_id=993634285 instance=ExtResource("k_red_tree")]
+position = Vector2(2152, 484)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree5" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree5" parent="Objects" unique_id=1801866110 instance=ExtResource("k_red_tree")]
 position = Vector2(900, 1060)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree6" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree6" parent="Objects" unique_id=531266593 instance=ExtResource("k_red_tree")]
 position = Vector2(2300, 1100)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree7" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree7" parent="Objects" unique_id=1069834782 instance=ExtResource("k_red_tree")]
 position = Vector2(1400, 420)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree8" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree8" parent="Objects" unique_id=353044708 instance=ExtResource("k_red_tree")]
 position = Vector2(1850, 380)
 scale = Vector2(0.5, 0.5)
 
-[node name="TgPavilion1" parent="Objects" instance=ExtResource("k_tg_pavilion")]
+[node name="TgPavilion1" parent="Objects" unique_id=877263162 instance=ExtResource("k_tg_pavilion")]
 position = Vector2(820, 1705)
 
-[node name="TgHut1" parent="Objects" instance=ExtResource("k_tg_hut")]
+[node name="TgHut1" parent="Objects" unique_id=15864693 instance=ExtResource("k_tg_hut")]
 position = Vector2(560, 1790)
 
-[node name="TgTower1" parent="Objects" instance=ExtResource("k_tg_tower")]
+[node name="TgTower1" parent="Objects" unique_id=1331165706 instance=ExtResource("k_tg_tower")]
 position = Vector2(330, 1890)
 
-[node name="TgTower2" parent="Objects" instance=ExtResource("k_tg_tower")]
+[node name="TgTower2" parent="Objects" unique_id=1504586488 instance=ExtResource("k_tg_tower")]
 position = Vector2(820, 2130)
 
-[node name="TgTower3" parent="Objects" instance=ExtResource("k_tg_tower")]
+[node name="TgTower3" parent="Objects" unique_id=1623015181 instance=ExtResource("k_tg_tower")]
 position = Vector2(1310, 1890)
 
-[node name="TgBannerA1" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+[node name="TgBannerA1" parent="Objects" unique_id=1382615918 instance=ExtResource("k_tg_banner_a")]
 position = Vector2(690, 1725)
 
-[node name="TgBannerB1" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+[node name="TgBannerB1" parent="Objects" unique_id=1288016112 instance=ExtResource("k_tg_banner_b")]
 position = Vector2(950, 1725)
 
-[node name="TgBannerA2" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+[node name="TgBannerA2" parent="Objects" unique_id=980354395 instance=ExtResource("k_tg_banner_a")]
 position = Vector2(1050, 1712)
 
-[node name="TgBannerB2" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+[node name="TgBannerB2" parent="Objects" unique_id=1156951143 instance=ExtResource("k_tg_banner_b")]
 position = Vector2(1150, 1765)
 
-[node name="TgFirepit1" parent="Objects" instance=ExtResource("k_tg_firepit")]
+[node name="TgFirepit1" parent="Objects" unique_id=456157351 instance=ExtResource("k_tg_firepit")]
 position = Vector2(650, 1770)
 
-[node name="TgFirepit2" parent="Objects" instance=ExtResource("k_tg_firepit")]
+[node name="TgFirepit2" parent="Objects" unique_id=1154047733 instance=ExtResource("k_tg_firepit")]
 position = Vector2(990, 1770)
 
-[node name="TgRack1" parent="Objects" instance=ExtResource("k_tg_rack")]
+[node name="TgRack1" parent="Objects" unique_id=1724112511 instance=ExtResource("k_tg_rack")]
 position = Vector2(1010, 1840)
 
-[node name="TgRack2" parent="Objects" instance=ExtResource("k_tg_rack")]
+[node name="TgRack2" parent="Objects" unique_id=1660946401 instance=ExtResource("k_tg_rack")]
 position = Vector2(470, 1905)
 
-[node name="TgDummyA1" parent="Objects" instance=ExtResource("k_tg_dummy_a")]
+[node name="TgDummyA1" parent="Objects" unique_id=153822096 instance=ExtResource("k_tg_dummy_a")]
 position = Vector2(600, 1920)
 
-[node name="TgDummyB1" parent="Objects" instance=ExtResource("k_tg_dummy_b")]
+[node name="TgDummyB1" parent="Objects" unique_id=771094220 instance=ExtResource("k_tg_dummy_b")]
 position = Vector2(650, 1945)
 
-[node name="TgDummyC1" parent="Objects" instance=ExtResource("k_tg_dummy_c")]
+[node name="TgDummyC1" parent="Objects" unique_id=37234728 instance=ExtResource("k_tg_dummy_c")]
 position = Vector2(700, 1970)
 
-[node name="TgDummyD1" parent="Objects" instance=ExtResource("k_tg_dummy_d")]
+[node name="TgDummyD1" parent="Objects" unique_id=1572000239 instance=ExtResource("k_tg_dummy_d")]
 position = Vector2(650, 1895)
 
-[node name="TgDummyA2" parent="Objects" instance=ExtResource("k_tg_dummy_a")]
+[node name="TgDummyA2" parent="Objects" unique_id=608551466 instance=ExtResource("k_tg_dummy_a")]
 position = Vector2(700, 1920)
 
-[node name="TgDummyB2" parent="Objects" instance=ExtResource("k_tg_dummy_b")]
+[node name="TgDummyB2" parent="Objects" unique_id=1303761027 instance=ExtResource("k_tg_dummy_b")]
 position = Vector2(750, 1945)
 
-[node name="TgTargetA1" parent="Objects" instance=ExtResource("k_tg_target_a")]
+[node name="TgTargetA1" parent="Objects" unique_id=1508127620 instance=ExtResource("k_tg_target_a")]
 position = Vector2(1150, 1880)
 
-[node name="TgTargetB1" parent="Objects" instance=ExtResource("k_tg_target_b")]
+[node name="TgTargetB1" parent="Objects" unique_id=586842995 instance=ExtResource("k_tg_target_b")]
 position = Vector2(1190, 1900)
 
-[node name="TgTargetA2" parent="Objects" instance=ExtResource("k_tg_target_a")]
+[node name="TgTargetA2" parent="Objects" unique_id=571882925 instance=ExtResource("k_tg_target_a")]
 position = Vector2(1230, 1920)
 
-[node name="TgTargetB2" parent="Objects" instance=ExtResource("k_tg_target_b")]
+[node name="TgTargetB2" parent="Objects" unique_id=776703350 instance=ExtResource("k_tg_target_b")]
 position = Vector2(1110, 1860)
 
-[node name="TgDrum1" parent="Objects" instance=ExtResource("k_tg_drum")]
+[node name="TgDrum1" parent="Objects" unique_id=1199186736 instance=ExtResource("k_tg_drum")]
 position = Vector2(600, 2045)
 
-[node name="TgTent1" parent="Objects" instance=ExtResource("k_tg_tent")]
+[node name="TgTent1" parent="Objects" unique_id=1364764798 instance=ExtResource("k_tg_tent")]
 position = Vector2(1030, 2050)
 
-[node name="TgCrates1" parent="Objects" instance=ExtResource("k_tg_crates")]
+[node name="TgCrates1" parent="Objects" unique_id=1987978532 instance=ExtResource("k_tg_crates")]
 position = Vector2(1180, 1990)
 
-[node name="TgFirepit3" parent="Objects" instance=ExtResource("k_tg_firepit")]
+[node name="TgFirepit3" parent="Objects" unique_id=219444497 instance=ExtResource("k_tg_firepit")]
 position = Vector2(880, 2050)
 
-[node name="TBarrack1" parent="Objects" instance=ExtResource("k_t_barrack")]
+[node name="TBarrack1" parent="Objects" unique_id=666466773 instance=ExtResource("k_t_barrack")]
 position = Vector2(450, 1990)
 
-[node name="TObstacle1" parent="Objects" instance=ExtResource("k_t_obstacle")]
+[node name="TObstacle1" parent="Objects" unique_id=1643581818 instance=ExtResource("k_t_obstacle")]
 position = Vector2(820, 2000)
 
-[node name="RObstacle1" parent="Objects" instance=ExtResource("k_r_obstacle")]
+[node name="RObstacle1" parent="Objects" unique_id=1086906522 instance=ExtResource("k_r_obstacle")]
 position = Vector2(900, 2030)
 
-[node name="Stable1" parent="Objects" instance=ExtResource("k_stable")]
+[node name="Stable1" parent="Objects" unique_id=320999084 instance=ExtResource("k_stable")]
 position = Vector2(1880, 1890)
 
-[node name="Storage2" parent="Objects" instance=ExtResource("k_storage")]
+[node name="Storage2" parent="Objects" unique_id=1808115222 instance=ExtResource("k_storage")]
 position = Vector2(2140, 2090)
 
-[node name="RBarracks1" parent="Objects" instance=ExtResource("k_r_barracks")]
-position = Vector2(2800, 2030)
-
-[node name="RPavilion1" parent="Objects" instance=ExtResource("k_r_pavilion")]
-position = Vector2(2900, 1000)
-
-[node name="Tent1" parent="Objects" instance=ExtResource("k_tent")]
+[node name="Tent1" parent="Objects" unique_id=1632149602 instance=ExtResource("k_tent")]
 position = Vector2(1560, 1950)
 
-[node name="Tent2" parent="Objects" instance=ExtResource("k_tent")]
+[node name="Tent2" parent="Objects" unique_id=974422361 instance=ExtResource("k_tent")]
 position = Vector2(1700, 2030)
 
-[node name="Tent3" parent="Objects" instance=ExtResource("k_tent")]
+[node name="Tent3" parent="Objects" unique_id=1862767507 instance=ExtResource("k_tent")]
 position = Vector2(1450, 2080)
 
-[node name="Crates2" parent="Objects" instance=ExtResource("k_crates")]
+[node name="Crates2" parent="Objects" unique_id=1074778083 instance=ExtResource("k_crates")]
 position = Vector2(2020, 2000)
 
-[node name="Jars2" parent="Objects" instance=ExtResource("k_jars")]
+[node name="Jars2" parent="Objects" unique_id=1583208182 instance=ExtResource("k_jars")]
 position = Vector2(2560, 2080)
 
-[node name="CookingPot1" parent="Objects" instance=ExtResource("k_cooking_pot")]
+[node name="CookingPot1" parent="Objects" unique_id=1283972552 instance=ExtResource("k_cooking_pot")]
 position = Vector2(1620, 2130)
 
-[node name="FireBowl5" parent="Objects" instance=ExtResource("k_fire_bowl")]
+[node name="FireBowl5" parent="Objects" unique_id=1431941362 instance=ExtResource("k_fire_bowl")]
 position = Vector2(2950, 1060)
 
-[node name="LanternPost3" parent="Objects" instance=ExtResource("k_lantern_post")]
+[node name="LanternPost3" parent="Objects" unique_id=1667737801 instance=ExtResource("k_lantern_post")]
 position = Vector2(2990, 1350)
 
-[node name="LanternPost4" parent="Objects" instance=ExtResource("k_lantern_post")]
+[node name="LanternPost4" parent="Objects" unique_id=2064335234 instance=ExtResource("k_lantern_post")]
 position = Vector2(2990, 1420)
 
-[node name="GoldenTemple1" parent="Objects" instance=ExtResource("k_golden_temple")]
+[node name="GoldenTemple1" parent="Objects" unique_id=1386506952 instance=ExtResource("k_golden_temple")]
 position = Vector2(2760, 540)
 scale = Vector2(0.8, 0.8)
 
-[node name="Torch1" parent="Objects" instance=ExtResource("k_torch")]
+[node name="Torch1" parent="Objects" unique_id=833637348 instance=ExtResource("k_torch")]
 position = Vector2(2630, 575)
 
-[node name="Torch2" parent="Objects" instance=ExtResource("k_torch")]
+[node name="Torch2" parent="Objects" unique_id=2047090386 instance=ExtResource("k_torch")]
 position = Vector2(2890, 575)
 
-[node name="Palm1" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm1" parent="Objects" unique_id=1529108365 instance=ExtResource("k_palm")]
 position = Vector2(3067, 135)
 
-[node name="Palm2" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm2" parent="Objects" unique_id=664469405 instance=ExtResource("k_palm")]
 position = Vector2(3052, 239)
 
-[node name="Palm3" parent="Objects" instance=ExtResource("k_palm")]
-position = Vector2(3068, 394)
+[node name="Palm3" parent="Objects" unique_id=1788408980 instance=ExtResource("k_palm")]
+position = Vector2(3243, 484)
+scale = Vector2(2, 2)
 
-[node name="Palm4" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm4" parent="Objects" unique_id=37359869 instance=ExtResource("k_palm")]
 position = Vector2(3072, 522)
+scale = Vector2(2, 2)
 
-[node name="Palm5" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm5" parent="Objects" unique_id=1967387052 instance=ExtResource("k_palm")]
 position = Vector2(3007, 638)
+scale = Vector2(2.1, 2.1)
 
-[node name="Palm6" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm6" parent="Objects" unique_id=1679678542 instance=ExtResource("k_palm")]
 position = Vector2(3015, 761)
 
-[node name="Palm7" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm7" parent="Objects" unique_id=283971869 instance=ExtResource("k_palm")]
 position = Vector2(2992, 897)
 
-[node name="Palm8" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm8" parent="Objects" unique_id=1839719848 instance=ExtResource("k_palm")]
 position = Vector2(2953, 1032)
 
-[node name="Palm9" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm9" parent="Objects" unique_id=233943832 instance=ExtResource("k_palm")]
 position = Vector2(2917, 1171)
 
-[node name="Palm10" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm10" parent="Objects" unique_id=248730663 instance=ExtResource("k_palm")]
 position = Vector2(2960, 1309)
 
-[node name="Palm11" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm11" parent="Objects" unique_id=1344580063 instance=ExtResource("k_palm")]
 position = Vector2(3052, 1554)
 
-[node name="Palm12" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm12" parent="Objects" unique_id=959196158 instance=ExtResource("k_palm")]
 position = Vector2(3082, 1661)
 
-[node name="Palm13" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm13" parent="Objects" unique_id=1370671120 instance=ExtResource("k_palm")]
 position = Vector2(3074, 1808)
 
-[node name="Palm14" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm14" parent="Objects" unique_id=1972464190 instance=ExtResource("k_palm")]
 position = Vector2(3054, 1945)
 
-[node name="Palm15" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm15" parent="Objects" unique_id=285416612 instance=ExtResource("k_palm")]
 position = Vector2(3062, 2069)
 
-[node name="Palm16" parent="Objects" instance=ExtResource("k_palm")]
+[node name="Palm16" parent="Objects" unique_id=535216603 instance=ExtResource("k_palm")]
 position = Vector2(3051, 2180)
 
-[node name="RedTree9" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree9" parent="Objects" unique_id=1701698758 instance=ExtResource("k_red_tree")]
 position = Vector2(556, 615)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreen1" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen1" parent="Objects" unique_id=276283326 instance=ExtResource("k_tree_green")]
 position = Vector2(2670, 210)
 
-[node name="TreeOlive1" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive1" parent="Objects" unique_id=408078293 instance=ExtResource("k_tree_olive")]
 position = Vector2(2153, 136)
 
-[node name="RedTree10" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree10" parent="Objects" unique_id=1142768017 instance=ExtResource("k_red_tree")]
 position = Vector2(1366, 2251)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreenF1" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF1" parent="Objects" unique_id=175994565 instance=ExtResource("k_tree_green_f")]
 position = Vector2(2123, 1391)
 
-[node name="TreeOliveF1" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF1" parent="Objects" unique_id=100542941 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(348, 2226)
 
-[node name="RedTree11" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree11" parent="Objects" unique_id=1895101149 instance=ExtResource("k_red_tree")]
 position = Vector2(2383, 302)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTallF1" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF1" parent="Objects" unique_id=709222089 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(523, 442)
 
-[node name="TreeGold1" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold1" parent="Objects" unique_id=1962957878 instance=ExtResource("k_tree_gold")]
 position = Vector2(2309, 1310)
 
-[node name="RedTree12" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree12" parent="Objects" unique_id=1086869424 instance=ExtResource("k_red_tree")]
 position = Vector2(815, 456)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOlive2" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive2" parent="Objects" unique_id=661073876 instance=ExtResource("k_tree_olive")]
 position = Vector2(1245, 2180)
 
-[node name="TreeGoldF1" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF1" parent="Objects" unique_id=718551341 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(977, 2189)
 
-[node name="RedTree13" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree13" parent="Objects" unique_id=2140040779 instance=ExtResource("k_red_tree")]
 position = Vector2(1600, 2254)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOliveF2" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF2" parent="Objects" unique_id=1270997525 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2901, 1555)
 
-[node name="TreeTall1" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall1" parent="Objects" unique_id=326173640 instance=ExtResource("k_tree_tall")]
 position = Vector2(2581, 1448)
 
-[node name="RedTree14" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree14" parent="Objects" unique_id=98940535 instance=ExtResource("k_red_tree")]
 position = Vector2(182, 489)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGold2" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold2" parent="Objects" unique_id=180498920 instance=ExtResource("k_tree_gold")]
 position = Vector2(404, 1388)
 
-[node name="TreeGreen2" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen2" parent="Objects" unique_id=334849255 instance=ExtResource("k_tree_green")]
 position = Vector2(2261, 1461)
 
-[node name="RedTree15" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree15" parent="Objects" unique_id=340032877 instance=ExtResource("k_red_tree")]
 position = Vector2(662, 142)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGoldF2" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF2" parent="Objects" unique_id=1061339348 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(2934, 1678)
 
-[node name="TreeGreenF2" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF2" parent="Objects" unique_id=200311290 instance=ExtResource("k_tree_green_f")]
 position = Vector2(407, 2100)
 
-[node name="RedTree16" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree16" parent="Objects" unique_id=1759097290 instance=ExtResource("k_red_tree")]
 position = Vector2(72, 581)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTall2" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall2" parent="Objects" unique_id=1414291322 instance=ExtResource("k_tree_tall")]
 position = Vector2(1118, 2158)
 
-[node name="TreeTallF2" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF2" parent="Objects" unique_id=716760973 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2368, 1404)
 
-[node name="RedTree17" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree17" parent="Objects" unique_id=519970108 instance=ExtResource("k_red_tree")]
 position = Vector2(688, 1321)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreen3" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen3" parent="Objects" unique_id=1815976197 instance=ExtResource("k_tree_green")]
 position = Vector2(142, 1843)
 
-[node name="TreeOlive3" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive3" parent="Objects" unique_id=984847100 instance=ExtResource("k_tree_olive")]
 position = Vector2(182, 778)
 
-[node name="RedTree18" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree18" parent="Objects" unique_id=1104185499 instance=ExtResource("k_red_tree")]
 position = Vector2(1144, 259)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreenF3" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF3" parent="Objects" unique_id=1009996360 instance=ExtResource("k_tree_green_f")]
 position = Vector2(2869, 297)
 
-[node name="TreeOliveF3" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF3" parent="Objects" unique_id=1963867893 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2892, 752)
 
-[node name="RedTree19" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree19" parent="Objects" unique_id=1528367726 instance=ExtResource("k_red_tree")]
 position = Vector2(96, 1496)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTallF3" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF3" parent="Objects" unique_id=2049162907 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2709, 1331)
 
-[node name="TreeGold3" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold3" parent="Objects" unique_id=1270276217 instance=ExtResource("k_tree_gold")]
 position = Vector2(1078, 178)
 
-[node name="RedTree20" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree20" parent="Objects" unique_id=439044015 instance=ExtResource("k_red_tree")]
 position = Vector2(2747, 301)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOlive4" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive4" parent="Objects" unique_id=899552818 instance=ExtResource("k_tree_olive")]
 position = Vector2(479, 300)
 
-[node name="TreeGoldF3" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF3" parent="Objects" unique_id=1300412302 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(1334, 147)
 
-[node name="RedTree21" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree21" parent="Objects" unique_id=1180333878 instance=ExtResource("k_red_tree")]
 position = Vector2(2737, 2283)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOliveF4" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF4" parent="Objects" unique_id=263513060 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(532, 1639)
 
-[node name="TreeTall3" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall3" parent="Objects" unique_id=1267463071 instance=ExtResource("k_tree_tall")]
 position = Vector2(444, 211)
 
-[node name="RedTree22" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree22" parent="Objects" unique_id=73206949 instance=ExtResource("k_red_tree")]
 position = Vector2(243, 1088)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGold4" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold4" parent="Objects" unique_id=2117946169 instance=ExtResource("k_tree_gold")]
 position = Vector2(1638, 130)
 
-[node name="TreeGreen4" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen4" parent="Objects" unique_id=1860217194 instance=ExtResource("k_tree_green")]
 position = Vector2(645, 313)
 
-[node name="RedTree23" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree23" parent="Objects" unique_id=592424572 instance=ExtResource("k_red_tree")]
 position = Vector2(1135, 1379)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGoldF4" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF4" parent="Objects" unique_id=1920407934 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(1852, 210)
 
-[node name="TreeGreenF4" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF4" parent="Objects" unique_id=302939734 instance=ExtResource("k_tree_green_f")]
 position = Vector2(2317, 2186)
 
-[node name="RedTree24" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree24" parent="Objects" unique_id=1821174631 instance=ExtResource("k_red_tree")]
 position = Vector2(2769, 150)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTall4" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall4" parent="Objects" unique_id=790062201 instance=ExtResource("k_tree_tall")]
 position = Vector2(305, 1294)
 
-[node name="TreeTallF4" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF4" parent="Objects" unique_id=1138843316 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2546, 1272)
 
-[node name="RedTree25" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree25" parent="Objects" unique_id=282711542 instance=ExtResource("k_red_tree")]
 position = Vector2(2441, 1476)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreen5" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen5" parent="Objects" unique_id=63263529 instance=ExtResource("k_tree_green")]
 position = Vector2(2719, 1158)
 
-[node name="TreeOlive5" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive5" parent="Objects" unique_id=1424679825 instance=ExtResource("k_tree_olive")]
 position = Vector2(1403, 1978)
 
-[node name="RedTree26" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree26" parent="Objects" unique_id=697996882 instance=ExtResource("k_red_tree")]
 position = Vector2(2093, 2180)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreenF5" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF5" parent="Objects" unique_id=1991098912 instance=ExtResource("k_tree_green_f")]
 position = Vector2(263, 1993)
 
-[node name="TreeOliveF5" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF5" parent="Objects" unique_id=1980804070 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(242, 972)
 
-[node name="RedTree27" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree27" parent="Objects" unique_id=211699539 instance=ExtResource("k_red_tree")]
 position = Vector2(92, 422)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTallF5" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF5" parent="Objects" unique_id=1418461048 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(54, 1053)
 
-[node name="TreeGold5" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold5" parent="Objects" unique_id=1378749424 instance=ExtResource("k_tree_gold")]
 position = Vector2(1503, 1878)
 
-[node name="RedTree28" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree28" parent="Objects" unique_id=513300684 instance=ExtResource("k_red_tree")]
 position = Vector2(579, 2124)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOlive6" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive6" parent="Objects" unique_id=768337633 instance=ExtResource("k_tree_olive")]
 position = Vector2(2606, 1596)
 
-[node name="TreeGoldF5" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF5" parent="Objects" unique_id=1316107761 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(278, 304)
 
-[node name="RedTree29" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree29" parent="Objects" unique_id=1397638412 instance=ExtResource("k_red_tree")]
 position = Vector2(423, 1186)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOliveF6" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF6" parent="Objects" unique_id=694109091 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(126, 1265)
 
-[node name="TreeTall5" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall5" parent="Objects" unique_id=912761380 instance=ExtResource("k_tree_tall")]
 position = Vector2(975, 397)
 
-[node name="RedTree30" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree30" parent="Objects" unique_id=868385167 instance=ExtResource("k_red_tree")]
 position = Vector2(150, 902)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGold6" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold6" parent="Objects" unique_id=1047668572 instance=ExtResource("k_tree_gold")]
 position = Vector2(2085, 1488)
 
-[node name="TreeGreen6" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen6" parent="Objects" unique_id=1645298792 instance=ExtResource("k_tree_green")]
 position = Vector2(2013, 246)
 
-[node name="RedTree31" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree31" parent="Objects" unique_id=566551641 instance=ExtResource("k_red_tree")]
 position = Vector2(364, 573)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGoldF6" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF6" parent="Objects" unique_id=381192957 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(252, 393)
 
-[node name="TreeGreenF6" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF6" parent="Objects" unique_id=495325653 instance=ExtResource("k_tree_green_f")]
 position = Vector2(45, 2003)
 
-[node name="RedTree32" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree32" parent="Objects" unique_id=404348323 instance=ExtResource("k_red_tree")]
 position = Vector2(779, 299)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTall6" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall6" parent="Objects" unique_id=1625331519 instance=ExtResource("k_tree_tall")]
 position = Vector2(118, 2111)
 
-[node name="TreeTallF6" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF6" parent="Objects" unique_id=1922339610 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(219, 1734)
 
-[node name="RedTree33" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree33" parent="Objects" unique_id=1538099572 instance=ExtResource("k_red_tree")]
 position = Vector2(2290, 429)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreen7" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen7" parent="Objects" unique_id=1560859940 instance=ExtResource("k_tree_green")]
 position = Vector2(721, 2280)
 
-[node name="TreeOlive7" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive7" parent="Objects" unique_id=1193263892 instance=ExtResource("k_tree_olive")]
 position = Vector2(2289, 214)
 
-[node name="RedTree34" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree34" parent="Objects" unique_id=1914827889 instance=ExtResource("k_red_tree")]
 position = Vector2(1969, 1421)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreenF7" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF7" parent="Objects" unique_id=1789907902 instance=ExtResource("k_tree_green_f")]
 position = Vector2(2923, 1809)
 
-[node name="TreeOliveF7" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF7" parent="Objects" unique_id=1082115701 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(165, 2277)
 
-[node name="RedTree35" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree35" parent="Objects" unique_id=1862045904 instance=ExtResource("k_red_tree")]
 position = Vector2(2376, 130)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTallF7" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF7" parent="Objects" unique_id=1682016800 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(930, 1433)
 
-[node name="TreeGold7" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold7" parent="Objects" unique_id=1072030580 instance=ExtResource("k_tree_gold")]
 position = Vector2(949, 309)
 
-[node name="RedTree36" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree36" parent="Objects" unique_id=1059461501 instance=ExtResource("k_red_tree")]
 position = Vector2(768, 198)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOlive8" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive8" parent="Objects" unique_id=301405865 instance=ExtResource("k_tree_olive")]
 position = Vector2(925, 2281)
 
-[node name="TreeGoldF7" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF7" parent="Objects" unique_id=1982077472 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(632, 1471)
 
-[node name="RedTree37" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree37" parent="Objects" unique_id=1188805935 instance=ExtResource("k_red_tree")]
 position = Vector2(2587, 1187)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOliveF8" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF8" parent="Objects" unique_id=1402596073 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(206, 1645)
 
-[node name="TreeTall7" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall7" parent="Objects" unique_id=2042553050 instance=ExtResource("k_tree_tall")]
 position = Vector2(1695, 1873)
 
-[node name="RedTree38" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree38" parent="Objects" unique_id=1474994919 instance=ExtResource("k_red_tree")]
 position = Vector2(1747, 2216)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGold8" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold8" parent="Objects" unique_id=2142465864 instance=ExtResource("k_tree_gold")]
 position = Vector2(356, 1673)
 
-[node name="TreeGreen8" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen8" parent="Objects" unique_id=411241849 instance=ExtResource("k_tree_green")]
 position = Vector2(1878, 2180)
 
-[node name="RedTree39" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree39" parent="Objects" unique_id=640717403 instance=ExtResource("k_red_tree")]
 position = Vector2(2546, 2236)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGoldF8" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF8" parent="Objects" unique_id=2034866394 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(61, 1781)
 
-[node name="TreeGreenF8" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF8" parent="Objects" unique_id=1979475688 instance=ExtResource("k_tree_green_f")]
 position = Vector2(1276, 241)
 
-[node name="RedTree40" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree40" parent="Objects" unique_id=838657747 instance=ExtResource("k_red_tree")]
 position = Vector2(2232, 292)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTall8" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall8" parent="Objects" unique_id=1564305641 instance=ExtResource("k_tree_tall")]
 position = Vector2(841, 1517)
 
-[node name="TreeTallF8" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF8" parent="Objects" unique_id=332679887 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(1099, 2273)
 
-[node name="RedTree41" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree41" parent="Objects" unique_id=1708616613 instance=ExtResource("k_red_tree")]
 position = Vector2(1930, 2278)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreen9" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen9" parent="Objects" unique_id=1889940352 instance=ExtResource("k_tree_green")]
 position = Vector2(2595, 336)
 
-[node name="TreeOlive9" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive9" parent="Objects" unique_id=1476386071 instance=ExtResource("k_tree_olive")]
 position = Vector2(366, 1499)
 
-[node name="RedTree42" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree42" parent="Objects" unique_id=1432574736 instance=ExtResource("k_red_tree")]
 position = Vector2(368, 448)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGreenF9" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF9" parent="Objects" unique_id=1092459691 instance=ExtResource("k_tree_green_f")]
 position = Vector2(118, 684)
 
-[node name="TreeOliveF9" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF9" parent="Objects" unique_id=1322895548 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2248, 2278)
 
-[node name="RedTree43" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree43" parent="Objects" unique_id=2054647190 instance=ExtResource("k_red_tree")]
 position = Vector2(1075, 1510)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTallF9" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF9" parent="Objects" unique_id=45438506 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(1192, 140)
 
-[node name="TreeGold9" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold9" parent="Objects" unique_id=1666479531 instance=ExtResource("k_tree_gold")]
 position = Vector2(44, 2247)
 
-[node name="RedTree44" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree44" parent="Objects" unique_id=793454562 instance=ExtResource("k_red_tree")]
 position = Vector2(2734, 1553)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOlive10" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive10" parent="Objects" unique_id=565893417 instance=ExtResource("k_tree_olive")]
 position = Vector2(917, 213)
 
-[node name="TreeGoldF9" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF9" parent="Objects" unique_id=1783092881 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(227, 2209)
 
-[node name="RedTree45" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree45" parent="Objects" unique_id=920788070 instance=ExtResource("k_red_tree")]
 position = Vector2(835, 1303)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeOliveF10" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF10" parent="Objects" unique_id=1209195928 instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2956, 220)
 
-[node name="TreeTall9" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall9" parent="Objects" unique_id=23314017 instance=ExtResource("k_tree_tall")]
 position = Vector2(2904, 1926)
 
-[node name="RedTree46" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree46" parent="Objects" unique_id=1891653900 instance=ExtResource("k_red_tree")]
 position = Vector2(567, 1390)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGold10" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold10" parent="Objects" unique_id=1909112824 instance=ExtResource("k_tree_gold")]
 position = Vector2(479, 1103)
 
-[node name="TreeGreen10" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen10" parent="Objects" unique_id=1916513982 instance=ExtResource("k_tree_green")]
 position = Vector2(1246, 1669)
 
-[node name="RedTree47" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree47" parent="Objects" unique_id=888181707 instance=ExtResource("k_red_tree")]
 position = Vector2(449, 2273)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeGoldF10" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF10" parent="Objects" unique_id=1289578696 instance=ExtResource("k_tree_gold_f")]
 position = Vector2(2570, 166)
 
-[node name="TreeGreenF10" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF10" parent="Objects" unique_id=1509559498 instance=ExtResource("k_tree_green_f")]
 position = Vector2(48, 1645)
 
-[node name="RedTree48" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree48" parent="Objects" unique_id=1342914774 instance=ExtResource("k_red_tree")]
 position = Vector2(1275, 2068)
 scale = Vector2(0.5, 0.5)
 
-[node name="TreeTall10" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall10" parent="Objects" unique_id=1792724556 instance=ExtResource("k_tree_tall")]
 position = Vector2(2414, 495)
 
-[node name="TreeTallF10" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF10" parent="Objects" unique_id=1012470598 instance=ExtResource("k_tree_tall_f")]
 position = Vector2(74, 259)
 
-[node name="BoatDocked" parent="Objects" instance=ExtResource("p_boat")]
+[node name="BoatDocked" parent="Objects" unique_id=1290202365 instance=ExtResource("p_boat")]
 position = Vector2(3290, 1560)
 facing = "se"
 
-[node name="BoatA" parent="Objects" instance=ExtResource("p_boat")]
+[node name="BoatA" parent="Objects" unique_id=6041254 instance=ExtResource("p_boat")]
 position = Vector2(3400, 300)
 route = PackedVector2Array(3400, 300, 3440, 1000, 3380, 1950, 3460, 1200)
 speed = 16.0
 
-[node name="BoatB" parent="Objects" instance=ExtResource("p_boat")]
+[node name="BoatB" parent="Objects" unique_id=2024123225 instance=ExtResource("p_boat")]
 position = Vector2(3500, 1700)
 route = PackedVector2Array(3500, 1700, 3330, 2050, 3520, 2200, 3520, 1800)
 speed = 11.0
 
-[node name="Crow0" parent="Objects" instance=ExtResource("p_crow")]
+[node name="Crow0" parent="Objects" unique_id=209941749 instance=ExtResource("p_crow")]
 position = Vector2(1000, 2150)
 
-[node name="Crow1" parent="Objects" instance=ExtResource("p_crow")]
+[node name="Crow1" parent="Objects" unique_id=463098030 instance=ExtResource("p_crow")]
 position = Vector2(1300, 1700)
 
-[node name="Crow2" parent="Objects" instance=ExtResource("p_crow")]
+[node name="Crow2" parent="Objects" unique_id=961466313 instance=ExtResource("p_crow")]
 position = Vector2(2900, 500)
 
-[node name="SpearGuard1" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard1" parent="Objects" unique_id=1788423653 instance=ExtResource("c_spear_guard")]
 position = Vector2(1522, 1506)
-start_facing = "s"
 
-[node name="SpearGuard2" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard2" parent="Objects" unique_id=1245775326 instance=ExtResource("c_spear_guard")]
 position = Vector2(1467, 1532)
-start_facing = "s"
 
-[node name="FlagBearer1" parent="Objects" instance=ExtResource("c_flag_bearer")]
+[node name="FlagBearer1" parent="Objects" unique_id=649595800 instance=ExtResource("c_flag_bearer")]
 position = Vector2(1405, 1550)
-start_facing = "s"
 
-[node name="SpearGuard3" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard3" parent="Objects" unique_id=601399230 instance=ExtResource("c_spear_guard")]
 position = Vector2(1541, 1410)
-start_facing = "s"
 
-[node name="SpearGuard4" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard4" parent="Objects" unique_id=1101514546 instance=ExtResource("c_spear_guard")]
 position = Vector2(1678, 1506)
-start_facing = "s"
 
-[node name="SpearGuard5" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard5" parent="Objects" unique_id=13891196 instance=ExtResource("c_spear_guard")]
 position = Vector2(1732, 1532)
-start_facing = "s"
 
-[node name="FlagBearer2" parent="Objects" instance=ExtResource("c_flag_bearer")]
+[node name="FlagBearer2" parent="Objects" unique_id=884417308 instance=ExtResource("c_flag_bearer")]
 position = Vector2(1795, 1550)
-start_facing = "s"
 
-[node name="SpearGuard6" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard6" parent="Objects" unique_id=1208602803 instance=ExtResource("c_spear_guard")]
 position = Vector2(1658, 1410)
-start_facing = "s"
 
-[node name="TgBannerA3" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+[node name="TgBannerA3" parent="Objects" unique_id=648417361 instance=ExtResource("k_tg_banner_a")]
 position = Vector2(1350, 1540)
 
-[node name="TgBannerB3" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+[node name="TgBannerB3" parent="Objects" unique_id=61135287 instance=ExtResource("k_tg_banner_b")]
 position = Vector2(1850, 1540)
 
-[node name="SpearGuard7" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard7" parent="Objects" unique_id=732287349 instance=ExtResource("c_spear_guard")]
 position = Vector2(1472, 1030)
 start_facing = "e"
 
-[node name="SpearGuard8" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard8" parent="Objects" unique_id=1072153649 instance=ExtResource("c_spear_guard")]
 position = Vector2(1728, 1030)
 start_facing = "w"
 
-[node name="SpearGuard9" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard9" parent="Objects" unique_id=513557316 instance=ExtResource("c_spear_guard")]
 position = Vector2(1472, 1120)
 start_facing = "e"
 
-[node name="SpearGuard10" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard10" parent="Objects" unique_id=590437599 instance=ExtResource("c_spear_guard")]
 position = Vector2(1728, 1120)
 start_facing = "w"
 
-[node name="SpearGuard11" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard11" parent="Objects" unique_id=1153034557 instance=ExtResource("c_spear_guard")]
 position = Vector2(1472, 1210)
 start_facing = "e"
 
-[node name="SpearGuard12" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard12" parent="Objects" unique_id=1868599599 instance=ExtResource("c_spear_guard")]
 position = Vector2(1728, 1210)
 start_facing = "w"
 
-[node name="SpearGuard13" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard13" parent="Objects" unique_id=1183093757 instance=ExtResource("c_spear_guard")]
 position = Vector2(1472, 1300)
 start_facing = "e"
 
-[node name="SpearGuard14" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard14" parent="Objects" unique_id=973271377 instance=ExtResource("c_spear_guard")]
 position = Vector2(1728, 1300)
 start_facing = "w"
 
-[node name="SpearGuard15" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard15" parent="Objects" unique_id=2108359108 instance=ExtResource("c_spear_guard")]
 position = Vector2(1472, 1390)
 start_facing = "e"
 
-[node name="SpearGuard16" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard16" parent="Objects" unique_id=196773920 instance=ExtResource("c_spear_guard")]
 position = Vector2(1728, 1390)
 start_facing = "w"
 
-[node name="SpearGuard17" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard17" parent="Objects" unique_id=758777919 instance=ExtResource("c_spear_guard")]
 position = Vector2(1770, 900)
-start_facing = "s"
 
-[node name="SpearGuard18" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard18" parent="Objects" unique_id=387290307 instance=ExtResource("c_spear_guard")]
 position = Vector2(1850, 900)
-start_facing = "s"
 
-[node name="RoyalHorse1" parent="Objects" instance=ExtResource("c_royal_horse")]
+[node name="RoyalHorse1" parent="Objects" unique_id=1498114468 instance=ExtResource("c_royal_horse")]
 position = Vector2(2010, 1000)
 start_facing = "sw"
-look_at_player = false
 breathe = 0.5
 
-[node name="SpearGuard19" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard19" parent="Objects" unique_id=1961512251 instance=ExtResource("c_spear_guard")]
 position = Vector2(1146, 1730)
 start_facing = "ne"
 
-[node name="SpearGuard20" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard20" parent="Objects" unique_id=664907617 instance=ExtResource("c_spear_guard")]
 position = Vector2(1084, 1776)
 start_facing = "ne"
 
-[node name="Trainer1" parent="Objects" instance=ExtResource("c_trainer")]
+[node name="Trainer1" parent="Objects" unique_id=990732676 instance=ExtResource("c_trainer")]
 position = Vector2(820, 1790)
-start_facing = "s"
 idle_anim = "train"
 
-[node name="SpearGuard21" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard21" parent="Objects" unique_id=39511419 instance=ExtResource("c_spear_guard")]
 position = Vector2(740, 1880)
 start_facing = "n"
 
-[node name="SpearGuard22" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard22" parent="Objects" unique_id=183101035 instance=ExtResource("c_spear_guard")]
 position = Vector2(786, 1880)
 start_facing = "n"
 
-[node name="SpearGuard23" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard23" parent="Objects" unique_id=215049922 instance=ExtResource("c_spear_guard")]
 position = Vector2(832, 1880)
 start_facing = "n"
 
-[node name="SpearGuard24" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard24" parent="Objects" unique_id=1079063498 instance=ExtResource("c_spear_guard")]
 position = Vector2(878, 1880)
 start_facing = "n"
 
-[node name="SpearGuard25" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard25" parent="Objects" unique_id=16394593 instance=ExtResource("c_spear_guard")]
 position = Vector2(717, 1910)
 start_facing = "n"
 
-[node name="SpearGuard26" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard26" parent="Objects" unique_id=1371209314 instance=ExtResource("c_spear_guard")]
 position = Vector2(763, 1910)
 start_facing = "n"
 
-[node name="SpearGuard27" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard27" parent="Objects" unique_id=1582744954 instance=ExtResource("c_spear_guard")]
 position = Vector2(809, 1910)
 start_facing = "n"
 
-[node name="SpearGuard28" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard28" parent="Objects" unique_id=1838795980 instance=ExtResource("c_spear_guard")]
 position = Vector2(855, 1910)
 start_facing = "n"
 
-[node name="Archer1" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer1" parent="Objects" unique_id=37281991 instance=ExtResource("c_archer")]
 position = Vector2(1000, 1910)
 start_facing = "e"
 
-[node name="Archer2" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer2" parent="Objects" unique_id=1430013250 instance=ExtResource("c_archer")]
 position = Vector2(1030, 1928)
 start_facing = "e"
 
-[node name="Archer3" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer3" parent="Objects" unique_id=1315102550 instance=ExtResource("c_archer")]
 position = Vector2(1060, 1946)
 start_facing = "e"
 
-[node name="SpearGuard29" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard29" parent="Objects" unique_id=1613151774 instance=ExtResource("c_spear_guard")]
 position = Vector2(2400, 1780)
 start_facing = "nw"
 
-[node name="SpearGuard30" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard30" parent="Objects" unique_id=1691565843 instance=ExtResource("c_spear_guard")]
 position = Vector2(2432, 1796)
 start_facing = "nw"
 
-[node name="SpearGuard31" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard31" parent="Objects" unique_id=1657050545 instance=ExtResource("c_spear_guard")]
 position = Vector2(2464, 1812)
 start_facing = "nw"
 
-[node name="SpearGuard32" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard32" parent="Objects" unique_id=1079088328 instance=ExtResource("c_spear_guard")]
 position = Vector2(2496, 1828)
 start_facing = "nw"
 
-[node name="SpearGuard33" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard33" parent="Objects" unique_id=1395126297 instance=ExtResource("c_spear_guard")]
 position = Vector2(2528, 1844)
 start_facing = "nw"
 
-[node name="SpearGuard34" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard34" parent="Objects" unique_id=1969166986 instance=ExtResource("c_spear_guard")]
 position = Vector2(2560, 1860)
 start_facing = "nw"
 
-[node name="SpearGuard35" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard35" parent="Objects" unique_id=946861295 instance=ExtResource("c_spear_guard")]
 position = Vector2(2593, 1876)
 start_facing = "nw"
 
-[node name="SpearGuard36" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard36" parent="Objects" unique_id=160479253 instance=ExtResource("c_spear_guard")]
 position = Vector2(2430, 1764)
 start_facing = "nw"
 
-[node name="SpearGuard37" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard37" parent="Objects" unique_id=743190328 instance=ExtResource("c_spear_guard")]
 position = Vector2(2462, 1780)
 start_facing = "nw"
 
-[node name="SpearGuard38" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard38" parent="Objects" unique_id=11526948 instance=ExtResource("c_spear_guard")]
 position = Vector2(2494, 1796)
 start_facing = "nw"
 
-[node name="SpearGuard39" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard39" parent="Objects" unique_id=1646641349 instance=ExtResource("c_spear_guard")]
 position = Vector2(2526, 1813)
 start_facing = "nw"
 
-[node name="SpearGuard40" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard40" parent="Objects" unique_id=2114182861 instance=ExtResource("c_spear_guard")]
 position = Vector2(2559, 1829)
 start_facing = "nw"
 
-[node name="SpearGuard41" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard41" parent="Objects" unique_id=1265739751 instance=ExtResource("c_spear_guard")]
 position = Vector2(2591, 1845)
 start_facing = "nw"
 
-[node name="SpearGuard42" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard42" parent="Objects" unique_id=1056802034 instance=ExtResource("c_spear_guard")]
 position = Vector2(2623, 1861)
 start_facing = "nw"
 
-[node name="SpearGuard43" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard43" parent="Objects" unique_id=178012677 instance=ExtResource("c_spear_guard")]
 position = Vector2(2460, 1749)
 start_facing = "nw"
 
-[node name="SpearGuard44" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard44" parent="Objects" unique_id=861583389 instance=ExtResource("c_spear_guard")]
 position = Vector2(2492, 1765)
 start_facing = "nw"
 
-[node name="SpearGuard45" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard45" parent="Objects" unique_id=840726539 instance=ExtResource("c_spear_guard")]
 position = Vector2(2525, 1781)
 start_facing = "nw"
 
-[node name="SpearGuard46" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard46" parent="Objects" unique_id=1567763575 instance=ExtResource("c_spear_guard")]
 position = Vector2(2557, 1797)
 start_facing = "nw"
 
-[node name="SpearGuard47" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard47" parent="Objects" unique_id=916139239 instance=ExtResource("c_spear_guard")]
 position = Vector2(2589, 1813)
 start_facing = "nw"
 
-[node name="SpearGuard48" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard48" parent="Objects" unique_id=1785969647 instance=ExtResource("c_spear_guard")]
 position = Vector2(2621, 1830)
 start_facing = "nw"
 
-[node name="SpearGuard49" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard49" parent="Objects" unique_id=2096272805 instance=ExtResource("c_spear_guard")]
 position = Vector2(2653, 1846)
 start_facing = "nw"
 
-[node name="SpearGuard50" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard50" parent="Objects" unique_id=2063962635 instance=ExtResource("c_spear_guard")]
 position = Vector2(2491, 1734)
 start_facing = "nw"
 
-[node name="SpearGuard51" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard51" parent="Objects" unique_id=2110720559 instance=ExtResource("c_spear_guard")]
 position = Vector2(2523, 1750)
 start_facing = "nw"
 
-[node name="SpearGuard52" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard52" parent="Objects" unique_id=1041877435 instance=ExtResource("c_spear_guard")]
 position = Vector2(2555, 1766)
 start_facing = "nw"
 
-[node name="SpearGuard53" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard53" parent="Objects" unique_id=1328368757 instance=ExtResource("c_spear_guard")]
 position = Vector2(2587, 1782)
 start_facing = "nw"
 
-[node name="SpearGuard54" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard54" parent="Objects" unique_id=385420731 instance=ExtResource("c_spear_guard")]
 position = Vector2(2619, 1798)
 start_facing = "nw"
 
-[node name="SpearGuard55" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard55" parent="Objects" unique_id=750446042 instance=ExtResource("c_spear_guard")]
 position = Vector2(2652, 1814)
 start_facing = "nw"
 
-[node name="SpearGuard56" parent="Objects" instance=ExtResource("c_spear_guard")]
+[node name="SpearGuard56" parent="Objects" unique_id=1517369769 instance=ExtResource("c_spear_guard")]
 position = Vector2(2684, 1830)
 start_facing = "nw"
 
-[node name="Archer4" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer4" parent="Objects" unique_id=616208684 instance=ExtResource("c_archer")]
 position = Vector2(2521, 1719)
 start_facing = "nw"
 
-[node name="Archer5" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer5" parent="Objects" unique_id=1832758236 instance=ExtResource("c_archer")]
 position = Vector2(2553, 1735)
 start_facing = "nw"
 
-[node name="Archer6" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer6" parent="Objects" unique_id=392451958 instance=ExtResource("c_archer")]
 position = Vector2(2585, 1751)
 start_facing = "nw"
 
-[node name="Archer7" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer7" parent="Objects" unique_id=790857419 instance=ExtResource("c_archer")]
 position = Vector2(2618, 1767)
 start_facing = "nw"
 
-[node name="Archer8" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer8" parent="Objects" unique_id=1654050965 instance=ExtResource("c_archer")]
 position = Vector2(2650, 1783)
 start_facing = "nw"
 
-[node name="Archer9" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer9" parent="Objects" unique_id=1953880751 instance=ExtResource("c_archer")]
 position = Vector2(2682, 1799)
 start_facing = "nw"
 
-[node name="Archer10" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer10" parent="Objects" unique_id=1200145190 instance=ExtResource("c_archer")]
 position = Vector2(2714, 1815)
 start_facing = "nw"
 
-[node name="Archer11" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer11" parent="Objects" unique_id=467663845 instance=ExtResource("c_archer")]
 position = Vector2(2551, 1704)
 start_facing = "nw"
 
-[node name="Archer12" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer12" parent="Objects" unique_id=499843440 instance=ExtResource("c_archer")]
 position = Vector2(2584, 1720)
 start_facing = "nw"
 
-[node name="Archer13" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer13" parent="Objects" unique_id=1101867540 instance=ExtResource("c_archer")]
 position = Vector2(2616, 1736)
 start_facing = "nw"
 
-[node name="Archer14" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer14" parent="Objects" unique_id=733026870 instance=ExtResource("c_archer")]
 position = Vector2(2648, 1752)
 start_facing = "nw"
 
-[node name="Archer15" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer15" parent="Objects" unique_id=1403124377 instance=ExtResource("c_archer")]
 position = Vector2(2680, 1768)
 start_facing = "nw"
 
-[node name="Archer16" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer16" parent="Objects" unique_id=229745957 instance=ExtResource("c_archer")]
 position = Vector2(2712, 1784)
 start_facing = "nw"
 
-[node name="Archer17" parent="Objects" instance=ExtResource("c_archer")]
+[node name="Archer17" parent="Objects" unique_id=1521857257 instance=ExtResource("c_archer")]
 position = Vector2(2745, 1800)
 start_facing = "nw"
 
-[node name="FlagBearer3" parent="Objects" instance=ExtResource("c_flag_bearer")]
+[node name="FlagBearer3" parent="Objects" unique_id=696135306 instance=ExtResource("c_flag_bearer")]
 position = Vector2(2364, 1762)
 start_facing = "nw"
 
-[node name="FlagBearer4" parent="Objects" instance=ExtResource("c_flag_bearer")]
+[node name="FlagBearer4" parent="Objects" unique_id=1656465814 instance=ExtResource("c_flag_bearer")]
 position = Vector2(2625, 1892)
 start_facing = "nw"
 
-[node name="CavalryRider1" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+[node name="CavalryRider1" parent="Objects" unique_id=390721228 instance=ExtResource("c_cavalry_rider")]
 position = Vector2(2280, 1930)
 start_facing = "nw"
 
-[node name="CavalryRider2" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+[node name="CavalryRider2" parent="Objects" unique_id=33048495 instance=ExtResource("c_cavalry_rider")]
 position = Vector2(2340, 1960)
 start_facing = "nw"
 
-[node name="CavalryRider3" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+[node name="CavalryRider3" parent="Objects" unique_id=1863817940 instance=ExtResource("c_cavalry_rider")]
 position = Vector2(2400, 1990)
 start_facing = "nw"
 
-[node name="CavalryRider4" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+[node name="CavalryRider4" parent="Objects" unique_id=190887582 instance=ExtResource("c_cavalry_rider")]
 position = Vector2(2310, 1720)
 start_facing = "nw"
 look_at_player = true
 
-[node name="ElephantRider1" parent="Objects" instance=ExtResource("c_elephant_rider")]
+[node name="WarElephant1" parent="Objects" unique_id=2110847245 instance=ExtResource("c_eleph")]
 position = Vector2(2730, 1740)
-start_facing = "nw"
-
-[node name="ElephantRider2" parent="Objects" instance=ExtResource("c_elephant_rider")]
-position = Vector2(2780, 1870)
 start_facing = "w"
-patrol_points = PackedVector2Array(2780, 1870, 2620, 1960)
-walk_speed = 10.0
-wait_time = 6.0
 
-[node name="Moon" type="DirectionalLight2D" parent="."]
+[node name="WarElephant2" parent="Objects" unique_id=197587109 instance=ExtResource("c_eleph")]
+position = Vector2(2800, 1880)
+patrol_points = PackedVector2Array(2800, 1880, 2550, 2010, 2250, 2010)
+speed = 14.0
+wait_time = 5.0
+start_facing = "w"
+
+[node name="Moon" type="DirectionalLight2D" parent="." unique_id=1549912346]
 rotation = -2.3
 color = Color(0.6, 0.72, 1, 1)
 energy = 0.0
 height = 0.6
 
-[node name="SunShafts" type="Node2D" parent="."]
+[node name="SunShafts" type="Node2D" parent="." unique_id=2054698571]
 
-[node name="Shaft0" type="Sprite2D" parent="SunShafts"]
-modulate = Color(1, 0.88, 0.6, 0.040)
+[node name="Shaft0" type="Sprite2D" parent="SunShafts" unique_id=1332401068]
+modulate = Color(1, 0.88, 0.6, 0.04)
 material = SubResource("M_add")
 position = Vector2(428, 467)
 rotation = 0.95
-scale = Vector2(2.80, 11.0)
+scale = Vector2(2.8, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft1" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft1" type="Sprite2D" parent="SunShafts" unique_id=226231005]
 modulate = Color(1, 0.88, 0.6, 0.029)
 material = SubResource("M_add")
 position = Vector2(457, 855)
 rotation = 0.95
-scale = Vector2(2.16, 11.0)
+scale = Vector2(2.16, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft2" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft2" type="Sprite2D" parent="SunShafts" unique_id=481734544]
 modulate = Color(1, 0.88, 0.6, 0.038)
 material = SubResource("M_add")
 position = Vector2(2619, 224)
 rotation = 0.95
-scale = Vector2(1.98, 11.0)
+scale = Vector2(1.98, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft3" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft3" type="Sprite2D" parent="SunShafts" unique_id=624401516]
 modulate = Color(1, 0.88, 0.6, 0.049)
 material = SubResource("M_add")
 position = Vector2(1592, 1158)
 rotation = 0.95
-scale = Vector2(2.68, 11.0)
+scale = Vector2(2.68, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft4" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft4" type="Sprite2D" parent="SunShafts" unique_id=976671408]
 modulate = Color(1, 0.88, 0.6, 0.032)
 material = SubResource("M_add")
 position = Vector2(1098, 1281)
 rotation = 0.95
-scale = Vector2(2.59, 11.0)
+scale = Vector2(2.59, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft5" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft5" type="Sprite2D" parent="SunShafts" unique_id=1080737274]
 modulate = Color(1, 0.88, 0.6, 0.033)
 material = SubResource("M_add")
 position = Vector2(144, 1922)
 rotation = 0.95
-scale = Vector2(1.80, 11.0)
+scale = Vector2(1.8, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft6" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft6" type="Sprite2D" parent="SunShafts" unique_id=919468479]
 modulate = Color(1, 0.88, 0.6, 0.044)
 material = SubResource("M_add")
 position = Vector2(3150, 1155)
 rotation = 0.95
-scale = Vector2(2.14, 11.0)
+scale = Vector2(2.14, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft7" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft7" type="Sprite2D" parent="SunShafts" unique_id=659467951]
 modulate = Color(1, 0.88, 0.6, 0.027)
 material = SubResource("M_add")
 position = Vector2(242, 1396)
 rotation = 0.95
-scale = Vector2(1.95, 11.0)
+scale = Vector2(1.95, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft8" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft8" type="Sprite2D" parent="SunShafts" unique_id=239802782]
 modulate = Color(1, 0.88, 0.6, 0.041)
 material = SubResource("M_add")
 position = Vector2(2369, 1840)
 rotation = 0.95
-scale = Vector2(1.61, 11.0)
+scale = Vector2(1.61, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft9" type="Sprite2D" parent="SunShafts"]
-modulate = Color(1, 0.88, 0.6, 0.030)
+[node name="Shaft9" type="Sprite2D" parent="SunShafts" unique_id=1062974193]
+modulate = Color(1, 0.88, 0.6, 0.03)
 material = SubResource("M_add")
 position = Vector2(1146, 1464)
 rotation = 0.95
-scale = Vector2(2.64, 11.0)
+scale = Vector2(2.64, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft10" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft10" type="Sprite2D" parent="SunShafts" unique_id=1333264894]
 modulate = Color(1, 0.88, 0.6, 0.046)
 material = SubResource("M_add")
 position = Vector2(2940, 1299)
 rotation = 0.95
-scale = Vector2(2.57, 11.0)
+scale = Vector2(2.57, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft11" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft11" type="Sprite2D" parent="SunShafts" unique_id=1669628516]
 modulate = Color(1, 0.88, 0.6, 0.028)
 material = SubResource("M_add")
 position = Vector2(1585, 1498)
 rotation = 0.95
-scale = Vector2(2.96, 11.0)
+scale = Vector2(2.96, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft12" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft12" type="Sprite2D" parent="SunShafts" unique_id=1433888032]
 modulate = Color(1, 0.88, 0.6, 0.029)
 material = SubResource("M_add")
 position = Vector2(3007, 778)
 rotation = 0.95
-scale = Vector2(2.16, 11.0)
+scale = Vector2(2.16, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft13" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft13" type="Sprite2D" parent="SunShafts" unique_id=85520525]
 modulate = Color(1, 0.88, 0.6, 0.032)
 material = SubResource("M_add")
 position = Vector2(2496, 576)
 rotation = 0.95
-scale = Vector2(2.94, 11.0)
+scale = Vector2(2.94, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft14" type="Sprite2D" parent="SunShafts"]
-modulate = Color(1, 0.88, 0.6, 0.030)
+[node name="Shaft14" type="Sprite2D" parent="SunShafts" unique_id=90617878]
+modulate = Color(1, 0.88, 0.6, 0.03)
 material = SubResource("M_add")
 position = Vector2(2035, 788)
 rotation = 0.95
-scale = Vector2(2.43, 11.0)
+scale = Vector2(2.43, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="Shaft15" type="Sprite2D" parent="SunShafts"]
+[node name="Shaft15" type="Sprite2D" parent="SunShafts" unique_id=1360329372]
 modulate = Color(1, 0.88, 0.6, 0.039)
 material = SubResource("M_add")
 position = Vector2(748, 1475)
 rotation = 0.95
-scale = Vector2(2.70, 11.0)
+scale = Vector2(2.7, 11)
 texture = SubResource("T_beam")
 script = ExtResource("sc_fl")
 amount = 0.4
 speed = 0.1
 
-[node name="FallingLeaves" type="CPUParticles2D" parent="."]
+[node name="FallingLeaves" type="CPUParticles2D" parent="." unique_id=658337631]
 position = Vector2(1800, 1150)
 amount = 40
 lifetime = 9.0
@@ -1797,7 +1698,7 @@ scale_amount_min = 1.5
 scale_amount_max = 2.5
 color_ramp = SubResource("G_leaf")
 
-[node name="Fireflies" type="CPUParticles2D" parent="."]
+[node name="Fireflies" type="CPUParticles2D" parent="." unique_id=375433334]
 material = SubResource("M_add")
 position = Vector2(1800, 1150)
 amount = 90
@@ -1810,23 +1711,22 @@ spread = 180.0
 gravity = Vector2(0, -1)
 initial_velocity_min = 1.0
 initial_velocity_max = 5.0
-scale_amount_min = 1.0
 scale_amount_max = 1.5
 color_ramp = SubResource("G_fly")
 
-[node name="PlayerSpawn" type="Marker2D" parent="."]
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=292221662]
 position = Vector2(1600, 1570)
 
-[node name="FromVillage" type="Marker2D" parent="."]
+[node name="FromVillage" type="Marker2D" parent="." unique_id=184713405]
 position = Vector2(70, 1562)
 
-[node name="Sun" type="DirectionalLight2D" parent="."]
+[node name="Sun" type="DirectionalLight2D" parent="." unique_id=749239030]
 rotation = 2.356
 color = Color(1, 0.86, 0.66, 1)
 energy = 0.5
 height = 0.5
 
-[node name="Dust" type="CPUParticles2D" parent="."]
+[node name="Dust" type="CPUParticles2D" parent="." unique_id=1821066312]
 material = SubResource("M_add")
 position = Vector2(1800, 1150)
 amount = 110
@@ -1841,7 +1741,7 @@ initial_velocity_min = 2.0
 initial_velocity_max = 6.0
 color_ramp = SubResource("G_dust")
 
-[node name="GrassField" parent="." instance=ExtResource("p_grass")]
+[node name="GrassField" parent="." unique_id=571749283 instance=ExtResource("p_grass")]
 mask = ExtResource("t_gm")
 map_size = Vector2(3600, 2300)
 density = 0.8
@@ -1850,18 +1750,18 @@ leaf_dark = Color(0.42, 0.46, 0.22, 1)
 leaf_base = Color(0.26, 0.28, 0.13, 1)
 tip_dry = Color(0.88, 0.8, 0.5, 1)
 
-[node name="Weather" parent="." instance=ExtResource("p_weather")]
+[node name="Weather" parent="." unique_id=322110078 instance=ExtResource("p_weather")]
 
-[node name="ExitToVillage" type="Area2D" parent="."]
+[node name="ExitToVillage" type="Area2D" parent="." unique_id=1763774290]
 position = Vector2(6, 1562)
 script = ExtResource("sc_exit")
 target_scene = "res://scenes/forest/forest_road.tscn"
 spawn_marker = "FromPalace"
 
-[node name="Shape" type="CollisionShape2D" parent="ExitToVillage"]
+[node name="Shape" type="CollisionShape2D" parent="ExitToVillage" unique_id=904705466]
 shape = SubResource("ExitR")
 
-[node name="Sign" type="Label" parent="ExitToVillage"]
+[node name="Sign" type="Label" parent="ExitToVillage" unique_id=1140783352]
 offset_left = 12.0
 offset_top = -70.0
 offset_right = 112.0

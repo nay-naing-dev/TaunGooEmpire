@@ -1,45 +1,25 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://bfans1w45r143"]
 
-[ext_resource type="Texture2D" path="boat_e.png" id="d0"]
-[ext_resource type="Texture2D" path="boat_e_n.png" id="n0"]
-[ext_resource type="Texture2D" path="boat_se.png" id="d1"]
-[ext_resource type="Texture2D" path="boat_se_n.png" id="n1"]
-[ext_resource type="Texture2D" path="boat_s.png" id="d2"]
-[ext_resource type="Texture2D" path="boat_s_n.png" id="n2"]
-[ext_resource type="Texture2D" path="boat_sw.png" id="d3"]
-[ext_resource type="Texture2D" path="boat_sw_n.png" id="n3"]
-[ext_resource type="Texture2D" path="boat_w.png" id="d4"]
-[ext_resource type="Texture2D" path="boat_w_n.png" id="n4"]
-[ext_resource type="Texture2D" path="boat_nw.png" id="d5"]
-[ext_resource type="Texture2D" path="boat_nw_n.png" id="n5"]
-[ext_resource type="Texture2D" path="boat_n.png" id="d6"]
-[ext_resource type="Texture2D" path="boat_n_n.png" id="n6"]
-[ext_resource type="Texture2D" path="boat_ne.png" id="d7"]
-[ext_resource type="Texture2D" path="boat_ne_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://cntftixdsm45b" path="res://environment/palace/boats/boat_e.png" id="d0"]
+[ext_resource type="Texture2D" uid="uid://dqdut3u1vh6b" path="res://environment/palace/boats/boat_se.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://cybmubqupnp47" path="res://environment/palace/boats/boat_s.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://d27orvxoyurtd" path="res://environment/palace/boats/boat_sw.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://bs05r60sbdpeb" path="res://environment/palace/boats/boat_w.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://cy23euoyii1o1" path="res://environment/palace/boats/boat_nw.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://b48avedjyxjdr" path="res://environment/palace/boats/boat_n.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://iwn3a3r6urt8" path="res://environment/palace/boats/boat_ne.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://b6efspdpyvjcs" path="res://environment/palace/boats/boat_e_n.png" id="n0"]
+[ext_resource type="Texture2D" uid="uid://cmj35b7l4xovm" path="res://environment/palace/boats/boat_se_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://4vi32m8qshjp" path="res://environment/palace/boats/boat_s_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://b48iejcif5uiv" path="res://environment/palace/boats/boat_sw_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://dedw1n6830aov" path="res://environment/palace/boats/boat_w_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://u8i2fccwm05a" path="res://environment/palace/boats/boat_nw_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://da1ptjtwpi4hj" path="res://environment/palace/boats/boat_n_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://gheph61sajaq" path="res://environment/palace/boats/boat_ne_n.png" id="n7"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
 normal_texture = ExtResource("n0")
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
-
-[sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
-
-[sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
-
-[sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
 
 [sub_resource type="CanvasTexture" id="C6"]
 diffuse_texture = ExtResource("d6")
@@ -49,61 +29,41 @@ normal_texture = ExtResource("n6")
 diffuse_texture = ExtResource("d7")
 normal_texture = ExtResource("n7")
 
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"e",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C1")
-}],
-"loop": true,
-"name": &"se",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C2")
-}],
-"loop": true,
-"name": &"s",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C3")
-}],
-"loop": true,
-"name": &"sw",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C4")
-}],
-"loop": true,
-"name": &"w",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}],
-"loop": true,
-"name": &"nw",
 "speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"n",
 "speed": 1.0
 }, {
@@ -111,7 +71,47 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"ne",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}],
+"loop": 1,
+"name": &"nw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C2")
+}],
+"loop": 1,
+"name": &"s",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": 1,
+"name": &"se",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C3")
+}],
+"loop": 1,
+"name": &"sw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": 1,
+"name": &"w",
 "speed": 1.0
 }]

@@ -1,237 +1,187 @@
-[gd_resource type="SpriteFrames" load_steps=313 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://dm3dgukk341hc"]
 
-[ext_resource type="Texture2D" path="frames/v0/attack_e_0.png" id="d0"]
-[ext_resource type="Texture2D" path="frames/attack_e_0_n.png" id="n0"]
-[ext_resource type="Texture2D" path="frames/v0/attack_e_1.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/attack_e_1_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/v0/attack_e_2.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/attack_e_2_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_0.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/attack_n_0_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_1.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/attack_n_1_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_2.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/attack_n_2_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_0.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/attack_n_0_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_1.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/attack_n_1_n.png" id="n7"]
-[ext_resource type="Texture2D" path="frames/v0/attack_n_2.png" id="d8"]
-[ext_resource type="Texture2D" path="frames/attack_n_2_n.png" id="n8"]
-[ext_resource type="Texture2D" path="frames/v0/attack_nw_0.png" id="d9"]
-[ext_resource type="Texture2D" path="frames/attack_nw_0_n.png" id="n9"]
-[ext_resource type="Texture2D" path="frames/v0/attack_nw_1.png" id="d10"]
-[ext_resource type="Texture2D" path="frames/attack_nw_1_n.png" id="n10"]
-[ext_resource type="Texture2D" path="frames/v0/attack_nw_2.png" id="d11"]
-[ext_resource type="Texture2D" path="frames/attack_nw_2_n.png" id="n11"]
-[ext_resource type="Texture2D" path="frames/v0/attack_s_0.png" id="d12"]
-[ext_resource type="Texture2D" path="frames/attack_s_0_n.png" id="n12"]
-[ext_resource type="Texture2D" path="frames/v0/attack_s_1.png" id="d13"]
-[ext_resource type="Texture2D" path="frames/attack_s_1_n.png" id="n13"]
-[ext_resource type="Texture2D" path="frames/v0/attack_s_2.png" id="d14"]
-[ext_resource type="Texture2D" path="frames/attack_s_2_n.png" id="n14"]
-[ext_resource type="Texture2D" path="frames/v0/attack_e_0.png" id="d15"]
-[ext_resource type="Texture2D" path="frames/attack_e_0_n.png" id="n15"]
-[ext_resource type="Texture2D" path="frames/v0/attack_e_1.png" id="d16"]
-[ext_resource type="Texture2D" path="frames/attack_e_1_n.png" id="n16"]
-[ext_resource type="Texture2D" path="frames/v0/attack_e_2.png" id="d17"]
-[ext_resource type="Texture2D" path="frames/attack_e_2_n.png" id="n17"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_0.png" id="d18"]
-[ext_resource type="Texture2D" path="frames/attack_sw_0_n.png" id="n18"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_1.png" id="d19"]
-[ext_resource type="Texture2D" path="frames/attack_sw_1_n.png" id="n19"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_2.png" id="d20"]
-[ext_resource type="Texture2D" path="frames/attack_sw_2_n.png" id="n20"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_0.png" id="d21"]
-[ext_resource type="Texture2D" path="frames/attack_sw_0_n.png" id="n21"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_1.png" id="d22"]
-[ext_resource type="Texture2D" path="frames/attack_sw_1_n.png" id="n22"]
-[ext_resource type="Texture2D" path="frames/v0/attack_sw_2.png" id="d23"]
-[ext_resource type="Texture2D" path="frames/attack_sw_2_n.png" id="n23"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_0.png" id="d24"]
-[ext_resource type="Texture2D" path="frames/death_e_0_n.png" id="n24"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_1.png" id="d25"]
-[ext_resource type="Texture2D" path="frames/death_e_1_n.png" id="n25"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_2.png" id="d26"]
-[ext_resource type="Texture2D" path="frames/death_e_2_n.png" id="n26"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_3.png" id="d27"]
-[ext_resource type="Texture2D" path="frames/death_e_3_n.png" id="n27"]
-[ext_resource type="Texture2D" path="frames/v0/death_n_0.png" id="d28"]
-[ext_resource type="Texture2D" path="frames/death_n_0_n.png" id="n28"]
-[ext_resource type="Texture2D" path="frames/v0/death_n_1.png" id="d29"]
-[ext_resource type="Texture2D" path="frames/death_n_1_n.png" id="n29"]
-[ext_resource type="Texture2D" path="frames/v0/death_n_2.png" id="d30"]
-[ext_resource type="Texture2D" path="frames/death_n_2_n.png" id="n30"]
-[ext_resource type="Texture2D" path="frames/v0/death_n_3.png" id="d31"]
-[ext_resource type="Texture2D" path="frames/death_n_3_n.png" id="n31"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_0.png" id="d32"]
-[ext_resource type="Texture2D" path="frames/death_e_0_n.png" id="n32"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_1.png" id="d33"]
-[ext_resource type="Texture2D" path="frames/death_e_1_n.png" id="n33"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_2.png" id="d34"]
-[ext_resource type="Texture2D" path="frames/death_e_2_n.png" id="n34"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_3.png" id="d35"]
-[ext_resource type="Texture2D" path="frames/death_e_3_n.png" id="n35"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_0.png" id="d36"]
-[ext_resource type="Texture2D" path="frames/death_nw_0_n.png" id="n36"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_1.png" id="d37"]
-[ext_resource type="Texture2D" path="frames/death_nw_1_n.png" id="n37"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_2.png" id="d38"]
-[ext_resource type="Texture2D" path="frames/death_nw_2_n.png" id="n38"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_3.png" id="d39"]
-[ext_resource type="Texture2D" path="frames/death_nw_3_n.png" id="n39"]
-[ext_resource type="Texture2D" path="frames/v0/death_s_0.png" id="d40"]
-[ext_resource type="Texture2D" path="frames/death_s_0_n.png" id="n40"]
-[ext_resource type="Texture2D" path="frames/v0/death_s_1.png" id="d41"]
-[ext_resource type="Texture2D" path="frames/death_s_1_n.png" id="n41"]
-[ext_resource type="Texture2D" path="frames/v0/death_s_2.png" id="d42"]
-[ext_resource type="Texture2D" path="frames/death_s_2_n.png" id="n42"]
-[ext_resource type="Texture2D" path="frames/v0/death_s_3.png" id="d43"]
-[ext_resource type="Texture2D" path="frames/death_s_3_n.png" id="n43"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_0.png" id="d44"]
-[ext_resource type="Texture2D" path="frames/death_e_0_n.png" id="n44"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_1.png" id="d45"]
-[ext_resource type="Texture2D" path="frames/death_e_1_n.png" id="n45"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_2.png" id="d46"]
-[ext_resource type="Texture2D" path="frames/death_e_2_n.png" id="n46"]
-[ext_resource type="Texture2D" path="frames/v0/death_e_3.png" id="d47"]
-[ext_resource type="Texture2D" path="frames/death_e_3_n.png" id="n47"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_0.png" id="d48"]
-[ext_resource type="Texture2D" path="frames/death_nw_0_n.png" id="n48"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_1.png" id="d49"]
-[ext_resource type="Texture2D" path="frames/death_nw_1_n.png" id="n49"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_2.png" id="d50"]
-[ext_resource type="Texture2D" path="frames/death_nw_2_n.png" id="n50"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_3.png" id="d51"]
-[ext_resource type="Texture2D" path="frames/death_nw_3_n.png" id="n51"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_0.png" id="d52"]
-[ext_resource type="Texture2D" path="frames/death_nw_0_n.png" id="n52"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_1.png" id="d53"]
-[ext_resource type="Texture2D" path="frames/death_nw_1_n.png" id="n53"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_2.png" id="d54"]
-[ext_resource type="Texture2D" path="frames/death_nw_2_n.png" id="n54"]
-[ext_resource type="Texture2D" path="frames/v0/death_nw_3.png" id="d55"]
-[ext_resource type="Texture2D" path="frames/death_nw_3_n.png" id="n55"]
-[ext_resource type="Texture2D" path="frames/v0/idle_e_0.png" id="d56"]
-[ext_resource type="Texture2D" path="frames/idle_e_0_n.png" id="n56"]
-[ext_resource type="Texture2D" path="frames/v0/idle_n_0.png" id="d57"]
-[ext_resource type="Texture2D" path="frames/idle_n_0_n.png" id="n57"]
-[ext_resource type="Texture2D" path="frames/v0/idle_ne_0.png" id="d58"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0_n.png" id="n58"]
-[ext_resource type="Texture2D" path="frames/v0/idle_nw_0.png" id="d59"]
-[ext_resource type="Texture2D" path="frames/idle_nw_0_n.png" id="n59"]
-[ext_resource type="Texture2D" path="frames/v0/idle_s_0.png" id="d60"]
-[ext_resource type="Texture2D" path="frames/idle_s_0_n.png" id="n60"]
-[ext_resource type="Texture2D" path="frames/v0/idle_se_0.png" id="d61"]
-[ext_resource type="Texture2D" path="frames/idle_se_0_n.png" id="n61"]
-[ext_resource type="Texture2D" path="frames/v0/idle_sw_0.png" id="d62"]
-[ext_resource type="Texture2D" path="frames/idle_sw_0_n.png" id="n62"]
-[ext_resource type="Texture2D" path="frames/v0/idle_w_0.png" id="d63"]
-[ext_resource type="Texture2D" path="frames/idle_w_0_n.png" id="n63"]
-[ext_resource type="Texture2D" path="frames/v0/run_e_0.png" id="d64"]
-[ext_resource type="Texture2D" path="frames/run_e_0_n.png" id="n64"]
-[ext_resource type="Texture2D" path="frames/v0/run_e_1.png" id="d65"]
-[ext_resource type="Texture2D" path="frames/run_e_1_n.png" id="n65"]
-[ext_resource type="Texture2D" path="frames/v0/run_e_2.png" id="d66"]
-[ext_resource type="Texture2D" path="frames/run_e_2_n.png" id="n66"]
-[ext_resource type="Texture2D" path="frames/v0/run_e_3.png" id="d67"]
-[ext_resource type="Texture2D" path="frames/run_e_3_n.png" id="n67"]
-[ext_resource type="Texture2D" path="frames/v0/run_e_4.png" id="d68"]
-[ext_resource type="Texture2D" path="frames/run_e_4_n.png" id="n68"]
-[ext_resource type="Texture2D" path="frames/v0/run_n_0.png" id="d69"]
-[ext_resource type="Texture2D" path="frames/run_n_0_n.png" id="n69"]
-[ext_resource type="Texture2D" path="frames/v0/run_n_1.png" id="d70"]
-[ext_resource type="Texture2D" path="frames/run_n_1_n.png" id="n70"]
-[ext_resource type="Texture2D" path="frames/v0/run_n_2.png" id="d71"]
-[ext_resource type="Texture2D" path="frames/run_n_2_n.png" id="n71"]
-[ext_resource type="Texture2D" path="frames/v0/run_n_3.png" id="d72"]
-[ext_resource type="Texture2D" path="frames/run_n_3_n.png" id="n72"]
-[ext_resource type="Texture2D" path="frames/v0/run_n_4.png" id="d73"]
-[ext_resource type="Texture2D" path="frames/run_n_4_n.png" id="n73"]
-[ext_resource type="Texture2D" path="frames/v0/run_ne_0.png" id="d74"]
-[ext_resource type="Texture2D" path="frames/run_ne_0_n.png" id="n74"]
-[ext_resource type="Texture2D" path="frames/v0/run_ne_1.png" id="d75"]
-[ext_resource type="Texture2D" path="frames/run_ne_1_n.png" id="n75"]
-[ext_resource type="Texture2D" path="frames/v0/run_ne_2.png" id="d76"]
-[ext_resource type="Texture2D" path="frames/run_ne_2_n.png" id="n76"]
-[ext_resource type="Texture2D" path="frames/v0/run_ne_3.png" id="d77"]
-[ext_resource type="Texture2D" path="frames/run_ne_3_n.png" id="n77"]
-[ext_resource type="Texture2D" path="frames/v0/run_ne_4.png" id="d78"]
-[ext_resource type="Texture2D" path="frames/run_ne_4_n.png" id="n78"]
-[ext_resource type="Texture2D" path="frames/v0/run_nw_0.png" id="d79"]
-[ext_resource type="Texture2D" path="frames/run_nw_0_n.png" id="n79"]
-[ext_resource type="Texture2D" path="frames/v0/run_nw_1.png" id="d80"]
-[ext_resource type="Texture2D" path="frames/run_nw_1_n.png" id="n80"]
-[ext_resource type="Texture2D" path="frames/v0/run_nw_2.png" id="d81"]
-[ext_resource type="Texture2D" path="frames/run_nw_2_n.png" id="n81"]
-[ext_resource type="Texture2D" path="frames/v0/run_nw_3.png" id="d82"]
-[ext_resource type="Texture2D" path="frames/run_nw_3_n.png" id="n82"]
-[ext_resource type="Texture2D" path="frames/v0/run_nw_4.png" id="d83"]
-[ext_resource type="Texture2D" path="frames/run_nw_4_n.png" id="n83"]
-[ext_resource type="Texture2D" path="frames/v0/run_s_0.png" id="d84"]
-[ext_resource type="Texture2D" path="frames/run_s_0_n.png" id="n84"]
-[ext_resource type="Texture2D" path="frames/v0/run_s_1.png" id="d85"]
-[ext_resource type="Texture2D" path="frames/run_s_1_n.png" id="n85"]
-[ext_resource type="Texture2D" path="frames/v0/run_s_2.png" id="d86"]
-[ext_resource type="Texture2D" path="frames/run_s_2_n.png" id="n86"]
-[ext_resource type="Texture2D" path="frames/v0/run_s_3.png" id="d87"]
-[ext_resource type="Texture2D" path="frames/run_s_3_n.png" id="n87"]
-[ext_resource type="Texture2D" path="frames/v0/run_s_4.png" id="d88"]
-[ext_resource type="Texture2D" path="frames/run_s_4_n.png" id="n88"]
-[ext_resource type="Texture2D" path="frames/v0/run_se_0.png" id="d89"]
-[ext_resource type="Texture2D" path="frames/run_se_0_n.png" id="n89"]
-[ext_resource type="Texture2D" path="frames/v0/run_se_1.png" id="d90"]
-[ext_resource type="Texture2D" path="frames/run_se_1_n.png" id="n90"]
-[ext_resource type="Texture2D" path="frames/v0/run_se_2.png" id="d91"]
-[ext_resource type="Texture2D" path="frames/run_se_2_n.png" id="n91"]
-[ext_resource type="Texture2D" path="frames/v0/run_se_3.png" id="d92"]
-[ext_resource type="Texture2D" path="frames/run_se_3_n.png" id="n92"]
-[ext_resource type="Texture2D" path="frames/v0/run_se_4.png" id="d93"]
-[ext_resource type="Texture2D" path="frames/run_se_4_n.png" id="n93"]
-[ext_resource type="Texture2D" path="frames/v0/run_sw_0.png" id="d94"]
-[ext_resource type="Texture2D" path="frames/run_sw_0_n.png" id="n94"]
-[ext_resource type="Texture2D" path="frames/v0/run_sw_1.png" id="d95"]
-[ext_resource type="Texture2D" path="frames/run_sw_1_n.png" id="n95"]
-[ext_resource type="Texture2D" path="frames/v0/run_sw_2.png" id="d96"]
-[ext_resource type="Texture2D" path="frames/run_sw_2_n.png" id="n96"]
-[ext_resource type="Texture2D" path="frames/v0/run_sw_3.png" id="d97"]
-[ext_resource type="Texture2D" path="frames/run_sw_3_n.png" id="n97"]
-[ext_resource type="Texture2D" path="frames/v0/run_sw_4.png" id="d98"]
-[ext_resource type="Texture2D" path="frames/run_sw_4_n.png" id="n98"]
-[ext_resource type="Texture2D" path="frames/v0/run_w_0.png" id="d99"]
-[ext_resource type="Texture2D" path="frames/run_w_0_n.png" id="n99"]
-[ext_resource type="Texture2D" path="frames/v0/run_w_1.png" id="d100"]
-[ext_resource type="Texture2D" path="frames/run_w_1_n.png" id="n100"]
-[ext_resource type="Texture2D" path="frames/v0/run_w_2.png" id="d101"]
-[ext_resource type="Texture2D" path="frames/run_w_2_n.png" id="n101"]
-[ext_resource type="Texture2D" path="frames/v0/run_w_3.png" id="d102"]
-[ext_resource type="Texture2D" path="frames/run_w_3_n.png" id="n102"]
-[ext_resource type="Texture2D" path="frames/v0/run_w_4.png" id="d103"]
-[ext_resource type="Texture2D" path="frames/run_w_4_n.png" id="n103"]
+[ext_resource type="Texture2D" uid="uid://yw54w7jbkxy7" path="res://characters/npcs/bandit_raider/frames/v0/attack_n_0.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://dghc78gvkr2l2" path="res://characters/npcs/bandit_raider/frames/v0/attack_n_1.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://cggbyt2n6ylyw" path="res://characters/npcs/bandit_raider/frames/v0/attack_n_2.png" id="d8"]
+[ext_resource type="Texture2D" uid="uid://2vf2v1mw7w3w" path="res://characters/npcs/bandit_raider/frames/v0/attack_nw_0.png" id="d9"]
+[ext_resource type="Texture2D" uid="uid://bpyr6lik2okfn" path="res://characters/npcs/bandit_raider/frames/v0/attack_nw_1.png" id="d10"]
+[ext_resource type="Texture2D" uid="uid://coac2yog8f7bh" path="res://characters/npcs/bandit_raider/frames/v0/attack_nw_2.png" id="d11"]
+[ext_resource type="Texture2D" uid="uid://cyts30388kjf5" path="res://characters/npcs/bandit_raider/frames/v0/attack_s_0.png" id="d12"]
+[ext_resource type="Texture2D" uid="uid://7hvqx7vltlfc" path="res://characters/npcs/bandit_raider/frames/v0/attack_s_1.png" id="d13"]
+[ext_resource type="Texture2D" uid="uid://tvx7x1t7ycwy" path="res://characters/npcs/bandit_raider/frames/v0/attack_s_2.png" id="d14"]
+[ext_resource type="Texture2D" uid="uid://dxbb8xsepkq63" path="res://characters/npcs/bandit_raider/frames/v0/attack_e_0.png" id="d15"]
+[ext_resource type="Texture2D" uid="uid://dcxuxupm7mio" path="res://characters/npcs/bandit_raider/frames/v0/attack_e_1.png" id="d16"]
+[ext_resource type="Texture2D" uid="uid://rpeluuyybtxj" path="res://characters/npcs/bandit_raider/frames/v0/attack_e_2.png" id="d17"]
+[ext_resource type="Texture2D" uid="uid://ci7ro12wxc8sy" path="res://characters/npcs/bandit_raider/frames/v0/attack_sw_0.png" id="d21"]
+[ext_resource type="Texture2D" uid="uid://ru5ah4uhkmwo" path="res://characters/npcs/bandit_raider/frames/v0/attack_sw_1.png" id="d22"]
+[ext_resource type="Texture2D" uid="uid://dianbw8njgex8" path="res://characters/npcs/bandit_raider/frames/v0/attack_sw_2.png" id="d23"]
+[ext_resource type="Texture2D" uid="uid://b5jv55mlm0gsw" path="res://characters/npcs/bandit_raider/frames/v0/death_n_0.png" id="d28"]
+[ext_resource type="Texture2D" uid="uid://dkic53opm4viv" path="res://characters/npcs/bandit_raider/frames/v0/death_n_1.png" id="d29"]
+[ext_resource type="Texture2D" uid="uid://bdjg5h7vuy7kr" path="res://characters/npcs/bandit_raider/frames/v0/death_n_2.png" id="d30"]
+[ext_resource type="Texture2D" uid="uid://crpiunvdoddvw" path="res://characters/npcs/bandit_raider/frames/v0/death_n_3.png" id="d31"]
+[ext_resource type="Texture2D" uid="uid://cuj24kvvak6rt" path="res://characters/npcs/bandit_raider/frames/v0/death_s_0.png" id="d40"]
+[ext_resource type="Texture2D" uid="uid://05fwos8g0ql5" path="res://characters/npcs/bandit_raider/frames/v0/death_s_1.png" id="d41"]
+[ext_resource type="Texture2D" uid="uid://gesc3xnf5qmt" path="res://characters/npcs/bandit_raider/frames/v0/death_s_2.png" id="d42"]
+[ext_resource type="Texture2D" uid="uid://drn5tt5wvce6p" path="res://characters/npcs/bandit_raider/frames/v0/death_s_3.png" id="d43"]
+[ext_resource type="Texture2D" uid="uid://bqq8rwgymwrp8" path="res://characters/npcs/bandit_raider/frames/v0/death_e_0.png" id="d44"]
+[ext_resource type="Texture2D" uid="uid://dtpff2pcuvgv0" path="res://characters/npcs/bandit_raider/frames/v0/death_e_1.png" id="d45"]
+[ext_resource type="Texture2D" uid="uid://cl720c76qyojm" path="res://characters/npcs/bandit_raider/frames/v0/death_e_2.png" id="d46"]
+[ext_resource type="Texture2D" uid="uid://b26iskxpqh256" path="res://characters/npcs/bandit_raider/frames/v0/death_e_3.png" id="d47"]
+[ext_resource type="Texture2D" uid="uid://v7kcnt4si3vj" path="res://characters/npcs/bandit_raider/frames/v0/death_nw_0.png" id="d52"]
+[ext_resource type="Texture2D" uid="uid://cgh44by3j8dnk" path="res://characters/npcs/bandit_raider/frames/v0/death_nw_1.png" id="d53"]
+[ext_resource type="Texture2D" uid="uid://bdri8ltlqm3c4" path="res://characters/npcs/bandit_raider/frames/v0/death_nw_2.png" id="d54"]
+[ext_resource type="Texture2D" uid="uid://ren0yb2176fc" path="res://characters/npcs/bandit_raider/frames/v0/death_nw_3.png" id="d55"]
+[ext_resource type="Texture2D" uid="uid://2sfdhu4p21kg" path="res://characters/npcs/bandit_raider/frames/v0/idle_e_0.png" id="d56"]
+[ext_resource type="Texture2D" uid="uid://bgucfammm0qyn" path="res://characters/npcs/bandit_raider/frames/v0/idle_n_0.png" id="d57"]
+[ext_resource type="Texture2D" uid="uid://bgv0kt40h0na1" path="res://characters/npcs/bandit_raider/frames/v0/idle_ne_0.png" id="d58"]
+[ext_resource type="Texture2D" uid="uid://ywyyusd1nusw" path="res://characters/npcs/bandit_raider/frames/v0/idle_nw_0.png" id="d59"]
+[ext_resource type="Texture2D" uid="uid://b7mbktrgvdyhq" path="res://characters/npcs/bandit_raider/frames/v0/idle_s_0.png" id="d60"]
+[ext_resource type="Texture2D" uid="uid://c8hnc4mdl00x5" path="res://characters/npcs/bandit_raider/frames/v0/idle_se_0.png" id="d61"]
+[ext_resource type="Texture2D" uid="uid://csdjh2jexdwqe" path="res://characters/npcs/bandit_raider/frames/v0/idle_sw_0.png" id="d62"]
+[ext_resource type="Texture2D" uid="uid://2jjs8c35qrbp" path="res://characters/npcs/bandit_raider/frames/v0/idle_w_0.png" id="d63"]
+[ext_resource type="Texture2D" uid="uid://bxc1xmun2j8ur" path="res://characters/npcs/bandit_raider/frames/v0/run_e_0.png" id="d64"]
+[ext_resource type="Texture2D" uid="uid://cgpqdq8nvvg6a" path="res://characters/npcs/bandit_raider/frames/v0/run_e_1.png" id="d65"]
+[ext_resource type="Texture2D" uid="uid://bwkcyc1uvftdk" path="res://characters/npcs/bandit_raider/frames/v0/run_e_2.png" id="d66"]
+[ext_resource type="Texture2D" uid="uid://caj5tinsp5q2h" path="res://characters/npcs/bandit_raider/frames/v0/run_e_3.png" id="d67"]
+[ext_resource type="Texture2D" uid="uid://by5porfiutxnp" path="res://characters/npcs/bandit_raider/frames/v0/run_e_4.png" id="d68"]
+[ext_resource type="Texture2D" uid="uid://bbt2r7bdpxwuq" path="res://characters/npcs/bandit_raider/frames/v0/run_n_0.png" id="d69"]
+[ext_resource type="Texture2D" uid="uid://b5612aocvlqaj" path="res://characters/npcs/bandit_raider/frames/v0/run_n_1.png" id="d70"]
+[ext_resource type="Texture2D" uid="uid://b8vwqrp7700c3" path="res://characters/npcs/bandit_raider/frames/v0/run_n_2.png" id="d71"]
+[ext_resource type="Texture2D" uid="uid://c68elgyh7355g" path="res://characters/npcs/bandit_raider/frames/v0/run_n_3.png" id="d72"]
+[ext_resource type="Texture2D" uid="uid://cf4d8ie7gicq" path="res://characters/npcs/bandit_raider/frames/v0/run_n_4.png" id="d73"]
+[ext_resource type="Texture2D" uid="uid://cpafmahm3s5t3" path="res://characters/npcs/bandit_raider/frames/v0/run_ne_0.png" id="d74"]
+[ext_resource type="Texture2D" uid="uid://bgeddjdupudft" path="res://characters/npcs/bandit_raider/frames/v0/run_ne_1.png" id="d75"]
+[ext_resource type="Texture2D" uid="uid://cr1lr2h4sud4" path="res://characters/npcs/bandit_raider/frames/v0/run_ne_2.png" id="d76"]
+[ext_resource type="Texture2D" uid="uid://v25wmbelf7pv" path="res://characters/npcs/bandit_raider/frames/v0/run_ne_3.png" id="d77"]
+[ext_resource type="Texture2D" uid="uid://bcpqb08ypguf0" path="res://characters/npcs/bandit_raider/frames/v0/run_ne_4.png" id="d78"]
+[ext_resource type="Texture2D" uid="uid://wow3ocijw2uy" path="res://characters/npcs/bandit_raider/frames/v0/run_nw_0.png" id="d79"]
+[ext_resource type="Texture2D" uid="uid://c18jltrdhrxua" path="res://characters/npcs/bandit_raider/frames/v0/run_nw_1.png" id="d80"]
+[ext_resource type="Texture2D" uid="uid://dtys00dra8qx1" path="res://characters/npcs/bandit_raider/frames/v0/run_nw_2.png" id="d81"]
+[ext_resource type="Texture2D" uid="uid://yrdwy34pd6r7" path="res://characters/npcs/bandit_raider/frames/v0/run_nw_3.png" id="d82"]
+[ext_resource type="Texture2D" uid="uid://d2ybhbsuitdkh" path="res://characters/npcs/bandit_raider/frames/v0/run_nw_4.png" id="d83"]
+[ext_resource type="Texture2D" uid="uid://t3k724xkdyhy" path="res://characters/npcs/bandit_raider/frames/v0/run_s_0.png" id="d84"]
+[ext_resource type="Texture2D" uid="uid://bbgo4ulbjjjjw" path="res://characters/npcs/bandit_raider/frames/v0/run_s_1.png" id="d85"]
+[ext_resource type="Texture2D" uid="uid://nps2wx2r0ng" path="res://characters/npcs/bandit_raider/frames/v0/run_s_2.png" id="d86"]
+[ext_resource type="Texture2D" uid="uid://bfiumcqbr4xm6" path="res://characters/npcs/bandit_raider/frames/v0/run_s_3.png" id="d87"]
+[ext_resource type="Texture2D" uid="uid://dlwplvk87gcbw" path="res://characters/npcs/bandit_raider/frames/v0/run_s_4.png" id="d88"]
+[ext_resource type="Texture2D" uid="uid://bhdyy6bipfgqj" path="res://characters/npcs/bandit_raider/frames/v0/run_se_0.png" id="d89"]
+[ext_resource type="Texture2D" uid="uid://da4wj2yw75pbd" path="res://characters/npcs/bandit_raider/frames/v0/run_se_1.png" id="d90"]
+[ext_resource type="Texture2D" uid="uid://bvfqom6acbwqm" path="res://characters/npcs/bandit_raider/frames/v0/run_se_2.png" id="d91"]
+[ext_resource type="Texture2D" uid="uid://6wm5lovn8ko" path="res://characters/npcs/bandit_raider/frames/v0/run_se_3.png" id="d92"]
+[ext_resource type="Texture2D" uid="uid://cscci1ernfug8" path="res://characters/npcs/bandit_raider/frames/v0/run_se_4.png" id="d93"]
+[ext_resource type="Texture2D" uid="uid://bg0vpn1e8mrbf" path="res://characters/npcs/bandit_raider/frames/v0/run_sw_0.png" id="d94"]
+[ext_resource type="Texture2D" uid="uid://kjp4mexus4fu" path="res://characters/npcs/bandit_raider/frames/v0/run_sw_1.png" id="d95"]
+[ext_resource type="Texture2D" uid="uid://u61xvh7jwnfh" path="res://characters/npcs/bandit_raider/frames/v0/run_sw_2.png" id="d96"]
+[ext_resource type="Texture2D" uid="uid://cwupqlt2io75r" path="res://characters/npcs/bandit_raider/frames/v0/run_sw_3.png" id="d97"]
+[ext_resource type="Texture2D" uid="uid://cdf7scrwcm4o5" path="res://characters/npcs/bandit_raider/frames/v0/run_sw_4.png" id="d98"]
+[ext_resource type="Texture2D" uid="uid://ckdmh3tapbu5b" path="res://characters/npcs/bandit_raider/frames/v0/run_w_0.png" id="d99"]
+[ext_resource type="Texture2D" uid="uid://b068ufxc1e7du" path="res://characters/npcs/bandit_raider/frames/v0/run_w_1.png" id="d100"]
+[ext_resource type="Texture2D" uid="uid://bpkq5tkgs8hvt" path="res://characters/npcs/bandit_raider/frames/v0/run_w_2.png" id="d101"]
+[ext_resource type="Texture2D" uid="uid://bspvw5p6pdbvh" path="res://characters/npcs/bandit_raider/frames/v0/run_w_3.png" id="d102"]
+[ext_resource type="Texture2D" uid="uid://fs6cmqou4fbd" path="res://characters/npcs/bandit_raider/frames/v0/run_w_4.png" id="d103"]
+[ext_resource type="Texture2D" uid="uid://cki2n3ifli67m" path="res://characters/npcs/bandit_raider/frames/attack_n_0_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://b10e82pugxoog" path="res://characters/npcs/bandit_raider/frames/attack_n_1_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://dhv5f2xmh626y" path="res://characters/npcs/bandit_raider/frames/attack_n_2_n.png" id="n8"]
+[ext_resource type="Texture2D" uid="uid://djkscusgax3x5" path="res://characters/npcs/bandit_raider/frames/attack_nw_0_n.png" id="n9"]
+[ext_resource type="Texture2D" uid="uid://b1tsoqkn6s8sb" path="res://characters/npcs/bandit_raider/frames/attack_nw_1_n.png" id="n10"]
+[ext_resource type="Texture2D" uid="uid://bnyijh6o0mii8" path="res://characters/npcs/bandit_raider/frames/attack_nw_2_n.png" id="n11"]
+[ext_resource type="Texture2D" uid="uid://dp87vuhhteoqg" path="res://characters/npcs/bandit_raider/frames/attack_s_0_n.png" id="n12"]
+[ext_resource type="Texture2D" uid="uid://c14vn4adfq7n" path="res://characters/npcs/bandit_raider/frames/attack_s_1_n.png" id="n13"]
+[ext_resource type="Texture2D" uid="uid://c7gqfw4fqr3ot" path="res://characters/npcs/bandit_raider/frames/attack_s_2_n.png" id="n14"]
+[ext_resource type="Texture2D" uid="uid://ca8m10qbty68y" path="res://characters/npcs/bandit_raider/frames/attack_e_0_n.png" id="n15"]
+[ext_resource type="Texture2D" uid="uid://cjj6nx4crcmtl" path="res://characters/npcs/bandit_raider/frames/attack_e_1_n.png" id="n16"]
+[ext_resource type="Texture2D" uid="uid://batww65aikt5b" path="res://characters/npcs/bandit_raider/frames/attack_e_2_n.png" id="n17"]
+[ext_resource type="Texture2D" uid="uid://ohokx6log8gc" path="res://characters/npcs/bandit_raider/frames/attack_sw_0_n.png" id="n21"]
+[ext_resource type="Texture2D" uid="uid://36cc01vqiey5" path="res://characters/npcs/bandit_raider/frames/attack_sw_1_n.png" id="n22"]
+[ext_resource type="Texture2D" uid="uid://pro4fn1aply4" path="res://characters/npcs/bandit_raider/frames/attack_sw_2_n.png" id="n23"]
+[ext_resource type="Texture2D" uid="uid://cg16yam012emb" path="res://characters/npcs/bandit_raider/frames/death_n_0_n.png" id="n28"]
+[ext_resource type="Texture2D" uid="uid://gxxctclthsbj" path="res://characters/npcs/bandit_raider/frames/death_n_1_n.png" id="n29"]
+[ext_resource type="Texture2D" uid="uid://x45bpi06bxcx" path="res://characters/npcs/bandit_raider/frames/death_n_2_n.png" id="n30"]
+[ext_resource type="Texture2D" uid="uid://ckkanugxvs36d" path="res://characters/npcs/bandit_raider/frames/death_n_3_n.png" id="n31"]
+[ext_resource type="Texture2D" uid="uid://nyxqsnq6ij83" path="res://characters/npcs/bandit_raider/frames/death_s_0_n.png" id="n40"]
+[ext_resource type="Texture2D" uid="uid://bsypvlvp074hl" path="res://characters/npcs/bandit_raider/frames/death_s_1_n.png" id="n41"]
+[ext_resource type="Texture2D" uid="uid://ddjq0s12pcqah" path="res://characters/npcs/bandit_raider/frames/death_s_2_n.png" id="n42"]
+[ext_resource type="Texture2D" uid="uid://b0k4ol677tyiv" path="res://characters/npcs/bandit_raider/frames/death_s_3_n.png" id="n43"]
+[ext_resource type="Texture2D" uid="uid://hcvov8vctmme" path="res://characters/npcs/bandit_raider/frames/death_e_0_n.png" id="n44"]
+[ext_resource type="Texture2D" uid="uid://c1t7pngo7jdxw" path="res://characters/npcs/bandit_raider/frames/death_e_1_n.png" id="n45"]
+[ext_resource type="Texture2D" uid="uid://ddipjjnfq74bf" path="res://characters/npcs/bandit_raider/frames/death_e_2_n.png" id="n46"]
+[ext_resource type="Texture2D" uid="uid://c08cbm33xjrpe" path="res://characters/npcs/bandit_raider/frames/death_e_3_n.png" id="n47"]
+[ext_resource type="Texture2D" uid="uid://dfitti0fcuku7" path="res://characters/npcs/bandit_raider/frames/death_nw_0_n.png" id="n52"]
+[ext_resource type="Texture2D" uid="uid://blqcdyv8rd1ba" path="res://characters/npcs/bandit_raider/frames/death_nw_1_n.png" id="n53"]
+[ext_resource type="Texture2D" uid="uid://cbrkkktc4po32" path="res://characters/npcs/bandit_raider/frames/death_nw_2_n.png" id="n54"]
+[ext_resource type="Texture2D" uid="uid://djpol43ksb6y7" path="res://characters/npcs/bandit_raider/frames/death_nw_3_n.png" id="n55"]
+[ext_resource type="Texture2D" uid="uid://cw6tt2ytfp0xe" path="res://characters/npcs/bandit_raider/frames/idle_e_0_n.png" id="n56"]
+[ext_resource type="Texture2D" uid="uid://ddlak4evahyse" path="res://characters/npcs/bandit_raider/frames/idle_n_0_n.png" id="n57"]
+[ext_resource type="Texture2D" uid="uid://w4u64vsmp1ew" path="res://characters/npcs/bandit_raider/frames/idle_ne_0_n.png" id="n58"]
+[ext_resource type="Texture2D" uid="uid://b4y6v02yewneu" path="res://characters/npcs/bandit_raider/frames/idle_nw_0_n.png" id="n59"]
+[ext_resource type="Texture2D" uid="uid://crfmavh58kapu" path="res://characters/npcs/bandit_raider/frames/idle_s_0_n.png" id="n60"]
+[ext_resource type="Texture2D" uid="uid://qbk80uvtpl2l" path="res://characters/npcs/bandit_raider/frames/idle_se_0_n.png" id="n61"]
+[ext_resource type="Texture2D" uid="uid://e0f6ggkmqpfn" path="res://characters/npcs/bandit_raider/frames/idle_sw_0_n.png" id="n62"]
+[ext_resource type="Texture2D" uid="uid://xno4df4i8na8" path="res://characters/npcs/bandit_raider/frames/idle_w_0_n.png" id="n63"]
+[ext_resource type="Texture2D" uid="uid://qrboicuil2hu" path="res://characters/npcs/bandit_raider/frames/run_e_0_n.png" id="n64"]
+[ext_resource type="Texture2D" uid="uid://prdqes5v1ee2" path="res://characters/npcs/bandit_raider/frames/run_e_1_n.png" id="n65"]
+[ext_resource type="Texture2D" uid="uid://b16ygrjb8e1c5" path="res://characters/npcs/bandit_raider/frames/run_e_2_n.png" id="n66"]
+[ext_resource type="Texture2D" uid="uid://cjliuqauq8wbc" path="res://characters/npcs/bandit_raider/frames/run_e_3_n.png" id="n67"]
+[ext_resource type="Texture2D" uid="uid://cjpr8m1oemptt" path="res://characters/npcs/bandit_raider/frames/run_e_4_n.png" id="n68"]
+[ext_resource type="Texture2D" uid="uid://bkdastcp2xqu3" path="res://characters/npcs/bandit_raider/frames/run_n_0_n.png" id="n69"]
+[ext_resource type="Texture2D" uid="uid://c0j60c8j071yp" path="res://characters/npcs/bandit_raider/frames/run_n_1_n.png" id="n70"]
+[ext_resource type="Texture2D" uid="uid://dit00q7uln058" path="res://characters/npcs/bandit_raider/frames/run_n_2_n.png" id="n71"]
+[ext_resource type="Texture2D" uid="uid://cnvg4rjeeqt41" path="res://characters/npcs/bandit_raider/frames/run_n_3_n.png" id="n72"]
+[ext_resource type="Texture2D" uid="uid://ducux6vvdp2ed" path="res://characters/npcs/bandit_raider/frames/run_n_4_n.png" id="n73"]
+[ext_resource type="Texture2D" uid="uid://b7l3wmju7rc20" path="res://characters/npcs/bandit_raider/frames/run_ne_0_n.png" id="n74"]
+[ext_resource type="Texture2D" uid="uid://brdajh35xcqnm" path="res://characters/npcs/bandit_raider/frames/run_ne_1_n.png" id="n75"]
+[ext_resource type="Texture2D" uid="uid://k1fey3oqrd2y" path="res://characters/npcs/bandit_raider/frames/run_ne_2_n.png" id="n76"]
+[ext_resource type="Texture2D" uid="uid://ct2ygtoaj8mkx" path="res://characters/npcs/bandit_raider/frames/run_ne_3_n.png" id="n77"]
+[ext_resource type="Texture2D" uid="uid://cf8x6fl0wbpok" path="res://characters/npcs/bandit_raider/frames/run_ne_4_n.png" id="n78"]
+[ext_resource type="Texture2D" uid="uid://bs773qij3eka" path="res://characters/npcs/bandit_raider/frames/run_nw_0_n.png" id="n79"]
+[ext_resource type="Texture2D" uid="uid://3pvllmpr6kde" path="res://characters/npcs/bandit_raider/frames/run_nw_1_n.png" id="n80"]
+[ext_resource type="Texture2D" uid="uid://brdo2xplv6d6e" path="res://characters/npcs/bandit_raider/frames/run_nw_2_n.png" id="n81"]
+[ext_resource type="Texture2D" uid="uid://21yxbq408txn" path="res://characters/npcs/bandit_raider/frames/run_nw_3_n.png" id="n82"]
+[ext_resource type="Texture2D" uid="uid://2pka6cp0cm82" path="res://characters/npcs/bandit_raider/frames/run_nw_4_n.png" id="n83"]
+[ext_resource type="Texture2D" uid="uid://g2klvcb027xc" path="res://characters/npcs/bandit_raider/frames/run_s_0_n.png" id="n84"]
+[ext_resource type="Texture2D" uid="uid://g70x341nq280" path="res://characters/npcs/bandit_raider/frames/run_s_1_n.png" id="n85"]
+[ext_resource type="Texture2D" uid="uid://ctq6ynvvwr52h" path="res://characters/npcs/bandit_raider/frames/run_s_2_n.png" id="n86"]
+[ext_resource type="Texture2D" uid="uid://cp6rfshj58yt7" path="res://characters/npcs/bandit_raider/frames/run_s_3_n.png" id="n87"]
+[ext_resource type="Texture2D" uid="uid://djj68bhhldugg" path="res://characters/npcs/bandit_raider/frames/run_s_4_n.png" id="n88"]
+[ext_resource type="Texture2D" uid="uid://bfauwhiw5237c" path="res://characters/npcs/bandit_raider/frames/run_se_0_n.png" id="n89"]
+[ext_resource type="Texture2D" uid="uid://dksmbpkyp3xvu" path="res://characters/npcs/bandit_raider/frames/run_se_1_n.png" id="n90"]
+[ext_resource type="Texture2D" uid="uid://4sk1mqau31jw" path="res://characters/npcs/bandit_raider/frames/run_se_2_n.png" id="n91"]
+[ext_resource type="Texture2D" uid="uid://dkpvva634jvf" path="res://characters/npcs/bandit_raider/frames/run_se_3_n.png" id="n92"]
+[ext_resource type="Texture2D" uid="uid://dx0eim0bdoogt" path="res://characters/npcs/bandit_raider/frames/run_se_4_n.png" id="n93"]
+[ext_resource type="Texture2D" uid="uid://blwi7cbje1g87" path="res://characters/npcs/bandit_raider/frames/run_sw_0_n.png" id="n94"]
+[ext_resource type="Texture2D" uid="uid://c7jgjwqnhes6q" path="res://characters/npcs/bandit_raider/frames/run_sw_1_n.png" id="n95"]
+[ext_resource type="Texture2D" uid="uid://dsjs0ko0fjrcs" path="res://characters/npcs/bandit_raider/frames/run_sw_2_n.png" id="n96"]
+[ext_resource type="Texture2D" uid="uid://dmel6dsxhx0yb" path="res://characters/npcs/bandit_raider/frames/run_sw_3_n.png" id="n97"]
+[ext_resource type="Texture2D" uid="uid://c6q73yfofgrbm" path="res://characters/npcs/bandit_raider/frames/run_sw_4_n.png" id="n98"]
+[ext_resource type="Texture2D" uid="uid://dlpjii5pddnbh" path="res://characters/npcs/bandit_raider/frames/run_w_0_n.png" id="n99"]
+[ext_resource type="Texture2D" uid="uid://bb4po0uxp1f8y" path="res://characters/npcs/bandit_raider/frames/run_w_1_n.png" id="n100"]
+[ext_resource type="Texture2D" uid="uid://d27c3p0px3jy7" path="res://characters/npcs/bandit_raider/frames/run_w_2_n.png" id="n101"]
+[ext_resource type="Texture2D" uid="uid://016p627xh2ux" path="res://characters/npcs/bandit_raider/frames/run_w_3_n.png" id="n102"]
+[ext_resource type="Texture2D" uid="uid://dpgeckxm4q3ml" path="res://characters/npcs/bandit_raider/frames/run_w_4_n.png" id="n103"]
 
 [sub_resource type="CanvasTexture" id="C0"]
-diffuse_texture = ExtResource("d0")
-normal_texture = ExtResource("n0")
+diffuse_texture = ExtResource("d15")
+normal_texture = ExtResource("n15")
 
 [sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
+diffuse_texture = ExtResource("d16")
+normal_texture = ExtResource("n16")
 
 [sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
+diffuse_texture = ExtResource("d17")
+normal_texture = ExtResource("n17")
 
 [sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
 
 [sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
 
 [sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
+diffuse_texture = ExtResource("d8")
+normal_texture = ExtResource("n8")
 
 [sub_resource type="CanvasTexture" id="C6"]
 diffuse_texture = ExtResource("d6")
@@ -282,16 +232,16 @@ diffuse_texture = ExtResource("d17")
 normal_texture = ExtResource("n17")
 
 [sub_resource type="CanvasTexture" id="C18"]
-diffuse_texture = ExtResource("d18")
-normal_texture = ExtResource("n18")
+diffuse_texture = ExtResource("d21")
+normal_texture = ExtResource("n21")
 
 [sub_resource type="CanvasTexture" id="C19"]
-diffuse_texture = ExtResource("d19")
-normal_texture = ExtResource("n19")
+diffuse_texture = ExtResource("d22")
+normal_texture = ExtResource("n22")
 
 [sub_resource type="CanvasTexture" id="C20"]
-diffuse_texture = ExtResource("d20")
-normal_texture = ExtResource("n20")
+diffuse_texture = ExtResource("d23")
+normal_texture = ExtResource("n23")
 
 [sub_resource type="CanvasTexture" id="C21"]
 diffuse_texture = ExtResource("d21")
@@ -306,20 +256,20 @@ diffuse_texture = ExtResource("d23")
 normal_texture = ExtResource("n23")
 
 [sub_resource type="CanvasTexture" id="C24"]
-diffuse_texture = ExtResource("d24")
-normal_texture = ExtResource("n24")
+diffuse_texture = ExtResource("d44")
+normal_texture = ExtResource("n44")
 
 [sub_resource type="CanvasTexture" id="C25"]
-diffuse_texture = ExtResource("d25")
-normal_texture = ExtResource("n25")
+diffuse_texture = ExtResource("d45")
+normal_texture = ExtResource("n45")
 
 [sub_resource type="CanvasTexture" id="C26"]
-diffuse_texture = ExtResource("d26")
-normal_texture = ExtResource("n26")
+diffuse_texture = ExtResource("d46")
+normal_texture = ExtResource("n46")
 
 [sub_resource type="CanvasTexture" id="C27"]
-diffuse_texture = ExtResource("d27")
-normal_texture = ExtResource("n27")
+diffuse_texture = ExtResource("d47")
+normal_texture = ExtResource("n47")
 
 [sub_resource type="CanvasTexture" id="C28"]
 diffuse_texture = ExtResource("d28")
@@ -338,36 +288,36 @@ diffuse_texture = ExtResource("d31")
 normal_texture = ExtResource("n31")
 
 [sub_resource type="CanvasTexture" id="C32"]
-diffuse_texture = ExtResource("d32")
-normal_texture = ExtResource("n32")
+diffuse_texture = ExtResource("d44")
+normal_texture = ExtResource("n44")
 
 [sub_resource type="CanvasTexture" id="C33"]
-diffuse_texture = ExtResource("d33")
-normal_texture = ExtResource("n33")
+diffuse_texture = ExtResource("d45")
+normal_texture = ExtResource("n45")
 
 [sub_resource type="CanvasTexture" id="C34"]
-diffuse_texture = ExtResource("d34")
-normal_texture = ExtResource("n34")
+diffuse_texture = ExtResource("d46")
+normal_texture = ExtResource("n46")
 
 [sub_resource type="CanvasTexture" id="C35"]
-diffuse_texture = ExtResource("d35")
-normal_texture = ExtResource("n35")
+diffuse_texture = ExtResource("d47")
+normal_texture = ExtResource("n47")
 
 [sub_resource type="CanvasTexture" id="C36"]
-diffuse_texture = ExtResource("d36")
-normal_texture = ExtResource("n36")
+diffuse_texture = ExtResource("d52")
+normal_texture = ExtResource("n52")
 
 [sub_resource type="CanvasTexture" id="C37"]
-diffuse_texture = ExtResource("d37")
-normal_texture = ExtResource("n37")
+diffuse_texture = ExtResource("d53")
+normal_texture = ExtResource("n53")
 
 [sub_resource type="CanvasTexture" id="C38"]
-diffuse_texture = ExtResource("d38")
-normal_texture = ExtResource("n38")
+diffuse_texture = ExtResource("d54")
+normal_texture = ExtResource("n54")
 
 [sub_resource type="CanvasTexture" id="C39"]
-diffuse_texture = ExtResource("d39")
-normal_texture = ExtResource("n39")
+diffuse_texture = ExtResource("d55")
+normal_texture = ExtResource("n55")
 
 [sub_resource type="CanvasTexture" id="C40"]
 diffuse_texture = ExtResource("d40")
@@ -402,20 +352,20 @@ diffuse_texture = ExtResource("d47")
 normal_texture = ExtResource("n47")
 
 [sub_resource type="CanvasTexture" id="C48"]
-diffuse_texture = ExtResource("d48")
-normal_texture = ExtResource("n48")
+diffuse_texture = ExtResource("d52")
+normal_texture = ExtResource("n52")
 
 [sub_resource type="CanvasTexture" id="C49"]
-diffuse_texture = ExtResource("d49")
-normal_texture = ExtResource("n49")
+diffuse_texture = ExtResource("d53")
+normal_texture = ExtResource("n53")
 
 [sub_resource type="CanvasTexture" id="C50"]
-diffuse_texture = ExtResource("d50")
-normal_texture = ExtResource("n50")
+diffuse_texture = ExtResource("d54")
+normal_texture = ExtResource("n54")
 
 [sub_resource type="CanvasTexture" id="C51"]
-diffuse_texture = ExtResource("d51")
-normal_texture = ExtResource("n51")
+diffuse_texture = ExtResource("d55")
+normal_texture = ExtResource("n55")
 
 [sub_resource type="CanvasTexture" id="C52"]
 diffuse_texture = ExtResource("d52")
@@ -637,9 +587,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C2")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_e",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -651,9 +601,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C5")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_n",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -665,9 +615,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C8")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_ne",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -679,9 +629,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C11")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_nw",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -693,9 +643,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C14")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_s",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -707,9 +657,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C17")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_se",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -721,9 +671,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C20")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_sw",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.6,
@@ -735,9 +685,9 @@ animations = [{
 "duration": 1.6,
 "texture": SubResource("C23")
 }],
-"loop": false,
+"loop": 0,
 "name": &"attack_w",
-"speed": 9
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -752,9 +702,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C27")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_e",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -769,9 +719,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C31")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_n",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -786,9 +736,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C35")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_ne",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -803,9 +753,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C39")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_nw",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -820,9 +770,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C43")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_s",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -837,9 +787,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C47")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_se",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -854,9 +804,9 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C51")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_sw",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.2,
@@ -871,73 +821,73 @@ animations = [{
 "duration": 2.0,
 "texture": SubResource("C55")
 }],
-"loop": false,
+"loop": 0,
 "name": &"death_w",
-"speed": 7
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C56")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_e",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C57")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_n",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C58")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_ne",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C59")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_nw",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C60")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_s",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C61")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_se",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C62")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_sw",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C63")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_w",
-"speed": 1
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -955,9 +905,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C68")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_e",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -975,9 +925,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C73")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_n",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -995,9 +945,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C78")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_ne",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1015,9 +965,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C83")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_nw",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1035,9 +985,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C88")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_s",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1055,9 +1005,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C93")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_se",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1075,9 +1025,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C98")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_sw",
-"speed": 11
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1095,7 +1045,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C103")
 }],
-"loop": true,
+"loop": 1,
 "name": &"run_w",
-"speed": 11
+"speed": 11.0
 }]
