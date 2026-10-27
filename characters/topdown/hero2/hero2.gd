@@ -49,8 +49,9 @@ func _physics_process(delta: float) -> void:
 		_knockback = _knockback.move_toward(Vector2.ZERO, 500.0 * delta)
 		move_and_slide()
 		return
-	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var talked := Input.is_action_just_pressed("interact") and _interact()
+	var talking := _in_dialogue()  # stand still; E turns the dialogue's pages
+	var input := Vector2.ZERO if talking else Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var talked := talking or (Input.is_action_just_pressed("interact") and _interact())
 	if not talked and Input.is_action_just_pressed("wave") and not waving and sprite.sprite_frames.has_animation("wave"):
 		waving = true
 		velocity = Vector2.ZERO
@@ -132,6 +133,11 @@ func _in_water() -> bool:
 func _interact() -> bool:
 	var game := get_node_or_null("/root/Game")
 	return game != null and game.has_method("interact") and game.interact(self)
+
+
+func _in_dialogue() -> bool:
+	var game := get_node_or_null("/root/Game")
+	return game != null and game.has_method("in_dialogue") and game.in_dialogue()
 
 
 func _ensure_input_actions() -> void:

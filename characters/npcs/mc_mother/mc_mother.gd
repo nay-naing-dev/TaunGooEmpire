@@ -6,7 +6,11 @@ extends CharacterBody2D
 ##   Inside she is only seen when the player is inside the house too.
 ## - No Home: walks slowly between Patrol Points (world positions) and waits at each.
 ## - Stops and turns to the player when the player comes close.
-##   An "E" shows over her head then; press it and she says one of Lines.
+##   An "E" shows over her head then; press it to talk.
+## - The first talk is the story intro (the royal summoner is coming), in the
+##   dialogue box at the bottom of the screen. Until then a "?" floats over her head.
+##   After that she says one line over her head: back from a long time away,
+##   bothered twice in a row, the first talk of a night, else one for the time of day.
 ## - crying = true: she stands, hides her face in her hands and sobs.
 ##   Call set_crying(true / false) from story scripts.
 
@@ -23,11 +27,34 @@ extends CharacterBody2D
 @export var notice_radius := 64.0
 @export var start_facing := "s"
 @export var crying := false
-## What she says when you talk to her (one at random each time).
-@export var lines: PackedStringArray = PackedStringArray([
-	"Have you eaten my son? There's rice by the fire.",
-	"Check in on your aunt. I've heard she's not well.",
-])
+## Her name in the dialogue box.
+@export var display_name := "Mother"
+## Game hours out of her sight before she greets the player as back from a long trip.
+@export var away_hours := 4.0
+## Talking to her again within this many game hours is bothering her twice.
+@export var repeat_hours := 1.0
+
+const INTRO := [
+	"Ah, you're awake. I was beginning to think I'd have to pour water over your head.",
+	"Come, sit down. There's rice left from this morning. It won't taste any better if you wait until noon.",
+	"And listen, son. The royal summoner is expected in two days.",
+	"I don't know what brings him here this time. But when the king calls for men, a village rarely remains the same afterward.",
+	"The woman around animal shed comes to know the news. You should seek out for her if you're interested",
+]
+const MORNING := [
+	"Don't spend the whole day wandering, child. There's work to be done around the house.",
+	"Have you eaten? There's rice by the fire",
+]
+const AFTERNOON := [
+	"You've been wandering all day. Did you find anything worth seeing, or have you simply been making the same journey around the village?",
+]
+const NIGHT := [
+	"The lamps are lit in every house now. From here, the village looks peaceful, doesn't it? I wish the world beyond it were as peaceful.",
+	"Come inside when you're tired. A home should never have to ask its own child to come back.",
+]
+const NIGHT_GREETING := "I was just about to put the lamp out. Sit for a moment, if you like."
+const REPEAT_LINE := "Have you run out of people to bother, or have you come to bother me twice?"
+const BACK_LINE := "There you are. I was beginning to wonder whether the forest had swallowed you."
 
 const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 enum Trip { INSIDE, TO_DOOR, TO_YARD, YARD, TO_STAIRS, TO_HEARTH }
@@ -46,6 +73,9 @@ var _leg_t := 0.0
 var _inside := false
 var _layer := 1
 var _bubble: SpeechBubble
+var _was_near := false
+var _back := false
+var _last_line := ""
 
 
 func _ready() -> void:
@@ -55,6 +85,10 @@ func _ready() -> void:
 	_bubble = SpeechBubble.new()
 	_bubble.head_height = 76.0
 	add_child(_bubble)
+	if not Game.flags.get("mother_intro_done", false):
+		_bubble.mark("?")
+	if not Game.flags.has("mother_last_seen"):
+		Game.flags["mother_last_seen"] = Game.now()
 	_base = sprite.offset
 	_layer = collision_layer
 	facing = start_facing
@@ -77,12 +111,60 @@ func _near(p: Node2D) -> bool:
 
 ## Game.interact() asks these when the player presses E.
 func can_interact(who: Node2D) -> bool:
-	return not crying and not lines.is_empty() and _near(who)
+	return not crying and not Game.in_dialogue() and _near(who)
 
 
 func interact(who: Node2D) -> void:
 	_face(who.global_position - global_position)
-	_bubble.say(lines[randi() % lines.size()])
+	if not Game.flags.get("mother_intro_done", false):
+		_bubble.mark("")
+		Game.dialogue(display_name, PackedStringArray(INTRO), _intro_done)
+		return
+	_last_line = _pick_line()
+	_bubble.say(_last_line)
+
+
+func _intro_done() -> void:
+	Game.flags["mother_intro_done"] = true
+	Game.flags["mother_last_talk"] = Game.now()
+	_back = false  # she has just seen you
+
+
+## Which line she says now. Remembers when you last talked (in Game.flags, so leaving
+## the village and coming back doesn't reset it).
+func _pick_line() -> String:
+	var now := Game.now()
+	var last: float = Game.flags.get("mother_last_talk", -INF)
+	Game.flags["mother_last_talk"] = now
+	if _back:
+		_back = false
+		return BACK_LINE
+	if now - last < repeat_hours and _last_line != REPEAT_LINE:
+		return REPEAT_LINE
+	if Game.time_of_day == 2:
+		# a night runs past midnight, so it belongs to the day it started on
+		var night := Game.day if Game.hour >= 12.0 else Game.day - 1
+		if Game.flags.get("mother_night_greeted", -1) != night:
+			Game.flags["mother_night_greeted"] = night
+			return NIGHT_GREETING
+		return _any(NIGHT)
+	return _any(MORNING if Game.hour < 12.0 else AFTERNOON)
+
+
+## A random line from the list, not the one she just said (when there is another).
+func _any(pool: Array) -> String:
+	var choices := pool.filter(func(l): return l != _last_line)
+	return choices.pick_random() if not choices.is_empty() else pool[0]
+
+
+## Notices the player coming back after a long time out of her sight.
+func _watch_for_return(p: Node2D) -> void:
+	var near := _near(p)
+	if near and not _was_near and Game.now() - float(Game.flags["mother_last_seen"]) >= away_hours:
+		_back = true
+	if near:
+		Game.flags["mother_last_seen"] = Game.now()
+	_was_near = near
 
 
 func _play(kind: String) -> void:
@@ -181,6 +263,7 @@ func _physics_process(delta: float) -> void:
 		collision_layer = _layer if visible else 0
 	var p := get_tree().get_first_node_in_group("player") as Node2D
 	_bubble.hint(p != null and can_interact(p))
+	_watch_for_return(p)
 	if crying:
 		# shoulders shake with each sob, now and then a deeper breath
 		var sob := maxf(0.0, sin(_t * 9.0)) * (0.6 + 0.4 * sin(_t * 0.7))

@@ -26,6 +26,8 @@ var next_spawn := ""
 ## Day clock: the hour of the day, 0..24. A whole day takes day_length real seconds,
 ## and worlds light themselves (and turn their shadows) from it every frame.
 var hour := 7.0
+## Day number, counting from 1. Goes up each time the clock passes midnight.
+var day := 1
 var day_length := 600.0
 var clock_running := true
 ## Which part of the day `hour` is in: 0 = morning / evening (golden), 1 = day, 2 = night.
@@ -35,6 +37,10 @@ const TIME_NAMES := ["Morning", "Day", "Night"]
 ## The hour F3 skips to for each part of the day.
 const TIME_HOURS := [6.5, 12.0, 21.0]
 var _skip: Tween
+## Story state that outlives a scene change (quests, who you have talked to, ...).
+var flags: Dictionary = {}
+const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
+var _dialogue: CanvasLayer
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -221,7 +227,10 @@ func _process(delta: float) -> void:
 
 
 func set_hour(h: float) -> void:
-	hour = fposmod(h, 24.0)
+	var next := fposmod(h, 24.0)
+	if next < hour - 12.0:  # passed midnight
+		day += 1
+	hour = next
 	if hour >= 19.0 or hour < 5.0:
 		time_of_day = 2
 	elif hour >= 9.0 and hour < 16.5:
@@ -246,8 +255,29 @@ func set_night(on: bool) -> void:
 	set_time(2 if on else 0)
 
 
+## Game hours since the start of day 0 (keeps counting past midnight), for "how long ago" checks.
+func now() -> float:
+	return day * 24.0 + hour
+
+
+## Opens the dialogue box at the bottom of the screen with the speaker's name and
+## their lines, one after another. done is called after the last one.
+func dialogue(speaker: String, lines: PackedStringArray, done := Callable()) -> void:
+	if _dialogue == null:
+		_dialogue = DIALOGUE_BOX.new()
+		add_child(_dialogue)
+	_dialogue.open(speaker, lines, done)
+
+
+## True while the dialogue box is up (players stand still and E only turns its pages).
+func in_dialogue() -> bool:
+	return _dialogue != null and _dialogue.busy()
+
+
 func go(scene_path: String) -> void:
 	indoors = false
+	if _dialogue:
+		_dialogue.close(false)
 	for n in _moved.keys():
 		if is_instance_valid(n):
 			n.queue_free()
