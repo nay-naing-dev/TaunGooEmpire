@@ -233,6 +233,12 @@ func set_storm(k: float) -> void:
 		m.set_shader_parameter("flutter", flutter * (1.0 + 2.0 * k))
 
 
+## Called by the world's day clock: 1 = full sun, 0 = no shadows (sunrise, sunset).
+func set_shadow_strength(k: float) -> void:
+	if _shadow_mat:
+		_shadow_mat.set_shader_parameter("shadow_color", Color(0.02, 0.06, 0.04, 0.30 * k))
+
+
 func _process(_delta: float) -> void:
 	var a := Vector3.ZERO
 	var b := Vector3.ZERO

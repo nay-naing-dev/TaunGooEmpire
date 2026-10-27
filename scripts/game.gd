@@ -14,7 +14,7 @@ const FOREST := "res://scenes/forest/forest_road.tscn"
 var topdown_character := "village_boy"
 ## What NPCs call the player ("{player}" in their lines).
 var player_name := "Player"
-## F2 toggles ASCII-art graphics, F3 cycles morning / day / night.
+## F2 toggles ASCII-art graphics, F3 skips to the next morning / day / night.
 var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
@@ -23,9 +23,18 @@ var indoors := false
 var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
 var next_spawn := ""
-## 0 = morning (golden sunrise), 1 = day, 2 = night.  F3 cycles through them.
+## Day clock: the hour of the day, 0..24. A whole day takes day_length real seconds,
+## and worlds light themselves (and turn their shadows) from it every frame.
+var hour := 7.0
+var day_length := 600.0
+var clock_running := true
+## Which part of the day `hour` is in: 0 = morning / evening (golden), 1 = day, 2 = night.
+## F3 skips ahead to the next one.
 var time_of_day := 0
 const TIME_NAMES := ["Morning", "Day", "Night"]
+## The hour F3 skips to for each part of the day.
+const TIME_HOURS := [6.5, 12.0, 21.0]
+var _skip: Tween
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -206,24 +215,35 @@ func _sync_clear_characters() -> void:
 		_moved.clear()
 
 
-func set_time(t: int) -> void:
-	time_of_day = wrapi(t, 0, 3)
+func _process(delta: float) -> void:
+	if clock_running and not (_skip and _skip.is_running()):
+		set_hour(hour + delta * 24.0 / day_length)
+
+
+func set_hour(h: float) -> void:
+	hour = fposmod(h, 24.0)
+	if hour >= 19.0 or hour < 5.0:
+		time_of_day = 2
+	elif hour >= 9.0 and hour < 16.5:
+		time_of_day = 1
+	else:
+		time_of_day = 0
 	night_mode = time_of_day == 2
-	var s := get_tree().current_scene
-	if s and s.has_method("apply_time"):
-		s.apply_time(time_of_day, true)
+
+
+## Fast-forwards the clock (over 2 s) to the start of part t of the day.
+func set_time(t: int) -> void:
+	var target: float = TIME_HOURS[wrapi(t, 0, 3)]
+	if target <= hour:
+		target += 24.0
+	if _skip:
+		_skip.kill()
+	_skip = create_tween()
+	_skip.tween_method(set_hour, hour, target, 2.0).set_trans(Tween.TRANS_SINE)
 
 
 func set_night(on: bool) -> void:
-	if on:
-		set_time(2)
-		return
-	if time_of_day == 2:
-		time_of_day = 0
-	night_mode = on
-	var s := get_tree().current_scene
-	if s and s.has_method("apply_night"):
-		s.apply_night(on, true)
+	set_time(2 if on else 0)
 
 
 func go(scene_path: String) -> void:
