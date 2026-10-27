@@ -5,6 +5,10 @@ extends Node2D
 
 @export var map_size: Vector2 = Vector2(2048, 1280)
 @export var camera_zoom: float = 2.4
+## Mouse wheel zooms between these (bigger = closer). Each notch is zoom_step.
+@export var zoom_min: float = 1.2
+@export var zoom_max: float = 3.0
+@export var zoom_step: float = 1.1
 @export var spawn_player: bool = true
 ## How strong the golden morning look is on this map (dry, sandy maps look best lower).
 @export_range(0.0, 1.0, 0.05) var morning_strength: float = 1.0
@@ -12,6 +16,7 @@ extends Node2D
 @export_enum("village_boy", "black_cat") var test_character: String = ""
 
 var _pan_cam: Camera2D
+var _cam: Camera2D
 var _shade_vp: SubViewport
 var _shade_t := 0.0
 var _t := 0.0
@@ -36,7 +41,11 @@ func _ready() -> void:
 	Game.next_spawn = ""
 	player.global_position = spawn.global_position
 	$Objects.add_child(player)
+	if Game.camera_zoom > 0.0:  # keep the zoom the player picked on the last map
+		camera_zoom = Game.camera_zoom
+	camera_zoom = clampf(camera_zoom, zoom_min, zoom_max)
 	var cam := Camera2D.new()
+	_cam = cam
 	cam.name = "Camera2D"
 	cam.zoom = Vector2(camera_zoom, camera_zoom)
 	cam.position = Vector2(0, -30)
@@ -68,6 +77,25 @@ func _process(delta: float) -> void:
 	# drift along a loop: palace -> market -> fortress gate -> monastery
 	var k := _t * 0.035
 	_pan_cam.position = Vector2(1000, 620) + Vector2(cos(k) * 520.0, sin(k * 2.0) * 220.0)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	var mb := event as InputEventMouseButton
+	if _cam == null or mb == null or not mb.pressed:
+		return
+	var z := camera_zoom
+	if mb.button_index == MOUSE_BUTTON_WHEEL_UP:
+		z *= zoom_step
+	elif mb.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		z /= zoom_step
+	else:
+		return
+	z = clampf(z, zoom_min, zoom_max)
+	# scale the camera by the same ratio, so a house's indoor zoom (camera_zoom * indoor_zoom) is kept
+	_cam.zoom *= z / camera_zoom
+	camera_zoom = z
+	Game.camera_zoom = z
+	get_viewport().set_input_as_handled()
 
 
 func _exit_tree() -> void:

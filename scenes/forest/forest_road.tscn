@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3]
+[gd_scene load_steps=62 format=3]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="sc_w"]
 
@@ -36,53 +36,59 @@
 
 [ext_resource type="PackedScene" path="res://environment/forest/rock_b.tscn" id="k_rock_b"]
 
+[ext_resource type="PackedScene" path="res://characters/npcs/bandit_brute/bandit_brute.tscn" id="p_brute"]
+
+[ext_resource type="PackedScene" path="res://characters/npcs/bandit_raider/bandit_raider.tscn" id="p_raider"]
+
 [ext_resource type="PackedScene" path="res://environment/forest/bush_green.tscn" id="k_bush_green"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/bush_autumn.tscn" id="k_bush_autumn"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/bush_green_f.tscn" id="k_bush_green_f"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/bush_autumn_f.tscn" id="k_bush_autumn_f"]
 
+[ext_resource type="PackedScene" path="res://environment/palace/training/t_campfire.tscn" id="k_t_campfire"]
+
 [ext_resource type="PackedScene" path="res://environment/forest/shrub.tscn" id="k_shrub"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/bush_autumn.tscn" id="k_bush_autumn"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/sapling_a.tscn" id="k_sapling_a"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_green.tscn" id="k_tree_green"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_olive.tscn" id="k_tree_olive"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_olive_f.tscn" id="k_tree_olive_f"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/tree_tall_f.tscn" id="k_tree_tall_f"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/sapling_b.tscn" id="k_sapling_b"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/tree_green_f.tscn" id="k_tree_green_f"]
 
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive.tscn" id="k_tree_olive"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_green.tscn" id="k_tree_green"]
+
 [ext_resource type="PackedScene" path="res://environment/forest/tree_tall.tscn" id="k_tree_tall"]
 
-[ext_resource type="PackedScene" path="res://environment/forest/sapling_c.tscn" id="k_sapling_c"]
+[ext_resource type="PackedScene" path="res://environment/forest/tree_tall_f.tscn" id="k_tree_tall_f"]
 
-[ext_resource type="PackedScene" path="res://environment/forest/sapling_d.tscn" id="k_sapling_d"]
+[ext_resource type="PackedScene" path="res://environment/forest/sapling_a.tscn" id="k_sapling_a"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/dead_tree.tscn" id="k_dead_tree"]
 
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive_f.tscn" id="k_tree_olive_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/sapling_c.tscn" id="k_sapling_c"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/sapling_d.tscn" id="k_sapling_d"]
+
 [ext_resource type="PackedScene" path="res://environment/forest/palm.tscn" id="k_palm"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/fern_b.tscn" id="k_fern_b"]
-
-[ext_resource type="PackedScene" path="res://environment/forest/fern_d.tscn" id="k_fern_d"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/fern_a.tscn" id="k_fern_a"]
 
 [ext_resource type="PackedScene" path="res://environment/forest/fern_c.tscn" id="k_fern_c"]
 
+[ext_resource type="PackedScene" path="res://environment/forest/fern_d.tscn" id="k_fern_d"]
+
 [ext_resource type="PackedScene" path="res://environment/forest/flowers.tscn" id="k_flowers"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/fern_b.tscn" id="k_fern_b"]
 
 [ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
 
@@ -269,233 +275,310 @@ position = Vector2(936, 79)
 [node name="RockB7" parent="Objects" instance=ExtResource("k_rock_b")]
 position = Vector2(1281, 431)
 
+[node name="Bandit1" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(656, 972)
+variant = 3
+start_facing = "s"
+
+[node name="Bandit2" parent="Objects" instance=ExtResource("p_brute")]
+position = Vector2(700, 933)
+variant = 2
+start_facing = "s"
+
+[node name="Bandit3" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(743, 926)
+variant = 1
+start_facing = "s"
+
 [node name="BushGreen1" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(4, 1317)
-
-[node name="BushGreenF1" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(84, 1150)
-
-[node name="BushAutumnF1" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(95, 1312)
-
-[node name="BushGreen2" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(163, 1334)
-
-[node name="BushGreenF2" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(215, 1160)
-
-[node name="Shrub1" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(284, 1154)
+position = Vector2(604, 935)
 
 [node name="BushAutumn1" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(330, 1319)
+position = Vector2(646, 928)
 
-[node name="BushAutumnF2" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(343, 1120)
+[node name="BushGreenF1" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(684, 882)
 
-[node name="BushGreen3" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(431, 1092)
+[node name="BushAutumnF1" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(736, 859)
 
-[node name="BushGreen4" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(489, 1262)
+[node name="Bandit4" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(1680, 921)
+variant = 1
+start_facing = "s"
 
-[node name="BushAutumnF3" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(571, 1219)
+[node name="Bandit5" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(1726, 924)
+variant = 0
+start_facing = "s"
 
-[node name="BushGreen5" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(583, 1055)
+[node name="Bandit6" parent="Objects" instance=ExtResource("p_brute")]
+position = Vector2(1772, 960)
+variant = 3
+start_facing = "s"
 
-[node name="BushAutumnF4" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(653, 1179)
-
-[node name="Shrub2" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(732, 1155)
-
-[node name="BushGreen6" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(789, 1124)
+[node name="BushGreen2" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1675, 871)
 
 [node name="BushAutumn2" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(780, 946)
+position = Vector2(1719, 886)
 
-[node name="BushGreen7" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(855, 1077)
+[node name="BushGreenF2" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(1774, 900)
 
-[node name="Shrub3" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(825, 904)
+[node name="BushAutumnF2" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1821, 927)
 
-[node name="Shrub4" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(919, 1051)
+[node name="Bandit7" parent="Objects" instance=ExtResource("p_brute")]
+position = Vector2(2364, 746)
+variant = 3
+start_facing = "s"
 
-[node name="BushAutumnF5" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(945, 881)
+[node name="Bandit8" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(2410, 709)
+variant = 2
+start_facing = "s"
 
-[node name="BushGreen8" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1120, 985)
+[node name="Bandit9" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(2455, 704)
+variant = 1
+start_facing = "s"
+
+[node name="Bandit10" parent="Objects" instance=ExtResource("p_raider")]
+position = Vector2(2500, 671)
+variant = 0
+start_facing = "s"
+
+[node name="BushGreen3" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2330, 709)
 
 [node name="BushAutumn3" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1160, 815)
-
-[node name="BushAutumnF6" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(1194, 972)
-
-[node name="BushAutumnF7" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(1267, 826)
+position = Vector2(2367, 670)
 
 [node name="BushGreenF3" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(1329, 998)
+position = Vector2(2420, 662)
 
-[node name="BushGreen9" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1408, 1044)
+[node name="BushAutumnF3" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(2466, 633)
 
-[node name="BushGreen10" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1582, 899)
+[node name="TCampfire1" parent="Objects" instance=ExtResource("k_t_campfire")]
+position = Vector2(2368, 612)
 
-[node name="BushAutumnF8" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(1705, 954)
+[node name="Log3" parent="Objects" instance=ExtResource("k_log")]
+position = Vector2(2428, 622)
+
+[node name="BushGreen4" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(4, 1324)
+
+[node name="Shrub1" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(78, 1156)
 
 [node name="BushGreenF4" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(1786, 986)
+position = Vector2(90, 1336)
 
-[node name="BushGreen11" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1765, 1160)
+[node name="Shrub2" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(140, 1169)
 
-[node name="BushGreen12" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1854, 1157)
+[node name="BushAutumnF4" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(151, 1332)
 
-[node name="BushGreenF5" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(1902, 974)
+[node name="Shrub3" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(225, 1156)
 
-[node name="Shrub5" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1913, 1135)
+[node name="BushGreen5" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(237, 1334)
 
-[node name="BushGreen13" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1989, 1164)
-
-[node name="BushGreen14" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2009, 990)
+[node name="BushGreen6" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(290, 1162)
 
 [node name="BushAutumn4" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2077, 956)
-
-[node name="BushGreenF6" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(2148, 908)
-
-[node name="BushAutumnF9" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(2199, 880)
-
-[node name="BushAutumnF10" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(2274, 1006)
-
-[node name="BushGreen15" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2248, 836)
-
-[node name="BushAutumnF11" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(2328, 972)
-
-[node name="BushGreen16" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2477, 904)
+position = Vector2(328, 1312)
 
 [node name="BushAutumn5" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2480, 727)
+position = Vector2(325, 1131)
 
-[node name="Shrub6" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2543, 688)
+[node name="BushGreenF5" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(378, 1284)
 
-[node name="BushGreen17" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2610, 671)
+[node name="BushAutumnF5" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(393, 1116)
+
+[node name="BushGreenF6" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(450, 1280)
+
+[node name="BushGreen7" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(441, 1076)
+
+[node name="Shrub4" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(522, 1054)
+
+[node name="BushAutumnF6" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(579, 1220)
 
 [node name="BushAutumn6" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2627, 835)
-
-[node name="BushAutumnF12" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(2693, 662)
-
-[node name="BushGreenF7" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(2713, 849)
+position = Vector2(666, 1200)
 
 [node name="BushAutumn7" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2757, 673)
+position = Vector2(631, 1017)
 
-[node name="Shrub7" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2772, 821)
+[node name="BushAutumnF7" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(715, 1165)
 
-[node name="BushGreenF8" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(2817, 659)
-
-[node name="BushGreen18" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2834, 817)
-
-[node name="BushGreenF9" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(2893, 634)
-
-[node name="Shrub8" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2981, 637)
-
-[node name="BushGreenF10" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(2998, 800)
-
-[node name="BushGreen19" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1599, 845)
-
-[node name="BushGreenF11" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(1597, 784)
-
-[node name="BushGreen20" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1483, 707)
+[node name="BushAutumnF8" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(828, 1098)
 
 [node name="BushAutumn8" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1596, 679)
+position = Vector2(820, 919)
+
+[node name="Shrub5" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(895, 1051)
+
+[node name="BushGreenF7" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(885, 890)
+
+[node name="BushAutumnF9" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1027, 853)
+
+[node name="BushGreen8" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1092, 820)
+
+[node name="BushAutumnF10" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1163, 983)
 
 [node name="BushAutumn9" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1466, 638)
+position = Vector2(1254, 819)
 
-[node name="Shrub9" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1591, 607)
+[node name="BushAutumnF11" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1290, 1019)
 
-[node name="Shrub10" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1453, 570)
+[node name="BushAutumn10" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1362, 1018)
 
-[node name="Shrub11" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1579, 539)
+[node name="Shrub6" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1572, 891)
+
+[node name="BushGreen9" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1703, 974)
+
+[node name="Shrub7" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1754, 1001)
+
+[node name="BushAutumnF12" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1764, 1148)
+
+[node name="BushGreen10" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1828, 1142)
+
+[node name="BushGreen11" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1873, 976)
+
+[node name="Shrub8" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1886, 1167)
 
 [node name="BushAutumnF13" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
-position = Vector2(1485, 443)
+position = Vector2(1965, 974)
 
-[node name="BushGreen21" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1586, 498)
+[node name="BushAutumn11" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1978, 1150)
+
+[node name="BushGreen12" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2085, 935)
+
+[node name="BushAutumn12" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2169, 1077)
+
+[node name="BushAutumnF14" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(2157, 892)
+
+[node name="BushGreenF8" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(2253, 1054)
+
+[node name="BushAutumn13" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2219, 876)
+
+[node name="Shrub9" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(2295, 1004)
+
+[node name="BushGreenF9" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(2268, 838)
+
+[node name="BushGreen13" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2349, 974)
+
+[node name="BushGreenF10" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(2439, 936)
+
+[node name="BushAutumn14" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2496, 891)
+
+[node name="BushAutumnF15" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(2567, 870)
+
+[node name="BushAutumnF16" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(2554, 695)
+
+[node name="BushGreen14" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2630, 860)
+
+[node name="BushGreenF11" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(2669, 675)
 
 [node name="BushGreenF12" parent="Objects" instance=ExtResource("k_bush_green_f")]
-position = Vector2(1622, 432)
+position = Vector2(2686, 838)
 
-[node name="BushGreen22" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1641, 377)
+[node name="Shrub10" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(2737, 661)
 
-[node name="SaplingA1" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(833, 209)
+[node name="BushAutumn15" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2754, 825)
 
-[node name="TreeGreen1" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(381, 2010)
+[node name="BushAutumn16" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2807, 654)
 
-[node name="TreeOlive1" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1752, 738)
+[node name="Shrub11" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(2826, 830)
 
-[node name="TreeGoldF1" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(94, 577)
+[node name="Shrub12" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(2877, 651)
 
-[node name="TreeOliveF1" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(821, 1447)
+[node name="Shrub13" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(2895, 827)
 
-[node name="TreeGreen2" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2135, 1662)
+[node name="BushAutumnF17" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1466, 815)
 
-[node name="TreeGold1" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(554, 1597)
+[node name="BushGreenF13" parent="Objects" instance=ExtResource("k_bush_green_f")]
+position = Vector2(1592, 793)
 
-[node name="TreeTallF1" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2655, 1478)
+[node name="BushAutumn17" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1632, 741)
 
-[node name="TreeGreen3" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2118, 1937)
+[node name="BushGreen15" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1484, 713)
+
+[node name="BushAutumn18" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1588, 687)
+
+[node name="BushGreen16" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1479, 641)
+
+[node name="Shrub14" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1577, 617)
+
+[node name="Shrub15" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1560, 536)
+
+[node name="BushAutumnF18" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1457, 496)
+
+[node name="BushAutumn19" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1510, 349)
+
+[node name="BushAutumnF19" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1631, 415)
+
+[node name="BushAutumnF20" parent="Objects" instance=ExtResource("k_bush_autumn_f")]
+position = Vector2(1666, 353)
 
 [node name="SaplingB1" parent="Objects" instance=ExtResource("k_sapling_b")]
 position = Vector2(2763, 903)
@@ -503,10 +586,10 @@ position = Vector2(2763, 903)
 [node name="TreeGreenF1" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(1548, 1694)
 
-[node name="TreeOlive2" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive1" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(1846, 1351)
 
-[node name="TreeGreen4" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen1" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(2866, 505)
 
 [node name="TreeTall1" parent="Objects" instance=ExtResource("k_tree_tall")]
@@ -515,10 +598,10 @@ position = Vector2(2656, 1031)
 [node name="TreeGreenF2" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(2590, 1286)
 
-[node name="TreeTallF2" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF1" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2807, 1625)
 
-[node name="SaplingA2" parent="Objects" instance=ExtResource("k_sapling_a")]
+[node name="SaplingA1" parent="Objects" instance=ExtResource("k_sapling_a")]
 position = Vector2(1347, 1361)
 
 [node name="TreeTall2" parent="Objects" instance=ExtResource("k_tree_tall")]
@@ -527,1586 +610,1661 @@ position = Vector2(1424, 1879)
 [node name="TreeGreenF3" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(2939, 1865)
 
-[node name="TreeOlive3" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(695, 840)
+[node name="DeadTree1" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(361, 437)
 
-[node name="TreeGoldF2" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(74, 1932)
+[node name="TreeOlive2" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1088, 1345)
 
-[node name="TreeGoldF3" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGreenF4" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(1153, 1172)
 
-[node name="TreeOliveF2" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF1" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(679, 739)
 
 [node name="SaplingC1" parent="Objects" instance=ExtResource("k_sapling_c")]
 position = Vector2(987, 1737)
 
-[node name="TreeGold2" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold1" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(2582, 1360)
 
-[node name="TreeOlive4" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive3" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(665, 1907)
 
-[node name="SaplingB2" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2379, 623)
+[node name="TreeOlive4" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(872, 2023)
 
-[node name="TreeOlive5" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2922, 1006)
+[node name="TreeGreen2" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2348, 1873)
 
-[node name="TreeGreen5" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGoldF1" parent="Objects" instance=ExtResource("k_tree_gold_f")]
 position = Vector2(2006, 229)
 
-[node name="TreeTall3" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2906, 1126)
+[node name="TreeGreen3" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2003, 2012)
 
-[node name="SaplingD1" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2125, 1334)
+[node name="TreeGreen4" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1311, 1824)
 
 [node name="SaplingC2" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(1652, 1973)
+position = Vector2(2525, 1508)
 
-[node name="TreeGreen6" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(827, 1831)
+[node name="TreeOlive5" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2845, 1461)
+
+[node name="TreeGoldF2" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1853, 671)
+
+[node name="TreeGreen5" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(336, 816)
 
 [node name="TreeOlive6" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2789, 454)
+position = Vector2(2515, 236)
 
-[node name="TreeGreen7" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(154, 1847)
+[node name="TreeGold2" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(554, 1567)
 
 [node name="TreeOlive7" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2948, 1982)
+position = Vector2(2726, 2035)
 
-[node name="TreeGreen8" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2941, 1205)
+[node name="DeadTree2" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(945, 1106)
 
-[node name="TreeGreen9" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(123, 185)
+[node name="TreeGold3" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2853, 1712)
 
-[node name="TreeGreen10" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2238, 1978)
-
-[node name="SaplingC3" parent="Objects" instance=ExtResource("k_sapling_c")]
+[node name="DeadTree3" parent="Objects" instance=ExtResource("k_dead_tree")]
 position = Vector2(2192, 1271)
 
-[node name="SaplingB3" parent="Objects" instance=ExtResource("k_sapling_b")]
+[node name="SaplingB2" parent="Objects" instance=ExtResource("k_sapling_b")]
 position = Vector2(618, 1658)
 
-[node name="TreeOliveF3" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF2" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(1331, 291)
 
-[node name="TreeGreen11" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen6" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(1043, 1500)
 
-[node name="DeadTree1" parent="Objects" instance=ExtResource("k_dead_tree")]
+[node name="DeadTree4" parent="Objects" instance=ExtResource("k_dead_tree")]
 position = Vector2(2821, 369)
 
 [node name="TreeOlive8" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(672, 460)
 
-[node name="TreeGold3" parent="Objects" instance=ExtResource("k_tree_gold")]
+[node name="TreeGold4" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(1439, 1387)
 
-[node name="TreeTall4" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall3" parent="Objects" instance=ExtResource("k_tree_tall")]
 position = Vector2(300, 652)
 
-[node name="SaplingC4" parent="Objects" instance=ExtResource("k_sapling_c")]
+[node name="SaplingC3" parent="Objects" instance=ExtResource("k_sapling_c")]
 position = Vector2(2140, 538)
 
-[node name="TreeGreenF4" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF5" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(2049, 1235)
 
-[node name="TreeGoldF4" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF3" parent="Objects" instance=ExtResource("k_tree_gold_f")]
 position = Vector2(355, 523)
 
-[node name="TreeOliveF4" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2266, 1482)
+[node name="TreeOliveF3" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2913, 1271)
 
-[node name="TreeTall5" parent="Objects" instance=ExtResource("k_tree_tall")]
+[node name="TreeTall4" parent="Objects" instance=ExtResource("k_tree_tall")]
 position = Vector2(482, 165)
 
-[node name="TreeGreen12" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2504, 1637)
+[node name="TreeGreen7" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(541, 1300)
 
-[node name="TreeTallF3" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF2" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2095, 392)
 
-[node name="TreeOliveF5" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF4" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2527, 2006)
 
-[node name="TreeTallF4" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+[node name="TreeTallF3" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2606, 566)
 
-[node name="SaplingC5" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(652, 1804)
+[node name="TreeOlive9" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2181, 1500)
 
-[node name="TreeGold4" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(823, 1758)
+[node name="TreeTall5" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(168, 1012)
+
+[node name="DeadTree5" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(811, 1768)
 
 [node name="TreeGold5" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(117, 651)
+position = Vector2(2411, 1108)
 
-[node name="TreeGreen13" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1188, 1776)
+[node name="TreeTallF4" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(748, 1704)
 
-[node name="TreeGoldF5" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1174, 1693)
-
-[node name="TreeOliveF6" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2284, 1677)
-
-[node name="SaplingA3" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(2429, 1178)
-
-[node name="TreeOlive9" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive10" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(2012, 1538)
 
 [node name="TreeGold6" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(2405, 1238)
 
-[node name="TreeGreen14" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen8" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(1005, 1262)
 
-[node name="TreeGoldF6" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF4" parent="Objects" instance=ExtResource("k_tree_gold_f")]
 position = Vector2(154, 475)
 
-[node name="SaplingA4" parent="Objects" instance=ExtResource("k_sapling_a")]
+[node name="SaplingA2" parent="Objects" instance=ExtResource("k_sapling_a")]
 position = Vector2(1737, 1277)
 
-[node name="TreeGreenF5" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF6" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(216, 349)
 
-[node name="TreeGoldF7" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF5" parent="Objects" instance=ExtResource("k_tree_gold_f")]
 position = Vector2(2215, 595)
 
-[node name="SaplingC6" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(241, 1007)
-
-[node name="TreeOlive10" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2713, 1298)
+[node name="SaplingC4" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(186, 1677)
 
 [node name="TreeOlive11" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1017, 1375)
-
-[node name="SaplingA5" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(390, 717)
-
-[node name="TreeOliveF7" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(1357, 213)
+position = Vector2(2713, 1298)
 
 [node name="TreeOlive12" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(266, 1064)
+
+[node name="SaplingA3" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(390, 717)
+
+[node name="TreeOliveF5" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(1357, 213)
+
+[node name="TreeOlive13" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(677, 1287)
 
 [node name="TreeTallF5" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(1424, 1269)
 
-[node name="SaplingB4" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(492, 829)
-
-[node name="TreeTall6" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1684, 161)
-
-[node name="TreeGreen15" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1581, 2021)
-
-[node name="SaplingC7" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(2350, 1544)
-
-[node name="TreeTall7" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(926, 664)
+[node name="TreeOliveF6" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2057, 1340)
 
 [node name="TreeTallF6" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(1184, 1949)
+position = Vector2(38, 1800)
 
-[node name="TreeGreenF6" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2735, 1804)
+[node name="DeadTree6" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1581, 2021)
 
-[node name="TreeTall8" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2820, 2051)
+[node name="SaplingC5" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(1224, 1653)
 
-[node name="SaplingC8" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(2886, 1430)
+[node name="TreeTall6" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2808, 1062)
 
-[node name="TreeOlive13" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1288, 1603)
+[node name="TreeOlive14" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2584, 1443)
 
-[node name="TreeGoldF8" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(815, 1262)
+[node name="TreeOlive15" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(970, 1824)
 
-[node name="TreeGreen16" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1034, 493)
-
-[node name="TreeTall9" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(384, 885)
-
-[node name="SaplingD2" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2088, 1835)
+[node name="TreeOlive16" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(159, 770)
 
 [node name="TreeGreenF7" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(39, 626)
+
+[node name="DeadTree7" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(817, 777)
+
+[node name="TreeOlive17" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1635, 474)
+
+[node name="TreeTallF7" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(815, 1262)
+
+[node name="SaplingB3" parent="Objects" instance=ExtResource("k_sapling_b")]
+position = Vector2(552, 1799)
+
+[node name="TreeTall7" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(384, 885)
+
+[node name="SaplingD1" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(2088, 1835)
+
+[node name="TreeGreenF8" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(266, 1543)
 
 [node name="TreeGold7" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(76, 947)
 
-[node name="TreeGreenF8" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF9" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(558, 737)
 
-[node name="TreeOlive14" parent="Objects" instance=ExtResource("k_tree_olive")]
+[node name="TreeOlive18" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(798, 1927)
 
-[node name="TreeGreen17" parent="Objects" instance=ExtResource("k_tree_green")]
+[node name="TreeGreen9" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(2770, 563)
 
-[node name="TreeOliveF8" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF7" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(1743, 526)
 
-[node name="SaplingB5" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(283, 1619)
+[node name="TreeOliveF8" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2398, 1526)
 
-[node name="TreeGreen18" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(979, 1152)
+[node name="TreeGoldF6" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(863, 305)
+
+[node name="TreeGreen10" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(997, 538)
 
 [node name="TreeOliveF9" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2062, 832)
 
-[node name="DeadTree2" parent="Objects" instance=ExtResource("k_dead_tree")]
+[node name="DeadTree8" parent="Objects" instance=ExtResource("k_dead_tree")]
 position = Vector2(2521, 383)
 
-[node name="DeadTree3" parent="Objects" instance=ExtResource("k_dead_tree")]
+[node name="DeadTree9" parent="Objects" instance=ExtResource("k_dead_tree")]
 position = Vector2(1309, 1742)
 
 [node name="TreeGold8" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(1217, 1310)
 
-[node name="SaplingD3" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(1680, 880)
-
-[node name="TreeGoldF9" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1087, 1634)
-
-[node name="TreeOlive15" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(803, 819)
-
-[node name="TreeGreen19" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(834, 508)
-
-[node name="TreeOlive16" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(357, 816)
-
-[node name="TreeGreen20" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(722, 1643)
-
-[node name="TreeGreen21" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1892, 152)
-
-[node name="SaplingB6" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2796, 186)
-
-[node name="TreeGreen22" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(122, 1400)
-
-[node name="TreeOliveF10" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2378, 1603)
-
-[node name="TreeTall10" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1253, 1058)
-
-[node name="TreeOliveF11" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(1532, 1900)
-
-[node name="TreeGold9" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2097, 2018)
-
-[node name="TreeOlive17" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(872, 427)
-
-[node name="TreeOliveF12" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(436, 289)
-
-[node name="TreeGoldF10" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(368, 1512)
-
-[node name="SaplingC9" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(1949, 1449)
-
-[node name="TreeGold10" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2968, 1512)
-
-[node name="DeadTree4" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(2426, 300)
-
-[node name="TreeOlive18" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(420, 1361)
-
-[node name="TreeGold11" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2221, 1889)
-
-[node name="DeadTree5" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(42, 1830)
-
-[node name="TreeTall11" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1021, 1838)
-
-[node name="DeadTree6" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(845, 1186)
-
-[node name="TreeGoldF11" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(479, 1463)
-
-[node name="TreeOliveF13" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2278, 696)
-
-[node name="TreeTall12" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(664, 1743)
-
-[node name="TreeTallF7" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(1053, 2050)
-
-[node name="TreeOliveF14" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2251, 1389)
+[node name="TreeGreenF10" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(154, 1884)
 
 [node name="TreeOlive19" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2720, 326)
+position = Vector2(2831, 969)
 
-[node name="TreeTallF8" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(737, 212)
+[node name="SaplingD2" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(575, 651)
 
-[node name="TreeGreen23" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2824, 1177)
+[node name="SaplingB4" parent="Objects" instance=ExtResource("k_sapling_b")]
+position = Vector2(2334, 1717)
 
-[node name="SaplingB7" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(1309, 1463)
+[node name="DeadTree10" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2797, 205)
 
-[node name="TreeGreen24" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(582, 1845)
-
-[node name="TreeGreenF9" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(1955, 466)
-
-[node name="TreeOliveF15" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(1664, 1629)
+[node name="DeadTree11" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1158, 1812)
 
 [node name="TreeOlive20" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(106, 2021)
+position = Vector2(21, 698)
 
-[node name="TreeOlive21" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(773, 684)
+[node name="TreeTall8" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(122, 1400)
 
-[node name="TreeGreenF10" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2790, 967)
-
-[node name="TreeGoldF12" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2675, 951)
-
-[node name="TreeGoldF13" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(467, 1777)
-
-[node name="TreeOlive22" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1828, 820)
-
-[node name="SaplingB8" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2370, 2052)
-
-[node name="SaplingA6" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(625, 199)
-
-[node name="TreeOlive23" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1933, 713)
-
-[node name="SaplingB9" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(1691, 1873)
-
-[node name="SaplingA7" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(2708, 250)
-
-[node name="TreeOlive24" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(511, 1999)
+[node name="TreeTallF8" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(502, 1671)
 
 [node name="TreeTallF9" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2118, 707)
+position = Vector2(2294, 182)
+
+[node name="TreeGreen11" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2732, 1400)
+
+[node name="TreeGreenF11" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(449, 1609)
+
+[node name="TreeOlive21" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2053, 1621)
+
+[node name="TreeGreenF12" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2625, 374)
+
+[node name="TreeGreenF13" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2396, 1395)
+
+[node name="TreeTall9" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(192, 904)
+
+[node name="TreeOlive22" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2341, 2052)
+
+[node name="SaplingB5" parent="Objects" instance=ExtResource("k_sapling_b")]
+position = Vector2(2212, 1702)
+
+[node name="DeadTree12" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(420, 1361)
+
+[node name="TreeTall10" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(903, 1570)
+
+[node name="TreeOlive23" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1865, 271)
+
+[node name="TreeGreen12" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(935, 796)
+
+[node name="TreeGreen13" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2230, 2016)
+
+[node name="TreeGreen14" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1803, 446)
+
+[node name="TreeTall11" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1346, 1510)
+
+[node name="TreeOlive24" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2084, 1955)
+
+[node name="TreeGreenF14" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2094, 627)
+
+[node name="TreeGold9" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(737, 212)
+
+[node name="TreeOlive25" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2235, 1432)
+
+[node name="TreeOliveF10" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(1742, 725)
+
+[node name="TreeGreen15" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2824, 1177)
+
+[node name="TreeGreen16" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1143, 1069)
+
+[node name="SaplingD3" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(604, 236)
+
+[node name="TreeTall12" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1955, 466)
+
+[node name="DeadTree13" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1272, 1997)
+
+[node name="TreeGold10" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1664, 1629)
+
+[node name="TreeOlive26" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(106, 2021)
+
+[node name="TreeOlive27" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1328, 1600)
+
+[node name="TreeOlive28" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(773, 684)
+
+[node name="TreeGreenF15" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2690, 1669)
+
+[node name="DeadTree14" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2200, 733)
+
+[node name="TreeOlive29" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2566, 1689)
+
+[node name="TreeOliveF11" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2542, 1904)
+
+[node name="TreeOlive30" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(759, 1536)
 
 [node name="TreeTall13" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2455, 571)
+position = Vector2(892, 587)
 
-[node name="TreeGold12" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1391, 482)
+[node name="TreeGreenF16" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2690, 167)
 
-[node name="TreeGoldF14" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2581, 1097)
+[node name="DeadTree15" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2708, 250)
 
-[node name="TreeGreen25" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(44, 1733)
+[node name="TreeGold11" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(511, 1999)
+
+[node name="TreeOliveF12" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2540, 1034)
+
+[node name="TreeGreen17" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2800, 1900)
+
+[node name="TreeGreen18" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(907, 165)
 
 [node name="TreeTall14" parent="Objects" instance=ExtResource("k_tree_tall")]
 position = Vector2(457, 1010)
 
-[node name="TreeOliveF16" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+[node name="TreeOliveF13" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(1551, 1525)
 
-[node name="SaplingB10" parent="Objects" instance=ExtResource("k_sapling_b")]
+[node name="SaplingB6" parent="Objects" instance=ExtResource("k_sapling_b")]
 position = Vector2(1435, 1760)
 
-[node name="TreeOlive25" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(117, 1673)
+[node name="TreeOlive31" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2420, 528)
 
-[node name="TreeGreenF11" parent="Objects" instance=ExtResource("k_tree_green_f")]
+[node name="TreeGreenF17" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(1960, 1779)
 
-[node name="TreeGoldF15" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeGoldF7" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(501, 1502)
+
+[node name="TreeOliveF14" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(1688, 631)
 
-[node name="TreeGreen26" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1063, 690)
-
-[node name="TreeGreenF12" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2919, 1722)
-
-[node name="TreeGreen27" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2765, 1417)
-
-[node name="TreeOliveF17" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2402, 409)
-
-[node name="DeadTree7" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(249, 942)
-
-[node name="TreeGreen28" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2967, 322)
-
-[node name="TreeGold13" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(261, 1992)
-
 [node name="TreeTall15" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2144, 1559)
+position = Vector2(327, 1838)
+
+[node name="TreeGreen19" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1718, 1946)
+
+[node name="TreeGoldF8" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1277, 1921)
+
+[node name="TreeGreenF18" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(1332, 1438)
+
+[node name="TreeOlive32" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(909, 1888)
+
+[node name="DeadTree16" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2896, 1385)
+
+[node name="TreeTall16" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1062, 1991)
 
 [node name="TreeTallF10" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2377, 1047)
+position = Vector2(588, 857)
 
-[node name="TreeOliveF18" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(229, 264)
+[node name="TreeGreenF19" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2967, 322)
 
-[node name="TreeOlive26" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(160, 1568)
+[node name="TreeGold12" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(261, 1992)
 
-[node name="TreeGoldF16" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+[node name="TreeTall17" parent="Objects" instance=ExtResource("k_tree_tall")]
 position = Vector2(214, 1763)
 
-[node name="SaplingA8" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(2325, 562)
+[node name="TreeGreen20" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1927, 1432)
 
-[node name="TreeGold14" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2666, 1897)
+[node name="SaplingC6" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(659, 333)
 
-[node name="TreeGreen29" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(822, 2028)
+[node name="TreeGreen21" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2727, 466)
 
-[node name="TreeGold15" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1310, 2033)
+[node name="DeadTree17" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1708, 2021)
 
-[node name="SaplingA9" parent="Objects" instance=ExtResource("k_sapling_a")]
+[node name="SaplingA4" parent="Objects" instance=ExtResource("k_sapling_a")]
 position = Vector2(2500, 1832)
 
 [node name="SaplingD4" parent="Objects" instance=ExtResource("k_sapling_d")]
 position = Vector2(637, 534)
 
-[node name="SaplingA10" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(1417, 1968)
-
-[node name="SaplingD5" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2407, 1749)
-
-[node name="SaplingB11" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(1472, 181)
-
-[node name="TreeTallF11" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(221, 787)
-
-[node name="TreeGold16" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1707, 808)
-
-[node name="TreeTallF12" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2629, 1632)
-
-[node name="TreeGoldF17" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2518, 467)
-
-[node name="TreeOliveF19" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(1202, 1876)
-
-[node name="TreeTall16" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1175, 1461)
-
-[node name="TreeGoldF18" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1809, 436)
-
-[node name="TreeOlive27" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(897, 568)
-
-[node name="TreeGoldF19" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2043, 635)
-
-[node name="TreeGoldF20" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(260, 1367)
-
-[node name="TreeOlive28" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(54, 1471)
-
-[node name="TreeGold17" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2283, 345)
-
-[node name="TreeOlive29" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1315, 1843)
-
-[node name="TreeGoldF21" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(668, 275)
-
-[node name="TreeGoldF22" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(605, 929)
-
-[node name="SaplingA11" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(677, 1451)
-
-[node name="TreeOlive30" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1393, 1646)
-
-[node name="DeadTree8" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(1703, 2038)
-
-[node name="TreeOliveF20" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2486, 1447)
-
-[node name="TreeTall17" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1246, 1519)
-
-[node name="TreeTall18" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(503, 566)
-
-[node name="TreeGreen30" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2706, 503)
-
-[node name="DeadTree9" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(296, 1055)
-
-[node name="TreeOlive31" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2517, 1222)
-
-[node name="TreeOlive32" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1316, 1234)
-
-[node name="TreeTall19" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(89, 388)
-
-[node name="TreeTall20" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2688, 1187)
-
-[node name="SaplingC10" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(1769, 1948)
-
-[node name="SaplingD6" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2041, 154)
-
 [node name="TreeOlive33" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2367, 1416)
-
-[node name="TreeGreen31" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1664, 1815)
-
-[node name="TreeGreen32" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2503, 1545)
-
-[node name="TreeTallF13" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2304, 1135)
-
-[node name="TreeGreen33" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(849, 1364)
-
-[node name="TreeGreen34" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(38, 759)
-
-[node name="DeadTree10" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(235, 578)
-
-[node name="TreeOliveF21" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2101, 297)
-
-[node name="SaplingD7" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2192, 176)
-
-[node name="DeadTree11" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(2605, 317)
+position = Vector2(69, 1530)
 
 [node name="TreeOlive34" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(950, 253)
+position = Vector2(544, 1868)
 
-[node name="SaplingA12" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(2368, 1967)
+[node name="TreeGreen22" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2709, 1842)
 
-[node name="TreeGoldF23" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(209, 1452)
+[node name="TreeGoldF9" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2548, 1147)
 
-[node name="TreeGreenF13" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2277, 426)
+[node name="TreeTallF11" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(1013, 674)
 
-[node name="TreeOliveF22" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(396, 1840)
+[node name="TreeTallF12" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(1352, 1166)
 
-[node name="TreeGoldF24" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1812, 655)
+[node name="TreeGreen23" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(68, 556)
 
-[node name="TreeGreenF14" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2438, 1322)
+[node name="TreeTall18" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(869, 428)
+
+[node name="TreeGold13" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1041, 1667)
+
+[node name="TreeGoldF10" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2518, 467)
+
+[node name="TreeOliveF15" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(756, 553)
+
+[node name="DeadTree18" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(359, 1443)
+
+[node name="TreeGreen24" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(863, 1170)
+
+[node name="SaplingA5" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(1201, 1467)
+
+[node name="TreeGoldF11" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(563, 1429)
+
+[node name="DeadTree19" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1154, 1897)
+
+[node name="TreeGold14" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2283, 345)
 
 [node name="TreeOlive35" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2012, 1648)
+position = Vector2(108, 1620)
 
-[node name="TreeTallF14" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2603, 253)
-
-[node name="TreeGoldF25" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2898, 244)
+[node name="TreeGoldF12" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(991, 1161)
 
 [node name="TreeOlive36" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1394, 1146)
+position = Vector2(145, 221)
+
+[node name="TreeTall19" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(65, 170)
+
+[node name="SaplingA6" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(1941, 574)
+
+[node name="TreeGreen25" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(500, 799)
+
+[node name="TreeTall20" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1067, 596)
 
 [node name="TreeOlive37" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2376, 1886)
+position = Vector2(503, 566)
 
-[node name="TreeGoldF26" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(483, 938)
+[node name="TreeGreen26" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1423, 1949)
 
 [node name="Palm1" parent="Objects" instance=ExtResource("k_palm")]
-position = Vector2(912, 166)
+position = Vector2(1987, 1847)
 
-[node name="TreeGreen35" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1203, 745)
-
-[node name="TreeGoldF27" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(321, 1436)
-
-[node name="TreeGoldF28" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2285, 1830)
-
-[node name="TreeGreen36" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1932, 1279)
-
-[node name="SaplingA13" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(2505, 1935)
+[node name="TreeGold15" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2517, 1222)
 
 [node name="TreeOlive38" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(31, 489)
-
-[node name="TreeGoldF29" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(606, 641)
-
-[node name="TreeOlive39" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1192, 2027)
-
-[node name="TreeTallF15" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2295, 1256)
+position = Vector2(1316, 1234)
 
 [node name="TreeTall21" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2804, 1083)
+position = Vector2(131, 294)
 
-[node name="SaplingD8" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(404, 1694)
+[node name="SaplingA7" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(2319, 1972)
 
-[node name="TreeOlive40" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(64, 856)
-
-[node name="TreeGold18" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1878, 574)
-
-[node name="TreeOlive41" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(243, 1903)
-
-[node name="TreeGreenF15" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2332, 498)
-
-[node name="TreeGold19" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2805, 1248)
-
-[node name="TreeGold20" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(351, 177)
-
-[node name="SaplingB12" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(642, 388)
-
-[node name="TreeGreenF16" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(435, 402)
-
-[node name="TreeGreen37" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2871, 880)
-
-[node name="TreeGreenF17" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(197, 877)
-
-[node name="SaplingB13" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(1931, 911)
-
-[node name="TreeOliveF23" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(551, 474)
-
-[node name="TreeGreenF18" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2916, 416)
-
-[node name="TreeGreen38" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1968, 368)
-
-[node name="TreeOliveF24" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2775, 1966)
-
-[node name="TreeOliveF25" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2474, 163)
-
-[node name="TreeOlive42" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2653, 176)
-
-[node name="SaplingA14" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(1832, 1434)
-
-[node name="TreeGreen39" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2493, 980)
-
-[node name="TreeGreen40" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2036, 1374)
-
-[node name="TreeGreen41" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(887, 1573)
-
-[node name="TreeTallF16" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2153, 1765)
-
-[node name="TreeOliveF26" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(999, 754)
-
-[node name="TreeOlive43" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(554, 1709)
-
-[node name="TreeTall22" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2830, 1354)
-
-[node name="TreeGold21" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2977, 488)
-
-[node name="TreeOlive44" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2764, 1701)
-
-[node name="TreeOlive45" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(706, 1371)
-
-[node name="TreeGreen42" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(848, 331)
-
-[node name="TreeGreenF19" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2502, 1719)
-
-[node name="TreeTallF17" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(1990, 561)
-
-[node name="TreeOlive46" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2062, 500)
-
-[node name="SaplingD9" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(2630, 2057)
+[node name="TreeTallF13" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2978, 251)
 
 [node name="TreeGreenF20" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(571, 1416)
+position = Vector2(2688, 1187)
 
-[node name="TreeGreen43" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1408, 394)
+[node name="SaplingD5" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(2017, 1695)
 
-[node name="TreeGold22" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1064, 1922)
-
-[node name="TreeOlive47" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2931, 1275)
-
-[node name="TreeGoldF30" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1130, 1370)
-
-[node name="SaplingC11" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(2344, 270)
-
-[node name="TreeGold23" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1540, 1782)
-
-[node name="TreeGreen44" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2967, 176)
-
-[node name="TreeOlive48" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1890, 282)
-
-[node name="TreeTall23" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1443, 1560)
-
-[node name="TreeGold24" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1078, 1089)
-
-[node name="TreeGold25" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(922, 1499)
-
-[node name="DeadTree12" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(583, 324)
-
-[node name="TreeTall24" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2968, 1381)
+[node name="TreeTallF14" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2041, 154)
 
 [node name="TreeGreenF21" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(645, 1542)
+position = Vector2(1470, 1623)
+
+[node name="TreeTallF15" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2359, 454)
+
+[node name="TreeOlive39" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(741, 296)
+
+[node name="TreeTallF16" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(450, 283)
+
+[node name="TreeOlive40" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(710, 1789)
+
+[node name="TreeGreen27" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1664, 1815)
+
+[node name="TreeGreen28" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2304, 1135)
 
 [node name="TreeGreenF22" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2879, 1924)
+position = Vector2(1901, 1257)
+
+[node name="TreeTall22" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1415, 411)
+
+[node name="TreeGreen29" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(280, 237)
+
+[node name="DeadTree20" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(804, 1615)
+
+[node name="TreeOlive41" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(950, 253)
+
+[node name="TreeTall23" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1864, 852)
+
+[node name="TreeTallF17" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(352, 1752)
+
+[node name="DeadTree21" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2913, 1998)
+
+[node name="TreeOliveF16" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2438, 1322)
+
+[node name="SaplingD6" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(1845, 763)
+
+[node name="TreeGreen30" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2664, 1776)
+
+[node name="DeadTree22" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2945, 1577)
+
+[node name="TreeOlive42" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(222, 834)
+
+[node name="DeadTree23" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2215, 1609)
 
 [node name="TreeGreenF23" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(782, 1516)
+position = Vector2(45, 1089)
 
-[node name="TreeGreen45" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1943, 798)
+[node name="TreeGreen31" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1203, 745)
 
-[node name="TreeGreenF24" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(1067, 576)
+[node name="TreeGoldF13" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2019, 746)
 
-[node name="TreeGold26" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(664, 2018)
-
-[node name="TreeTall25" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2091, 1468)
-
-[node name="TreeGoldF31" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2979, 1591)
+[node name="TreeGoldF14" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2966, 1460)
 
 [node name="TreeTallF18" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2847, 1816)
+position = Vector2(1545, 1913)
 
-[node name="TreeGreen46" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(38, 287)
+[node name="TreeOliveF17" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(540, 499)
 
-[node name="TreeGreenF25" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(759, 592)
+[node name="SaplingB7" parent="Objects" instance=ExtResource("k_sapling_b")]
+position = Vector2(184, 620)
 
-[node name="TreeGold27" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1820, 904)
+[node name="TreeTall24" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(701, 1994)
 
-[node name="TreeGreen47" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2053, 1732)
+[node name="TreeOlive43" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1800, 150)
 
-[node name="SaplingC12" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(1296, 1947)
+[node name="TreeOliveF18" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(874, 1662)
 
-[node name="TreeGreen48" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(754, 405)
+[node name="TreeOlive44" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(31, 489)
 
-[node name="SaplingC13" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(2626, 401)
+[node name="TreeGoldF15" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(686, 639)
 
-[node name="TreeGold28" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(98, 1047)
+[node name="TreeGreen32" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2890, 184)
 
-[node name="TreeGreen49" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(905, 1971)
+[node name="TreeGoldF16" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1970, 676)
 
-[node name="TreeGold29" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2725, 1546)
+[node name="TreeGold16" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2805, 1248)
 
-[node name="TreeGold30" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(2636, 1747)
+[node name="TreeGreen33" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2271, 1767)
 
-[node name="TreeGreen50" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(258, 1692)
+[node name="TreeTall25" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(356, 344)
 
-[node name="TreeGold31" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(859, 752)
+[node name="SaplingA8" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(1103, 1437)
 
-[node name="TreeGreen51" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(334, 330)
+[node name="TreeOlive45" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(814, 1346)
 
-[node name="TreeTallF19" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(1847, 1228)
+[node name="TreeOlive46" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2446, 1686)
 
-[node name="TreeGoldF32" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1810, 214)
-
-[node name="SaplingB14" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(397, 1920)
-
-[node name="SaplingA15" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(589, 1333)
+[node name="TreeGreen34" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(274, 1633)
 
 [node name="TreeTall26" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1127, 1562)
+position = Vector2(2937, 1056)
 
-[node name="TreeOliveF27" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(200, 717)
+[node name="TreeOlive47" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1931, 911)
 
-[node name="TreeGreen52" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2785, 1884)
+[node name="SaplingB8" parent="Objects" instance=ExtResource("k_sapling_b")]
+position = Vector2(1474, 2016)
 
-[node name="SaplingA16" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(453, 672)
+[node name="TreeOlive48" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1212, 1728)
+
+[node name="TreeGoldF17" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2619, 1605)
+
+[node name="TreeGreen35" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1968, 368)
+
+[node name="TreeOliveF19" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2474, 163)
+
+[node name="TreeGreen36" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1164, 1959)
 
 [node name="TreeOlive49" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2000, 1876)
+position = Vector2(1184, 1526)
+
+[node name="TreeGold17" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2419, 1618)
 
 [node name="TreeTall27" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(404, 1623)
-
-[node name="TreeGreen53" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2852, 1489)
-
-[node name="TreeGreen54" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2178, 481)
-
-[node name="TreeOliveF28" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2419, 1117)
-
-[node name="TreeTall28" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(1012, 1570)
-
-[node name="SaplingB15" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2338, 202)
-
-[node name="SaplingA17" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(1174, 153)
+position = Vector2(760, 1443)
 
 [node name="TreeOlive50" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2418, 681)
+position = Vector2(76, 408)
 
-[node name="TreeGold32" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1246, 1129)
+[node name="TreeTallF19" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2170, 1363)
 
-[node name="DeadTree13" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(2971, 1794)
+[node name="TreeGreenF24" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2769, 316)
 
-[node name="TreeGreenF26" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(342, 1745)
+[node name="TreeGoldF18" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(305, 167)
 
-[node name="TreeTall29" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(899, 1686)
-
-[node name="SaplingA18" parent="Objects" instance=ExtResource("k_sapling_a")]
-position = Vector2(1520, 1436)
-
-[node name="TreeTallF20" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(539, 234)
-
-[node name="TreeTallF21" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2931, 576)
-
-[node name="TreeTall30" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(316, 457)
-
-[node name="DeadTree14" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(2324, 1332)
-
-[node name="TreeGreen55" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(439, 768)
-
-[node name="TreeGoldF33" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2246, 232)
-
-[node name="TreeTall31" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(485, 1896)
-
-[node name="SaplingC14" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(212, 2057)
+[node name="TreeGold18" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2977, 488)
 
 [node name="TreeOlive51" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1433, 2041)
-
-[node name="SaplingB16" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2963, 939)
-
-[node name="TreeOliveF29" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2854, 1561)
-
-[node name="TreeGreenF27" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(1278, 1405)
-
-[node name="TreeTall32" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(2027, 904)
-
-[node name="Palm2" parent="Objects" instance=ExtResource("k_palm")]
-position = Vector2(1171, 665)
-
-[node name="TreeGreen56" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1289, 1674)
-
-[node name="SaplingB17" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2278, 1754)
-
-[node name="TreeGoldF34" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(186, 1103)
-
-[node name="TreeGreenF28" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2245, 2059)
-
-[node name="TreeGoldF35" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2218, 776)
-
-[node name="TreeOliveF30" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(41, 1584)
-
-[node name="SaplingD10" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(1303, 150)
-
-[node name="TreeTallF22" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2485, 252)
-
-[node name="TreeGoldF36" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1448, 1476)
-
-[node name="TreeGreen57" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(273, 1832)
+position = Vector2(881, 662)
 
 [node name="TreeOlive52" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(1075, 1770)
+position = Vector2(706, 1371)
+
+[node name="TreeGreen37" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2162, 1872)
+
+[node name="TreeGreen38" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2101, 1726)
+
+[node name="DeadTree24" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(892, 1399)
+
+[node name="TreeTallF20" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(29, 1941)
+
+[node name="TreeTall28" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2782, 1552)
+
+[node name="DeadTree25" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(670, 1595)
+
+[node name="TreeGreen39" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2969, 906)
+
+[node name="TreeTall29" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1813, 1208)
+
+[node name="TreeGreen40" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2718, 1963)
+
+[node name="TreeOliveF20" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2342, 284)
 
 [node name="TreeOlive53" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2662, 1992)
+position = Vector2(405, 1890)
 
-[node name="TreeGreenF29" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(335, 988)
+[node name="TreeGreen41" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(980, 2053)
+
+[node name="TreeTall30" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1374, 1681)
+
+[node name="TreeTallF21" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2300, 1334)
+
+[node name="DeadTree26" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1264, 1108)
 
 [node name="TreeOlive54" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2956, 2055)
+position = Vector2(2406, 358)
 
-[node name="DeadTree15" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(2521, 628)
+[node name="TreeOliveF21" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(1540, 1782)
 
-[node name="TreeGreen58" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(1550, 1623)
+[node name="TreeGoldF19" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(309, 1373)
 
-[node name="SaplingD11" parent="Objects" instance=ExtResource("k_sapling_d")]
-position = Vector2(570, 996)
+[node name="TreeTallF22" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2247, 466)
 
-[node name="TreeTall33" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(928, 2052)
-
-[node name="TreeGreenF30" parent="Objects" instance=ExtResource("k_tree_green_f")]
-position = Vector2(2269, 1585)
-
-[node name="TreeGoldF37" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(2387, 1485)
-
-[node name="TreeGreen59" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(924, 819)
-
-[node name="TreeTallF23" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(2405, 1682)
-
-[node name="TreeGoldF38" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1999, 1955)
-
-[node name="TreeGold33" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(403, 608)
-
-[node name="SaplingB18" parent="Objects" instance=ExtResource("k_sapling_b")]
-position = Vector2(2912, 1651)
-
-[node name="TreeOliveF31" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2133, 225)
+[node name="TreeTall31" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(922, 1499)
 
 [node name="TreeOlive55" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(935, 1889)
+position = Vector2(400, 2014)
+
+[node name="TreeTallF23" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2221, 668)
+
+[node name="SaplingD7" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(2110, 469)
+
+[node name="TreeGreen42" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2526, 1758)
+
+[node name="TreeGreenF25" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2949, 2054)
+
+[node name="TreeTall32" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(157, 1483)
+
+[node name="TreeGreen43" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1016, 1405)
+
+[node name="DeadTree27" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(81, 822)
 
 [node name="TreeTallF24" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(542, 381)
+position = Vector2(2847, 1816)
 
-[node name="DeadTree16" parent="Objects" instance=ExtResource("k_dead_tree")]
-position = Vector2(1154, 1248)
+[node name="TreeGreen44" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(259, 1917)
 
-[node name="TreeGreen60" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(960, 366)
+[node name="TreeTall33" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(486, 386)
 
-[node name="TreeGoldF39" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(930, 1422)
-
-[node name="TreeTall34" parent="Objects" instance=ExtResource("k_tree_tall")]
-position = Vector2(586, 818)
-
-[node name="SaplingC15" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(1855, 353)
-
-[node name="TreeOliveF32" parent="Objects" instance=ExtResource("k_tree_olive_f")]
-position = Vector2(2594, 1817)
-
-[node name="TreeGold34" parent="Objects" instance=ExtResource("k_tree_gold")]
-position = Vector2(1569, 151)
-
-[node name="Palm3" parent="Objects" instance=ExtResource("k_palm")]
-position = Vector2(1508, 1330)
+[node name="DeadTree28" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1514, 161)
 
 [node name="TreeTallF25" parent="Objects" instance=ExtResource("k_tree_tall_f")]
-position = Vector2(478, 1542)
+position = Vector2(566, 307)
 
-[node name="TreeGoldF40" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(1643, 1735)
+[node name="SaplingD8" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(1056, 1900)
 
-[node name="TreeGreen61" parent="Objects" instance=ExtResource("k_tree_green")]
-position = Vector2(2035, 756)
+[node name="TreeTallF26" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(1086, 1567)
 
-[node name="TreeGoldF41" parent="Objects" instance=ExtResource("k_tree_gold_f")]
-position = Vector2(910, 1300)
+[node name="TreeTallF27" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(144, 688)
 
-[node name="SaplingC16" parent="Objects" instance=ExtResource("k_sapling_c")]
-position = Vector2(2401, 1814)
+[node name="TreeGreen45" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(757, 1862)
+
+[node name="TreeGold19" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1331, 2053)
+
+[node name="DeadTree29" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2947, 1139)
+
+[node name="TreeGold20" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2164, 331)
+
+[node name="TreeTallF28" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2545, 956)
+
+[node name="SaplingC7" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(225, 536)
+
+[node name="TreeGoldF20" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2918, 420)
 
 [node name="TreeOlive56" parent="Objects" instance=ExtResource("k_tree_olive")]
-position = Vector2(2832, 309)
+position = Vector2(2184, 155)
 
-[node name="FernB1" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(2946, 882)
+[node name="SaplingA9" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(283, 582)
 
-[node name="FernB2" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(108, 994)
+[node name="TreeOlive57" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(75, 1729)
 
-[node name="FernD1" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2276, 550)
+[node name="TreeTall34" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(933, 1323)
+
+[node name="TreeGold21" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2293, 1495)
+
+[node name="TreeGreen46" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2396, 1807)
+
+[node name="TreeOlive58" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2302, 1568)
+
+[node name="TreeOliveF22" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2973, 586)
+
+[node name="TreeOlive59" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2954, 1770)
+
+[node name="SaplingD9" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(594, 177)
+
+[node name="TreeGreenF26" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(1744, 816)
+
+[node name="SaplingA10" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(453, 672)
+
+[node name="TreeGoldF21" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1492, 1462)
+
+[node name="TreeGoldF22" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(952, 1958)
+
+[node name="TreeGoldF23" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(500, 1749)
+
+[node name="TreeGreen47" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(302, 984)
+
+[node name="DeadTree30" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1130, 2053)
+
+[node name="Palm2" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1154, 670)
+
+[node name="SaplingA11" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(643, 1503)
+
+[node name="TreeOliveF23" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(965, 383)
+
+[node name="TreeGold22" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2035, 1458)
+
+[node name="TreeGreen48" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2702, 1494)
+
+[node name="TreeGreen49" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2679, 1116)
+
+[node name="TreeOlive60" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1174, 153)
+
+[node name="TreeGold23" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(36, 341)
+
+[node name="TreeGreenF27" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2533, 322)
+
+[node name="TreeOliveF24" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2408, 1990)
+
+[node name="DeadTree31" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1084, 759)
+
+[node name="DeadTree32" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(720, 386)
+
+[node name="SaplingC8" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(860, 518)
+
+[node name="TreeOlive61" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2968, 1199)
+
+[node name="TreeOliveF25" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(453, 1817)
+
+[node name="TreeOlive62" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2212, 234)
+
+[node name="TreeTall35" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2927, 1646)
+
+[node name="TreeGoldF24" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2149, 1790)
+
+[node name="TreeTall36" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2238, 1927)
+
+[node name="Palm3" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1402, 547)
+
+[node name="TreeTall37" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1788, 599)
+
+[node name="DeadTree33" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(1683, 159)
+
+[node name="TreeGold24" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2179, 805)
+
+[node name="TreeOlive63" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2016, 303)
+
+[node name="TreeOlive64" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1087, 1758)
+
+[node name="TreeTallF29" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(165, 1102)
+
+[node name="TreeOlive65" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2949, 986)
+
+[node name="SaplingD10" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(40, 880)
+
+[node name="TreeGreen50" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2276, 1224)
+
+[node name="SaplingD11" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(212, 2057)
+
+[node name="TreeGold25" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1234, 1393)
+
+[node name="TreeTallF30" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(379, 1517)
+
+[node name="TreeOlive66" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(303, 747)
+
+[node name="TreeOlive67" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1861, 529)
+
+[node name="TreeTallF31" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(641, 2057)
+
+[node name="TreeGreen51" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2670, 954)
+
+[node name="Palm4" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1352, 481)
+
+[node name="TreeOlive68" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1922, 159)
+
+[node name="TreeGreen52" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1160, 1249)
+
+[node name="TreeGreen53" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(243, 430)
+
+[node name="Palm5" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1092, 496)
+
+[node name="TreeGreenF28" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2300, 1650)
+
+[node name="TreeGold26" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(605, 382)
+
+[node name="TreeGold27" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(602, 1718)
+
+[node name="TreeOlive69" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1734, 1872)
+
+[node name="SaplingC9" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(2394, 1027)
+
+[node name="TreeOlive70" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(37, 240)
+
+[node name="TreeGoldF25" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2310, 552)
+
+[node name="TreeGreenF29" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(1641, 1743)
+
+[node name="TreeTall38" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2863, 278)
+
+[node name="DeadTree34" parent="Objects" instance=ExtResource("k_dead_tree")]
+position = Vector2(2458, 1455)
+
+[node name="Palm6" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1384, 1080)
+
+[node name="TreeGreen54" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(195, 150)
+
+[node name="TreeTall39" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2118, 698)
+
+[node name="TreeGoldF26" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2832, 1337)
+
+[node name="TreeOlive71" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(27, 1461)
+
+[node name="TreeGreenF30" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2502, 1569)
+
+[node name="TreeGreen55" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(422, 617)
+
+[node name="TreeOliveF26" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(1697, 1196)
+
+[node name="TreeGoldF27" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2118, 2032)
+
+[node name="TreeOliveF27" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(1420, 153)
+
+[node name="TreeTall40" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(406, 217)
+
+[node name="TreeGreen56" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2025, 538)
+
+[node name="TreeOlive72" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(387, 1668)
+
+[node name="SaplingA12" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(982, 465)
+
+[node name="TreeGreen57" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2393, 215)
+
+[node name="SaplingD12" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(1647, 565)
+
+[node name="SaplingC10" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(1855, 353)
+
+[node name="TreeOliveF28" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2964, 1945)
+
+[node name="Palm7" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1508, 1330)
+
+[node name="TreeOlive73" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2649, 300)
+
+[node name="TreeOlive74" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(496, 941)
+
+[node name="Palm8" parent="Objects" instance=ExtResource("k_palm")]
+position = Vector2(1464, 1190)
+
+[node name="SaplingC11" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(261, 1450)
+
+[node name="SaplingD13" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(26, 1011)
+
+[node name="TreeOlive75" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1811, 1423)
+
+[node name="TreeGreen58" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1952, 807)
+
+[node name="TreeGold28" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2970, 1331)
+
+[node name="SaplingC12" parent="Objects" instance=ExtResource("k_sapling_c")]
+position = Vector2(756, 2057)
+
+[node name="SaplingA13" parent="Objects" instance=ExtResource("k_sapling_a")]
+position = Vector2(450, 1425)
+
+[node name="TreeGreen59" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2119, 1563)
+
+[node name="TreeOlive76" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2859, 886)
+
+[node name="TreeGreen60" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2896, 1526)
+
+[node name="TreeGreen61" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1021, 1067)
+
+[node name="SaplingD14" parent="Objects" instance=ExtResource("k_sapling_d")]
+position = Vector2(1287, 150)
+
+[node name="TreeOlive77" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1136, 1630)
 
 [node name="FernA1" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(957, 994)
+position = Vector2(1762, 42)
 
-[node name="BushGreen23" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2050, 1104)
-
-[node name="Shrub12" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1390, 103)
+[node name="Shrub16" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1873, 460)
 
 [node name="FernC1" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(730, 259)
-
-[node name="FernB3" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(544, 514)
-
-[node name="FernC2" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2586, 624)
-
-[node name="FernA2" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2860, 609)
-
-[node name="FernC3" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2170, 1598)
-
-[node name="FernC4" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2851, 1885)
-
-[node name="FernB4" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(347, 93)
-
-[node name="Shrub13" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(179, 395)
-
-[node name="FernB5" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(2164, 358)
-
-[node name="FernC5" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2663, 269)
-
-[node name="Shrub14" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(549, 1349)
-
-[node name="FernA3" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1038, 1314)
-
-[node name="FernA4" parent="Objects" instance=ExtResource("k_fern_a")]
 position = Vector2(1392, 61)
 
-[node name="FernA5" parent="Objects" instance=ExtResource("k_fern_a")]
+[node name="FernA2" parent="Objects" instance=ExtResource("k_fern_a")]
 position = Vector2(525, 51)
 
-[node name="FernC6" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1675, 517)
+[node name="FernC2" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2096, 520)
 
-[node name="BushAutumn10" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(247, 481)
+[node name="FernA3" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1000, 788)
 
-[node name="FernB6" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(1754, 1426)
+[node name="FernD1" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(708, 1129)
+
+[node name="FernA4" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(685, 276)
+
+[node name="FernA5" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(2774, 632)
+
+[node name="Shrub17" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(809, 1482)
 
 [node name="FernA6" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2354, 1183)
+position = Vector2(2135, 498)
 
-[node name="BushAutumn11" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(854, 876)
+[node name="FernA7" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1754, 231)
 
-[node name="BushAutumn12" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1664, 1140)
+[node name="FernA8" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1756, 1401)
 
-[node name="BushAutumn13" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(600, 411)
+[node name="Flowers1" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(476, 1897)
 
-[node name="BushAutumn14" parent="Objects" instance=ExtResource("k_bush_autumn")]
+[node name="BushAutumn20" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1287, 988)
+
+[node name="FernC3" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2058, 1122)
+
+[node name="BushGreen17" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2059, 1383)
+
+[node name="FernA9" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(531, 426)
+
+[node name="FernB1" parent="Objects" instance=ExtResource("k_fern_b")]
 position = Vector2(351, 391)
 
 [node name="FernD2" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2407, 765)
+position = Vector2(1118, 1696)
 
-[node name="Flowers1" parent="Objects" instance=ExtResource("k_flowers")]
+[node name="FernC4" parent="Objects" instance=ExtResource("k_fern_c")]
 position = Vector2(2379, 48)
 
-[node name="FernC7" parent="Objects" instance=ExtResource("k_fern_c")]
+[node name="Shrub18" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(882, 1432)
+
+[node name="FernB2" parent="Objects" instance=ExtResource("k_fern_b")]
 position = Vector2(1364, 123)
 
-[node name="BushGreen24" parent="Objects" instance=ExtResource("k_bush_green")]
+[node name="BushGreen18" parent="Objects" instance=ExtResource("k_bush_green")]
 position = Vector2(1063, 1236)
 
-[node name="BushAutumn15" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1226, 645)
+[node name="BushAutumn21" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2269, 1825)
 
 [node name="Flowers2" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(1089, 1133)
+position = Vector2(1226, 645)
 
-[node name="FernB7" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(1074, 1203)
-
-[node name="FernD3" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2266, 110)
-
-[node name="FernC8" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2073, 597)
-
-[node name="BushAutumn16" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2743, 81)
-
-[node name="FernC9" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(155, 1160)
-
-[node name="BushAutumn17" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2113, 1149)
-
-[node name="FernB8" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(1161, 998)
-
-[node name="FernA7" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1398, 283)
-
-[node name="BushGreen25" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(517, 1944)
-
-[node name="FernC10" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2917, 793)
-
-[node name="FernC11" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1556, 834)
-
-[node name="Shrub15" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1046, 343)
-
-[node name="FernA8" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1703, 1759)
-
-[node name="FernA9" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1246, 1357)
-
-[node name="BushAutumn18" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(650, 1215)
-
-[node name="Shrub16" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(795, 1078)
-
-[node name="BushAutumn19" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(929, 301)
+[node name="FernB3" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(2656, 518)
 
 [node name="FernA10" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2693, 1358)
+position = Vector2(964, 875)
+
+[node name="FernD3" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(361, 595)
+
+[node name="BushAutumn22" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2743, 81)
+
+[node name="FernC5" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1826, 198)
+
+[node name="BushAutumn23" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2113, 1149)
+
+[node name="FernB4" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(207, 1594)
 
 [node name="FernA11" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2593, 906)
+position = Vector2(1398, 283)
 
-[node name="FernB9" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(2195, 48)
+[node name="BushGreen19" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(517, 1944)
 
-[node name="BushGreen26" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(739, 1119)
+[node name="FernC6" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2917, 793)
 
-[node name="Shrub17" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2828, 1396)
-
-[node name="Flowers3" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(693, 336)
-
-[node name="FernA12" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1332, 438)
-
-[node name="Shrub18" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(436, 64)
+[node name="FernC7" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1556, 834)
 
 [node name="Shrub19" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2882, 1223)
+position = Vector2(1046, 343)
+
+[node name="FernA12" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1703, 1759)
+
+[node name="FernB5" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(1806, 1278)
+
+[node name="FernB6" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(2308, 641)
 
 [node name="FernD4" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(584, 1780)
+position = Vector2(2593, 906)
 
-[node name="FernD5" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2720, 1132)
+[node name="BushGreen20" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(625, 1461)
+
+[node name="Flowers3" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(23, 1177)
+
+[node name="FernB7" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(2794, 107)
 
 [node name="FernA13" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(212, 1966)
+position = Vector2(1660, 1884)
 
-[node name="FernC12" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(79, 456)
-
-[node name="FernD6" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(69, 1195)
+[node name="BushAutumn24" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(462, 905)
 
 [node name="FernA14" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(618, 1761)
+
+[node name="FernB8" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(47, 1038)
+
+[node name="FernA15" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(769, 1165)
+
+[node name="Shrub20" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(79, 456)
+
+[node name="FernA16" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1318, 84)
+
+[node name="FernA17" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(69, 1195)
+
+[node name="FernA18" parent="Objects" instance=ExtResource("k_fern_a")]
 position = Vector2(2436, 1773)
 
 [node name="Flowers4" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(1549, 587)
-
-[node name="FernA15" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(957, 1229)
-
-[node name="FernA16" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1687, 282)
-
-[node name="FernA17" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1099, 1705)
-
-[node name="BushAutumn20" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(741, 60)
-
-[node name="FernA18" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2657, 1830)
-
-[node name="FernA19" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2237, 1134)
-
-[node name="FernD7" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(188, 1027)
-
-[node name="FernD8" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(124, 1893)
-
-[node name="FernA20" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2961, 1078)
-
-[node name="FernA21" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(712, 633)
-
-[node name="BushGreen27" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1409, 1929)
-
-[node name="Shrub20" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(167, 43)
-
-[node name="FernA22" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(440, 42)
-
-[node name="FernC13" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2707, 217)
-
-[node name="BushGreen28" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1420, 1440)
-
-[node name="FernA23" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1192, 1209)
-
-[node name="FernA24" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(778, 91)
-
-[node name="BushAutumn21" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1422, 442)
+position = Vector2(620, 1333)
 
 [node name="Flowers5" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(2441, 1596)
-
-[node name="FernD9" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(240, 412)
-
-[node name="FernB10" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(2446, 508)
-
-[node name="FernC14" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(33, 1043)
-
-[node name="FernA25" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(462, 1118)
-
-[node name="Shrub21" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(189, 977)
-
-[node name="FernC15" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1375, 1552)
-
-[node name="FernA26" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(961, 1204)
-
-[node name="BushGreen29" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(633, 228)
-
-[node name="FernA27" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2923, 1480)
-
-[node name="FernC16" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1539, 1471)
-
-[node name="BushAutumn22" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(898, 227)
-
-[node name="FernA28" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(338, 1264)
-
-[node name="FernC17" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1466, 1195)
-
-[node name="FernA29" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1608, 1486)
+position = Vector2(1549, 587)
 
 [node name="Flowers6" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(949, 1840)
+position = Vector2(2383, 937)
 
-[node name="FernA30" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2001, 1120)
-
-[node name="BushGreen30" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1456, 673)
-
-[node name="Flowers7" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(2730, 1614)
-
-[node name="FernA31" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1969, 1490)
-
-[node name="FernC18" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1100, 461)
-
-[node name="BushGreen31" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2428, 128)
-
-[node name="FernA32" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2672, 1696)
-
-[node name="Flowers8" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(12, 660)
-
-[node name="FernA33" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(2781, 1495)
-
-[node name="FernA34" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1636, 1776)
-
-[node name="FernD10" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2590, 864)
-
-[node name="FernA35" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1844, 1279)
-
-[node name="FernA36" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(223, 1943)
-
-[node name="FernA37" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1964, 191)
-
-[node name="FernA38" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(541, 971)
-
-[node name="FernB11" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(709, 540)
-
-[node name="BushGreen32" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(662, 678)
-
-[node name="BushAutumn23" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2112, 591)
-
-[node name="FernC19" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(1176, 1018)
-
-[node name="BushAutumn24" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(2063, 989)
-
-[node name="BushGreen33" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(559, 1964)
-
-[node name="BushGreen34" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1144, 124)
-
-[node name="BushGreen35" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1297, 508)
-
-[node name="FernB12" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(528, 89)
+[node name="BushGreen21" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2947, 779)
 
 [node name="BushAutumn25" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(1345, 1417)
+position = Vector2(957, 1229)
 
-[node name="Flowers9" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(1127, 1863)
+[node name="FernC8" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2001, 418)
 
-[node name="BushGreen36" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2555, 1674)
+[node name="FernB9" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(95, 1901)
 
-[node name="FernD11" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(385, 1056)
+[node name="FernC9" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1687, 282)
 
-[node name="FernD12" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(2124, 1239)
+[node name="FernD5" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(741, 60)
 
-[node name="FernB13" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(2040, 1128)
+[node name="FernA19" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1233, 1782)
 
-[node name="FernA39" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(825, 1643)
+[node name="FernA20" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1362, 1864)
 
-[node name="Flowers10" parent="Objects" instance=ExtResource("k_flowers")]
-position = Vector2(1300, 1286)
+[node name="Shrub21" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1597, 45)
 
-[node name="FernA40" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(12, 545)
+[node name="BushGreen22" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1990, 499)
 
-[node name="FernA41" parent="Objects" instance=ExtResource("k_fern_a")]
-position = Vector2(1331, 1312)
+[node name="FernA21" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1192, 960)
 
-[node name="Shrub22" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(2485, 314)
+[node name="Flowers7" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(2109, 254)
 
-[node name="Shrub23" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(699, 1861)
+[node name="FernA22" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(2565, 143)
 
-[node name="FernC20" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(535, 291)
+[node name="FernA23" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1407, 360)
 
-[node name="FernD13" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(399, 1139)
+[node name="FernA24" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(440, 42)
 
-[node name="Shrub24" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1425, 597)
+[node name="FernC10" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2707, 217)
 
-[node name="BushGreen37" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(1871, 1185)
+[node name="BushGreen23" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1420, 1440)
+
+[node name="FernA25" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1192, 1209)
+
+[node name="FernA26" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(778, 91)
 
 [node name="BushAutumn26" parent="Objects" instance=ExtResource("k_bush_autumn")]
-position = Vector2(559, 1500)
+position = Vector2(1234, 279)
 
-[node name="Shrub25" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1223, 1177)
+[node name="Shrub22" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(1735, 190)
 
-[node name="FernB14" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(1730, 572)
+[node name="FernB10" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(1544, 58)
 
-[node name="FernD14" parent="Objects" instance=ExtResource("k_fern_d")]
-position = Vector2(501, 1379)
+[node name="BushAutumn27" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2076, 336)
 
-[node name="BushGreen38" parent="Objects" instance=ExtResource("k_bush_green")]
-position = Vector2(2693, 1851)
+[node name="Flowers8" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(2321, 137)
 
-[node name="FernC21" parent="Objects" instance=ExtResource("k_fern_c")]
-position = Vector2(2302, 591)
+[node name="BushGreen24" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(961, 1204)
+
+[node name="Flowers9" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(1757, 771)
+
+[node name="BushAutumn28" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(297, 111)
+
+[node name="BushGreen25" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1606, 1946)
+
+[node name="Flowers10" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(2211, 1841)
+
+[node name="FernC11" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(2805, 254)
+
+[node name="FernA27" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1881, 486)
 
 [node name="Flowers11" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(2001, 1120)
+
+[node name="Flowers12" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(426, 744)
+
+[node name="FernA28" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1456, 673)
+
+[node name="Flowers13" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(2730, 1614)
+
+[node name="FernA29" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(25, 1842)
+
+[node name="FernC12" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(453, 1918)
+
+[node name="FernA30" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(470, 1321)
+
+[node name="FernA31" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1161, 1867)
+
+[node name="FernA32" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(923, 1782)
+
+[node name="BushAutumn29" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2943, 1406)
+
+[node name="FernC13" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1361, 80)
+
+[node name="FernA33" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1195, 270)
+
+[node name="FernD6" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(2781, 1495)
+
+[node name="BushAutumn30" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(197, 1963)
+
+[node name="Shrub23" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(311, 464)
+
+[node name="FernA34" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1379, 101)
+
+[node name="Flowers14" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(744, 1124)
+
+[node name="FernC14" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1844, 1279)
+
+[node name="FernA35" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(2918, 1804)
+
+[node name="FernA36" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1964, 191)
+
+[node name="BushGreen26" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(2091, 902)
+
+[node name="BushGreen27" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1434, 469)
+
+[node name="FernC15" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(775, 466)
+
+[node name="FernC16" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(1176, 1018)
+
+[node name="BushAutumn31" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2063, 989)
+
+[node name="BushGreen28" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(559, 1964)
+
+[node name="BushGreen29" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1172, 810)
+
+[node name="FernB11" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(142, 872)
+
+[node name="FernD7" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(528, 89)
+
+[node name="Flowers15" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(1530, 771)
+
+[node name="FernA37" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1563, 1423)
+
+[node name="FernA38" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1503, 1563)
+
+[node name="BushAutumn32" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(1300, 1286)
+
+[node name="FernD8" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(1954, 1660)
+
+[node name="FernB12" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(2376, 173)
+
+[node name="FernA39" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(394, 760)
+
+[node name="FernB13" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(861, 1315)
+
+[node name="BushGreen30" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(449, 1133)
+
+[node name="BushGreen31" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1761, 399)
+
+[node name="FernB14" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(1223, 1177)
+
+[node name="FernD9" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(823, 849)
+
+[node name="FernC17" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(501, 1379)
+
+[node name="Flowers16" parent="Objects" instance=ExtResource("k_flowers")]
+position = Vector2(1048, 1795)
+
+[node name="Flowers17" parent="Objects" instance=ExtResource("k_flowers")]
 position = Vector2(1226, 1227)
 
-[node name="FernA42" parent="Objects" instance=ExtResource("k_fern_a")]
+[node name="FernA40" parent="Objects" instance=ExtResource("k_fern_a")]
 position = Vector2(148, 1750)
 
-[node name="FernB15" parent="Objects" instance=ExtResource("k_fern_b")]
-position = Vector2(1474, 354)
+[node name="BushGreen32" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1088, 1303)
 
-[node name="Shrub26" parent="Objects" instance=ExtResource("k_shrub")]
-position = Vector2(1231, 681)
+[node name="BushAutumn33" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(758, 1213)
+
+[node name="FernA41" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1221, 1600)
+
+[node name="FernA42" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(916, 721)
+
+[node name="FernD10" parent="Objects" instance=ExtResource("k_fern_d")]
+position = Vector2(958, 724)
+
+[node name="BushGreen33" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1003, 602)
+
+[node name="BushAutumn34" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2834, 1023)
+
+[node name="FernA43" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(2374, 1456)
+
+[node name="BushGreen34" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(552, 64)
+
+[node name="Shrub24" parent="Objects" instance=ExtResource("k_shrub")]
+position = Vector2(579, 123)
+
+[node name="FernA44" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(1356, 347)
+
+[node name="BushAutumn35" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2668, 1988)
+
+[node name="FernB15" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(2036, 700)
+
+[node name="FernC18" parent="Objects" instance=ExtResource("k_fern_c")]
+position = Vector2(741, 600)
+
+[node name="FernA45" parent="Objects" instance=ExtResource("k_fern_a")]
+position = Vector2(472, 867)
+
+[node name="BushGreen35" parent="Objects" instance=ExtResource("k_bush_green")]
+position = Vector2(1620, 1671)
+
+[node name="FernB16" parent="Objects" instance=ExtResource("k_fern_b")]
+position = Vector2(544, 449)
+
+[node name="BushAutumn36" parent="Objects" instance=ExtResource("k_bush_autumn")]
+position = Vector2(2607, 208)
 
 [node name="Crow0" parent="Objects" instance=ExtResource("p_crow")]
 position = Vector2(900, 1180)
