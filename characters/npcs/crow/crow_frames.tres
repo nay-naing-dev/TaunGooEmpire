@@ -1,37 +1,21 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://dgtgda1togwr2"]
 
-[ext_resource type="Texture2D" path="frames/crow_1.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/crow_1_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/crow_2.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/crow_2_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/crow_3.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/crow_3_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/crow_4.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/crow_4_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/crow_5.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/crow_5_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/crow_6.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/crow_6_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/crow_7.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/crow_7_n.png" id="n7"]
-[ext_resource type="Texture2D" path="frames/crow_8.png" id="d8"]
-[ext_resource type="Texture2D" path="frames/crow_8_n.png" id="n8"]
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
-
-[sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
-
-[sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
+[ext_resource type="Texture2D" uid="uid://ccu6md6aqfcuh" path="res://characters/npcs/crow/frames/crow_1.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://dsir3vv8peypd" path="res://characters/npcs/crow/frames/crow_2.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://me55ld6enxwn" path="res://characters/npcs/crow/frames/crow_3.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://ceooveivvf305" path="res://characters/npcs/crow/frames/crow_4.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://b1aljt137rml5" path="res://characters/npcs/crow/frames/crow_5.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://c2mtns6pr4aam" path="res://characters/npcs/crow/frames/crow_6.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://bc73lwsb157ri" path="res://characters/npcs/crow/frames/crow_7.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://jabiao65lkpb" path="res://characters/npcs/crow/frames/crow_8.png" id="d8"]
+[ext_resource type="Texture2D" uid="uid://d2s1a2nwyynmm" path="res://characters/npcs/crow/frames/crow_1_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://cc2ye7vp3jfkk" path="res://characters/npcs/crow/frames/crow_2_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://82irbci5lr2l" path="res://characters/npcs/crow/frames/crow_3_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://vnep70o8v4gu" path="res://characters/npcs/crow/frames/crow_4_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://gtppp8lxavyo" path="res://characters/npcs/crow/frames/crow_5_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://dr5b7kl8ouyis" path="res://characters/npcs/crow/frames/crow_6_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://b63bb06r28cpb" path="res://characters/npcs/crow/frames/crow_7_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://dp71757b1sfbs" path="res://characters/npcs/crow/frames/crow_8_n.png" id="n8"]
 
 [sub_resource type="CanvasTexture" id="C5"]
 diffuse_texture = ExtResource("d5")
@@ -49,13 +33,54 @@ normal_texture = ExtResource("n7")
 diffuse_texture = ExtResource("d8")
 normal_texture = ExtResource("n8")
 
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("C5")
+}, {
+"duration": 1.0,
+"texture": SubResource("C6")
+}, {
+"duration": 1.0,
+"texture": SubResource("C7")
+}, {
+"duration": 1.0,
+"texture": SubResource("C8")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C8")
+}],
+"loop": 1,
+"name": &"glide",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("C1")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 1.0
 }, {
@@ -72,32 +97,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 8.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}, {
-"duration": 1.0,
-"texture": SubResource("C6")
-}, {
-"duration": 1.0,
-"texture": SubResource("C7")
-}, {
-"duration": 1.0,
-"texture": SubResource("C8")
-}],
-"loop": true,
-"name": &"fly",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C8")
-}],
-"loop": true,
-"name": &"glide",
-"speed": 1.0
 }]

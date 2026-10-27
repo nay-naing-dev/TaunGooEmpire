@@ -60,6 +60,9 @@ func _resolve() -> void:
 	for b in buildings:
 		b.z_index = 0
 	for body in get_tree().get_nodes_in_group("player") + get_tree().get_nodes_in_group("actor"):
+		# inside a house / palace room (house.gd lifts the player to z 41): leave it alone
+		if body.z_index >= 40 or (body.is_in_group("player") and Game.get("indoors") == true):
+			continue
 		var raise := false
 		var behind: Array = []
 		for b in buildings:

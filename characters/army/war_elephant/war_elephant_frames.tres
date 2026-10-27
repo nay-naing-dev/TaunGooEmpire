@@ -1,0 +1,1161 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c6inugtgnq13w"]
+
+[ext_resource type="Texture2D" uid="uid://cmqoa22hgv01x" path="res://characters/army/war_elephant/frames/walk_s_0.png" id="d0"]
+[ext_resource type="Texture2D" uid="uid://3ccb1bc6cwpt" path="res://characters/army/war_elephant/frames/walk_s_1.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://n0not5bx4bxc" path="res://characters/army/war_elephant/frames/walk_s_2.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://byijimjp113fh" path="res://characters/army/war_elephant/frames/walk_s_3.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://c1xahfhf8s7mo" path="res://characters/army/war_elephant/frames/walk_s_4.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://dde2266h57p71" path="res://characters/army/war_elephant/frames/walk_s_5.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://d1rnmm8evecof" path="res://characters/army/war_elephant/frames/walk_s_6.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://didwrdt7s0p0n" path="res://characters/army/war_elephant/frames/walk_s_7.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://doakch5c2n6xo" path="res://characters/army/war_elephant/frames/walk_s_8.png" id="d8"]
+[ext_resource type="Texture2D" uid="uid://ca8bud05tshda" path="res://characters/army/war_elephant/frames/walk_s_9.png" id="d9"]
+[ext_resource type="Texture2D" uid="uid://dwxi0eodnd336" path="res://characters/army/war_elephant/frames/walk_s_10.png" id="d10"]
+[ext_resource type="Texture2D" uid="uid://b01c2quqd3i0a" path="res://characters/army/war_elephant/frames/walk_s_11.png" id="d11"]
+[ext_resource type="Texture2D" uid="uid://dwyntn3vufjud" path="res://characters/army/war_elephant/frames/walk_s_12.png" id="d12"]
+[ext_resource type="Texture2D" uid="uid://clq8i854g6jw2" path="res://characters/army/war_elephant/frames/walk_s_13.png" id="d13"]
+[ext_resource type="Texture2D" uid="uid://dvhpwqh17ypv2" path="res://characters/army/war_elephant/frames/walk_s_14.png" id="d14"]
+[ext_resource type="Texture2D" uid="uid://c5jvmofqnkdmu" path="res://characters/army/war_elephant/frames/walk_s_15.png" id="d15"]
+[ext_resource type="Texture2D" uid="uid://bl2q1umc24cwe" path="res://characters/army/war_elephant/frames/walk_s_16.png" id="d16"]
+[ext_resource type="Texture2D" uid="uid://cg7bl5rp1svaa" path="res://characters/army/war_elephant/frames/walk_s_17.png" id="d17"]
+[ext_resource type="Texture2D" uid="uid://nccw5ht4nxxi" path="res://characters/army/war_elephant/frames/walk_s_18.png" id="d18"]
+[ext_resource type="Texture2D" uid="uid://bojgxiplepr6n" path="res://characters/army/war_elephant/frames/walk_s_19.png" id="d19"]
+[ext_resource type="Texture2D" uid="uid://dcrwe5f0tn4hg" path="res://characters/army/war_elephant/frames/walk_s_20.png" id="d20"]
+[ext_resource type="Texture2D" uid="uid://d0yutnhys5n8n" path="res://characters/army/war_elephant/frames/walk_s_21.png" id="d21"]
+[ext_resource type="Texture2D" uid="uid://bnqcf0dy804oi" path="res://characters/army/war_elephant/frames/walk_s_22.png" id="d22"]
+[ext_resource type="Texture2D" uid="uid://cue2l00d8dpcr" path="res://characters/army/war_elephant/frames/walk_s_23.png" id="d23"]
+[ext_resource type="Texture2D" uid="uid://bvycpjfbtedd7" path="res://characters/army/war_elephant/frames/walk_s_24.png" id="d24"]
+[ext_resource type="Texture2D" uid="uid://b7o4t46gsran8" path="res://characters/army/war_elephant/frames/walk_s_25.png" id="d25"]
+[ext_resource type="Texture2D" uid="uid://42lo83ac4lh7" path="res://characters/army/war_elephant/frames/walk_s_26.png" id="d26"]
+[ext_resource type="Texture2D" uid="uid://bw58y5hxfcurr" path="res://characters/army/war_elephant/frames/walk_s_27.png" id="d27"]
+[ext_resource type="Texture2D" uid="uid://oln0xperkqmw" path="res://characters/army/war_elephant/frames/walk_s_28.png" id="d28"]
+[ext_resource type="Texture2D" uid="uid://x2iy6vfh3s5j" path="res://characters/army/war_elephant/frames/walk_s_29.png" id="d29"]
+[ext_resource type="Texture2D" uid="uid://d2u7m2kkbo1mg" path="res://characters/army/war_elephant/frames/walk_s_30.png" id="d30"]
+[ext_resource type="Texture2D" uid="uid://bxakbsx7yvmm5" path="res://characters/army/war_elephant/frames/walk_s_31.png" id="d31"]
+[ext_resource type="Texture2D" uid="uid://u5yh2t8fijkt" path="res://characters/army/war_elephant/frames/walk_s_32.png" id="d32"]
+[ext_resource type="Texture2D" uid="uid://b8e6o2ak67rtr" path="res://characters/army/war_elephant/frames/walk_s_33.png" id="d33"]
+[ext_resource type="Texture2D" uid="uid://dj8pgfdc2s5d2" path="res://characters/army/war_elephant/frames/walk_s_34.png" id="d34"]
+[ext_resource type="Texture2D" uid="uid://ba4064h4a6qe6" path="res://characters/army/war_elephant/frames/walk_e_0.png" id="d35"]
+[ext_resource type="Texture2D" uid="uid://fw8yb1wa67s2" path="res://characters/army/war_elephant/frames/walk_e_1.png" id="d36"]
+[ext_resource type="Texture2D" uid="uid://bs3aulhbot8rb" path="res://characters/army/war_elephant/frames/walk_e_2.png" id="d37"]
+[ext_resource type="Texture2D" uid="uid://6ac4l1m0wrx1" path="res://characters/army/war_elephant/frames/walk_e_3.png" id="d38"]
+[ext_resource type="Texture2D" uid="uid://bwo2h3qo57sdu" path="res://characters/army/war_elephant/frames/walk_e_4.png" id="d39"]
+[ext_resource type="Texture2D" uid="uid://cvonejygw404f" path="res://characters/army/war_elephant/frames/walk_e_5.png" id="d40"]
+[ext_resource type="Texture2D" uid="uid://cs64h3wum36v3" path="res://characters/army/war_elephant/frames/walk_e_6.png" id="d41"]
+[ext_resource type="Texture2D" uid="uid://bnnjwt06uuve5" path="res://characters/army/war_elephant/frames/walk_e_7.png" id="d42"]
+[ext_resource type="Texture2D" uid="uid://d1yf77eha6nc6" path="res://characters/army/war_elephant/frames/walk_e_8.png" id="d43"]
+[ext_resource type="Texture2D" uid="uid://iyeh8ofgwyqe" path="res://characters/army/war_elephant/frames/walk_e_9.png" id="d44"]
+[ext_resource type="Texture2D" uid="uid://cwx0cofdtel6h" path="res://characters/army/war_elephant/frames/walk_e_10.png" id="d45"]
+[ext_resource type="Texture2D" uid="uid://cw5quu7yqksjw" path="res://characters/army/war_elephant/frames/walk_e_11.png" id="d46"]
+[ext_resource type="Texture2D" uid="uid://32lbjcgpm1rr" path="res://characters/army/war_elephant/frames/walk_e_12.png" id="d47"]
+[ext_resource type="Texture2D" uid="uid://bsn0p3th308we" path="res://characters/army/war_elephant/frames/walk_e_13.png" id="d48"]
+[ext_resource type="Texture2D" uid="uid://dkkljwf3rhvip" path="res://characters/army/war_elephant/frames/walk_e_14.png" id="d49"]
+[ext_resource type="Texture2D" uid="uid://djdmgkfjqgg37" path="res://characters/army/war_elephant/frames/walk_e_15.png" id="d50"]
+[ext_resource type="Texture2D" uid="uid://qpyc71fcino0" path="res://characters/army/war_elephant/frames/walk_e_16.png" id="d51"]
+[ext_resource type="Texture2D" uid="uid://da7ja0l0jm2e5" path="res://characters/army/war_elephant/frames/walk_e_17.png" id="d52"]
+[ext_resource type="Texture2D" uid="uid://dl6daeic2yxiq" path="res://characters/army/war_elephant/frames/walk_e_18.png" id="d53"]
+[ext_resource type="Texture2D" uid="uid://b7umlusgbkebp" path="res://characters/army/war_elephant/frames/walk_e_19.png" id="d54"]
+[ext_resource type="Texture2D" uid="uid://laua8ai46kuy" path="res://characters/army/war_elephant/frames/walk_e_20.png" id="d55"]
+[ext_resource type="Texture2D" uid="uid://dliva6mfnurwi" path="res://characters/army/war_elephant/frames/walk_e_21.png" id="d56"]
+[ext_resource type="Texture2D" uid="uid://bjjhlb4ecnvrn" path="res://characters/army/war_elephant/frames/walk_e_22.png" id="d57"]
+[ext_resource type="Texture2D" uid="uid://j1g7i828f7o" path="res://characters/army/war_elephant/frames/walk_e_23.png" id="d58"]
+[ext_resource type="Texture2D" uid="uid://cdn5apor5k4gc" path="res://characters/army/war_elephant/frames/walk_e_24.png" id="d59"]
+[ext_resource type="Texture2D" uid="uid://bs6ynwkwvi1q4" path="res://characters/army/war_elephant/frames/walk_e_25.png" id="d60"]
+[ext_resource type="Texture2D" uid="uid://cnemvyef8s635" path="res://characters/army/war_elephant/frames/walk_e_26.png" id="d61"]
+[ext_resource type="Texture2D" uid="uid://dey4kehb7tqh1" path="res://characters/army/war_elephant/frames/walk_e_27.png" id="d62"]
+[ext_resource type="Texture2D" uid="uid://dv383tcxh2ixv" path="res://characters/army/war_elephant/frames/walk_e_28.png" id="d63"]
+[ext_resource type="Texture2D" uid="uid://c7d3idsg67n6s" path="res://characters/army/war_elephant/frames/walk_e_29.png" id="d64"]
+[ext_resource type="Texture2D" uid="uid://b5p2vsxqf0nta" path="res://characters/army/war_elephant/frames/walk_w_0.png" id="d65"]
+[ext_resource type="Texture2D" uid="uid://bpe6oc4keisbn" path="res://characters/army/war_elephant/frames/walk_w_1.png" id="d66"]
+[ext_resource type="Texture2D" uid="uid://bfhik11snseg8" path="res://characters/army/war_elephant/frames/walk_w_2.png" id="d67"]
+[ext_resource type="Texture2D" uid="uid://b8sb5ufhjqgov" path="res://characters/army/war_elephant/frames/walk_w_3.png" id="d68"]
+[ext_resource type="Texture2D" uid="uid://dlyryt5317dmq" path="res://characters/army/war_elephant/frames/walk_w_4.png" id="d69"]
+[ext_resource type="Texture2D" uid="uid://cpeft3nolu6b3" path="res://characters/army/war_elephant/frames/walk_w_5.png" id="d70"]
+[ext_resource type="Texture2D" uid="uid://u71kq58lnvtp" path="res://characters/army/war_elephant/frames/walk_w_6.png" id="d71"]
+[ext_resource type="Texture2D" uid="uid://dbn4p054a53jv" path="res://characters/army/war_elephant/frames/walk_w_7.png" id="d72"]
+[ext_resource type="Texture2D" uid="uid://b1vjogye4xbyo" path="res://characters/army/war_elephant/frames/walk_w_8.png" id="d73"]
+[ext_resource type="Texture2D" uid="uid://g7nlvq4iyin5" path="res://characters/army/war_elephant/frames/walk_w_9.png" id="d74"]
+[ext_resource type="Texture2D" uid="uid://dajf1ti5b2a32" path="res://characters/army/war_elephant/frames/walk_w_10.png" id="d75"]
+[ext_resource type="Texture2D" uid="uid://qv4nbj5012dl" path="res://characters/army/war_elephant/frames/walk_w_11.png" id="d76"]
+[ext_resource type="Texture2D" uid="uid://3lxc1na71fti" path="res://characters/army/war_elephant/frames/walk_w_12.png" id="d77"]
+[ext_resource type="Texture2D" uid="uid://btdi67y6ksmht" path="res://characters/army/war_elephant/frames/walk_w_13.png" id="d78"]
+[ext_resource type="Texture2D" uid="uid://bh0ag0gx8hfpf" path="res://characters/army/war_elephant/frames/walk_w_14.png" id="d79"]
+[ext_resource type="Texture2D" uid="uid://0wbvb4ftfgo4" path="res://characters/army/war_elephant/frames/walk_w_15.png" id="d80"]
+[ext_resource type="Texture2D" uid="uid://chrla1h1dvvmm" path="res://characters/army/war_elephant/frames/walk_w_16.png" id="d81"]
+[ext_resource type="Texture2D" uid="uid://d3jyt8upmwhdd" path="res://characters/army/war_elephant/frames/walk_w_17.png" id="d82"]
+[ext_resource type="Texture2D" uid="uid://ckk0qky30ouvk" path="res://characters/army/war_elephant/frames/walk_w_18.png" id="d83"]
+[ext_resource type="Texture2D" uid="uid://b8m0na7sgdbtl" path="res://characters/army/war_elephant/frames/walk_w_19.png" id="d84"]
+[ext_resource type="Texture2D" uid="uid://b4ri6scmxon3r" path="res://characters/army/war_elephant/frames/walk_w_20.png" id="d85"]
+[ext_resource type="Texture2D" uid="uid://bip75ssed8pp7" path="res://characters/army/war_elephant/frames/walk_w_21.png" id="d86"]
+[ext_resource type="Texture2D" uid="uid://cqjxt1t1gd35n" path="res://characters/army/war_elephant/frames/walk_w_22.png" id="d87"]
+[ext_resource type="Texture2D" uid="uid://ddvghfb745dsk" path="res://characters/army/war_elephant/frames/walk_w_23.png" id="d88"]
+[ext_resource type="Texture2D" uid="uid://cpcj63srhdkce" path="res://characters/army/war_elephant/frames/walk_w_24.png" id="d89"]
+[ext_resource type="Texture2D" uid="uid://b5w4i6il7eud1" path="res://characters/army/war_elephant/frames/walk_w_25.png" id="d90"]
+[ext_resource type="Texture2D" uid="uid://cm1n6dytwu53p" path="res://characters/army/war_elephant/frames/walk_w_26.png" id="d91"]
+[ext_resource type="Texture2D" uid="uid://v7587cacymwc" path="res://characters/army/war_elephant/frames/walk_w_27.png" id="d92"]
+[ext_resource type="Texture2D" uid="uid://kf55jf83p1ys" path="res://characters/army/war_elephant/frames/walk_w_28.png" id="d93"]
+[ext_resource type="Texture2D" uid="uid://dc6j61fsqk1jf" path="res://characters/army/war_elephant/frames/walk_w_29.png" id="d94"]
+[ext_resource type="Texture2D" uid="uid://by28tvbb8mq85" path="res://characters/army/war_elephant/frames/walk_n_0.png" id="d95"]
+[ext_resource type="Texture2D" uid="uid://dbv6wqkel7c4q" path="res://characters/army/war_elephant/frames/walk_n_1.png" id="d96"]
+[ext_resource type="Texture2D" uid="uid://dp0egmsrp0ulh" path="res://characters/army/war_elephant/frames/walk_n_2.png" id="d97"]
+[ext_resource type="Texture2D" uid="uid://bkl8rjj4ioxik" path="res://characters/army/war_elephant/frames/walk_n_3.png" id="d98"]
+[ext_resource type="Texture2D" uid="uid://cvtoeljp0fvks" path="res://characters/army/war_elephant/frames/walk_n_4.png" id="d99"]
+[ext_resource type="Texture2D" uid="uid://d24010mb6atxv" path="res://characters/army/war_elephant/frames/walk_n_5.png" id="d100"]
+[ext_resource type="Texture2D" uid="uid://dbw3lq7t6xfov" path="res://characters/army/war_elephant/frames/walk_n_6.png" id="d101"]
+[ext_resource type="Texture2D" uid="uid://c8gbaxai4koon" path="res://characters/army/war_elephant/frames/walk_n_7.png" id="d102"]
+[ext_resource type="Texture2D" uid="uid://dvsa0jor0m44a" path="res://characters/army/war_elephant/frames/walk_n_8.png" id="d103"]
+[ext_resource type="Texture2D" uid="uid://d1kmd1hoj4tiv" path="res://characters/army/war_elephant/frames/walk_n_9.png" id="d104"]
+[ext_resource type="Texture2D" uid="uid://dxrygicmfrxkg" path="res://characters/army/war_elephant/frames/walk_n_10.png" id="d105"]
+[ext_resource type="Texture2D" uid="uid://re0yol4srfcg" path="res://characters/army/war_elephant/frames/walk_n_11.png" id="d106"]
+[ext_resource type="Texture2D" uid="uid://bklk1m8xk3dn5" path="res://characters/army/war_elephant/frames/walk_n_12.png" id="d107"]
+[ext_resource type="Texture2D" uid="uid://ymuxrxw01mau" path="res://characters/army/war_elephant/frames/walk_n_13.png" id="d108"]
+[ext_resource type="Texture2D" uid="uid://bk35fdx820bx4" path="res://characters/army/war_elephant/frames/walk_n_14.png" id="d109"]
+[ext_resource type="Texture2D" uid="uid://rltb4nikki7l" path="res://characters/army/war_elephant/frames/walk_n_15.png" id="d110"]
+[ext_resource type="Texture2D" uid="uid://dian267ttvidb" path="res://characters/army/war_elephant/frames/walk_n_16.png" id="d111"]
+[ext_resource type="Texture2D" uid="uid://b62tviu12b6fk" path="res://characters/army/war_elephant/frames/walk_n_17.png" id="d112"]
+[ext_resource type="Texture2D" uid="uid://ddpcyodtsw4mp" path="res://characters/army/war_elephant/frames/walk_n_18.png" id="d113"]
+[ext_resource type="Texture2D" uid="uid://dswuxv5aq33vw" path="res://characters/army/war_elephant/frames/walk_n_19.png" id="d114"]
+[ext_resource type="Texture2D" uid="uid://db4pt2y86vqs0" path="res://characters/army/war_elephant/frames/walk_n_20.png" id="d115"]
+[ext_resource type="Texture2D" uid="uid://dmi1n7xhh62b0" path="res://characters/army/war_elephant/frames/walk_n_21.png" id="d116"]
+[ext_resource type="Texture2D" uid="uid://jfqo5lfwcocd" path="res://characters/army/war_elephant/frames/walk_n_22.png" id="d117"]
+[ext_resource type="Texture2D" uid="uid://jwaql2eo8mby" path="res://characters/army/war_elephant/frames/walk_n_23.png" id="d118"]
+[ext_resource type="Texture2D" uid="uid://irpb83ck7rrl" path="res://characters/army/war_elephant/frames/walk_n_24.png" id="d119"]
+[ext_resource type="Texture2D" uid="uid://cab1qr8n4shg" path="res://characters/army/war_elephant/frames/idle_s_0.png" id="d120"]
+[ext_resource type="Texture2D" uid="uid://dbudb3bhet8bq" path="res://characters/army/war_elephant/frames/idle_e_0.png" id="d121"]
+[ext_resource type="Texture2D" uid="uid://cnkiwhacfao1a" path="res://characters/army/war_elephant/frames/idle_w_0.png" id="d122"]
+[ext_resource type="Texture2D" uid="uid://hgoec0jkspsx" path="res://characters/army/war_elephant/frames/idle_n_0.png" id="d123"]
+[ext_resource type="Texture2D" uid="uid://c1d4s2b6sgx3n" path="res://characters/army/war_elephant/frames/walk_s_0_n.png" id="n0"]
+[ext_resource type="Texture2D" uid="uid://c378sffvtyhvh" path="res://characters/army/war_elephant/frames/walk_s_1_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://bqo80ig64irfw" path="res://characters/army/war_elephant/frames/walk_s_2_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://1smhovf6ry4k" path="res://characters/army/war_elephant/frames/walk_s_3_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://cbg75xwookvs2" path="res://characters/army/war_elephant/frames/walk_s_4_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://f0c3qaln7e2j" path="res://characters/army/war_elephant/frames/walk_s_5_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://28mtr2xej4l" path="res://characters/army/war_elephant/frames/walk_s_6_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://c15hcqdfofwaq" path="res://characters/army/war_elephant/frames/walk_s_7_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://bv3j3gp7klep" path="res://characters/army/war_elephant/frames/walk_s_8_n.png" id="n8"]
+[ext_resource type="Texture2D" uid="uid://bkfflbdknbqwa" path="res://characters/army/war_elephant/frames/walk_s_9_n.png" id="n9"]
+[ext_resource type="Texture2D" uid="uid://d2s54fyrfld83" path="res://characters/army/war_elephant/frames/walk_s_10_n.png" id="n10"]
+[ext_resource type="Texture2D" uid="uid://bmnmp4b3yva7h" path="res://characters/army/war_elephant/frames/walk_s_11_n.png" id="n11"]
+[ext_resource type="Texture2D" uid="uid://c6edgx5f63451" path="res://characters/army/war_elephant/frames/walk_s_12_n.png" id="n12"]
+[ext_resource type="Texture2D" uid="uid://c433etxuvm8p" path="res://characters/army/war_elephant/frames/walk_s_13_n.png" id="n13"]
+[ext_resource type="Texture2D" uid="uid://clhi34d4n8m7w" path="res://characters/army/war_elephant/frames/walk_s_14_n.png" id="n14"]
+[ext_resource type="Texture2D" uid="uid://6ipfilxl6yu5" path="res://characters/army/war_elephant/frames/walk_s_15_n.png" id="n15"]
+[ext_resource type="Texture2D" uid="uid://dy0bqlxtr5skf" path="res://characters/army/war_elephant/frames/walk_s_16_n.png" id="n16"]
+[ext_resource type="Texture2D" uid="uid://i356sqgw2axd" path="res://characters/army/war_elephant/frames/walk_s_17_n.png" id="n17"]
+[ext_resource type="Texture2D" uid="uid://ci67ardbsqlqp" path="res://characters/army/war_elephant/frames/walk_s_18_n.png" id="n18"]
+[ext_resource type="Texture2D" uid="uid://l6442oroo6xp" path="res://characters/army/war_elephant/frames/walk_s_19_n.png" id="n19"]
+[ext_resource type="Texture2D" uid="uid://btonsv8anpwnu" path="res://characters/army/war_elephant/frames/walk_s_20_n.png" id="n20"]
+[ext_resource type="Texture2D" uid="uid://bsteqdfqp70n4" path="res://characters/army/war_elephant/frames/walk_s_21_n.png" id="n21"]
+[ext_resource type="Texture2D" uid="uid://bprqwcgkstuxo" path="res://characters/army/war_elephant/frames/walk_s_22_n.png" id="n22"]
+[ext_resource type="Texture2D" uid="uid://qtekjekko37y" path="res://characters/army/war_elephant/frames/walk_s_23_n.png" id="n23"]
+[ext_resource type="Texture2D" uid="uid://bx2qi072dyhrb" path="res://characters/army/war_elephant/frames/walk_s_24_n.png" id="n24"]
+[ext_resource type="Texture2D" uid="uid://bjkdi3001cgnt" path="res://characters/army/war_elephant/frames/walk_s_25_n.png" id="n25"]
+[ext_resource type="Texture2D" uid="uid://2udwt68663ut" path="res://characters/army/war_elephant/frames/walk_s_26_n.png" id="n26"]
+[ext_resource type="Texture2D" uid="uid://bnjppg004x5pl" path="res://characters/army/war_elephant/frames/walk_s_27_n.png" id="n27"]
+[ext_resource type="Texture2D" uid="uid://ct6vp8l3v6i38" path="res://characters/army/war_elephant/frames/walk_s_28_n.png" id="n28"]
+[ext_resource type="Texture2D" uid="uid://ggr10tc2gepf" path="res://characters/army/war_elephant/frames/walk_s_29_n.png" id="n29"]
+[ext_resource type="Texture2D" uid="uid://dxho4twk18wce" path="res://characters/army/war_elephant/frames/walk_s_30_n.png" id="n30"]
+[ext_resource type="Texture2D" uid="uid://dg6e286vmv8ij" path="res://characters/army/war_elephant/frames/walk_s_31_n.png" id="n31"]
+[ext_resource type="Texture2D" uid="uid://bd6eelhld83dc" path="res://characters/army/war_elephant/frames/walk_s_32_n.png" id="n32"]
+[ext_resource type="Texture2D" uid="uid://bmmc4i5asjmj5" path="res://characters/army/war_elephant/frames/walk_s_33_n.png" id="n33"]
+[ext_resource type="Texture2D" uid="uid://dtvni0y4kc32n" path="res://characters/army/war_elephant/frames/walk_s_34_n.png" id="n34"]
+[ext_resource type="Texture2D" uid="uid://el5ys02lxutm" path="res://characters/army/war_elephant/frames/walk_e_0_n.png" id="n35"]
+[ext_resource type="Texture2D" uid="uid://cppi1su8vih1k" path="res://characters/army/war_elephant/frames/walk_e_1_n.png" id="n36"]
+[ext_resource type="Texture2D" uid="uid://8u8ha880bi0w" path="res://characters/army/war_elephant/frames/walk_e_2_n.png" id="n37"]
+[ext_resource type="Texture2D" uid="uid://bemt37bf8jiua" path="res://characters/army/war_elephant/frames/walk_e_3_n.png" id="n38"]
+[ext_resource type="Texture2D" uid="uid://bv1w7816uwhxq" path="res://characters/army/war_elephant/frames/walk_e_4_n.png" id="n39"]
+[ext_resource type="Texture2D" uid="uid://dtpr7tmnt0my0" path="res://characters/army/war_elephant/frames/walk_e_5_n.png" id="n40"]
+[ext_resource type="Texture2D" uid="uid://7vys1hhl7mjp" path="res://characters/army/war_elephant/frames/walk_e_6_n.png" id="n41"]
+[ext_resource type="Texture2D" uid="uid://bheuu1o6tsjlw" path="res://characters/army/war_elephant/frames/walk_e_7_n.png" id="n42"]
+[ext_resource type="Texture2D" uid="uid://dpmdn71cdbqp5" path="res://characters/army/war_elephant/frames/walk_e_8_n.png" id="n43"]
+[ext_resource type="Texture2D" uid="uid://b1naq0pmy35a5" path="res://characters/army/war_elephant/frames/walk_e_9_n.png" id="n44"]
+[ext_resource type="Texture2D" uid="uid://dc55dm0cqxv6j" path="res://characters/army/war_elephant/frames/walk_e_10_n.png" id="n45"]
+[ext_resource type="Texture2D" uid="uid://c6otvp6e51px4" path="res://characters/army/war_elephant/frames/walk_e_11_n.png" id="n46"]
+[ext_resource type="Texture2D" uid="uid://cycjhxd5858s7" path="res://characters/army/war_elephant/frames/walk_e_12_n.png" id="n47"]
+[ext_resource type="Texture2D" uid="uid://6303k6miitc4" path="res://characters/army/war_elephant/frames/walk_e_13_n.png" id="n48"]
+[ext_resource type="Texture2D" uid="uid://5v8r8ms4gemi" path="res://characters/army/war_elephant/frames/walk_e_14_n.png" id="n49"]
+[ext_resource type="Texture2D" uid="uid://dd7j5txuxcol7" path="res://characters/army/war_elephant/frames/walk_e_15_n.png" id="n50"]
+[ext_resource type="Texture2D" uid="uid://dy6ar18a0h4xv" path="res://characters/army/war_elephant/frames/walk_e_16_n.png" id="n51"]
+[ext_resource type="Texture2D" uid="uid://b8t7ddbl7bng5" path="res://characters/army/war_elephant/frames/walk_e_17_n.png" id="n52"]
+[ext_resource type="Texture2D" uid="uid://35ne134y02nk" path="res://characters/army/war_elephant/frames/walk_e_18_n.png" id="n53"]
+[ext_resource type="Texture2D" uid="uid://boc6mco2c44em" path="res://characters/army/war_elephant/frames/walk_e_19_n.png" id="n54"]
+[ext_resource type="Texture2D" uid="uid://dj0qkiy7ivm6v" path="res://characters/army/war_elephant/frames/walk_e_20_n.png" id="n55"]
+[ext_resource type="Texture2D" uid="uid://qw6cjeeu6hui" path="res://characters/army/war_elephant/frames/walk_e_21_n.png" id="n56"]
+[ext_resource type="Texture2D" uid="uid://dq1obp2itvbuw" path="res://characters/army/war_elephant/frames/walk_e_22_n.png" id="n57"]
+[ext_resource type="Texture2D" uid="uid://7mjtdt7f8u7" path="res://characters/army/war_elephant/frames/walk_e_23_n.png" id="n58"]
+[ext_resource type="Texture2D" uid="uid://dupq6p3lgfoax" path="res://characters/army/war_elephant/frames/walk_e_24_n.png" id="n59"]
+[ext_resource type="Texture2D" uid="uid://b5345w7fy7255" path="res://characters/army/war_elephant/frames/walk_e_25_n.png" id="n60"]
+[ext_resource type="Texture2D" uid="uid://crddrr386tbv" path="res://characters/army/war_elephant/frames/walk_e_26_n.png" id="n61"]
+[ext_resource type="Texture2D" uid="uid://cbfyydcmvxj2y" path="res://characters/army/war_elephant/frames/walk_e_27_n.png" id="n62"]
+[ext_resource type="Texture2D" uid="uid://btj4tm6pjexot" path="res://characters/army/war_elephant/frames/walk_e_28_n.png" id="n63"]
+[ext_resource type="Texture2D" uid="uid://dioctb4katllu" path="res://characters/army/war_elephant/frames/walk_e_29_n.png" id="n64"]
+[ext_resource type="Texture2D" uid="uid://b3nuyjwelv0p0" path="res://characters/army/war_elephant/frames/walk_w_0_n.png" id="n65"]
+[ext_resource type="Texture2D" uid="uid://fx3j1pwa2cux" path="res://characters/army/war_elephant/frames/walk_w_1_n.png" id="n66"]
+[ext_resource type="Texture2D" uid="uid://8131ke2jyav" path="res://characters/army/war_elephant/frames/walk_w_2_n.png" id="n67"]
+[ext_resource type="Texture2D" uid="uid://yshfeg2kshqv" path="res://characters/army/war_elephant/frames/walk_w_3_n.png" id="n68"]
+[ext_resource type="Texture2D" uid="uid://bjt7jc81ww325" path="res://characters/army/war_elephant/frames/walk_w_4_n.png" id="n69"]
+[ext_resource type="Texture2D" uid="uid://ddmk33d40blo5" path="res://characters/army/war_elephant/frames/walk_w_5_n.png" id="n70"]
+[ext_resource type="Texture2D" uid="uid://waqifvkeq3wy" path="res://characters/army/war_elephant/frames/walk_w_6_n.png" id="n71"]
+[ext_resource type="Texture2D" uid="uid://c8ydf11qu4obo" path="res://characters/army/war_elephant/frames/walk_w_7_n.png" id="n72"]
+[ext_resource type="Texture2D" uid="uid://ctwwjbqp8fb4f" path="res://characters/army/war_elephant/frames/walk_w_8_n.png" id="n73"]
+[ext_resource type="Texture2D" uid="uid://bbrcjubd7iwye" path="res://characters/army/war_elephant/frames/walk_w_9_n.png" id="n74"]
+[ext_resource type="Texture2D" uid="uid://byjls0707sbxt" path="res://characters/army/war_elephant/frames/walk_w_10_n.png" id="n75"]
+[ext_resource type="Texture2D" uid="uid://c6dhyt16ao6ph" path="res://characters/army/war_elephant/frames/walk_w_11_n.png" id="n76"]
+[ext_resource type="Texture2D" uid="uid://wjngguvcp0n0" path="res://characters/army/war_elephant/frames/walk_w_12_n.png" id="n77"]
+[ext_resource type="Texture2D" uid="uid://cast33m8vjou4" path="res://characters/army/war_elephant/frames/walk_w_13_n.png" id="n78"]
+[ext_resource type="Texture2D" uid="uid://dqjyobdpjtpml" path="res://characters/army/war_elephant/frames/walk_w_14_n.png" id="n79"]
+[ext_resource type="Texture2D" uid="uid://biyoa7h3ps1f6" path="res://characters/army/war_elephant/frames/walk_w_15_n.png" id="n80"]
+[ext_resource type="Texture2D" uid="uid://bmsnkvno6c78" path="res://characters/army/war_elephant/frames/walk_w_16_n.png" id="n81"]
+[ext_resource type="Texture2D" uid="uid://doijqptyuswwt" path="res://characters/army/war_elephant/frames/walk_w_17_n.png" id="n82"]
+[ext_resource type="Texture2D" uid="uid://cguvnlo6hasef" path="res://characters/army/war_elephant/frames/walk_w_18_n.png" id="n83"]
+[ext_resource type="Texture2D" uid="uid://cxrvpey32ybdc" path="res://characters/army/war_elephant/frames/walk_w_19_n.png" id="n84"]
+[ext_resource type="Texture2D" uid="uid://b3f2ejivikimc" path="res://characters/army/war_elephant/frames/walk_w_20_n.png" id="n85"]
+[ext_resource type="Texture2D" uid="uid://4vs4p54asd5b" path="res://characters/army/war_elephant/frames/walk_w_21_n.png" id="n86"]
+[ext_resource type="Texture2D" uid="uid://cm2l7f45784so" path="res://characters/army/war_elephant/frames/walk_w_22_n.png" id="n87"]
+[ext_resource type="Texture2D" uid="uid://b6krgahf5wmab" path="res://characters/army/war_elephant/frames/walk_w_23_n.png" id="n88"]
+[ext_resource type="Texture2D" uid="uid://oyb0nnyaypq6" path="res://characters/army/war_elephant/frames/walk_w_24_n.png" id="n89"]
+[ext_resource type="Texture2D" uid="uid://br35ddqq5nrho" path="res://characters/army/war_elephant/frames/walk_w_25_n.png" id="n90"]
+[ext_resource type="Texture2D" uid="uid://bf3lnqcqai4xw" path="res://characters/army/war_elephant/frames/walk_w_26_n.png" id="n91"]
+[ext_resource type="Texture2D" uid="uid://c5raxw6wnh34i" path="res://characters/army/war_elephant/frames/walk_w_27_n.png" id="n92"]
+[ext_resource type="Texture2D" uid="uid://dg5tbu1b12c1u" path="res://characters/army/war_elephant/frames/walk_w_28_n.png" id="n93"]
+[ext_resource type="Texture2D" uid="uid://bkk24p34nhp52" path="res://characters/army/war_elephant/frames/walk_w_29_n.png" id="n94"]
+[ext_resource type="Texture2D" uid="uid://dxmkytu68hl2h" path="res://characters/army/war_elephant/frames/walk_n_0_n.png" id="n95"]
+[ext_resource type="Texture2D" uid="uid://7y4mtq516grw" path="res://characters/army/war_elephant/frames/walk_n_1_n.png" id="n96"]
+[ext_resource type="Texture2D" uid="uid://pyo57i40g08s" path="res://characters/army/war_elephant/frames/walk_n_2_n.png" id="n97"]
+[ext_resource type="Texture2D" uid="uid://vmxtjmopwwl6" path="res://characters/army/war_elephant/frames/walk_n_3_n.png" id="n98"]
+[ext_resource type="Texture2D" uid="uid://d1vjfhu56y0gk" path="res://characters/army/war_elephant/frames/walk_n_4_n.png" id="n99"]
+[ext_resource type="Texture2D" uid="uid://bq3wk8qxmsfox" path="res://characters/army/war_elephant/frames/walk_n_5_n.png" id="n100"]
+[ext_resource type="Texture2D" uid="uid://c4vctatdcogjy" path="res://characters/army/war_elephant/frames/walk_n_6_n.png" id="n101"]
+[ext_resource type="Texture2D" uid="uid://c6hptf7qfomiv" path="res://characters/army/war_elephant/frames/walk_n_7_n.png" id="n102"]
+[ext_resource type="Texture2D" uid="uid://dqnuif2wt3bry" path="res://characters/army/war_elephant/frames/walk_n_8_n.png" id="n103"]
+[ext_resource type="Texture2D" uid="uid://b47h28lcaqs0c" path="res://characters/army/war_elephant/frames/walk_n_9_n.png" id="n104"]
+[ext_resource type="Texture2D" uid="uid://c15pfp4ykf4vs" path="res://characters/army/war_elephant/frames/walk_n_10_n.png" id="n105"]
+[ext_resource type="Texture2D" uid="uid://pq0tqycwtr86" path="res://characters/army/war_elephant/frames/walk_n_11_n.png" id="n106"]
+[ext_resource type="Texture2D" uid="uid://f5mp6vbn6iih" path="res://characters/army/war_elephant/frames/walk_n_12_n.png" id="n107"]
+[ext_resource type="Texture2D" uid="uid://b6npyoimcv2xm" path="res://characters/army/war_elephant/frames/walk_n_13_n.png" id="n108"]
+[ext_resource type="Texture2D" uid="uid://d3yxc4y73mh4n" path="res://characters/army/war_elephant/frames/walk_n_14_n.png" id="n109"]
+[ext_resource type="Texture2D" uid="uid://7njfmruatn1p" path="res://characters/army/war_elephant/frames/walk_n_15_n.png" id="n110"]
+[ext_resource type="Texture2D" uid="uid://btbrqho2el1gd" path="res://characters/army/war_elephant/frames/walk_n_16_n.png" id="n111"]
+[ext_resource type="Texture2D" uid="uid://chjwxgndvla58" path="res://characters/army/war_elephant/frames/walk_n_17_n.png" id="n112"]
+[ext_resource type="Texture2D" uid="uid://rhuipg53j88v" path="res://characters/army/war_elephant/frames/walk_n_18_n.png" id="n113"]
+[ext_resource type="Texture2D" uid="uid://c1gjnkrfg7oau" path="res://characters/army/war_elephant/frames/walk_n_19_n.png" id="n114"]
+[ext_resource type="Texture2D" uid="uid://b6q3xa41mupca" path="res://characters/army/war_elephant/frames/walk_n_20_n.png" id="n115"]
+[ext_resource type="Texture2D" uid="uid://bhno6k2vunf8w" path="res://characters/army/war_elephant/frames/walk_n_21_n.png" id="n116"]
+[ext_resource type="Texture2D" uid="uid://b1si5w0asxf2y" path="res://characters/army/war_elephant/frames/walk_n_22_n.png" id="n117"]
+[ext_resource type="Texture2D" uid="uid://rkdhwv6l3h07" path="res://characters/army/war_elephant/frames/walk_n_23_n.png" id="n118"]
+[ext_resource type="Texture2D" uid="uid://bwvnl24x3yicj" path="res://characters/army/war_elephant/frames/walk_n_24_n.png" id="n119"]
+[ext_resource type="Texture2D" uid="uid://byq7rgds02q63" path="res://characters/army/war_elephant/frames/idle_s_0_n.png" id="n120"]
+[ext_resource type="Texture2D" uid="uid://b0xajf4jhogvd" path="res://characters/army/war_elephant/frames/idle_e_0_n.png" id="n121"]
+[ext_resource type="Texture2D" uid="uid://cj45b20eahycr" path="res://characters/army/war_elephant/frames/idle_w_0_n.png" id="n122"]
+[ext_resource type="Texture2D" uid="uid://30pnsp3sihmf" path="res://characters/army/war_elephant/frames/idle_n_0_n.png" id="n123"]
+
+[sub_resource type="CanvasTexture" id="C121"]
+diffuse_texture = ExtResource("d121")
+normal_texture = ExtResource("n121")
+
+[sub_resource type="CanvasTexture" id="C123"]
+diffuse_texture = ExtResource("d123")
+normal_texture = ExtResource("n123")
+
+[sub_resource type="CanvasTexture" id="C120"]
+diffuse_texture = ExtResource("d120")
+normal_texture = ExtResource("n120")
+
+[sub_resource type="CanvasTexture" id="C122"]
+diffuse_texture = ExtResource("d122")
+normal_texture = ExtResource("n122")
+
+[sub_resource type="CanvasTexture" id="C35"]
+diffuse_texture = ExtResource("d35")
+normal_texture = ExtResource("n35")
+
+[sub_resource type="CanvasTexture" id="C36"]
+diffuse_texture = ExtResource("d36")
+normal_texture = ExtResource("n36")
+
+[sub_resource type="CanvasTexture" id="C37"]
+diffuse_texture = ExtResource("d37")
+normal_texture = ExtResource("n37")
+
+[sub_resource type="CanvasTexture" id="C38"]
+diffuse_texture = ExtResource("d38")
+normal_texture = ExtResource("n38")
+
+[sub_resource type="CanvasTexture" id="C39"]
+diffuse_texture = ExtResource("d39")
+normal_texture = ExtResource("n39")
+
+[sub_resource type="CanvasTexture" id="C40"]
+diffuse_texture = ExtResource("d40")
+normal_texture = ExtResource("n40")
+
+[sub_resource type="CanvasTexture" id="C41"]
+diffuse_texture = ExtResource("d41")
+normal_texture = ExtResource("n41")
+
+[sub_resource type="CanvasTexture" id="C42"]
+diffuse_texture = ExtResource("d42")
+normal_texture = ExtResource("n42")
+
+[sub_resource type="CanvasTexture" id="C43"]
+diffuse_texture = ExtResource("d43")
+normal_texture = ExtResource("n43")
+
+[sub_resource type="CanvasTexture" id="C44"]
+diffuse_texture = ExtResource("d44")
+normal_texture = ExtResource("n44")
+
+[sub_resource type="CanvasTexture" id="C45"]
+diffuse_texture = ExtResource("d45")
+normal_texture = ExtResource("n45")
+
+[sub_resource type="CanvasTexture" id="C46"]
+diffuse_texture = ExtResource("d46")
+normal_texture = ExtResource("n46")
+
+[sub_resource type="CanvasTexture" id="C47"]
+diffuse_texture = ExtResource("d47")
+normal_texture = ExtResource("n47")
+
+[sub_resource type="CanvasTexture" id="C48"]
+diffuse_texture = ExtResource("d48")
+normal_texture = ExtResource("n48")
+
+[sub_resource type="CanvasTexture" id="C49"]
+diffuse_texture = ExtResource("d49")
+normal_texture = ExtResource("n49")
+
+[sub_resource type="CanvasTexture" id="C50"]
+diffuse_texture = ExtResource("d50")
+normal_texture = ExtResource("n50")
+
+[sub_resource type="CanvasTexture" id="C51"]
+diffuse_texture = ExtResource("d51")
+normal_texture = ExtResource("n51")
+
+[sub_resource type="CanvasTexture" id="C52"]
+diffuse_texture = ExtResource("d52")
+normal_texture = ExtResource("n52")
+
+[sub_resource type="CanvasTexture" id="C53"]
+diffuse_texture = ExtResource("d53")
+normal_texture = ExtResource("n53")
+
+[sub_resource type="CanvasTexture" id="C54"]
+diffuse_texture = ExtResource("d54")
+normal_texture = ExtResource("n54")
+
+[sub_resource type="CanvasTexture" id="C55"]
+diffuse_texture = ExtResource("d55")
+normal_texture = ExtResource("n55")
+
+[sub_resource type="CanvasTexture" id="C56"]
+diffuse_texture = ExtResource("d56")
+normal_texture = ExtResource("n56")
+
+[sub_resource type="CanvasTexture" id="C57"]
+diffuse_texture = ExtResource("d57")
+normal_texture = ExtResource("n57")
+
+[sub_resource type="CanvasTexture" id="C58"]
+diffuse_texture = ExtResource("d58")
+normal_texture = ExtResource("n58")
+
+[sub_resource type="CanvasTexture" id="C59"]
+diffuse_texture = ExtResource("d59")
+normal_texture = ExtResource("n59")
+
+[sub_resource type="CanvasTexture" id="C60"]
+diffuse_texture = ExtResource("d60")
+normal_texture = ExtResource("n60")
+
+[sub_resource type="CanvasTexture" id="C61"]
+diffuse_texture = ExtResource("d61")
+normal_texture = ExtResource("n61")
+
+[sub_resource type="CanvasTexture" id="C62"]
+diffuse_texture = ExtResource("d62")
+normal_texture = ExtResource("n62")
+
+[sub_resource type="CanvasTexture" id="C63"]
+diffuse_texture = ExtResource("d63")
+normal_texture = ExtResource("n63")
+
+[sub_resource type="CanvasTexture" id="C64"]
+diffuse_texture = ExtResource("d64")
+normal_texture = ExtResource("n64")
+
+[sub_resource type="CanvasTexture" id="C95"]
+diffuse_texture = ExtResource("d95")
+normal_texture = ExtResource("n95")
+
+[sub_resource type="CanvasTexture" id="C96"]
+diffuse_texture = ExtResource("d96")
+normal_texture = ExtResource("n96")
+
+[sub_resource type="CanvasTexture" id="C97"]
+diffuse_texture = ExtResource("d97")
+normal_texture = ExtResource("n97")
+
+[sub_resource type="CanvasTexture" id="C98"]
+diffuse_texture = ExtResource("d98")
+normal_texture = ExtResource("n98")
+
+[sub_resource type="CanvasTexture" id="C99"]
+diffuse_texture = ExtResource("d99")
+normal_texture = ExtResource("n99")
+
+[sub_resource type="CanvasTexture" id="C100"]
+diffuse_texture = ExtResource("d100")
+normal_texture = ExtResource("n100")
+
+[sub_resource type="CanvasTexture" id="C101"]
+diffuse_texture = ExtResource("d101")
+normal_texture = ExtResource("n101")
+
+[sub_resource type="CanvasTexture" id="C102"]
+diffuse_texture = ExtResource("d102")
+normal_texture = ExtResource("n102")
+
+[sub_resource type="CanvasTexture" id="C103"]
+diffuse_texture = ExtResource("d103")
+normal_texture = ExtResource("n103")
+
+[sub_resource type="CanvasTexture" id="C104"]
+diffuse_texture = ExtResource("d104")
+normal_texture = ExtResource("n104")
+
+[sub_resource type="CanvasTexture" id="C105"]
+diffuse_texture = ExtResource("d105")
+normal_texture = ExtResource("n105")
+
+[sub_resource type="CanvasTexture" id="C106"]
+diffuse_texture = ExtResource("d106")
+normal_texture = ExtResource("n106")
+
+[sub_resource type="CanvasTexture" id="C107"]
+diffuse_texture = ExtResource("d107")
+normal_texture = ExtResource("n107")
+
+[sub_resource type="CanvasTexture" id="C108"]
+diffuse_texture = ExtResource("d108")
+normal_texture = ExtResource("n108")
+
+[sub_resource type="CanvasTexture" id="C109"]
+diffuse_texture = ExtResource("d109")
+normal_texture = ExtResource("n109")
+
+[sub_resource type="CanvasTexture" id="C110"]
+diffuse_texture = ExtResource("d110")
+normal_texture = ExtResource("n110")
+
+[sub_resource type="CanvasTexture" id="C111"]
+diffuse_texture = ExtResource("d111")
+normal_texture = ExtResource("n111")
+
+[sub_resource type="CanvasTexture" id="C112"]
+diffuse_texture = ExtResource("d112")
+normal_texture = ExtResource("n112")
+
+[sub_resource type="CanvasTexture" id="C113"]
+diffuse_texture = ExtResource("d113")
+normal_texture = ExtResource("n113")
+
+[sub_resource type="CanvasTexture" id="C114"]
+diffuse_texture = ExtResource("d114")
+normal_texture = ExtResource("n114")
+
+[sub_resource type="CanvasTexture" id="C115"]
+diffuse_texture = ExtResource("d115")
+normal_texture = ExtResource("n115")
+
+[sub_resource type="CanvasTexture" id="C116"]
+diffuse_texture = ExtResource("d116")
+normal_texture = ExtResource("n116")
+
+[sub_resource type="CanvasTexture" id="C117"]
+diffuse_texture = ExtResource("d117")
+normal_texture = ExtResource("n117")
+
+[sub_resource type="CanvasTexture" id="C118"]
+diffuse_texture = ExtResource("d118")
+normal_texture = ExtResource("n118")
+
+[sub_resource type="CanvasTexture" id="C119"]
+diffuse_texture = ExtResource("d119")
+normal_texture = ExtResource("n119")
+
+[sub_resource type="CanvasTexture" id="C0"]
+diffuse_texture = ExtResource("d0")
+normal_texture = ExtResource("n0")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C6"]
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
+
+[sub_resource type="CanvasTexture" id="C7"]
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
+
+[sub_resource type="CanvasTexture" id="C8"]
+diffuse_texture = ExtResource("d8")
+normal_texture = ExtResource("n8")
+
+[sub_resource type="CanvasTexture" id="C9"]
+diffuse_texture = ExtResource("d9")
+normal_texture = ExtResource("n9")
+
+[sub_resource type="CanvasTexture" id="C10"]
+diffuse_texture = ExtResource("d10")
+normal_texture = ExtResource("n10")
+
+[sub_resource type="CanvasTexture" id="C11"]
+diffuse_texture = ExtResource("d11")
+normal_texture = ExtResource("n11")
+
+[sub_resource type="CanvasTexture" id="C12"]
+diffuse_texture = ExtResource("d12")
+normal_texture = ExtResource("n12")
+
+[sub_resource type="CanvasTexture" id="C13"]
+diffuse_texture = ExtResource("d13")
+normal_texture = ExtResource("n13")
+
+[sub_resource type="CanvasTexture" id="C14"]
+diffuse_texture = ExtResource("d14")
+normal_texture = ExtResource("n14")
+
+[sub_resource type="CanvasTexture" id="C15"]
+diffuse_texture = ExtResource("d15")
+normal_texture = ExtResource("n15")
+
+[sub_resource type="CanvasTexture" id="C16"]
+diffuse_texture = ExtResource("d16")
+normal_texture = ExtResource("n16")
+
+[sub_resource type="CanvasTexture" id="C17"]
+diffuse_texture = ExtResource("d17")
+normal_texture = ExtResource("n17")
+
+[sub_resource type="CanvasTexture" id="C18"]
+diffuse_texture = ExtResource("d18")
+normal_texture = ExtResource("n18")
+
+[sub_resource type="CanvasTexture" id="C19"]
+diffuse_texture = ExtResource("d19")
+normal_texture = ExtResource("n19")
+
+[sub_resource type="CanvasTexture" id="C20"]
+diffuse_texture = ExtResource("d20")
+normal_texture = ExtResource("n20")
+
+[sub_resource type="CanvasTexture" id="C21"]
+diffuse_texture = ExtResource("d21")
+normal_texture = ExtResource("n21")
+
+[sub_resource type="CanvasTexture" id="C22"]
+diffuse_texture = ExtResource("d22")
+normal_texture = ExtResource("n22")
+
+[sub_resource type="CanvasTexture" id="C23"]
+diffuse_texture = ExtResource("d23")
+normal_texture = ExtResource("n23")
+
+[sub_resource type="CanvasTexture" id="C24"]
+diffuse_texture = ExtResource("d24")
+normal_texture = ExtResource("n24")
+
+[sub_resource type="CanvasTexture" id="C25"]
+diffuse_texture = ExtResource("d25")
+normal_texture = ExtResource("n25")
+
+[sub_resource type="CanvasTexture" id="C26"]
+diffuse_texture = ExtResource("d26")
+normal_texture = ExtResource("n26")
+
+[sub_resource type="CanvasTexture" id="C27"]
+diffuse_texture = ExtResource("d27")
+normal_texture = ExtResource("n27")
+
+[sub_resource type="CanvasTexture" id="C28"]
+diffuse_texture = ExtResource("d28")
+normal_texture = ExtResource("n28")
+
+[sub_resource type="CanvasTexture" id="C29"]
+diffuse_texture = ExtResource("d29")
+normal_texture = ExtResource("n29")
+
+[sub_resource type="CanvasTexture" id="C30"]
+diffuse_texture = ExtResource("d30")
+normal_texture = ExtResource("n30")
+
+[sub_resource type="CanvasTexture" id="C31"]
+diffuse_texture = ExtResource("d31")
+normal_texture = ExtResource("n31")
+
+[sub_resource type="CanvasTexture" id="C32"]
+diffuse_texture = ExtResource("d32")
+normal_texture = ExtResource("n32")
+
+[sub_resource type="CanvasTexture" id="C33"]
+diffuse_texture = ExtResource("d33")
+normal_texture = ExtResource("n33")
+
+[sub_resource type="CanvasTexture" id="C34"]
+diffuse_texture = ExtResource("d34")
+normal_texture = ExtResource("n34")
+
+[sub_resource type="CanvasTexture" id="C65"]
+diffuse_texture = ExtResource("d65")
+normal_texture = ExtResource("n65")
+
+[sub_resource type="CanvasTexture" id="C66"]
+diffuse_texture = ExtResource("d66")
+normal_texture = ExtResource("n66")
+
+[sub_resource type="CanvasTexture" id="C67"]
+diffuse_texture = ExtResource("d67")
+normal_texture = ExtResource("n67")
+
+[sub_resource type="CanvasTexture" id="C68"]
+diffuse_texture = ExtResource("d68")
+normal_texture = ExtResource("n68")
+
+[sub_resource type="CanvasTexture" id="C69"]
+diffuse_texture = ExtResource("d69")
+normal_texture = ExtResource("n69")
+
+[sub_resource type="CanvasTexture" id="C70"]
+diffuse_texture = ExtResource("d70")
+normal_texture = ExtResource("n70")
+
+[sub_resource type="CanvasTexture" id="C71"]
+diffuse_texture = ExtResource("d71")
+normal_texture = ExtResource("n71")
+
+[sub_resource type="CanvasTexture" id="C72"]
+diffuse_texture = ExtResource("d72")
+normal_texture = ExtResource("n72")
+
+[sub_resource type="CanvasTexture" id="C73"]
+diffuse_texture = ExtResource("d73")
+normal_texture = ExtResource("n73")
+
+[sub_resource type="CanvasTexture" id="C74"]
+diffuse_texture = ExtResource("d74")
+normal_texture = ExtResource("n74")
+
+[sub_resource type="CanvasTexture" id="C75"]
+diffuse_texture = ExtResource("d75")
+normal_texture = ExtResource("n75")
+
+[sub_resource type="CanvasTexture" id="C76"]
+diffuse_texture = ExtResource("d76")
+normal_texture = ExtResource("n76")
+
+[sub_resource type="CanvasTexture" id="C77"]
+diffuse_texture = ExtResource("d77")
+normal_texture = ExtResource("n77")
+
+[sub_resource type="CanvasTexture" id="C78"]
+diffuse_texture = ExtResource("d78")
+normal_texture = ExtResource("n78")
+
+[sub_resource type="CanvasTexture" id="C79"]
+diffuse_texture = ExtResource("d79")
+normal_texture = ExtResource("n79")
+
+[sub_resource type="CanvasTexture" id="C80"]
+diffuse_texture = ExtResource("d80")
+normal_texture = ExtResource("n80")
+
+[sub_resource type="CanvasTexture" id="C81"]
+diffuse_texture = ExtResource("d81")
+normal_texture = ExtResource("n81")
+
+[sub_resource type="CanvasTexture" id="C82"]
+diffuse_texture = ExtResource("d82")
+normal_texture = ExtResource("n82")
+
+[sub_resource type="CanvasTexture" id="C83"]
+diffuse_texture = ExtResource("d83")
+normal_texture = ExtResource("n83")
+
+[sub_resource type="CanvasTexture" id="C84"]
+diffuse_texture = ExtResource("d84")
+normal_texture = ExtResource("n84")
+
+[sub_resource type="CanvasTexture" id="C85"]
+diffuse_texture = ExtResource("d85")
+normal_texture = ExtResource("n85")
+
+[sub_resource type="CanvasTexture" id="C86"]
+diffuse_texture = ExtResource("d86")
+normal_texture = ExtResource("n86")
+
+[sub_resource type="CanvasTexture" id="C87"]
+diffuse_texture = ExtResource("d87")
+normal_texture = ExtResource("n87")
+
+[sub_resource type="CanvasTexture" id="C88"]
+diffuse_texture = ExtResource("d88")
+normal_texture = ExtResource("n88")
+
+[sub_resource type="CanvasTexture" id="C89"]
+diffuse_texture = ExtResource("d89")
+normal_texture = ExtResource("n89")
+
+[sub_resource type="CanvasTexture" id="C90"]
+diffuse_texture = ExtResource("d90")
+normal_texture = ExtResource("n90")
+
+[sub_resource type="CanvasTexture" id="C91"]
+diffuse_texture = ExtResource("d91")
+normal_texture = ExtResource("n91")
+
+[sub_resource type="CanvasTexture" id="C92"]
+diffuse_texture = ExtResource("d92")
+normal_texture = ExtResource("n92")
+
+[sub_resource type="CanvasTexture" id="C93"]
+diffuse_texture = ExtResource("d93")
+normal_texture = ExtResource("n93")
+
+[sub_resource type="CanvasTexture" id="C94"]
+diffuse_texture = ExtResource("d94")
+normal_texture = ExtResource("n94")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C121")
+}],
+"loop": 1,
+"name": &"idle_e",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C123")
+}],
+"loop": 1,
+"name": &"idle_n",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C120")
+}],
+"loop": 1,
+"name": &"idle_s",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C122")
+}],
+"loop": 1,
+"name": &"idle_w",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C35")
+}, {
+"duration": 1.0,
+"texture": SubResource("C36")
+}, {
+"duration": 1.0,
+"texture": SubResource("C37")
+}, {
+"duration": 1.0,
+"texture": SubResource("C38")
+}, {
+"duration": 1.0,
+"texture": SubResource("C39")
+}, {
+"duration": 1.0,
+"texture": SubResource("C40")
+}, {
+"duration": 1.0,
+"texture": SubResource("C41")
+}, {
+"duration": 1.0,
+"texture": SubResource("C42")
+}, {
+"duration": 1.0,
+"texture": SubResource("C43")
+}, {
+"duration": 1.0,
+"texture": SubResource("C44")
+}, {
+"duration": 1.0,
+"texture": SubResource("C45")
+}, {
+"duration": 1.0,
+"texture": SubResource("C46")
+}, {
+"duration": 1.0,
+"texture": SubResource("C47")
+}, {
+"duration": 1.0,
+"texture": SubResource("C48")
+}, {
+"duration": 1.0,
+"texture": SubResource("C49")
+}, {
+"duration": 1.0,
+"texture": SubResource("C50")
+}, {
+"duration": 1.0,
+"texture": SubResource("C51")
+}, {
+"duration": 1.0,
+"texture": SubResource("C52")
+}, {
+"duration": 1.0,
+"texture": SubResource("C53")
+}, {
+"duration": 1.0,
+"texture": SubResource("C54")
+}, {
+"duration": 1.0,
+"texture": SubResource("C55")
+}, {
+"duration": 1.0,
+"texture": SubResource("C56")
+}, {
+"duration": 1.0,
+"texture": SubResource("C57")
+}, {
+"duration": 1.0,
+"texture": SubResource("C58")
+}, {
+"duration": 1.0,
+"texture": SubResource("C59")
+}, {
+"duration": 1.0,
+"texture": SubResource("C60")
+}, {
+"duration": 1.0,
+"texture": SubResource("C61")
+}, {
+"duration": 1.0,
+"texture": SubResource("C62")
+}, {
+"duration": 1.0,
+"texture": SubResource("C63")
+}, {
+"duration": 1.0,
+"texture": SubResource("C64")
+}],
+"loop": 1,
+"name": &"walk_e",
+"speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C95")
+}, {
+"duration": 1.0,
+"texture": SubResource("C96")
+}, {
+"duration": 1.0,
+"texture": SubResource("C97")
+}, {
+"duration": 1.0,
+"texture": SubResource("C98")
+}, {
+"duration": 1.0,
+"texture": SubResource("C99")
+}, {
+"duration": 1.0,
+"texture": SubResource("C100")
+}, {
+"duration": 1.0,
+"texture": SubResource("C101")
+}, {
+"duration": 1.0,
+"texture": SubResource("C102")
+}, {
+"duration": 1.0,
+"texture": SubResource("C103")
+}, {
+"duration": 1.0,
+"texture": SubResource("C104")
+}, {
+"duration": 1.0,
+"texture": SubResource("C105")
+}, {
+"duration": 1.0,
+"texture": SubResource("C106")
+}, {
+"duration": 1.0,
+"texture": SubResource("C107")
+}, {
+"duration": 1.0,
+"texture": SubResource("C108")
+}, {
+"duration": 1.0,
+"texture": SubResource("C109")
+}, {
+"duration": 1.0,
+"texture": SubResource("C110")
+}, {
+"duration": 1.0,
+"texture": SubResource("C111")
+}, {
+"duration": 1.0,
+"texture": SubResource("C112")
+}, {
+"duration": 1.0,
+"texture": SubResource("C113")
+}, {
+"duration": 1.0,
+"texture": SubResource("C114")
+}, {
+"duration": 1.0,
+"texture": SubResource("C115")
+}, {
+"duration": 1.0,
+"texture": SubResource("C116")
+}, {
+"duration": 1.0,
+"texture": SubResource("C117")
+}, {
+"duration": 1.0,
+"texture": SubResource("C118")
+}, {
+"duration": 1.0,
+"texture": SubResource("C119")
+}],
+"loop": 1,
+"name": &"walk_n",
+"speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C0")
+}, {
+"duration": 1.0,
+"texture": SubResource("C1")
+}, {
+"duration": 1.0,
+"texture": SubResource("C2")
+}, {
+"duration": 1.0,
+"texture": SubResource("C3")
+}, {
+"duration": 1.0,
+"texture": SubResource("C4")
+}, {
+"duration": 1.0,
+"texture": SubResource("C5")
+}, {
+"duration": 1.0,
+"texture": SubResource("C6")
+}, {
+"duration": 1.0,
+"texture": SubResource("C7")
+}, {
+"duration": 1.0,
+"texture": SubResource("C8")
+}, {
+"duration": 1.0,
+"texture": SubResource("C9")
+}, {
+"duration": 1.0,
+"texture": SubResource("C10")
+}, {
+"duration": 1.0,
+"texture": SubResource("C11")
+}, {
+"duration": 1.0,
+"texture": SubResource("C12")
+}, {
+"duration": 1.0,
+"texture": SubResource("C13")
+}, {
+"duration": 1.0,
+"texture": SubResource("C14")
+}, {
+"duration": 1.0,
+"texture": SubResource("C15")
+}, {
+"duration": 1.0,
+"texture": SubResource("C16")
+}, {
+"duration": 1.0,
+"texture": SubResource("C17")
+}, {
+"duration": 1.0,
+"texture": SubResource("C18")
+}, {
+"duration": 1.0,
+"texture": SubResource("C19")
+}, {
+"duration": 1.0,
+"texture": SubResource("C20")
+}, {
+"duration": 1.0,
+"texture": SubResource("C21")
+}, {
+"duration": 1.0,
+"texture": SubResource("C22")
+}, {
+"duration": 1.0,
+"texture": SubResource("C23")
+}, {
+"duration": 1.0,
+"texture": SubResource("C24")
+}, {
+"duration": 1.0,
+"texture": SubResource("C25")
+}, {
+"duration": 1.0,
+"texture": SubResource("C26")
+}, {
+"duration": 1.0,
+"texture": SubResource("C27")
+}, {
+"duration": 1.0,
+"texture": SubResource("C28")
+}, {
+"duration": 1.0,
+"texture": SubResource("C29")
+}, {
+"duration": 1.0,
+"texture": SubResource("C30")
+}, {
+"duration": 1.0,
+"texture": SubResource("C31")
+}, {
+"duration": 1.0,
+"texture": SubResource("C32")
+}, {
+"duration": 1.0,
+"texture": SubResource("C33")
+}, {
+"duration": 1.0,
+"texture": SubResource("C34")
+}],
+"loop": 1,
+"name": &"walk_s",
+"speed": 22.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C65")
+}, {
+"duration": 1.0,
+"texture": SubResource("C66")
+}, {
+"duration": 1.0,
+"texture": SubResource("C67")
+}, {
+"duration": 1.0,
+"texture": SubResource("C68")
+}, {
+"duration": 1.0,
+"texture": SubResource("C69")
+}, {
+"duration": 1.0,
+"texture": SubResource("C70")
+}, {
+"duration": 1.0,
+"texture": SubResource("C71")
+}, {
+"duration": 1.0,
+"texture": SubResource("C72")
+}, {
+"duration": 1.0,
+"texture": SubResource("C73")
+}, {
+"duration": 1.0,
+"texture": SubResource("C74")
+}, {
+"duration": 1.0,
+"texture": SubResource("C75")
+}, {
+"duration": 1.0,
+"texture": SubResource("C76")
+}, {
+"duration": 1.0,
+"texture": SubResource("C77")
+}, {
+"duration": 1.0,
+"texture": SubResource("C78")
+}, {
+"duration": 1.0,
+"texture": SubResource("C79")
+}, {
+"duration": 1.0,
+"texture": SubResource("C80")
+}, {
+"duration": 1.0,
+"texture": SubResource("C81")
+}, {
+"duration": 1.0,
+"texture": SubResource("C82")
+}, {
+"duration": 1.0,
+"texture": SubResource("C83")
+}, {
+"duration": 1.0,
+"texture": SubResource("C84")
+}, {
+"duration": 1.0,
+"texture": SubResource("C85")
+}, {
+"duration": 1.0,
+"texture": SubResource("C86")
+}, {
+"duration": 1.0,
+"texture": SubResource("C87")
+}, {
+"duration": 1.0,
+"texture": SubResource("C88")
+}, {
+"duration": 1.0,
+"texture": SubResource("C89")
+}, {
+"duration": 1.0,
+"texture": SubResource("C90")
+}, {
+"duration": 1.0,
+"texture": SubResource("C91")
+}, {
+"duration": 1.0,
+"texture": SubResource("C92")
+}, {
+"duration": 1.0,
+"texture": SubResource("C93")
+}, {
+"duration": 1.0,
+"texture": SubResource("C94")
+}],
+"loop": 1,
+"name": &"walk_w",
+"speed": 22.0
+}]

@@ -1,45 +1,25 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://c3ydj237y1su2"]
 
-[ext_resource type="Texture2D" path="frames/e.png" id="d0"]
-[ext_resource type="Texture2D" path="frames/e_n.png" id="n0"]
-[ext_resource type="Texture2D" path="frames/se.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/se_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/s.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/s_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/sw.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/sw_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/w.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/w_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/nw.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/nw_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/n.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/n_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/ne.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/ne_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://ducaepa51wv2l" path="res://characters/npcs/rice_porter/frames/e.png" id="d0"]
+[ext_resource type="Texture2D" uid="uid://rai1rtit8sf3" path="res://characters/npcs/rice_porter/frames/se.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://1lywc65qe8d8" path="res://characters/npcs/rice_porter/frames/s.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://wgff8ksy22vl" path="res://characters/npcs/rice_porter/frames/sw.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://dmoc04o3xs1a5" path="res://characters/npcs/rice_porter/frames/w.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://xiel35uryryh" path="res://characters/npcs/rice_porter/frames/nw.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://gv46e6dwcaxm" path="res://characters/npcs/rice_porter/frames/n.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://cn1c67qq1fukx" path="res://characters/npcs/rice_porter/frames/ne.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://beljkrkcn366p" path="res://characters/npcs/rice_porter/frames/e_n.png" id="n0"]
+[ext_resource type="Texture2D" uid="uid://cfy3s451dndhx" path="res://characters/npcs/rice_porter/frames/se_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://sbys4xkupykk" path="res://characters/npcs/rice_porter/frames/s_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://csp1qwtxa0eae" path="res://characters/npcs/rice_porter/frames/sw_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://bhe524v4ln3fu" path="res://characters/npcs/rice_porter/frames/w_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://di4kqicwkuh3s" path="res://characters/npcs/rice_porter/frames/nw_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://dmj1uhifh706f" path="res://characters/npcs/rice_porter/frames/n_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://cyjy60eur8jx8" path="res://characters/npcs/rice_porter/frames/ne_n.png" id="n7"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
 normal_texture = ExtResource("n0")
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
-
-[sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
-
-[sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
-
-[sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
 
 [sub_resource type="CanvasTexture" id="C6"]
 diffuse_texture = ExtResource("d6")
@@ -49,61 +29,41 @@ normal_texture = ExtResource("n6")
 diffuse_texture = ExtResource("d7")
 normal_texture = ExtResource("n7")
 
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"e",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C1")
-}],
-"loop": true,
-"name": &"se",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C2")
-}],
-"loop": true,
-"name": &"s",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C3")
-}],
-"loop": true,
-"name": &"sw",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C4")
-}],
-"loop": true,
-"name": &"w",
-"speed": 1.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}],
-"loop": true,
-"name": &"nw",
 "speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"n",
 "speed": 1.0
 }, {
@@ -111,7 +71,47 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"ne",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}],
+"loop": 1,
+"name": &"nw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C2")
+}],
+"loop": 1,
+"name": &"s",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": 1,
+"name": &"se",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C3")
+}],
+"loop": 1,
+"name": &"sw",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": 1,
+"name": &"w",
 "speed": 1.0
 }]

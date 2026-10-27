@@ -1,45 +1,25 @@
-[gd_resource type="SpriteFrames" load_steps=25 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://hwb8oxoggy0f"]
 
-[ext_resource type="Texture2D" path="frames/idle_e_0.png" id="d0"]
-[ext_resource type="Texture2D" path="frames/idle_e_0_n.png" id="n0"]
-[ext_resource type="Texture2D" path="frames/idle_se_0.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/idle_se_0_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/idle_s_0.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/idle_s_0_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/idle_sw_0.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/idle_sw_0_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/idle_w_0.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/idle_w_0_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/idle_nw_0.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/idle_nw_0_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/idle_n_0.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/idle_n_0_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0_n.png" id="n7"]
+[ext_resource type="Texture2D" uid="uid://p1a2xnmdvfan" path="res://characters/palace/archer/frames/idle_e_0.png" id="d0"]
+[ext_resource type="Texture2D" uid="uid://chydqmnlumdtf" path="res://characters/palace/archer/frames/idle_se_0.png" id="d1"]
+[ext_resource type="Texture2D" uid="uid://b5x5dqro725ud" path="res://characters/palace/archer/frames/idle_s_0.png" id="d2"]
+[ext_resource type="Texture2D" uid="uid://3y75c5boqab" path="res://characters/palace/archer/frames/idle_sw_0.png" id="d3"]
+[ext_resource type="Texture2D" uid="uid://qq3pwjtssjvn" path="res://characters/palace/archer/frames/idle_w_0.png" id="d4"]
+[ext_resource type="Texture2D" uid="uid://h3unxnh8ovtv" path="res://characters/palace/archer/frames/idle_nw_0.png" id="d5"]
+[ext_resource type="Texture2D" uid="uid://brhf7sr0ybeqs" path="res://characters/palace/archer/frames/idle_n_0.png" id="d6"]
+[ext_resource type="Texture2D" uid="uid://u2dphm5exr21" path="res://characters/palace/archer/frames/idle_ne_0.png" id="d7"]
+[ext_resource type="Texture2D" uid="uid://lw4hrj547xof" path="res://characters/palace/archer/frames/idle_e_0_n.png" id="n0"]
+[ext_resource type="Texture2D" uid="uid://b0toxigdnxrq1" path="res://characters/palace/archer/frames/idle_se_0_n.png" id="n1"]
+[ext_resource type="Texture2D" uid="uid://dwk1bs4mbqb4k" path="res://characters/palace/archer/frames/idle_s_0_n.png" id="n2"]
+[ext_resource type="Texture2D" uid="uid://omuxnmo5e5ok" path="res://characters/palace/archer/frames/idle_sw_0_n.png" id="n3"]
+[ext_resource type="Texture2D" uid="uid://bii72jdt4xjrw" path="res://characters/palace/archer/frames/idle_w_0_n.png" id="n4"]
+[ext_resource type="Texture2D" uid="uid://ddh8r4mwhy35x" path="res://characters/palace/archer/frames/idle_nw_0_n.png" id="n5"]
+[ext_resource type="Texture2D" uid="uid://bndgenpm6uxud" path="res://characters/palace/archer/frames/idle_n_0_n.png" id="n6"]
+[ext_resource type="Texture2D" uid="uid://b0l6pgo4rl1d2" path="res://characters/palace/archer/frames/idle_ne_0_n.png" id="n7"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
 normal_texture = ExtResource("n0")
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
-
-[sub_resource type="CanvasTexture" id="C2"]
-diffuse_texture = ExtResource("d2")
-normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C3"]
-diffuse_texture = ExtResource("d3")
-normal_texture = ExtResource("n3")
-
-[sub_resource type="CanvasTexture" id="C4"]
-diffuse_texture = ExtResource("d4")
-normal_texture = ExtResource("n4")
-
-[sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
 
 [sub_resource type="CanvasTexture" id="C6"]
 diffuse_texture = ExtResource("d6")
@@ -49,61 +29,41 @@ normal_texture = ExtResource("n6")
 diffuse_texture = ExtResource("d7")
 normal_texture = ExtResource("n7")
 
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_e",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C1")
-}],
-"loop": true,
-"name": &"idle_se",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C2")
-}],
-"loop": true,
-"name": &"idle_s",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C3")
-}],
-"loop": true,
-"name": &"idle_sw",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C4")
-}],
-"loop": true,
-"name": &"idle_w",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}],
-"loop": true,
-"name": &"idle_nw",
 "speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("C6")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_n",
 "speed": 6.0
 }, {
@@ -111,7 +71,47 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C7")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle_ne",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C5")
+}],
+"loop": 1,
+"name": &"idle_nw",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C2")
+}],
+"loop": 1,
+"name": &"idle_s",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C1")
+}],
+"loop": 1,
+"name": &"idle_se",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C3")
+}],
+"loop": 1,
+"name": &"idle_sw",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C4")
+}],
+"loop": 1,
+"name": &"idle_w",
 "speed": 6.0
 }]
