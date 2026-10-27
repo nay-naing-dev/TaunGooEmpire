@@ -45,7 +45,7 @@ func _near(p: Node2D) -> bool:
 
 ## Game.interact() asks these when the player presses E.
 func can_interact(who: Node2D) -> bool:
-	return _bubble != null and _near(who)
+	return _bubble != null and not Game.in_dialogue() and _near(who)
 
 
 func interact(who: Node2D) -> void:
@@ -66,7 +66,7 @@ func _physics_process(delta: float) -> void:
 	var p := get_tree().get_first_node_in_group("player") as Node2D
 	var near := _near(p)
 	if _bubble:
-		_bubble.hint(near)
+		_bubble.hint(can_interact(p))
 	var moving := false
 	if near:
 		_face(p.global_position - global_position)

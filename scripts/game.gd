@@ -262,11 +262,12 @@ func now() -> float:
 
 ## Opens the dialogue box at the bottom of the screen with the speaker's name and
 ## their lines, one after another. done is called after the last one.
-func dialogue(speaker: String, lines: PackedStringArray, done := Callable()) -> void:
+## With choices, the player picks one under the last line and done(index) is called.
+func dialogue(speaker: String, lines: PackedStringArray, done := Callable(), choices := PackedStringArray()) -> void:
 	if _dialogue == null:
 		_dialogue = DIALOGUE_BOX.new()
 		add_child(_dialogue)
-	_dialogue.open(speaker, lines, done)
+	_dialogue.open(speaker, lines, done, choices)
 
 
 ## True while the dialogue box is up (players stand still and E only turns its pages).
