@@ -12,7 +12,9 @@ const VILLAGE := "res://scenes/village/village.tscn"
 const FOREST := "res://scenes/forest/forest_road.tscn"
 
 var topdown_character := "village_boy"
-## F2 toggles ASCII-art graphics, F3 cycles morning / day / night.
+## What NPCs call the player ("{player}" in their lines).
+var player_name := "Player"
+## F2 toggles ASCII-art graphics, F3 skips to the next morning / day / night.
 var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
@@ -21,9 +23,28 @@ var indoors := false
 var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
 var next_spawn := ""
-## 0 = morning (golden sunrise), 1 = day, 2 = night.  F3 cycles through them.
+## Day clock: the hour of the day, 0..24. A whole day takes day_length real seconds,
+## and worlds light themselves (and turn their shadows) from it every frame.
+var hour := 7.0
+## Day number, counting from 1. Goes up each time the clock passes midnight.
+var day := 1
+var day_length := 600.0
+var clock_running := true
+## Which part of the day `hour` is in: 0 = morning / evening (golden), 1 = day, 2 = night.
+## F3 skips ahead to the next one.
 var time_of_day := 0
 const TIME_NAMES := ["Morning", "Day", "Night"]
+## The hour F3 skips to for each part of the day.
+const TIME_HOURS := [6.5, 12.0, 21.0]
+var _skip: Tween
+## Story state that outlives a scene change (quests, who you have talked to, ...).
+var flags: Dictionary = {}
+const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
+var _dialogue: CanvasLayer
+## The player's bag (36 slots). B shows it. Quests: inventory.add / remove / has / item_added.
+var inventory := Inventory.new()
+const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
+var inventory_menu: CanvasLayer
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -77,6 +98,14 @@ func _ready() -> void:
 	_reflect_mat = ShaderMaterial.new()
 	_reflect_mat.shader = REFLECT_SHADER
 	reset_world_globals()
+	if not InputMap.has_action("inventory"):
+		InputMap.add_action("inventory")
+		var b := InputEventKey.new()
+		b.physical_keycode = KEY_B
+		InputMap.action_add_event("inventory", b)
+	inventory_menu = INVENTORY_MENU.new()
+	add_child(inventory_menu)
+	inventory_menu.set_inventory(inventory)
 
 
 func set_ascii(on: bool) -> void:
@@ -204,28 +233,64 @@ func _sync_clear_characters() -> void:
 		_moved.clear()
 
 
-func set_time(t: int) -> void:
-	time_of_day = wrapi(t, 0, 3)
+func _process(delta: float) -> void:
+	if clock_running and not (_skip and _skip.is_running()):
+		set_hour(hour + delta * 24.0 / day_length)
+
+
+func set_hour(h: float) -> void:
+	var next := fposmod(h, 24.0)
+	if next < hour - 12.0:  # passed midnight
+		day += 1
+	hour = next
+	if hour >= 19.0 or hour < 5.0:
+		time_of_day = 2
+	elif hour >= 9.0 and hour < 16.5:
+		time_of_day = 1
+	else:
+		time_of_day = 0
 	night_mode = time_of_day == 2
-	var s := get_tree().current_scene
-	if s and s.has_method("apply_time"):
-		s.apply_time(time_of_day, true)
+
+
+## Fast-forwards the clock (over 2 s) to the start of part t of the day.
+func set_time(t: int) -> void:
+	var target: float = TIME_HOURS[wrapi(t, 0, 3)]
+	if target <= hour:
+		target += 24.0
+	if _skip:
+		_skip.kill()
+	_skip = create_tween()
+	_skip.tween_method(set_hour, hour, target, 2.0).set_trans(Tween.TRANS_SINE)
 
 
 func set_night(on: bool) -> void:
-	if on:
-		set_time(2)
-		return
-	if time_of_day == 2:
-		time_of_day = 0
-	night_mode = on
-	var s := get_tree().current_scene
-	if s and s.has_method("apply_night"):
-		s.apply_night(on, true)
+	set_time(2 if on else 0)
+
+
+## Game hours since the start of day 0 (keeps counting past midnight), for "how long ago" checks.
+func now() -> float:
+	return day * 24.0 + hour
+
+
+## Opens the dialogue box at the bottom of the screen with the speaker's name and
+## their lines, one after another. done is called after the last one.
+## With choices, the player picks one under the last line and done(index) is called.
+func dialogue(speaker: String, lines: PackedStringArray, done := Callable(), choices := PackedStringArray()) -> void:
+	if _dialogue == null:
+		_dialogue = DIALOGUE_BOX.new()
+		add_child(_dialogue)
+	_dialogue.open(speaker, lines, done, choices)
+
+
+## True while the dialogue box is up (players stand still and E only turns its pages).
+func in_dialogue() -> bool:
+	return _dialogue != null and _dialogue.busy()
 
 
 func go(scene_path: String) -> void:
 	indoors = false
+	if _dialogue:
+		_dialogue.close(false)
 	for n in _moved.keys():
 		if is_instance_valid(n):
 			n.queue_free()
