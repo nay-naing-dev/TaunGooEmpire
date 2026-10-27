@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3]
+[gd_scene load_steps=107 format=3]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="sc_w"]
 
@@ -38,7 +38,7 @@
 
 [ext_resource type="PackedScene" path="res://environment/palace/walls/training_gate_open.tscn" id="k_training_gate_dr"]
 
-[ext_resource type="PackedScene" path="res://environment/palace/houses/royal_hall.tscn" id="h_royal_hall"]
+[ext_resource type="PackedScene" path="res://environment/palace/houses/main_palace.tscn" id="h_main_palace"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/houses/king_res.tscn" id="h_king_res"]
 
@@ -51,8 +51,6 @@
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/shrine.tscn" id="k_shrine"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/guard_tower.tscn" id="k_guard_tower"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/pavilion.tscn" id="k_pavilion"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/storage.tscn" id="k_storage"]
 
@@ -94,61 +92,95 @@
 
 [ext_resource type="PackedScene" path="res://environment/trees/red_tree/red_tree.tscn" id="k_red_tree"]
 
-[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_pavilion.tscn" id="k_r_pavilion"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/pavilion.tscn" id="k_tg_pavilion"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/hut.tscn" id="k_tg_hut"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tower.tscn" id="k_tg_tower"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_a.tscn" id="k_tg_banner_a"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/banner_b.tscn" id="k_tg_banner_b"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/firepit.tscn" id="k_tg_firepit"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/rack.tscn" id="k_tg_rack"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_a.tscn" id="k_tg_dummy_a"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_b.tscn" id="k_tg_dummy_b"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_c.tscn" id="k_tg_dummy_c"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_d.tscn" id="k_tg_dummy_d"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_a.tscn" id="k_tg_target_a"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_b.tscn" id="k_tg_target_b"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/drum.tscn" id="k_tg_drum"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tent.tscn" id="k_tg_tent"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/crates.tscn" id="k_tg_crates"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/t_barrack.tscn" id="k_t_barrack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_brazier.tscn" id="k_r_brazier"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_chests.tscn" id="k_r_chests"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_target.tscn" id="k_t_target"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_target.tscn" id="k_r_target"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_dummy.tscn" id="k_r_dummy"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_dummy.tscn" id="k_t_dummy"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_sword_post.tscn" id="k_r_sword_post"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_sword_post.tscn" id="k_t_sword_post"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_spear_rack.tscn" id="k_r_spear_rack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_armor_rack.tscn" id="k_t_armor_rack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_armor_rack.tscn" id="k_r_armor_rack"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_campfire.tscn" id="k_t_campfire"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_logs.tscn" id="k_t_logs"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_logs.tscn" id="k_r_logs"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_stones.tscn" id="k_t_stones"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/training/t_obstacle.tscn" id="k_t_obstacle"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/training/r_obstacle.tscn" id="k_r_obstacle"]
 
-[ext_resource type="PackedScene" path="res://environment/palace/training/t_crates.tscn" id="k_t_crates"]
-
-[ext_resource type="PackedScene" path="res://environment/palace/training/r_stones.tscn" id="k_r_stones"]
-
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/stable.tscn" id="k_stable"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/r_barracks.tscn" id="k_r_barracks"]
+
+[ext_resource type="PackedScene" path="res://environment/palace/buildings/r_pavilion.tscn" id="k_r_pavilion"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/tent.tscn" id="k_tent"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/props/cooking_pot.tscn" id="k_cooking_pot"]
 
+[ext_resource type="PackedScene" path="res://environment/taungoo/temple/golden_temple.tscn" id="k_golden_temple"]
+
+[ext_resource type="PackedScene" path="res://environment/taungoo/nature/torch.tscn" id="k_torch"]
+
 [ext_resource type="PackedScene" path="res://environment/taungoo/nature/palm.tscn" id="k_palm"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_green.tscn" id="k_tree_green"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive.tscn" id="k_tree_olive"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_green_f.tscn" id="k_tree_green_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_olive_f.tscn" id="k_tree_olive_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_tall_f.tscn" id="k_tree_tall_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
+
+[ext_resource type="PackedScene" path="res://environment/forest/tree_tall.tscn" id="k_tree_tall"]
 
 [ext_resource type="PackedScene" path="res://environment/palace/boats/sea_boat.tscn" id="p_boat"]
 
 [ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/king_bayinnaung/king_bayinnaung.tscn" id="c_king_bayinnaung"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/spear_guard/spear_guard.tscn" id="c_spear_guard"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/archer/archer.tscn" id="c_archer"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/flag_bearer/flag_bearer.tscn" id="c_flag_bearer"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/cavalry_rider/cavalry_rider.tscn" id="c_cavalry_rider"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/royal_horse/royal_horse.tscn" id="c_royal_horse"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/elephant_rider/elephant_rider.tscn" id="c_elephant_rider"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/trainer/trainer.tscn" id="c_trainer"]
 
 [sub_resource type="CanvasTexture" id="CT_g"]
 diffuse_texture = ExtResource("t_g")
@@ -418,14 +450,14 @@ position = Vector2(1342, 1928)
 [node name="TrainingGateDr1" parent="Objects" instance=ExtResource("k_training_gate_dr")]
 position = Vector2(1101, 1773)
 
-[node name="RoyalHall1" parent="Objects" instance=ExtResource("h_royal_hall")]
-position = Vector2(1600, 905)
+[node name="MainPalace1" parent="Objects" instance=ExtResource("h_main_palace")]
+position = Vector2(1807, 868)
 
 [node name="KingRes1" parent="Objects" instance=ExtResource("h_king_res")]
 position = Vector2(980, 930)
 
 [node name="QueenRes1" parent="Objects" instance=ExtResource("h_queen_res")]
-position = Vector2(2300, 930)
+position = Vector2(2420, 930)
 
 [node name="PrincessRes1" parent="Objects" instance=ExtResource("h_princess_res")]
 position = Vector2(1150, 1230)
@@ -434,7 +466,7 @@ position = Vector2(1150, 1230)
 position = Vector2(2080, 1250)
 
 [node name="Shrine1" parent="Objects" instance=ExtResource("k_shrine")]
-position = Vector2(2420, 1180)
+position = Vector2(2440, 1200)
 
 [node name="Shrine2" parent="Objects" instance=ExtResource("k_shrine")]
 position = Vector2(790, 1180)
@@ -445,11 +477,8 @@ position = Vector2(520, 880)
 [node name="GuardTower2" parent="Objects" instance=ExtResource("k_guard_tower")]
 position = Vector2(2690, 880)
 
-[node name="Pavilion1" parent="Objects" instance=ExtResource("k_pavilion")]
-position = Vector2(1600, 470)
-
 [node name="Storage1" parent="Objects" instance=ExtResource("k_storage")]
-position = Vector2(2050, 560)
+position = Vector2(2560, 640)
 
 [node name="FlagA1" parent="Objects" instance=ExtResource("k_flag_a")]
 position = Vector2(1540, 990)
@@ -566,25 +595,25 @@ position = Vector2(1420, 1460)
 position = Vector2(1780, 1460)
 
 [node name="Jars1" parent="Objects" instance=ExtResource("k_jars")]
-position = Vector2(2130, 600)
+position = Vector2(2620, 700)
 
 [node name="Crates1" parent="Objects" instance=ExtResource("k_crates")]
-position = Vector2(1960, 600)
+position = Vector2(2480, 700)
 
 [node name="RedTree1" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(760, 760)
 scale = Vector2(0.5, 0.5)
 
 [node name="RedTree2" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2440, 760)
+position = Vector2(2560, 820)
 scale = Vector2(0.5, 0.5)
 
 [node name="RedTree3" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(1240, 560)
+position = Vector2(1180, 560)
 scale = Vector2(0.5, 0.5)
 
 [node name="RedTree4" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(1960, 560)
+position = Vector2(2120, 520)
 scale = Vector2(0.5, 0.5)
 
 [node name="RedTree5" parent="Objects" instance=ExtResource("k_red_tree")]
@@ -592,94 +621,117 @@ position = Vector2(900, 1060)
 scale = Vector2(0.5, 0.5)
 
 [node name="RedTree6" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2300, 1070)
+position = Vector2(2300, 1100)
 scale = Vector2(0.5, 0.5)
 
-[node name="RPavilion1" parent="Objects" instance=ExtResource("k_r_pavilion")]
-position = Vector2(830, 1718)
+[node name="RedTree7" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1400, 420)
+scale = Vector2(0.5, 0.5)
+
+[node name="RedTree8" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1850, 380)
+scale = Vector2(0.5, 0.5)
+
+[node name="TgPavilion1" parent="Objects" instance=ExtResource("k_tg_pavilion")]
+position = Vector2(820, 1705)
+
+[node name="TgHut1" parent="Objects" instance=ExtResource("k_tg_hut")]
+position = Vector2(560, 1790)
+
+[node name="TgTower1" parent="Objects" instance=ExtResource("k_tg_tower")]
+position = Vector2(330, 1890)
+
+[node name="TgTower2" parent="Objects" instance=ExtResource("k_tg_tower")]
+position = Vector2(820, 2130)
+
+[node name="TgTower3" parent="Objects" instance=ExtResource("k_tg_tower")]
+position = Vector2(1310, 1890)
+
+[node name="TgBannerA1" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+position = Vector2(690, 1725)
+
+[node name="TgBannerB1" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+position = Vector2(950, 1725)
+
+[node name="TgBannerA2" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+position = Vector2(1050, 1712)
+
+[node name="TgBannerB2" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+position = Vector2(1150, 1765)
+
+[node name="TgFirepit1" parent="Objects" instance=ExtResource("k_tg_firepit")]
+position = Vector2(650, 1770)
+
+[node name="TgFirepit2" parent="Objects" instance=ExtResource("k_tg_firepit")]
+position = Vector2(990, 1770)
+
+[node name="TgRack1" parent="Objects" instance=ExtResource("k_tg_rack")]
+position = Vector2(1010, 1840)
+
+[node name="TgRack2" parent="Objects" instance=ExtResource("k_tg_rack")]
+position = Vector2(470, 1905)
+
+[node name="TgDummyA1" parent="Objects" instance=ExtResource("k_tg_dummy_a")]
+position = Vector2(600, 1920)
+
+[node name="TgDummyB1" parent="Objects" instance=ExtResource("k_tg_dummy_b")]
+position = Vector2(650, 1945)
+
+[node name="TgDummyC1" parent="Objects" instance=ExtResource("k_tg_dummy_c")]
+position = Vector2(700, 1970)
+
+[node name="TgDummyD1" parent="Objects" instance=ExtResource("k_tg_dummy_d")]
+position = Vector2(650, 1895)
+
+[node name="TgDummyA2" parent="Objects" instance=ExtResource("k_tg_dummy_a")]
+position = Vector2(700, 1920)
+
+[node name="TgDummyB2" parent="Objects" instance=ExtResource("k_tg_dummy_b")]
+position = Vector2(750, 1945)
+
+[node name="TgTargetA1" parent="Objects" instance=ExtResource("k_tg_target_a")]
+position = Vector2(1150, 1880)
+
+[node name="TgTargetB1" parent="Objects" instance=ExtResource("k_tg_target_b")]
+position = Vector2(1190, 1900)
+
+[node name="TgTargetA2" parent="Objects" instance=ExtResource("k_tg_target_a")]
+position = Vector2(1230, 1920)
+
+[node name="TgTargetB2" parent="Objects" instance=ExtResource("k_tg_target_b")]
+position = Vector2(1110, 1860)
+
+[node name="TgDrum1" parent="Objects" instance=ExtResource("k_tg_drum")]
+position = Vector2(600, 2045)
+
+[node name="TgTent1" parent="Objects" instance=ExtResource("k_tg_tent")]
+position = Vector2(1030, 2050)
+
+[node name="TgCrates1" parent="Objects" instance=ExtResource("k_tg_crates")]
+position = Vector2(1180, 1990)
+
+[node name="TgFirepit3" parent="Objects" instance=ExtResource("k_tg_firepit")]
+position = Vector2(880, 2050)
 
 [node name="TBarrack1" parent="Objects" instance=ExtResource("k_t_barrack")]
-position = Vector2(496, 1847)
-
-[node name="TBarrack2" parent="Objects" instance=ExtResource("k_t_barrack")]
-position = Vector2(604, 1998)
-
-[node name="RBrazier1" parent="Objects" instance=ExtResource("k_r_brazier")]
-position = Vector2(712, 1750)
-
-[node name="RBrazier2" parent="Objects" instance=ExtResource("k_r_brazier")]
-position = Vector2(949, 1750)
-
-[node name="RChests1" parent="Objects" instance=ExtResource("k_r_chests")]
-position = Vector2(1057, 1788)
-
-[node name="TTarget1" parent="Objects" instance=ExtResource("k_t_target")]
-position = Vector2(1036, 1863)
-
-[node name="RTarget1" parent="Objects" instance=ExtResource("k_r_target")]
-position = Vector2(1111, 1901)
-
-[node name="TTarget2" parent="Objects" instance=ExtResource("k_t_target")]
-position = Vector2(1187, 1934)
-
-[node name="RDummy1" parent="Objects" instance=ExtResource("k_r_dummy")]
-position = Vector2(744, 1890)
-
-[node name="TDummy1" parent="Objects" instance=ExtResource("k_t_dummy")]
-position = Vector2(820, 1928)
-
-[node name="RDummy2" parent="Objects" instance=ExtResource("k_r_dummy")]
-position = Vector2(895, 1966)
-
-[node name="RSwordPost1" parent="Objects" instance=ExtResource("k_r_sword_post")]
-position = Vector2(690, 1961)
-
-[node name="TSwordPost1" parent="Objects" instance=ExtResource("k_t_sword_post")]
-position = Vector2(755, 2009)
-
-[node name="RSpearRack1" parent="Objects" instance=ExtResource("k_r_spear_rack")]
-position = Vector2(928, 1815)
-
-[node name="TArmorRack1" parent="Objects" instance=ExtResource("k_t_armor_rack")]
-position = Vector2(625, 1804)
-
-[node name="RArmorRack1" parent="Objects" instance=ExtResource("k_r_armor_rack")]
-position = Vector2(982, 2031)
-
-[node name="TCampfire1" parent="Objects" instance=ExtResource("k_t_campfire")]
-position = Vector2(517, 1934)
-
-[node name="TLogs1" parent="Objects" instance=ExtResource("k_t_logs")]
-position = Vector2(398, 1901)
-
-[node name="RLogs1" parent="Objects" instance=ExtResource("k_r_logs")]
-position = Vector2(690, 2085)
-
-[node name="TStones1" parent="Objects" instance=ExtResource("k_t_stones")]
-position = Vector2(550, 2052)
+position = Vector2(450, 1990)
 
 [node name="TObstacle1" parent="Objects" instance=ExtResource("k_t_obstacle")]
-position = Vector2(841, 2074)
+position = Vector2(820, 2000)
 
 [node name="RObstacle1" parent="Objects" instance=ExtResource("k_r_obstacle")]
-position = Vector2(906, 2106)
-
-[node name="TCrates1" parent="Objects" instance=ExtResource("k_t_crates")]
-position = Vector2(442, 1966)
-
-[node name="RStones1" parent="Objects" instance=ExtResource("k_r_stones")]
-position = Vector2(1165, 1847)
+position = Vector2(900, 2030)
 
 [node name="Stable1" parent="Objects" instance=ExtResource("k_stable")]
-position = Vector2(1900, 1830)
+position = Vector2(1880, 1890)
 
 [node name="Storage2" parent="Objects" instance=ExtResource("k_storage")]
-position = Vector2(2200, 1800)
+position = Vector2(2140, 2090)
 
 [node name="RBarracks1" parent="Objects" instance=ExtResource("k_r_barracks")]
-position = Vector2(2500, 1760)
+position = Vector2(2800, 2030)
 
-[node name="RPavilion2" parent="Objects" instance=ExtResource("k_r_pavilion")]
+[node name="RPavilion1" parent="Objects" instance=ExtResource("k_r_pavilion")]
 position = Vector2(2900, 1000)
 
 [node name="Tent1" parent="Objects" instance=ExtResource("k_tent")]
@@ -692,10 +744,10 @@ position = Vector2(1700, 2030)
 position = Vector2(1450, 2080)
 
 [node name="Crates2" parent="Objects" instance=ExtResource("k_crates")]
-position = Vector2(2050, 1900)
+position = Vector2(2020, 2000)
 
 [node name="Jars2" parent="Objects" instance=ExtResource("k_jars")]
-position = Vector2(2350, 1880)
+position = Vector2(2560, 2080)
 
 [node name="CookingPot1" parent="Objects" instance=ExtResource("k_cooking_pot")]
 position = Vector2(1620, 2130)
@@ -708,6 +760,16 @@ position = Vector2(2990, 1350)
 
 [node name="LanternPost4" parent="Objects" instance=ExtResource("k_lantern_post")]
 position = Vector2(2990, 1420)
+
+[node name="GoldenTemple1" parent="Objects" instance=ExtResource("k_golden_temple")]
+position = Vector2(2760, 540)
+scale = Vector2(0.8, 0.8)
+
+[node name="Torch1" parent="Objects" instance=ExtResource("k_torch")]
+position = Vector2(2630, 575)
+
+[node name="Torch2" parent="Objects" instance=ExtResource("k_torch")]
+position = Vector2(2890, 575)
 
 [node name="Palm1" parent="Objects" instance=ExtResource("k_palm")]
 position = Vector2(3067, 135)
@@ -757,141 +819,405 @@ position = Vector2(3062, 2069)
 [node name="Palm16" parent="Objects" instance=ExtResource("k_palm")]
 position = Vector2(3051, 2180)
 
-[node name="RedTree7" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree9" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(556, 615)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree8" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreen1" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(2670, 210)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree9" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeOlive1" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(2153, 136)
-scale = Vector2(0.5, 0.5)
 
 [node name="RedTree10" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(1366, 2251)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree11" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreenF1" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(2123, 1391)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree12" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeOliveF1" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(348, 2226)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree13" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree11" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(2383, 302)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree14" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeTallF1" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(523, 442)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree15" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGold1" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(2309, 1310)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree16" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(1885, 2007)
-scale = Vector2(0.5, 0.5)
-
-[node name="RedTree17" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2710, 1864)
-scale = Vector2(0.5, 0.5)
-
-[node name="RedTree18" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(1846, 1669)
-scale = Vector2(0.5, 0.5)
-
-[node name="RedTree19" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree12" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(815, 456)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree20" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(977, 2189)
-scale = Vector2(0.5, 0.5)
+[node name="TreeOlive2" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1245, 2180)
 
-[node name="RedTree21" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGoldF1" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(977, 2189)
+
+[node name="RedTree13" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(1600, 2254)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree22" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeOliveF2" parent="Objects" instance=ExtResource("k_tree_olive_f")]
 position = Vector2(2901, 1555)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree23" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeTall1" parent="Objects" instance=ExtResource("k_tree_tall")]
 position = Vector2(2581, 1448)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree24" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree14" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(182, 489)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree25" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGold2" parent="Objects" instance=ExtResource("k_tree_gold")]
 position = Vector2(404, 1388)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree26" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreen2" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(2261, 1461)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree27" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree15" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(662, 142)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree28" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(1481, 1757)
-scale = Vector2(0.5, 0.5)
-
-[node name="RedTree29" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGoldF2" parent="Objects" instance=ExtResource("k_tree_gold_f")]
 position = Vector2(2934, 1678)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree30" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreenF2" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(407, 2100)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree31" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2887, 2018)
-scale = Vector2(0.5, 0.5)
-
-[node name="RedTree32" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree16" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(72, 581)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree33" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeTall2" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1118, 2158)
+
+[node name="TreeTallF2" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2368, 1404)
+
+[node name="RedTree17" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(688, 1321)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree34" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreen3" parent="Objects" instance=ExtResource("k_tree_green")]
 position = Vector2(142, 1843)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree35" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeOlive3" parent="Objects" instance=ExtResource("k_tree_olive")]
 position = Vector2(182, 778)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree36" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree18" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(1144, 259)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree37" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeGreenF3" parent="Objects" instance=ExtResource("k_tree_green_f")]
 position = Vector2(2869, 297)
-scale = Vector2(0.5, 0.5)
 
-[node name="RedTree38" parent="Objects" instance=ExtResource("k_red_tree")]
-position = Vector2(2599, 1994)
-scale = Vector2(0.5, 0.5)
+[node name="TreeOliveF3" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2892, 752)
 
-[node name="RedTree39" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="RedTree19" parent="Objects" instance=ExtResource("k_red_tree")]
 position = Vector2(96, 1496)
 scale = Vector2(0.5, 0.5)
 
-[node name="RedTree40" parent="Objects" instance=ExtResource("k_red_tree")]
+[node name="TreeTallF3" parent="Objects" instance=ExtResource("k_tree_tall_f")]
 position = Vector2(2709, 1331)
+
+[node name="TreeGold3" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1078, 178)
+
+[node name="RedTree20" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2747, 301)
 scale = Vector2(0.5, 0.5)
+
+[node name="TreeOlive4" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(479, 300)
+
+[node name="TreeGoldF3" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1334, 147)
+
+[node name="RedTree21" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2737, 2283)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOliveF4" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(532, 1639)
+
+[node name="TreeTall3" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(444, 211)
+
+[node name="RedTree22" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(243, 1088)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGold4" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1638, 130)
+
+[node name="TreeGreen4" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(645, 313)
+
+[node name="RedTree23" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1135, 1379)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGoldF4" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(1852, 210)
+
+[node name="TreeGreenF4" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2317, 2186)
+
+[node name="RedTree24" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2769, 150)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTall4" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(305, 1294)
+
+[node name="TreeTallF4" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(2546, 1272)
+
+[node name="RedTree25" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2441, 1476)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreen5" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2719, 1158)
+
+[node name="TreeOlive5" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(1403, 1978)
+
+[node name="RedTree26" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2093, 2180)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreenF5" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(263, 1993)
+
+[node name="TreeOliveF5" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(242, 972)
+
+[node name="RedTree27" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(92, 422)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTallF5" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(54, 1053)
+
+[node name="TreeGold5" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(1503, 1878)
+
+[node name="RedTree28" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(579, 2124)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOlive6" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2606, 1596)
+
+[node name="TreeGoldF5" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(278, 304)
+
+[node name="RedTree29" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(423, 1186)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOliveF6" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(126, 1265)
+
+[node name="TreeTall5" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(975, 397)
+
+[node name="RedTree30" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(150, 902)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGold6" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(2085, 1488)
+
+[node name="TreeGreen6" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2013, 246)
+
+[node name="RedTree31" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(364, 573)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGoldF6" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(252, 393)
+
+[node name="TreeGreenF6" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(45, 2003)
+
+[node name="RedTree32" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(779, 299)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTall6" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(118, 2111)
+
+[node name="TreeTallF6" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(219, 1734)
+
+[node name="RedTree33" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2290, 429)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreen7" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(721, 2280)
+
+[node name="TreeOlive7" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(2289, 214)
+
+[node name="RedTree34" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1969, 1421)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreenF7" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(2923, 1809)
+
+[node name="TreeOliveF7" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(165, 2277)
+
+[node name="RedTree35" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2376, 130)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTallF7" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(930, 1433)
+
+[node name="TreeGold7" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(949, 309)
+
+[node name="RedTree36" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(768, 198)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOlive8" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(925, 2281)
+
+[node name="TreeGoldF7" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(632, 1471)
+
+[node name="RedTree37" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2587, 1187)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOliveF8" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(206, 1645)
+
+[node name="TreeTall7" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(1695, 1873)
+
+[node name="RedTree38" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1747, 2216)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGold8" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(356, 1673)
+
+[node name="TreeGreen8" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1878, 2180)
+
+[node name="RedTree39" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2546, 2236)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGoldF8" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(61, 1781)
+
+[node name="TreeGreenF8" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(1276, 241)
+
+[node name="RedTree40" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2232, 292)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTall8" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(841, 1517)
+
+[node name="TreeTallF8" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(1099, 2273)
+
+[node name="RedTree41" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1930, 2278)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreen9" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(2595, 336)
+
+[node name="TreeOlive9" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(366, 1499)
+
+[node name="RedTree42" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(368, 448)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGreenF9" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(118, 684)
+
+[node name="TreeOliveF9" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2248, 2278)
+
+[node name="RedTree43" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1075, 1510)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTallF9" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(1192, 140)
+
+[node name="TreeGold9" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(44, 2247)
+
+[node name="RedTree44" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(2734, 1553)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOlive10" parent="Objects" instance=ExtResource("k_tree_olive")]
+position = Vector2(917, 213)
+
+[node name="TreeGoldF9" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(227, 2209)
+
+[node name="RedTree45" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(835, 1303)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeOliveF10" parent="Objects" instance=ExtResource("k_tree_olive_f")]
+position = Vector2(2956, 220)
+
+[node name="TreeTall9" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2904, 1926)
+
+[node name="RedTree46" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(567, 1390)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGold10" parent="Objects" instance=ExtResource("k_tree_gold")]
+position = Vector2(479, 1103)
+
+[node name="TreeGreen10" parent="Objects" instance=ExtResource("k_tree_green")]
+position = Vector2(1246, 1669)
+
+[node name="RedTree47" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(449, 2273)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeGoldF10" parent="Objects" instance=ExtResource("k_tree_gold_f")]
+position = Vector2(2570, 166)
+
+[node name="TreeGreenF10" parent="Objects" instance=ExtResource("k_tree_green_f")]
+position = Vector2(48, 1645)
+
+[node name="RedTree48" parent="Objects" instance=ExtResource("k_red_tree")]
+position = Vector2(1275, 2068)
+scale = Vector2(0.5, 0.5)
+
+[node name="TreeTall10" parent="Objects" instance=ExtResource("k_tree_tall")]
+position = Vector2(2414, 495)
+
+[node name="TreeTallF10" parent="Objects" instance=ExtResource("k_tree_tall_f")]
+position = Vector2(74, 259)
 
 [node name="BoatDocked" parent="Objects" instance=ExtResource("p_boat")]
 position = Vector2(3290, 1560)
@@ -915,6 +1241,359 @@ position = Vector2(1300, 1700)
 
 [node name="Crow2" parent="Objects" instance=ExtResource("p_crow")]
 position = Vector2(2900, 500)
+
+[node name="SpearGuard1" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1522, 1506)
+start_facing = "s"
+
+[node name="SpearGuard2" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1467, 1532)
+start_facing = "s"
+
+[node name="FlagBearer1" parent="Objects" instance=ExtResource("c_flag_bearer")]
+position = Vector2(1405, 1550)
+start_facing = "s"
+
+[node name="SpearGuard3" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1541, 1410)
+start_facing = "s"
+
+[node name="SpearGuard4" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1678, 1506)
+start_facing = "s"
+
+[node name="SpearGuard5" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1732, 1532)
+start_facing = "s"
+
+[node name="FlagBearer2" parent="Objects" instance=ExtResource("c_flag_bearer")]
+position = Vector2(1795, 1550)
+start_facing = "s"
+
+[node name="SpearGuard6" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1658, 1410)
+start_facing = "s"
+
+[node name="TgBannerA3" parent="Objects" instance=ExtResource("k_tg_banner_a")]
+position = Vector2(1350, 1540)
+
+[node name="TgBannerB3" parent="Objects" instance=ExtResource("k_tg_banner_b")]
+position = Vector2(1850, 1540)
+
+[node name="SpearGuard7" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1472, 1030)
+start_facing = "e"
+
+[node name="SpearGuard8" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1728, 1030)
+start_facing = "w"
+
+[node name="SpearGuard9" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1472, 1120)
+start_facing = "e"
+
+[node name="SpearGuard10" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1728, 1120)
+start_facing = "w"
+
+[node name="SpearGuard11" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1472, 1210)
+start_facing = "e"
+
+[node name="SpearGuard12" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1728, 1210)
+start_facing = "w"
+
+[node name="SpearGuard13" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1472, 1300)
+start_facing = "e"
+
+[node name="SpearGuard14" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1728, 1300)
+start_facing = "w"
+
+[node name="SpearGuard15" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1472, 1390)
+start_facing = "e"
+
+[node name="SpearGuard16" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1728, 1390)
+start_facing = "w"
+
+[node name="SpearGuard17" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1770, 900)
+start_facing = "s"
+
+[node name="SpearGuard18" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1850, 900)
+start_facing = "s"
+
+[node name="RoyalHorse1" parent="Objects" instance=ExtResource("c_royal_horse")]
+position = Vector2(2010, 1000)
+start_facing = "sw"
+look_at_player = false
+breathe = 0.5
+
+[node name="SpearGuard19" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1146, 1730)
+start_facing = "ne"
+
+[node name="SpearGuard20" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(1084, 1776)
+start_facing = "ne"
+
+[node name="Trainer1" parent="Objects" instance=ExtResource("c_trainer")]
+position = Vector2(820, 1790)
+start_facing = "s"
+idle_anim = "train"
+
+[node name="SpearGuard21" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(740, 1880)
+start_facing = "n"
+
+[node name="SpearGuard22" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(786, 1880)
+start_facing = "n"
+
+[node name="SpearGuard23" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(832, 1880)
+start_facing = "n"
+
+[node name="SpearGuard24" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(878, 1880)
+start_facing = "n"
+
+[node name="SpearGuard25" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(717, 1910)
+start_facing = "n"
+
+[node name="SpearGuard26" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(763, 1910)
+start_facing = "n"
+
+[node name="SpearGuard27" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(809, 1910)
+start_facing = "n"
+
+[node name="SpearGuard28" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(855, 1910)
+start_facing = "n"
+
+[node name="Archer1" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(1000, 1910)
+start_facing = "e"
+
+[node name="Archer2" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(1030, 1928)
+start_facing = "e"
+
+[node name="Archer3" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(1060, 1946)
+start_facing = "e"
+
+[node name="SpearGuard29" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2400, 1780)
+start_facing = "nw"
+
+[node name="SpearGuard30" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2432, 1796)
+start_facing = "nw"
+
+[node name="SpearGuard31" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2464, 1812)
+start_facing = "nw"
+
+[node name="SpearGuard32" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2496, 1828)
+start_facing = "nw"
+
+[node name="SpearGuard33" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2528, 1844)
+start_facing = "nw"
+
+[node name="SpearGuard34" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2560, 1860)
+start_facing = "nw"
+
+[node name="SpearGuard35" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2593, 1876)
+start_facing = "nw"
+
+[node name="SpearGuard36" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2430, 1764)
+start_facing = "nw"
+
+[node name="SpearGuard37" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2462, 1780)
+start_facing = "nw"
+
+[node name="SpearGuard38" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2494, 1796)
+start_facing = "nw"
+
+[node name="SpearGuard39" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2526, 1813)
+start_facing = "nw"
+
+[node name="SpearGuard40" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2559, 1829)
+start_facing = "nw"
+
+[node name="SpearGuard41" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2591, 1845)
+start_facing = "nw"
+
+[node name="SpearGuard42" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2623, 1861)
+start_facing = "nw"
+
+[node name="SpearGuard43" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2460, 1749)
+start_facing = "nw"
+
+[node name="SpearGuard44" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2492, 1765)
+start_facing = "nw"
+
+[node name="SpearGuard45" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2525, 1781)
+start_facing = "nw"
+
+[node name="SpearGuard46" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2557, 1797)
+start_facing = "nw"
+
+[node name="SpearGuard47" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2589, 1813)
+start_facing = "nw"
+
+[node name="SpearGuard48" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2621, 1830)
+start_facing = "nw"
+
+[node name="SpearGuard49" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2653, 1846)
+start_facing = "nw"
+
+[node name="SpearGuard50" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2491, 1734)
+start_facing = "nw"
+
+[node name="SpearGuard51" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2523, 1750)
+start_facing = "nw"
+
+[node name="SpearGuard52" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2555, 1766)
+start_facing = "nw"
+
+[node name="SpearGuard53" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2587, 1782)
+start_facing = "nw"
+
+[node name="SpearGuard54" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2619, 1798)
+start_facing = "nw"
+
+[node name="SpearGuard55" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2652, 1814)
+start_facing = "nw"
+
+[node name="SpearGuard56" parent="Objects" instance=ExtResource("c_spear_guard")]
+position = Vector2(2684, 1830)
+start_facing = "nw"
+
+[node name="Archer4" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2521, 1719)
+start_facing = "nw"
+
+[node name="Archer5" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2553, 1735)
+start_facing = "nw"
+
+[node name="Archer6" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2585, 1751)
+start_facing = "nw"
+
+[node name="Archer7" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2618, 1767)
+start_facing = "nw"
+
+[node name="Archer8" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2650, 1783)
+start_facing = "nw"
+
+[node name="Archer9" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2682, 1799)
+start_facing = "nw"
+
+[node name="Archer10" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2714, 1815)
+start_facing = "nw"
+
+[node name="Archer11" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2551, 1704)
+start_facing = "nw"
+
+[node name="Archer12" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2584, 1720)
+start_facing = "nw"
+
+[node name="Archer13" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2616, 1736)
+start_facing = "nw"
+
+[node name="Archer14" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2648, 1752)
+start_facing = "nw"
+
+[node name="Archer15" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2680, 1768)
+start_facing = "nw"
+
+[node name="Archer16" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2712, 1784)
+start_facing = "nw"
+
+[node name="Archer17" parent="Objects" instance=ExtResource("c_archer")]
+position = Vector2(2745, 1800)
+start_facing = "nw"
+
+[node name="FlagBearer3" parent="Objects" instance=ExtResource("c_flag_bearer")]
+position = Vector2(2364, 1762)
+start_facing = "nw"
+
+[node name="FlagBearer4" parent="Objects" instance=ExtResource("c_flag_bearer")]
+position = Vector2(2625, 1892)
+start_facing = "nw"
+
+[node name="CavalryRider1" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+position = Vector2(2280, 1930)
+start_facing = "nw"
+
+[node name="CavalryRider2" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+position = Vector2(2340, 1960)
+start_facing = "nw"
+
+[node name="CavalryRider3" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+position = Vector2(2400, 1990)
+start_facing = "nw"
+
+[node name="CavalryRider4" parent="Objects" instance=ExtResource("c_cavalry_rider")]
+position = Vector2(2310, 1720)
+start_facing = "nw"
+look_at_player = true
+
+[node name="ElephantRider1" parent="Objects" instance=ExtResource("c_elephant_rider")]
+position = Vector2(2730, 1740)
+start_facing = "nw"
+
+[node name="ElephantRider2" parent="Objects" instance=ExtResource("c_elephant_rider")]
+position = Vector2(2780, 1870)
+start_facing = "w"
+patrol_points = PackedVector2Array(2780, 1870, 2620, 1960)
+walk_speed = 10.0
+wait_time = 6.0
 
 [node name="Moon" type="DirectionalLight2D" parent="."]
 rotation = -2.3

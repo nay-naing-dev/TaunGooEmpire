@@ -1,0 +1,223 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/house.gd" id="1_s"]
+[ext_resource type="Texture2D" path="main_palace_ext.png" id="2_e"]
+[ext_resource type="Texture2D" path="main_palace_ext_n.png" id="3_en"]
+[ext_resource type="Texture2D" path="main_palace_room.png" id="4_i"]
+[ext_resource type="Texture2D" path="main_palace_room_n.png" id="5_in"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/throne.tscn" id="i_throne"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/column.tscn" id="i_column"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/floor_lamp.tscn" id="i_floor_lamp"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/golden_ornament.tscn" id="i_golden_ornament"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/royal_chair.tscn" id="i_royal_chair"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/altar_table.tscn" id="i_altar_table"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/vase.tscn" id="i_vase"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/lotus_pot.tscn" id="i_lotus_pot"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/palm_pot.tscn" id="i_palm_pot"]
+[ext_resource type="PackedScene" path="res://environment/palace/interior/items/lantern.tscn" id="i_lantern"]
+
+[ext_resource type="PackedScene" path="res://characters/palace/king_bayinnaung/king_bayinnaung.tscn" id="c_king"]
+[ext_resource type="PackedScene" path="res://characters/palace/court_dancer/court_dancer.tscn" id="c_dan"]
+[ext_resource type="PackedScene" path="res://characters/palace/court_dancer_green/court_dancer_green.tscn" id="c_dang"]
+[ext_resource type="PackedScene" path="res://characters/palace/spear_guard/spear_guard.tscn" id="c_spear"]
+
+[sub_resource type="CanvasTexture" id="CTE"]
+diffuse_texture = ExtResource("2_e")
+normal_texture = ExtResource("3_en")
+
+[sub_resource type="CanvasTexture" id="CTI"]
+diffuse_texture = ExtResource("4_i")
+normal_texture = ExtResource("5_in")
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="MainPalace" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_s")
+
+[node name="Outside" type="StaticBody2D" parent="."]
+
+[node name="CastShadow" type="Sprite2D" parent="Outside"]
+modulate = Color(0.04, 0.03, 0.1, 0.32)
+z_index = -1
+skew = -0.95
+scale = Vector2(1, 0.45)
+texture = ExtResource("2_e")
+centered = false
+offset = Vector2(-649, -632)
+
+[node name="Sprite2D" type="Sprite2D" parent="Outside"]
+texture_filter = 1
+texture = SubResource("CTE")
+centered = false
+offset = Vector2(-649, -632)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
+polygon = PackedVector2Array(-515, -83, -184, -314, 100, -197, -231, -18)
+
+[node name="Inside" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
+position = Vector2(-318.0, -365.0)
+
+[node name="Dim" type="Polygon2D" parent="Inside"]
+z_index = 39
+z_as_relative = false
+color = Color(0.02, 0.015, 0.03, 0.68)
+polygon = PackedVector2Array(-4000, -3000, 4000, -3000, 4000, 3000, -4000, 3000)
+
+[node name="Room" type="Sprite2D" parent="Inside"]
+z_index = 40
+z_as_relative = false
+texture_filter = 1
+texture = SubResource("CTI")
+centered = false
+offset = Vector2(-370, -174)
+
+[node name="HearthLight" type="PointLight2D" parent="Inside"]
+position = Vector2(120, 160)
+color = Color(1, 0.7, 0.4, 1)
+energy = 0.6
+texture = SubResource("TL")
+texture_scale = 2.6
+
+[node name="Walls" type="StaticBody2D" parent="Inside"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inside/Walls"]
+build_mode = 1
+disabled = true
+polygon = PackedVector2Array(0, 12, 396, 210, 80, 368, -316, 170)
+
+[node name="DoorIn" type="Marker2D" parent="Inside"]
+position = Vector2(232.0, 286.0)
+
+[node name="Furniture" type="Node2D" parent="Inside"]
+z_index = 41
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Throne1" parent="Inside/Furniture" instance=ExtResource("i_throne")]
+position = Vector2(-102, 119)
+
+[node name="Column1" parent="Inside/Furniture" instance=ExtResource("i_column")]
+position = Vector2(80, 100)
+
+[node name="Column2" parent="Inside/Furniture" instance=ExtResource("i_column")]
+position = Vector2(-140, 210)
+
+[node name="Column3" parent="Inside/Furniture" instance=ExtResource("i_column")]
+position = Vector2(220, 170)
+
+[node name="Column4" parent="Inside/Furniture" instance=ExtResource("i_column")]
+position = Vector2(0, 280)
+
+[node name="FloorLamp1" parent="Inside/Furniture" instance=ExtResource("i_floor_lamp")]
+position = Vector2(-40, 80)
+
+[node name="FloorLamp2" parent="Inside/Furniture" instance=ExtResource("i_floor_lamp")]
+position = Vector2(-180, 150)
+
+[node name="GoldenOrnament1" parent="Inside/Furniture" instance=ExtResource("i_golden_ornament")]
+position = Vector2(-84, 78)
+
+[node name="GoldenOrnament2" parent="Inside/Furniture" instance=ExtResource("i_golden_ornament")]
+position = Vector2(-184, 128)
+
+[node name="RoyalChair1" parent="Inside/Furniture" instance=ExtResource("i_royal_chair")]
+position = Vector2(60, 130)
+
+[node name="RoyalChair2" parent="Inside/Furniture" instance=ExtResource("i_royal_chair")]
+position = Vector2(100, 150)
+
+[node name="RoyalChair3" parent="Inside/Furniture" instance=ExtResource("i_royal_chair")]
+position = Vector2(-80, 200)
+
+[node name="RoyalChair4" parent="Inside/Furniture" instance=ExtResource("i_royal_chair")]
+position = Vector2(-40, 220)
+
+[node name="AltarTable1" parent="Inside/Furniture" instance=ExtResource("i_altar_table")]
+position = Vector2(-142, 99)
+
+[node name="Vase1" parent="Inside/Furniture" instance=ExtResource("i_vase")]
+position = Vector2(40, 80)
+
+[node name="Vase2" parent="Inside/Furniture" instance=ExtResource("i_vase")]
+position = Vector2(-180, 190)
+
+[node name="LotusPot1" parent="Inside/Furniture" instance=ExtResource("i_lotus_pot")]
+position = Vector2(312, 216)
+
+[node name="LotusPot2" parent="Inside/Furniture" instance=ExtResource("i_lotus_pot")]
+position = Vector2(92, 326)
+
+[node name="PalmPot1" parent="Inside/Furniture" instance=ExtResource("i_palm_pot")]
+position = Vector2(4, 42)
+
+[node name="PalmPot2" parent="Inside/Furniture" instance=ExtResource("i_palm_pot")]
+position = Vector2(-256, 172)
+
+[node name="Lantern1" parent="Inside/Furniture" instance=ExtResource("i_lantern")]
+position = Vector2(200, 140)
+
+[node name="Lantern2" parent="Inside/Furniture" instance=ExtResource("i_lantern")]
+position = Vector2(-60, 270)
+
+[node name="KingBayinnaung" parent="Inside/Furniture" instance=ExtResource("c_king")]
+position = Vector2(-70, 135)
+start_facing = "se"
+look_at_player = true
+
+[node name="ThroneGuardL" parent="Inside/Furniture" instance=ExtResource("c_spear")]
+position = Vector2(48, 116)
+start_facing = "se"
+
+[node name="ThroneGuardR" parent="Inside/Furniture" instance=ExtResource("c_spear")]
+position = Vector2(-112, 196)
+start_facing = "se"
+
+[node name="DoorGuardL" parent="Inside/Furniture" instance=ExtResource("c_spear")]
+position = Vector2(256, 252)
+start_facing = "nw"
+
+[node name="DoorGuardR" parent="Inside/Furniture" instance=ExtResource("c_spear")]
+position = Vector2(160, 300)
+start_facing = "nw"
+
+[node name="Dancer1" parent="Inside/Furniture" instance=ExtResource("c_dan")]
+position = Vector2(52, 170)
+start_facing = "w"
+idle_anim = "fan"
+breathe = 1.4
+
+[node name="Dancer2" parent="Inside/Furniture" instance=ExtResource("c_dan")]
+position = Vector2(0, 196)
+start_facing = "e"
+idle_anim = "fan"
+breathe = 1.4
+
+[node name="Dancer3" parent="Inside/Furniture" instance=ExtResource("c_dang")]
+position = Vector2(116, 190)
+start_facing = "nw"
+idle_anim = "walk"
+breathe = 1.4
+
+[node name="Dancer4" parent="Inside/Furniture" instance=ExtResource("c_dang")]
+position = Vector2(40, 228)
+start_facing = "sw"
+idle_anim = "walk"
+breathe = 1.4
+
+[node name="Dancer5" parent="Inside/Furniture" instance=ExtResource("c_dan")]
+position = Vector2(130, 235)
+start_facing = "nw"
+idle_anim = "walk"
+breathe = 1.4

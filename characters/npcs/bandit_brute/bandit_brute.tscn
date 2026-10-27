@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://characters/npcs/bandit/bandit.gd" id="1_s"]
+[ext_resource type="SpriteFrames" path="bandit_brute_v0.tres" id="2_f"]
+
+[sub_resource type="CircleShape2D" id="Feet"]
+radius = 9.0
+
+[sub_resource type="Gradient" id="GS"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="TS"]
+gradient = SubResource("GS")
+width = 64
+height = 64
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="BanditBrute" type="CharacterBody2D"]
+script = ExtResource("1_s")
+frames_base = "res://characters/npcs/bandit_brute/bandit_brute"
+max_health = 60
+damage = 14
+run_speed = 76.0
+attack_range = 28.0
+hit_frame = 3
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+scale = Vector2(0.6, 0.18)
+texture = SubResource("TS")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_f")
+animation = &"idle_s"
+offset = Vector2(0, -108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("Feet")

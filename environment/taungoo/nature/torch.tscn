@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://environment/fx/flicker.gd" id="1_f"]
+
+[sub_resource type="Gradient" id="GR"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TR"]
+gradient = SubResource("GR")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="GF"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(1, 0.95, 0.6, 1, 1, 0.55, 0.15, 0.9, 0.5, 0.1, 0.05, 0)
+
+[sub_resource type="CanvasItemMaterial" id="Add"]
+blend_mode = 1
+light_mode = 1
+
+[node name="Torch" type="StaticBody2D"]
+
+[node name="Post" type="Polygon2D" parent="."]
+color = Color(0.3, 0.2, 0.13, 1)
+polygon = PackedVector2Array(-1.5, 0, 1.5, 0, 1.5, -26, -1.5, -26)
+
+[node name="Bowl" type="Polygon2D" parent="."]
+color = Color(0.55, 0.42, 0.2, 1)
+polygon = PackedVector2Array(-4, -26, 4, -26, 2.5, -30, -2.5, -30)
+
+[node name="Flame" type="CPUParticles2D" parent="."]
+material = SubResource("Add")
+position = Vector2(0, -31)
+amount = 18
+lifetime = 0.5
+preprocess = 0.5
+emission_shape = 1
+emission_sphere_radius = 2.0
+direction = Vector2(0, -1)
+spread = 15.0
+gravity = Vector2(0, -50)
+initial_velocity_min = 8.0
+initial_velocity_max = 20.0
+scale_amount_min = 1.5
+scale_amount_max = 3.0
+color_ramp = SubResource("GF")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, -32)
+color = Color(1, 0.62, 0.3, 1)
+energy = 1.0
+texture = SubResource("TR")
+texture_scale = 1.8
+height = 40.0
+script = ExtResource("1_f")
+amount = 0.12

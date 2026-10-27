@@ -1,0 +1,1277 @@
+[gd_resource type="SpriteFrames" load_steps=385 format=3]
+
+[ext_resource type="Texture2D" path="frames/v0/attack_e_0.png" id="d0"]
+[ext_resource type="Texture2D" path="frames/attack_e_0_n.png" id="n0"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_1.png" id="d1"]
+[ext_resource type="Texture2D" path="frames/attack_e_1_n.png" id="n1"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_2.png" id="d2"]
+[ext_resource type="Texture2D" path="frames/attack_e_2_n.png" id="n2"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_3.png" id="d3"]
+[ext_resource type="Texture2D" path="frames/attack_e_3_n.png" id="n3"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_4.png" id="d4"]
+[ext_resource type="Texture2D" path="frames/attack_e_4_n.png" id="n4"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_5.png" id="d5"]
+[ext_resource type="Texture2D" path="frames/attack_e_5_n.png" id="n5"]
+[ext_resource type="Texture2D" path="frames/v0/attack_e_6.png" id="d6"]
+[ext_resource type="Texture2D" path="frames/attack_e_6_n.png" id="n6"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_0.png" id="d7"]
+[ext_resource type="Texture2D" path="frames/attack_n_0_n.png" id="n7"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_1.png" id="d8"]
+[ext_resource type="Texture2D" path="frames/attack_n_1_n.png" id="n8"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_2.png" id="d9"]
+[ext_resource type="Texture2D" path="frames/attack_n_2_n.png" id="n9"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_3.png" id="d10"]
+[ext_resource type="Texture2D" path="frames/attack_n_3_n.png" id="n10"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_4.png" id="d11"]
+[ext_resource type="Texture2D" path="frames/attack_n_4_n.png" id="n11"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_5.png" id="d12"]
+[ext_resource type="Texture2D" path="frames/attack_n_5_n.png" id="n12"]
+[ext_resource type="Texture2D" path="frames/v0/attack_n_6.png" id="d13"]
+[ext_resource type="Texture2D" path="frames/attack_n_6_n.png" id="n13"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_0.png" id="d14"]
+[ext_resource type="Texture2D" path="frames/attack_ne_0_n.png" id="n14"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_1.png" id="d15"]
+[ext_resource type="Texture2D" path="frames/attack_ne_1_n.png" id="n15"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_2.png" id="d16"]
+[ext_resource type="Texture2D" path="frames/attack_ne_2_n.png" id="n16"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_3.png" id="d17"]
+[ext_resource type="Texture2D" path="frames/attack_ne_3_n.png" id="n17"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_4.png" id="d18"]
+[ext_resource type="Texture2D" path="frames/attack_ne_4_n.png" id="n18"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_5.png" id="d19"]
+[ext_resource type="Texture2D" path="frames/attack_ne_5_n.png" id="n19"]
+[ext_resource type="Texture2D" path="frames/v0/attack_ne_6.png" id="d20"]
+[ext_resource type="Texture2D" path="frames/attack_ne_6_n.png" id="n20"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_0.png" id="d21"]
+[ext_resource type="Texture2D" path="frames/attack_nw_0_n.png" id="n21"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_1.png" id="d22"]
+[ext_resource type="Texture2D" path="frames/attack_nw_1_n.png" id="n22"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_2.png" id="d23"]
+[ext_resource type="Texture2D" path="frames/attack_nw_2_n.png" id="n23"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_3.png" id="d24"]
+[ext_resource type="Texture2D" path="frames/attack_nw_3_n.png" id="n24"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_4.png" id="d25"]
+[ext_resource type="Texture2D" path="frames/attack_nw_4_n.png" id="n25"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_5.png" id="d26"]
+[ext_resource type="Texture2D" path="frames/attack_nw_5_n.png" id="n26"]
+[ext_resource type="Texture2D" path="frames/v0/attack_nw_6.png" id="d27"]
+[ext_resource type="Texture2D" path="frames/attack_nw_6_n.png" id="n27"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_0.png" id="d28"]
+[ext_resource type="Texture2D" path="frames/attack_s_0_n.png" id="n28"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_1.png" id="d29"]
+[ext_resource type="Texture2D" path="frames/attack_s_1_n.png" id="n29"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_2.png" id="d30"]
+[ext_resource type="Texture2D" path="frames/attack_s_2_n.png" id="n30"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_3.png" id="d31"]
+[ext_resource type="Texture2D" path="frames/attack_s_3_n.png" id="n31"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_4.png" id="d32"]
+[ext_resource type="Texture2D" path="frames/attack_s_4_n.png" id="n32"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_5.png" id="d33"]
+[ext_resource type="Texture2D" path="frames/attack_s_5_n.png" id="n33"]
+[ext_resource type="Texture2D" path="frames/v0/attack_s_6.png" id="d34"]
+[ext_resource type="Texture2D" path="frames/attack_s_6_n.png" id="n34"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_0.png" id="d35"]
+[ext_resource type="Texture2D" path="frames/attack_se_0_n.png" id="n35"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_1.png" id="d36"]
+[ext_resource type="Texture2D" path="frames/attack_se_1_n.png" id="n36"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_2.png" id="d37"]
+[ext_resource type="Texture2D" path="frames/attack_se_2_n.png" id="n37"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_3.png" id="d38"]
+[ext_resource type="Texture2D" path="frames/attack_se_3_n.png" id="n38"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_4.png" id="d39"]
+[ext_resource type="Texture2D" path="frames/attack_se_4_n.png" id="n39"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_5.png" id="d40"]
+[ext_resource type="Texture2D" path="frames/attack_se_5_n.png" id="n40"]
+[ext_resource type="Texture2D" path="frames/v0/attack_se_6.png" id="d41"]
+[ext_resource type="Texture2D" path="frames/attack_se_6_n.png" id="n41"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_0.png" id="d42"]
+[ext_resource type="Texture2D" path="frames/attack_sw_0_n.png" id="n42"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_1.png" id="d43"]
+[ext_resource type="Texture2D" path="frames/attack_sw_1_n.png" id="n43"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_2.png" id="d44"]
+[ext_resource type="Texture2D" path="frames/attack_sw_2_n.png" id="n44"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_3.png" id="d45"]
+[ext_resource type="Texture2D" path="frames/attack_sw_3_n.png" id="n45"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_4.png" id="d46"]
+[ext_resource type="Texture2D" path="frames/attack_sw_4_n.png" id="n46"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_5.png" id="d47"]
+[ext_resource type="Texture2D" path="frames/attack_sw_5_n.png" id="n47"]
+[ext_resource type="Texture2D" path="frames/v0/attack_sw_6.png" id="d48"]
+[ext_resource type="Texture2D" path="frames/attack_sw_6_n.png" id="n48"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_0.png" id="d49"]
+[ext_resource type="Texture2D" path="frames/attack_w_0_n.png" id="n49"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_1.png" id="d50"]
+[ext_resource type="Texture2D" path="frames/attack_w_1_n.png" id="n50"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_2.png" id="d51"]
+[ext_resource type="Texture2D" path="frames/attack_w_2_n.png" id="n51"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_3.png" id="d52"]
+[ext_resource type="Texture2D" path="frames/attack_w_3_n.png" id="n52"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_4.png" id="d53"]
+[ext_resource type="Texture2D" path="frames/attack_w_4_n.png" id="n53"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_5.png" id="d54"]
+[ext_resource type="Texture2D" path="frames/attack_w_5_n.png" id="n54"]
+[ext_resource type="Texture2D" path="frames/v0/attack_w_6.png" id="d55"]
+[ext_resource type="Texture2D" path="frames/attack_w_6_n.png" id="n55"]
+[ext_resource type="Texture2D" path="frames/v0/idle_e_0.png" id="d56"]
+[ext_resource type="Texture2D" path="frames/idle_e_0_n.png" id="n56"]
+[ext_resource type="Texture2D" path="frames/v0/idle_n_0.png" id="d57"]
+[ext_resource type="Texture2D" path="frames/idle_n_0_n.png" id="n57"]
+[ext_resource type="Texture2D" path="frames/v0/idle_ne_0.png" id="d58"]
+[ext_resource type="Texture2D" path="frames/idle_ne_0_n.png" id="n58"]
+[ext_resource type="Texture2D" path="frames/v0/idle_nw_0.png" id="d59"]
+[ext_resource type="Texture2D" path="frames/idle_nw_0_n.png" id="n59"]
+[ext_resource type="Texture2D" path="frames/v0/idle_s_0.png" id="d60"]
+[ext_resource type="Texture2D" path="frames/idle_s_0_n.png" id="n60"]
+[ext_resource type="Texture2D" path="frames/v0/idle_se_0.png" id="d61"]
+[ext_resource type="Texture2D" path="frames/idle_se_0_n.png" id="n61"]
+[ext_resource type="Texture2D" path="frames/v0/idle_sw_0.png" id="d62"]
+[ext_resource type="Texture2D" path="frames/idle_sw_0_n.png" id="n62"]
+[ext_resource type="Texture2D" path="frames/v0/idle_w_0.png" id="d63"]
+[ext_resource type="Texture2D" path="frames/idle_w_0_n.png" id="n63"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_0.png" id="d64"]
+[ext_resource type="Texture2D" path="frames/run_e_0_n.png" id="n64"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_1.png" id="d65"]
+[ext_resource type="Texture2D" path="frames/run_e_1_n.png" id="n65"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_2.png" id="d66"]
+[ext_resource type="Texture2D" path="frames/run_e_2_n.png" id="n66"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_3.png" id="d67"]
+[ext_resource type="Texture2D" path="frames/run_e_3_n.png" id="n67"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_4.png" id="d68"]
+[ext_resource type="Texture2D" path="frames/run_e_4_n.png" id="n68"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_5.png" id="d69"]
+[ext_resource type="Texture2D" path="frames/run_e_5_n.png" id="n69"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_6.png" id="d70"]
+[ext_resource type="Texture2D" path="frames/run_e_6_n.png" id="n70"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_7.png" id="d71"]
+[ext_resource type="Texture2D" path="frames/run_e_7_n.png" id="n71"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_0.png" id="d72"]
+[ext_resource type="Texture2D" path="frames/run_n_0_n.png" id="n72"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_1.png" id="d73"]
+[ext_resource type="Texture2D" path="frames/run_n_1_n.png" id="n73"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_2.png" id="d74"]
+[ext_resource type="Texture2D" path="frames/run_n_2_n.png" id="n74"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_3.png" id="d75"]
+[ext_resource type="Texture2D" path="frames/run_n_3_n.png" id="n75"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_4.png" id="d76"]
+[ext_resource type="Texture2D" path="frames/run_n_4_n.png" id="n76"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_5.png" id="d77"]
+[ext_resource type="Texture2D" path="frames/run_n_5_n.png" id="n77"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_6.png" id="d78"]
+[ext_resource type="Texture2D" path="frames/run_n_6_n.png" id="n78"]
+[ext_resource type="Texture2D" path="frames/v0/run_n_7.png" id="d79"]
+[ext_resource type="Texture2D" path="frames/run_n_7_n.png" id="n79"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_0.png" id="d80"]
+[ext_resource type="Texture2D" path="frames/run_ne_0_n.png" id="n80"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_1.png" id="d81"]
+[ext_resource type="Texture2D" path="frames/run_ne_1_n.png" id="n81"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_2.png" id="d82"]
+[ext_resource type="Texture2D" path="frames/run_ne_2_n.png" id="n82"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_3.png" id="d83"]
+[ext_resource type="Texture2D" path="frames/run_ne_3_n.png" id="n83"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_4.png" id="d84"]
+[ext_resource type="Texture2D" path="frames/run_ne_4_n.png" id="n84"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_5.png" id="d85"]
+[ext_resource type="Texture2D" path="frames/run_ne_5_n.png" id="n85"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_6.png" id="d86"]
+[ext_resource type="Texture2D" path="frames/run_ne_6_n.png" id="n86"]
+[ext_resource type="Texture2D" path="frames/v0/run_ne_7.png" id="d87"]
+[ext_resource type="Texture2D" path="frames/run_ne_7_n.png" id="n87"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_0.png" id="d88"]
+[ext_resource type="Texture2D" path="frames/run_nw_0_n.png" id="n88"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_1.png" id="d89"]
+[ext_resource type="Texture2D" path="frames/run_nw_1_n.png" id="n89"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_2.png" id="d90"]
+[ext_resource type="Texture2D" path="frames/run_nw_2_n.png" id="n90"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_3.png" id="d91"]
+[ext_resource type="Texture2D" path="frames/run_nw_3_n.png" id="n91"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_4.png" id="d92"]
+[ext_resource type="Texture2D" path="frames/run_nw_4_n.png" id="n92"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_5.png" id="d93"]
+[ext_resource type="Texture2D" path="frames/run_nw_5_n.png" id="n93"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_6.png" id="d94"]
+[ext_resource type="Texture2D" path="frames/run_nw_6_n.png" id="n94"]
+[ext_resource type="Texture2D" path="frames/v0/run_nw_7.png" id="d95"]
+[ext_resource type="Texture2D" path="frames/run_nw_7_n.png" id="n95"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_0.png" id="d96"]
+[ext_resource type="Texture2D" path="frames/run_s_0_n.png" id="n96"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_1.png" id="d97"]
+[ext_resource type="Texture2D" path="frames/run_s_1_n.png" id="n97"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_2.png" id="d98"]
+[ext_resource type="Texture2D" path="frames/run_s_2_n.png" id="n98"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_3.png" id="d99"]
+[ext_resource type="Texture2D" path="frames/run_s_3_n.png" id="n99"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_4.png" id="d100"]
+[ext_resource type="Texture2D" path="frames/run_s_4_n.png" id="n100"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_5.png" id="d101"]
+[ext_resource type="Texture2D" path="frames/run_s_5_n.png" id="n101"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_6.png" id="d102"]
+[ext_resource type="Texture2D" path="frames/run_s_6_n.png" id="n102"]
+[ext_resource type="Texture2D" path="frames/v0/run_s_7.png" id="d103"]
+[ext_resource type="Texture2D" path="frames/run_s_7_n.png" id="n103"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_0.png" id="d104"]
+[ext_resource type="Texture2D" path="frames/run_e_0_n.png" id="n104"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_1.png" id="d105"]
+[ext_resource type="Texture2D" path="frames/run_e_1_n.png" id="n105"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_2.png" id="d106"]
+[ext_resource type="Texture2D" path="frames/run_e_2_n.png" id="n106"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_3.png" id="d107"]
+[ext_resource type="Texture2D" path="frames/run_e_3_n.png" id="n107"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_4.png" id="d108"]
+[ext_resource type="Texture2D" path="frames/run_e_4_n.png" id="n108"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_5.png" id="d109"]
+[ext_resource type="Texture2D" path="frames/run_e_5_n.png" id="n109"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_6.png" id="d110"]
+[ext_resource type="Texture2D" path="frames/run_e_6_n.png" id="n110"]
+[ext_resource type="Texture2D" path="frames/v0/run_e_7.png" id="d111"]
+[ext_resource type="Texture2D" path="frames/run_e_7_n.png" id="n111"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_0.png" id="d112"]
+[ext_resource type="Texture2D" path="frames/run_sw_0_n.png" id="n112"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_1.png" id="d113"]
+[ext_resource type="Texture2D" path="frames/run_sw_1_n.png" id="n113"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_2.png" id="d114"]
+[ext_resource type="Texture2D" path="frames/run_sw_2_n.png" id="n114"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_3.png" id="d115"]
+[ext_resource type="Texture2D" path="frames/run_sw_3_n.png" id="n115"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_4.png" id="d116"]
+[ext_resource type="Texture2D" path="frames/run_sw_4_n.png" id="n116"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_5.png" id="d117"]
+[ext_resource type="Texture2D" path="frames/run_sw_5_n.png" id="n117"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_6.png" id="d118"]
+[ext_resource type="Texture2D" path="frames/run_sw_6_n.png" id="n118"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_7.png" id="d119"]
+[ext_resource type="Texture2D" path="frames/run_sw_7_n.png" id="n119"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_0.png" id="d120"]
+[ext_resource type="Texture2D" path="frames/run_sw_0_n.png" id="n120"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_1.png" id="d121"]
+[ext_resource type="Texture2D" path="frames/run_sw_1_n.png" id="n121"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_2.png" id="d122"]
+[ext_resource type="Texture2D" path="frames/run_sw_2_n.png" id="n122"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_3.png" id="d123"]
+[ext_resource type="Texture2D" path="frames/run_sw_3_n.png" id="n123"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_4.png" id="d124"]
+[ext_resource type="Texture2D" path="frames/run_sw_4_n.png" id="n124"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_5.png" id="d125"]
+[ext_resource type="Texture2D" path="frames/run_sw_5_n.png" id="n125"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_6.png" id="d126"]
+[ext_resource type="Texture2D" path="frames/run_sw_6_n.png" id="n126"]
+[ext_resource type="Texture2D" path="frames/v0/run_sw_7.png" id="d127"]
+[ext_resource type="Texture2D" path="frames/run_sw_7_n.png" id="n127"]
+
+[sub_resource type="CanvasTexture" id="C0"]
+diffuse_texture = ExtResource("d0")
+normal_texture = ExtResource("n0")
+
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
+
+[sub_resource type="CanvasTexture" id="C2"]
+diffuse_texture = ExtResource("d2")
+normal_texture = ExtResource("n2")
+
+[sub_resource type="CanvasTexture" id="C3"]
+diffuse_texture = ExtResource("d3")
+normal_texture = ExtResource("n3")
+
+[sub_resource type="CanvasTexture" id="C4"]
+diffuse_texture = ExtResource("d4")
+normal_texture = ExtResource("n4")
+
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
+
+[sub_resource type="CanvasTexture" id="C6"]
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
+
+[sub_resource type="CanvasTexture" id="C7"]
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
+
+[sub_resource type="CanvasTexture" id="C8"]
+diffuse_texture = ExtResource("d8")
+normal_texture = ExtResource("n8")
+
+[sub_resource type="CanvasTexture" id="C9"]
+diffuse_texture = ExtResource("d9")
+normal_texture = ExtResource("n9")
+
+[sub_resource type="CanvasTexture" id="C10"]
+diffuse_texture = ExtResource("d10")
+normal_texture = ExtResource("n10")
+
+[sub_resource type="CanvasTexture" id="C11"]
+diffuse_texture = ExtResource("d11")
+normal_texture = ExtResource("n11")
+
+[sub_resource type="CanvasTexture" id="C12"]
+diffuse_texture = ExtResource("d12")
+normal_texture = ExtResource("n12")
+
+[sub_resource type="CanvasTexture" id="C13"]
+diffuse_texture = ExtResource("d13")
+normal_texture = ExtResource("n13")
+
+[sub_resource type="CanvasTexture" id="C14"]
+diffuse_texture = ExtResource("d14")
+normal_texture = ExtResource("n14")
+
+[sub_resource type="CanvasTexture" id="C15"]
+diffuse_texture = ExtResource("d15")
+normal_texture = ExtResource("n15")
+
+[sub_resource type="CanvasTexture" id="C16"]
+diffuse_texture = ExtResource("d16")
+normal_texture = ExtResource("n16")
+
+[sub_resource type="CanvasTexture" id="C17"]
+diffuse_texture = ExtResource("d17")
+normal_texture = ExtResource("n17")
+
+[sub_resource type="CanvasTexture" id="C18"]
+diffuse_texture = ExtResource("d18")
+normal_texture = ExtResource("n18")
+
+[sub_resource type="CanvasTexture" id="C19"]
+diffuse_texture = ExtResource("d19")
+normal_texture = ExtResource("n19")
+
+[sub_resource type="CanvasTexture" id="C20"]
+diffuse_texture = ExtResource("d20")
+normal_texture = ExtResource("n20")
+
+[sub_resource type="CanvasTexture" id="C21"]
+diffuse_texture = ExtResource("d21")
+normal_texture = ExtResource("n21")
+
+[sub_resource type="CanvasTexture" id="C22"]
+diffuse_texture = ExtResource("d22")
+normal_texture = ExtResource("n22")
+
+[sub_resource type="CanvasTexture" id="C23"]
+diffuse_texture = ExtResource("d23")
+normal_texture = ExtResource("n23")
+
+[sub_resource type="CanvasTexture" id="C24"]
+diffuse_texture = ExtResource("d24")
+normal_texture = ExtResource("n24")
+
+[sub_resource type="CanvasTexture" id="C25"]
+diffuse_texture = ExtResource("d25")
+normal_texture = ExtResource("n25")
+
+[sub_resource type="CanvasTexture" id="C26"]
+diffuse_texture = ExtResource("d26")
+normal_texture = ExtResource("n26")
+
+[sub_resource type="CanvasTexture" id="C27"]
+diffuse_texture = ExtResource("d27")
+normal_texture = ExtResource("n27")
+
+[sub_resource type="CanvasTexture" id="C28"]
+diffuse_texture = ExtResource("d28")
+normal_texture = ExtResource("n28")
+
+[sub_resource type="CanvasTexture" id="C29"]
+diffuse_texture = ExtResource("d29")
+normal_texture = ExtResource("n29")
+
+[sub_resource type="CanvasTexture" id="C30"]
+diffuse_texture = ExtResource("d30")
+normal_texture = ExtResource("n30")
+
+[sub_resource type="CanvasTexture" id="C31"]
+diffuse_texture = ExtResource("d31")
+normal_texture = ExtResource("n31")
+
+[sub_resource type="CanvasTexture" id="C32"]
+diffuse_texture = ExtResource("d32")
+normal_texture = ExtResource("n32")
+
+[sub_resource type="CanvasTexture" id="C33"]
+diffuse_texture = ExtResource("d33")
+normal_texture = ExtResource("n33")
+
+[sub_resource type="CanvasTexture" id="C34"]
+diffuse_texture = ExtResource("d34")
+normal_texture = ExtResource("n34")
+
+[sub_resource type="CanvasTexture" id="C35"]
+diffuse_texture = ExtResource("d35")
+normal_texture = ExtResource("n35")
+
+[sub_resource type="CanvasTexture" id="C36"]
+diffuse_texture = ExtResource("d36")
+normal_texture = ExtResource("n36")
+
+[sub_resource type="CanvasTexture" id="C37"]
+diffuse_texture = ExtResource("d37")
+normal_texture = ExtResource("n37")
+
+[sub_resource type="CanvasTexture" id="C38"]
+diffuse_texture = ExtResource("d38")
+normal_texture = ExtResource("n38")
+
+[sub_resource type="CanvasTexture" id="C39"]
+diffuse_texture = ExtResource("d39")
+normal_texture = ExtResource("n39")
+
+[sub_resource type="CanvasTexture" id="C40"]
+diffuse_texture = ExtResource("d40")
+normal_texture = ExtResource("n40")
+
+[sub_resource type="CanvasTexture" id="C41"]
+diffuse_texture = ExtResource("d41")
+normal_texture = ExtResource("n41")
+
+[sub_resource type="CanvasTexture" id="C42"]
+diffuse_texture = ExtResource("d42")
+normal_texture = ExtResource("n42")
+
+[sub_resource type="CanvasTexture" id="C43"]
+diffuse_texture = ExtResource("d43")
+normal_texture = ExtResource("n43")
+
+[sub_resource type="CanvasTexture" id="C44"]
+diffuse_texture = ExtResource("d44")
+normal_texture = ExtResource("n44")
+
+[sub_resource type="CanvasTexture" id="C45"]
+diffuse_texture = ExtResource("d45")
+normal_texture = ExtResource("n45")
+
+[sub_resource type="CanvasTexture" id="C46"]
+diffuse_texture = ExtResource("d46")
+normal_texture = ExtResource("n46")
+
+[sub_resource type="CanvasTexture" id="C47"]
+diffuse_texture = ExtResource("d47")
+normal_texture = ExtResource("n47")
+
+[sub_resource type="CanvasTexture" id="C48"]
+diffuse_texture = ExtResource("d48")
+normal_texture = ExtResource("n48")
+
+[sub_resource type="CanvasTexture" id="C49"]
+diffuse_texture = ExtResource("d49")
+normal_texture = ExtResource("n49")
+
+[sub_resource type="CanvasTexture" id="C50"]
+diffuse_texture = ExtResource("d50")
+normal_texture = ExtResource("n50")
+
+[sub_resource type="CanvasTexture" id="C51"]
+diffuse_texture = ExtResource("d51")
+normal_texture = ExtResource("n51")
+
+[sub_resource type="CanvasTexture" id="C52"]
+diffuse_texture = ExtResource("d52")
+normal_texture = ExtResource("n52")
+
+[sub_resource type="CanvasTexture" id="C53"]
+diffuse_texture = ExtResource("d53")
+normal_texture = ExtResource("n53")
+
+[sub_resource type="CanvasTexture" id="C54"]
+diffuse_texture = ExtResource("d54")
+normal_texture = ExtResource("n54")
+
+[sub_resource type="CanvasTexture" id="C55"]
+diffuse_texture = ExtResource("d55")
+normal_texture = ExtResource("n55")
+
+[sub_resource type="CanvasTexture" id="C56"]
+diffuse_texture = ExtResource("d56")
+normal_texture = ExtResource("n56")
+
+[sub_resource type="CanvasTexture" id="C57"]
+diffuse_texture = ExtResource("d57")
+normal_texture = ExtResource("n57")
+
+[sub_resource type="CanvasTexture" id="C58"]
+diffuse_texture = ExtResource("d58")
+normal_texture = ExtResource("n58")
+
+[sub_resource type="CanvasTexture" id="C59"]
+diffuse_texture = ExtResource("d59")
+normal_texture = ExtResource("n59")
+
+[sub_resource type="CanvasTexture" id="C60"]
+diffuse_texture = ExtResource("d60")
+normal_texture = ExtResource("n60")
+
+[sub_resource type="CanvasTexture" id="C61"]
+diffuse_texture = ExtResource("d61")
+normal_texture = ExtResource("n61")
+
+[sub_resource type="CanvasTexture" id="C62"]
+diffuse_texture = ExtResource("d62")
+normal_texture = ExtResource("n62")
+
+[sub_resource type="CanvasTexture" id="C63"]
+diffuse_texture = ExtResource("d63")
+normal_texture = ExtResource("n63")
+
+[sub_resource type="CanvasTexture" id="C64"]
+diffuse_texture = ExtResource("d64")
+normal_texture = ExtResource("n64")
+
+[sub_resource type="CanvasTexture" id="C65"]
+diffuse_texture = ExtResource("d65")
+normal_texture = ExtResource("n65")
+
+[sub_resource type="CanvasTexture" id="C66"]
+diffuse_texture = ExtResource("d66")
+normal_texture = ExtResource("n66")
+
+[sub_resource type="CanvasTexture" id="C67"]
+diffuse_texture = ExtResource("d67")
+normal_texture = ExtResource("n67")
+
+[sub_resource type="CanvasTexture" id="C68"]
+diffuse_texture = ExtResource("d68")
+normal_texture = ExtResource("n68")
+
+[sub_resource type="CanvasTexture" id="C69"]
+diffuse_texture = ExtResource("d69")
+normal_texture = ExtResource("n69")
+
+[sub_resource type="CanvasTexture" id="C70"]
+diffuse_texture = ExtResource("d70")
+normal_texture = ExtResource("n70")
+
+[sub_resource type="CanvasTexture" id="C71"]
+diffuse_texture = ExtResource("d71")
+normal_texture = ExtResource("n71")
+
+[sub_resource type="CanvasTexture" id="C72"]
+diffuse_texture = ExtResource("d72")
+normal_texture = ExtResource("n72")
+
+[sub_resource type="CanvasTexture" id="C73"]
+diffuse_texture = ExtResource("d73")
+normal_texture = ExtResource("n73")
+
+[sub_resource type="CanvasTexture" id="C74"]
+diffuse_texture = ExtResource("d74")
+normal_texture = ExtResource("n74")
+
+[sub_resource type="CanvasTexture" id="C75"]
+diffuse_texture = ExtResource("d75")
+normal_texture = ExtResource("n75")
+
+[sub_resource type="CanvasTexture" id="C76"]
+diffuse_texture = ExtResource("d76")
+normal_texture = ExtResource("n76")
+
+[sub_resource type="CanvasTexture" id="C77"]
+diffuse_texture = ExtResource("d77")
+normal_texture = ExtResource("n77")
+
+[sub_resource type="CanvasTexture" id="C78"]
+diffuse_texture = ExtResource("d78")
+normal_texture = ExtResource("n78")
+
+[sub_resource type="CanvasTexture" id="C79"]
+diffuse_texture = ExtResource("d79")
+normal_texture = ExtResource("n79")
+
+[sub_resource type="CanvasTexture" id="C80"]
+diffuse_texture = ExtResource("d80")
+normal_texture = ExtResource("n80")
+
+[sub_resource type="CanvasTexture" id="C81"]
+diffuse_texture = ExtResource("d81")
+normal_texture = ExtResource("n81")
+
+[sub_resource type="CanvasTexture" id="C82"]
+diffuse_texture = ExtResource("d82")
+normal_texture = ExtResource("n82")
+
+[sub_resource type="CanvasTexture" id="C83"]
+diffuse_texture = ExtResource("d83")
+normal_texture = ExtResource("n83")
+
+[sub_resource type="CanvasTexture" id="C84"]
+diffuse_texture = ExtResource("d84")
+normal_texture = ExtResource("n84")
+
+[sub_resource type="CanvasTexture" id="C85"]
+diffuse_texture = ExtResource("d85")
+normal_texture = ExtResource("n85")
+
+[sub_resource type="CanvasTexture" id="C86"]
+diffuse_texture = ExtResource("d86")
+normal_texture = ExtResource("n86")
+
+[sub_resource type="CanvasTexture" id="C87"]
+diffuse_texture = ExtResource("d87")
+normal_texture = ExtResource("n87")
+
+[sub_resource type="CanvasTexture" id="C88"]
+diffuse_texture = ExtResource("d88")
+normal_texture = ExtResource("n88")
+
+[sub_resource type="CanvasTexture" id="C89"]
+diffuse_texture = ExtResource("d89")
+normal_texture = ExtResource("n89")
+
+[sub_resource type="CanvasTexture" id="C90"]
+diffuse_texture = ExtResource("d90")
+normal_texture = ExtResource("n90")
+
+[sub_resource type="CanvasTexture" id="C91"]
+diffuse_texture = ExtResource("d91")
+normal_texture = ExtResource("n91")
+
+[sub_resource type="CanvasTexture" id="C92"]
+diffuse_texture = ExtResource("d92")
+normal_texture = ExtResource("n92")
+
+[sub_resource type="CanvasTexture" id="C93"]
+diffuse_texture = ExtResource("d93")
+normal_texture = ExtResource("n93")
+
+[sub_resource type="CanvasTexture" id="C94"]
+diffuse_texture = ExtResource("d94")
+normal_texture = ExtResource("n94")
+
+[sub_resource type="CanvasTexture" id="C95"]
+diffuse_texture = ExtResource("d95")
+normal_texture = ExtResource("n95")
+
+[sub_resource type="CanvasTexture" id="C96"]
+diffuse_texture = ExtResource("d96")
+normal_texture = ExtResource("n96")
+
+[sub_resource type="CanvasTexture" id="C97"]
+diffuse_texture = ExtResource("d97")
+normal_texture = ExtResource("n97")
+
+[sub_resource type="CanvasTexture" id="C98"]
+diffuse_texture = ExtResource("d98")
+normal_texture = ExtResource("n98")
+
+[sub_resource type="CanvasTexture" id="C99"]
+diffuse_texture = ExtResource("d99")
+normal_texture = ExtResource("n99")
+
+[sub_resource type="CanvasTexture" id="C100"]
+diffuse_texture = ExtResource("d100")
+normal_texture = ExtResource("n100")
+
+[sub_resource type="CanvasTexture" id="C101"]
+diffuse_texture = ExtResource("d101")
+normal_texture = ExtResource("n101")
+
+[sub_resource type="CanvasTexture" id="C102"]
+diffuse_texture = ExtResource("d102")
+normal_texture = ExtResource("n102")
+
+[sub_resource type="CanvasTexture" id="C103"]
+diffuse_texture = ExtResource("d103")
+normal_texture = ExtResource("n103")
+
+[sub_resource type="CanvasTexture" id="C104"]
+diffuse_texture = ExtResource("d104")
+normal_texture = ExtResource("n104")
+
+[sub_resource type="CanvasTexture" id="C105"]
+diffuse_texture = ExtResource("d105")
+normal_texture = ExtResource("n105")
+
+[sub_resource type="CanvasTexture" id="C106"]
+diffuse_texture = ExtResource("d106")
+normal_texture = ExtResource("n106")
+
+[sub_resource type="CanvasTexture" id="C107"]
+diffuse_texture = ExtResource("d107")
+normal_texture = ExtResource("n107")
+
+[sub_resource type="CanvasTexture" id="C108"]
+diffuse_texture = ExtResource("d108")
+normal_texture = ExtResource("n108")
+
+[sub_resource type="CanvasTexture" id="C109"]
+diffuse_texture = ExtResource("d109")
+normal_texture = ExtResource("n109")
+
+[sub_resource type="CanvasTexture" id="C110"]
+diffuse_texture = ExtResource("d110")
+normal_texture = ExtResource("n110")
+
+[sub_resource type="CanvasTexture" id="C111"]
+diffuse_texture = ExtResource("d111")
+normal_texture = ExtResource("n111")
+
+[sub_resource type="CanvasTexture" id="C112"]
+diffuse_texture = ExtResource("d112")
+normal_texture = ExtResource("n112")
+
+[sub_resource type="CanvasTexture" id="C113"]
+diffuse_texture = ExtResource("d113")
+normal_texture = ExtResource("n113")
+
+[sub_resource type="CanvasTexture" id="C114"]
+diffuse_texture = ExtResource("d114")
+normal_texture = ExtResource("n114")
+
+[sub_resource type="CanvasTexture" id="C115"]
+diffuse_texture = ExtResource("d115")
+normal_texture = ExtResource("n115")
+
+[sub_resource type="CanvasTexture" id="C116"]
+diffuse_texture = ExtResource("d116")
+normal_texture = ExtResource("n116")
+
+[sub_resource type="CanvasTexture" id="C117"]
+diffuse_texture = ExtResource("d117")
+normal_texture = ExtResource("n117")
+
+[sub_resource type="CanvasTexture" id="C118"]
+diffuse_texture = ExtResource("d118")
+normal_texture = ExtResource("n118")
+
+[sub_resource type="CanvasTexture" id="C119"]
+diffuse_texture = ExtResource("d119")
+normal_texture = ExtResource("n119")
+
+[sub_resource type="CanvasTexture" id="C120"]
+diffuse_texture = ExtResource("d120")
+normal_texture = ExtResource("n120")
+
+[sub_resource type="CanvasTexture" id="C121"]
+diffuse_texture = ExtResource("d121")
+normal_texture = ExtResource("n121")
+
+[sub_resource type="CanvasTexture" id="C122"]
+diffuse_texture = ExtResource("d122")
+normal_texture = ExtResource("n122")
+
+[sub_resource type="CanvasTexture" id="C123"]
+diffuse_texture = ExtResource("d123")
+normal_texture = ExtResource("n123")
+
+[sub_resource type="CanvasTexture" id="C124"]
+diffuse_texture = ExtResource("d124")
+normal_texture = ExtResource("n124")
+
+[sub_resource type="CanvasTexture" id="C125"]
+diffuse_texture = ExtResource("d125")
+normal_texture = ExtResource("n125")
+
+[sub_resource type="CanvasTexture" id="C126"]
+diffuse_texture = ExtResource("d126")
+normal_texture = ExtResource("n126")
+
+[sub_resource type="CanvasTexture" id="C127"]
+diffuse_texture = ExtResource("d127")
+normal_texture = ExtResource("n127")
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C0")
+}, {
+"duration": 1,
+"texture": SubResource("C1")
+}, {
+"duration": 1,
+"texture": SubResource("C2")
+}, {
+"duration": 0.8,
+"texture": SubResource("C3")
+}, {
+"duration": 0.8,
+"texture": SubResource("C4")
+}, {
+"duration": 1,
+"texture": SubResource("C5")
+}, {
+"duration": 1.6,
+"texture": SubResource("C6")
+}],
+"loop": false,
+"name": &"attack_e",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C7")
+}, {
+"duration": 1,
+"texture": SubResource("C8")
+}, {
+"duration": 1,
+"texture": SubResource("C9")
+}, {
+"duration": 0.8,
+"texture": SubResource("C10")
+}, {
+"duration": 0.8,
+"texture": SubResource("C11")
+}, {
+"duration": 1,
+"texture": SubResource("C12")
+}, {
+"duration": 1.6,
+"texture": SubResource("C13")
+}],
+"loop": false,
+"name": &"attack_n",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C14")
+}, {
+"duration": 1,
+"texture": SubResource("C15")
+}, {
+"duration": 1,
+"texture": SubResource("C16")
+}, {
+"duration": 0.8,
+"texture": SubResource("C17")
+}, {
+"duration": 0.8,
+"texture": SubResource("C18")
+}, {
+"duration": 1,
+"texture": SubResource("C19")
+}, {
+"duration": 1.6,
+"texture": SubResource("C20")
+}],
+"loop": false,
+"name": &"attack_ne",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C21")
+}, {
+"duration": 1,
+"texture": SubResource("C22")
+}, {
+"duration": 1,
+"texture": SubResource("C23")
+}, {
+"duration": 0.8,
+"texture": SubResource("C24")
+}, {
+"duration": 0.8,
+"texture": SubResource("C25")
+}, {
+"duration": 1,
+"texture": SubResource("C26")
+}, {
+"duration": 1.6,
+"texture": SubResource("C27")
+}],
+"loop": false,
+"name": &"attack_nw",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C28")
+}, {
+"duration": 1,
+"texture": SubResource("C29")
+}, {
+"duration": 1,
+"texture": SubResource("C30")
+}, {
+"duration": 0.8,
+"texture": SubResource("C31")
+}, {
+"duration": 0.8,
+"texture": SubResource("C32")
+}, {
+"duration": 1,
+"texture": SubResource("C33")
+}, {
+"duration": 1.6,
+"texture": SubResource("C34")
+}],
+"loop": false,
+"name": &"attack_s",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C35")
+}, {
+"duration": 1,
+"texture": SubResource("C36")
+}, {
+"duration": 1,
+"texture": SubResource("C37")
+}, {
+"duration": 0.8,
+"texture": SubResource("C38")
+}, {
+"duration": 0.8,
+"texture": SubResource("C39")
+}, {
+"duration": 1,
+"texture": SubResource("C40")
+}, {
+"duration": 1.6,
+"texture": SubResource("C41")
+}],
+"loop": false,
+"name": &"attack_se",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C42")
+}, {
+"duration": 1,
+"texture": SubResource("C43")
+}, {
+"duration": 1,
+"texture": SubResource("C44")
+}, {
+"duration": 0.8,
+"texture": SubResource("C45")
+}, {
+"duration": 0.8,
+"texture": SubResource("C46")
+}, {
+"duration": 1,
+"texture": SubResource("C47")
+}, {
+"duration": 1.6,
+"texture": SubResource("C48")
+}],
+"loop": false,
+"name": &"attack_sw",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("C49")
+}, {
+"duration": 1,
+"texture": SubResource("C50")
+}, {
+"duration": 1,
+"texture": SubResource("C51")
+}, {
+"duration": 0.8,
+"texture": SubResource("C52")
+}, {
+"duration": 0.8,
+"texture": SubResource("C53")
+}, {
+"duration": 1,
+"texture": SubResource("C54")
+}, {
+"duration": 1.6,
+"texture": SubResource("C55")
+}],
+"loop": false,
+"name": &"attack_w",
+"speed": 14
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C56")
+}],
+"loop": true,
+"name": &"idle_e",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C57")
+}],
+"loop": true,
+"name": &"idle_n",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C58")
+}],
+"loop": true,
+"name": &"idle_ne",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C59")
+}],
+"loop": true,
+"name": &"idle_nw",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C60")
+}],
+"loop": true,
+"name": &"idle_s",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C61")
+}],
+"loop": true,
+"name": &"idle_se",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C62")
+}],
+"loop": true,
+"name": &"idle_sw",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C63")
+}],
+"loop": true,
+"name": &"idle_w",
+"speed": 1
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C64")
+}, {
+"duration": 1.0,
+"texture": SubResource("C65")
+}, {
+"duration": 1.0,
+"texture": SubResource("C66")
+}, {
+"duration": 1.0,
+"texture": SubResource("C67")
+}, {
+"duration": 1.0,
+"texture": SubResource("C68")
+}, {
+"duration": 1.0,
+"texture": SubResource("C69")
+}, {
+"duration": 1.0,
+"texture": SubResource("C70")
+}, {
+"duration": 1.0,
+"texture": SubResource("C71")
+}],
+"loop": true,
+"name": &"run_e",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C72")
+}, {
+"duration": 1.0,
+"texture": SubResource("C73")
+}, {
+"duration": 1.0,
+"texture": SubResource("C74")
+}, {
+"duration": 1.0,
+"texture": SubResource("C75")
+}, {
+"duration": 1.0,
+"texture": SubResource("C76")
+}, {
+"duration": 1.0,
+"texture": SubResource("C77")
+}, {
+"duration": 1.0,
+"texture": SubResource("C78")
+}, {
+"duration": 1.0,
+"texture": SubResource("C79")
+}],
+"loop": true,
+"name": &"run_n",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C80")
+}, {
+"duration": 1.0,
+"texture": SubResource("C81")
+}, {
+"duration": 1.0,
+"texture": SubResource("C82")
+}, {
+"duration": 1.0,
+"texture": SubResource("C83")
+}, {
+"duration": 1.0,
+"texture": SubResource("C84")
+}, {
+"duration": 1.0,
+"texture": SubResource("C85")
+}, {
+"duration": 1.0,
+"texture": SubResource("C86")
+}, {
+"duration": 1.0,
+"texture": SubResource("C87")
+}],
+"loop": true,
+"name": &"run_ne",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C88")
+}, {
+"duration": 1.0,
+"texture": SubResource("C89")
+}, {
+"duration": 1.0,
+"texture": SubResource("C90")
+}, {
+"duration": 1.0,
+"texture": SubResource("C91")
+}, {
+"duration": 1.0,
+"texture": SubResource("C92")
+}, {
+"duration": 1.0,
+"texture": SubResource("C93")
+}, {
+"duration": 1.0,
+"texture": SubResource("C94")
+}, {
+"duration": 1.0,
+"texture": SubResource("C95")
+}],
+"loop": true,
+"name": &"run_nw",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C96")
+}, {
+"duration": 1.0,
+"texture": SubResource("C97")
+}, {
+"duration": 1.0,
+"texture": SubResource("C98")
+}, {
+"duration": 1.0,
+"texture": SubResource("C99")
+}, {
+"duration": 1.0,
+"texture": SubResource("C100")
+}, {
+"duration": 1.0,
+"texture": SubResource("C101")
+}, {
+"duration": 1.0,
+"texture": SubResource("C102")
+}, {
+"duration": 1.0,
+"texture": SubResource("C103")
+}],
+"loop": true,
+"name": &"run_s",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C104")
+}, {
+"duration": 1.0,
+"texture": SubResource("C105")
+}, {
+"duration": 1.0,
+"texture": SubResource("C106")
+}, {
+"duration": 1.0,
+"texture": SubResource("C107")
+}, {
+"duration": 1.0,
+"texture": SubResource("C108")
+}, {
+"duration": 1.0,
+"texture": SubResource("C109")
+}, {
+"duration": 1.0,
+"texture": SubResource("C110")
+}, {
+"duration": 1.0,
+"texture": SubResource("C111")
+}],
+"loop": true,
+"name": &"run_se",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C112")
+}, {
+"duration": 1.0,
+"texture": SubResource("C113")
+}, {
+"duration": 1.0,
+"texture": SubResource("C114")
+}, {
+"duration": 1.0,
+"texture": SubResource("C115")
+}, {
+"duration": 1.0,
+"texture": SubResource("C116")
+}, {
+"duration": 1.0,
+"texture": SubResource("C117")
+}, {
+"duration": 1.0,
+"texture": SubResource("C118")
+}, {
+"duration": 1.0,
+"texture": SubResource("C119")
+}],
+"loop": true,
+"name": &"run_sw",
+"speed": 13
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C120")
+}, {
+"duration": 1.0,
+"texture": SubResource("C121")
+}, {
+"duration": 1.0,
+"texture": SubResource("C122")
+}, {
+"duration": 1.0,
+"texture": SubResource("C123")
+}, {
+"duration": 1.0,
+"texture": SubResource("C124")
+}, {
+"duration": 1.0,
+"texture": SubResource("C125")
+}, {
+"duration": 1.0,
+"texture": SubResource("C126")
+}, {
+"duration": 1.0,
+"texture": SubResource("C127")
+}],
+"loop": true,
+"name": &"run_w",
+"speed": 13
+}]
