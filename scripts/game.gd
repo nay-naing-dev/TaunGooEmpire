@@ -12,6 +12,8 @@ const VILLAGE := "res://scenes/village/village.tscn"
 const FOREST := "res://scenes/forest/forest_road.tscn"
 
 var topdown_character := "village_boy"
+## What NPCs call the player ("{player}" in their lines).
+var player_name := "Player"
 ## F2 toggles ASCII-art graphics, F3 cycles morning / day / night.
 var ascii_mode := false
 var night_mode := false

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://wtqctas2jsmo"]
 
+[ext_resource type="Script" path="res://scripts/proximity_text.gd" id="sc_ptext"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/kitchen_house.tscn" id="h_kitchen_house"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/mc_home.tscn" id="h_mc_home"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/pavilion_house.tscn" id="h_pavilion_house"]
@@ -160,6 +161,9 @@ colors = PackedColorArray(1, 0.88, 0.6, 0, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0.8,
 [sub_resource type="RectangleShape2D" id="ExitR"]
 size = Vector2(24, 150)
 
+[sub_resource type="RectangleShape2D" id="ShedR"]
+size = Vector2(300, 150)
+
 [node name="Village" type="Node2D" unique_id=2076396914]
 script = ExtResource("sc_w")
 map_size = Vector2(2400, 1600)
@@ -221,6 +225,14 @@ shape = SubResource("Seg3")
 
 [node name="Pond" parent="." unique_id=1679647269 instance=ExtResource("p_pond")]
 position = Vector2(1380, 960)
+
+[node name="LakeThought" type="Area2D" parent="Pond"]
+script = ExtResource("sc_ptext")
+text = "This is the lake I used to play by when I was a kid"
+on_player = true
+
+[node name="Shape" type="CollisionPolygon2D" parent="Pond/LakeThought"]
+polygon = PackedVector2Array(39, 281, 52, 293, 71, 302, 206, 328, 259, 330, 316, 325, 354, 325, 414, 330, 450, 328, 476, 321, 532, 288, 612, 248, 628, 228, 640, 183, 640, 166, 622, 147, 534, 112, 523, 105, 483, 69, 455, 54, 343, 25, 315, 22, 281, 24, 257, 30, 182, 58, 99, 78, 75, 96, 36, 168, 45, 227, 38, 264)
 
 [node name="Objects" type="Node2D" parent="." unique_id=861362750]
 y_sort_enabled = true
@@ -332,6 +344,15 @@ position = Vector2(1300, 1275)
 
 [node name="AnimalShed1" parent="Objects" unique_id=1814529627 instance=ExtResource("v_animal_shed")]
 position = Vector2(1300, 1490)
+
+[node name="ShedNote" type="Area2D" parent="Objects/AnimalShed1"]
+script = ExtResource("sc_ptext")
+text = "This shed provides eggs for the village"
+head_height = 110.0
+
+[node name="Shape" type="CollisionShape2D" parent="Objects/AnimalShed1/ShedNote"]
+position = Vector2(0, 5)
+shape = SubResource("ShedR")
 
 [node name="Haystack3" parent="Objects" unique_id=1729028752 instance=ExtResource("v_haystack")]
 position = Vector2(1150, 1505)
@@ -697,6 +718,7 @@ start_facing = "se"
 [node name="VillageWoman" parent="Objects" unique_id=242386258 instance=ExtResource("p_woman")]
 position = Vector2(700, 1330)
 start_facing = "se"
+lines = PackedStringArray("Greetings {player}! Paying a visit?")
 
 [node name="McMother" parent="Objects" unique_id=1544358003 instance=ExtResource("p_mom")]
 position = Vector2(1150, 890)
@@ -706,6 +728,7 @@ start_facing = "se"
 [node name="RicePorter" parent="Objects" unique_id=1953594463 instance=ExtResource("p_porter")]
 position = Vector2(640, 500)
 patrol_points = PackedVector2Array(640, 500, 760, 640, 900, 800, 1000, 940, 1010, 1100)
+lines = PackedStringArray("Farm yield is not good this year")
 
 [node name="Crow0" parent="Objects" unique_id=1055402220 instance=ExtResource("p_crow")]
 position = Vector2(520, 520)

@@ -4,11 +4,16 @@ extends CanvasLayer
 ## Add it as a child of the character, then:
 ##   say(text)   - show a line for a while (longer lines stay up longer)
 ##   hint(true)  - show a small "E" while the player is in reach and nothing is said
+##   show_text(text) - keep a line up until show_text("")
+
+enum Tail { SPEECH, THOUGHT, NONE }
 
 ## How far above the character's feet the bubble's tail points (world pixels).
 @export var head_height := 80.0
 @export var max_width := 220.0
 @export var font_size := 14
+## SPEECH: pointed tail. THOUGHT: little circles rising from the head. NONE: a plain note.
+@export var tail := Tail.SPEECH
 
 const INK := Color(0.15, 0.06, 0.08)
 const PAPER := Color(1, 0.96, 0.88, 0.95)
@@ -43,18 +48,39 @@ func _ready() -> void:
 	_label.add_theme_color_override("font_color", INK)
 	_panel.add_child(_label)
 	# little tail under the bubble, pointing at the head
-	var tail := Polygon2D.new()
-	tail.name = "Tail"
-	tail.color = INK
-	tail.polygon = PackedVector2Array([Vector2(-7, -2), Vector2(7, -2), Vector2(0, 8)])
-	var fill := Polygon2D.new()
-	fill.color = PAPER
-	fill.polygon = PackedVector2Array([Vector2(-4.5, -3), Vector2(4.5, -3), Vector2(0, 4.5)])
-	tail.add_child(fill)
-	_panel.add_child(tail)
+	var t := Node2D.new()
+	t.name = "Tail"
+	if tail == Tail.SPEECH:
+		t.add_child(_poly(PackedVector2Array([Vector2(-7, -2), Vector2(7, -2), Vector2(0, 8)]), INK))
+		t.add_child(_poly(PackedVector2Array([Vector2(-4.5, -3), Vector2(4.5, -3), Vector2(0, 4.5)]), PAPER))
+	elif tail == Tail.THOUGHT:
+		for c in [[Vector2(-5, 6), 4.5], [Vector2(-11, 14), 3.0]]:
+			t.add_child(_poly(_circle(c[0], c[1] + 1.5), INK))
+			t.add_child(_poly(_circle(c[0], c[1]), PAPER))
+	_panel.add_child(t)
 	add_child(_panel)
 	_panel.modulate.a = 0.0
 	_panel.visible = false
+
+
+func _poly(points: PackedVector2Array, color: Color) -> Polygon2D:
+	var p := Polygon2D.new()
+	p.color = color
+	p.polygon = points
+	return p
+
+
+func _circle(center: Vector2, r: float) -> PackedVector2Array:
+	var pts := PackedVector2Array()
+	for i in 12:
+		pts.append(center + Vector2.from_angle(TAU * i / 12.0) * r)
+	return pts
+
+
+## Keeps a line up until show_text("") (no timer).
+func show_text(text: String) -> void:
+	_left = 0.0
+	_show(text if text != "" or not _hint else "E")
 
 
 ## Shows a line over the head. duration < 0: time it from the line's length.
