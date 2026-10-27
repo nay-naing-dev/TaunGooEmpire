@@ -41,6 +41,10 @@ var _skip: Tween
 var flags: Dictionary = {}
 const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
 var _dialogue: CanvasLayer
+## The player's bag (36 slots). B shows it. Quests: inventory.add / remove / has / item_added.
+var inventory := Inventory.new()
+const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
+var inventory_menu: CanvasLayer
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -94,6 +98,14 @@ func _ready() -> void:
 	_reflect_mat = ShaderMaterial.new()
 	_reflect_mat.shader = REFLECT_SHADER
 	reset_world_globals()
+	if not InputMap.has_action("inventory"):
+		InputMap.add_action("inventory")
+		var b := InputEventKey.new()
+		b.physical_keycode = KEY_B
+		InputMap.action_add_event("inventory", b)
+	inventory_menu = INVENTORY_MENU.new()
+	add_child(inventory_menu)
+	inventory_menu.set_inventory(inventory)
 
 
 func set_ascii(on: bool) -> void:
