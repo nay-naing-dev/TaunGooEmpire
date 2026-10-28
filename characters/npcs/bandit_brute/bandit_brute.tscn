@@ -4,7 +4,7 @@
 [ext_resource type="SpriteFrames" path="bandit_brute_v0.tres" id="2_f"]
 
 [sub_resource type="CircleShape2D" id="Feet"]
-radius = 9.0
+radius = 12.0
 
 [sub_resource type="Gradient" id="GS"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -23,17 +23,17 @@ frames_base = "res://characters/npcs/bandit_brute/bandit_brute"
 max_health = 60
 damage = 14
 run_speed = 76.0
-attack_range = 28.0
+attack_range = 34.0
 hit_frame = 3
 
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.5)
-scale = Vector2(0.6, 0.18)
+scale = Vector2(0.78, 0.24)
 texture = SubResource("TS")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.64, 0.64)
 sprite_frames = ExtResource("2_f")
 animation = &"idle_s"
 offset = Vector2(0, -108)

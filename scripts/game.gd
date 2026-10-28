@@ -5,6 +5,7 @@ extends Node
 const TOPDOWN := {
 	"village_boy": "res://characters/topdown/hero2/hero2.tscn",
 	"black_cat": "res://characters/topdown/black_cat/black_cat.tscn",
+	"mc_warrior": "res://characters/topdown/mc_warrior/mc_warrior.tscn",
 }
 const TITLE := "res://scenes/title/title_screen.tscn"
 const WORLD := "res://scenes/world/taungoo_world.tscn"
