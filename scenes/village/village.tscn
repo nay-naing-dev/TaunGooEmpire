@@ -87,6 +87,8 @@
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_right.tscn" id="v_ttree_right"]
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_top.tscn" id="v_ttree_top"]
 [ext_resource type="PackedScene" path="res://environment/village/props/water_jars.tscn" id="v_water_jars"]
+[ext_resource type="PackedScene" path="res://environment/village/props/village_torch.tscn" id="v_village_torch"]
+[ext_resource type="PackedScene" path="res://environment/village/props/street_lamp.tscn" id="v_street_lamp"]
 
 [sub_resource type="ShaderMaterial" id="M_atm"]
 shader = ExtResource("s_atm")
@@ -276,6 +278,42 @@ position = Vector2(760, 1262)
 
 [node name="PavilionHouse1" parent="Objects" unique_id=907530225 instance=ExtResource("h_pavilion_house")]
 position = Vector2(1235, 1262)
+
+[node name="TorchMcHome" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1150, 852)
+
+[node name="LampMcHome" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1222, 862)
+
+[node name="TorchThatchHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1525, 650)
+
+[node name="LampThatchHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1600, 660)
+
+[node name="TorchRedRoofHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1872, 498)
+
+[node name="LampRedRoofHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1945, 505)
+
+[node name="TorchKitchenHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(722, 1275)
+
+[node name="LampKitchenHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(800, 1282)
+
+[node name="TorchPavilionHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1195, 1275)
+
+[node name="LampPavilionHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1275, 1282)
+
+[node name="LampFarm1" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(625, 390)
+
+[node name="LampFarm2" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(520, 478)
 
 [node name="FarmHut1" parent="Objects" unique_id=734904984 instance=ExtResource("v_farm_hut")]
 position = Vector2(760, 300)

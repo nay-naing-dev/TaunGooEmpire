@@ -1,0 +1,80 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://environment/village/night_lamp.gd" id="1_s"]
+[ext_resource type="Texture2D" path="street_lamp.png" id="2_t"]
+[ext_resource type="Texture2D" path="street_lamp_n.png" id="3_n"]
+[ext_resource type="Texture2D" path="street_lamp_fire.png" id="4_f"]
+
+[sub_resource type="CanvasTexture" id="CT"]
+diffuse_texture = ExtResource("2_t")
+normal_texture = ExtResource("3_n")
+
+[sub_resource type="Gradient" id="GR"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="TR"]
+gradient = SubResource("GR")
+width = 64
+height = 64
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="GL"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="TL"]
+gradient = SubResource("GL")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CanvasItemMaterial" id="Unshaded"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="Add"]
+blend_mode = 1
+light_mode = 1
+
+[node name="StreetLamp" type="StaticBody2D"]
+script = ExtResource("1_s")
+flicker = 0.06
+
+[node name="ContactShadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.45)
+z_index = -1
+scale = Vector2(0.5, 0.18)
+texture = SubResource("TR")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CT")
+centered = false
+offset = Vector2(-15, -135)
+
+[node name="Fire" type="Sprite2D" parent="."]
+material = SubResource("Unshaded")
+texture_filter = 1
+texture = ExtResource("4_f")
+centered = false
+offset = Vector2(-15, -135)
+
+[node name="Halo" type="Sprite2D" parent="."]
+modulate = Color(1, 0.65, 0.3, 0.35)
+material = SubResource("Add")
+position = Vector2(25, -85)
+scale = Vector2(0.6, 0.6)
+texture = SubResource("TL")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(20, -50)
+color = Color(1, 0.7, 0.38, 1)
+energy = 1.2
+texture = SubResource("TL")
+texture_scale = 3.2
+height = 50.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(10, 0, 7, 3, 0, 4, -7, 3, -10, 0, -7, -3, 0, -4, 7, -3)
