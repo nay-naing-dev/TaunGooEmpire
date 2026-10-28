@@ -58,7 +58,7 @@ centered = false
 offset = Vector2(-211, -294)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
-polygon = PackedVector2Array(-142, -36, -29, -85, 57, -49, -50, -9)
+polygon = PackedVector2Array(-181, -42, -84, 2, -28, -12, -20, -5, 8, -5, 2, -25, 39, -37, -58, -86)
 
 [node name="Inside" type="Node2D" parent="."]
 visible = false
