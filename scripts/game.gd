@@ -41,6 +41,8 @@ var _skip: Tween
 var flags: Dictionary = {}
 const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
 var _dialogue: CanvasLayer
+const PROMPT_BOX := preload("res://scripts/ui/prompt_box.gd")
+var _prompt: CanvasLayer
 ## The player's bag (36 slots). B shows it. Quests: inventory.add / remove / has / item_added.
 var inventory := Inventory.new()
 const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
@@ -328,9 +330,19 @@ func dialogue(speaker: String, lines: PackedStringArray, done := Callable(), cho
 	_dialogue.open(speaker, lines, done, choices)
 
 
-## True while the dialogue box is up (players stand still and E only turns its pages).
+## True while the dialogue box or a prompt box is up (players stand still and E only
+## turns its pages / picks its button).
 func in_dialogue() -> bool:
-	return _dialogue != null and _dialogue.busy()
+	return (_dialogue != null and _dialogue.busy()) or (_prompt != null and _prompt.busy())
+
+
+## A box in the middle of the screen with text and buttons (default just OK). The world
+## is paused and greyed out behind it until a button is picked, then done(index) is called.
+func prompt(text: String, buttons := PackedStringArray(["OK"]), done := Callable()) -> void:
+	if _prompt == null:
+		_prompt = PROMPT_BOX.new()
+		add_child(_prompt)
+	_prompt.open(text, buttons, done)
 
 
 func go(scene_path: String) -> void:

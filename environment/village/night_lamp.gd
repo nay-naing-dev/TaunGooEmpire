@@ -25,8 +25,14 @@ var _t := randf() * 10.0
 
 
 func _ready() -> void:
+	add_to_group("night_lamp")
 	_base_energy = _light.energy
 	_base_halo = _halo.modulate.a
+	snap()
+
+
+## Lit / out right away for the current hour (after the clock jumps, e.g. sleeping).
+func snap() -> void:
 	_lit = _target()
 	_apply()
 
