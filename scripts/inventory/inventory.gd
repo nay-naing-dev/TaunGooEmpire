@@ -120,6 +120,17 @@ func has_id(item_id: String, count := 1) -> bool:
 	return count <= 0
 
 
+## How many more of item fit (topping up its stacks plus empty slots).
+func space_for(item: ItemData) -> int:
+	var n := 0
+	for s in slots:
+		if s == null:
+			n += item.max_stack
+		elif s.item == item:
+			n += item.max_stack - s.count
+	return n
+
+
 func is_full() -> bool:
 	return not slots.has(null)
 

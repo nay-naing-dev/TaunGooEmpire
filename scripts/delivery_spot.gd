@@ -1,11 +1,13 @@
 extends Node2D
-## Where a delivery quest ends (put it on the building, e.g. the animal shed).
-## While Game.flags[quest] is "active" and the bag has the item, an "E" shows when
-## the player is in reach; press it and the item leaves the bag, the quest is "done"
-## and "Quest Complete!" pops up over the player's head.
+## Where a delivery objective is done (put it on the building, e.g. the animal shed).
+## While the quest is active and the bag has the item, an "E" shows when the player
+## is in reach; press it and the item leaves the bag and the objective is ticked off
+## in Game.quests (the last one completes the quest: "Quest Completed: <name>").
 
-## The quest's key in Game.flags (the quest giver sets it to "active").
+## The quest's id in Game.quests (the quest giver starts it).
 @export var quest := ""
+## Which of its objectives this delivery is (0 = the first).
+@export var objective := 0
 ## Item id taken from the bag (res://items/<id>.tres).
 @export var item_id := ""
 @export var count := 1
@@ -13,8 +15,6 @@ extends Node2D
 @export var reach := 120.0
 ## How far above this node the "E" sits.
 @export var hint_height := 40.0
-## How far above the player's feet "Quest Complete!" shows.
-@export var player_head_height := 72.0
 
 const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 var _bubble: SpeechBubble
@@ -33,23 +33,13 @@ func _near(p: Node2D) -> bool:
 
 
 func can_interact(who: Node2D) -> bool:
-	return Game.flags.get(quest, "") == "active" and Game.inventory.has_id(item_id, count) \
+	return Game.quests.is_active(quest) and Game.inventory.has_id(item_id, count) \
 			and not Game.in_dialogue() and _near(who)
 
 
-func interact(who: Node2D) -> void:
-	if not Game.inventory.remove_id(item_id, count):
-		return
-	Game.flags[quest] = "done"
-	var pop := who.get_node_or_null("QuestBubble") as SpeechBubble
-	if pop == null:
-		pop = SpeechBubble.new()
-		pop.name = "QuestBubble"
-		pop.tail = SpeechBubble.Tail.NONE
-		pop.head_height = player_head_height
-		pop.font_size = 18
-		who.add_child(pop)
-	pop.say("Quest Complete!", 3.0)
+func interact(_who: Node2D) -> void:
+	if Game.inventory.remove_id(item_id, count):
+		Game.quests.complete_objective(quest, objective)
 
 
 func _process(_delta: float) -> void:
