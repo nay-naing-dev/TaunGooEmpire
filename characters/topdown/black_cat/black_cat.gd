@@ -63,11 +63,12 @@ func _physics_process(delta: float) -> void:
 		_knockback = _knockback.move_toward(Vector2.ZERO, 500.0 * delta)
 		move_and_slide()
 		return
-	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var talking := _in_dialogue()  # stand still; E turns the dialogue's pages
+	var input := Vector2.ZERO if talking else Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var wade := 0.65 if _in_water() else 1.0
 	match mode:
 		Mode.MOVE:
-			if Input.is_action_just_pressed("interact") and _interact():
+			if talking or (Input.is_action_just_pressed("interact") and _interact()):
 				_move(Vector2.ZERO, wade, delta)
 			elif Input.is_action_just_pressed("attack"):
 				_start_pounce(input)
@@ -77,7 +78,7 @@ func _physics_process(delta: float) -> void:
 				_move(input, wade, delta)
 		Mode.SIT:
 			velocity = Vector2.ZERO
-			if input != Vector2.ZERO or Input.is_action_just_pressed("sit") or Input.is_action_just_pressed("attack"):
+			if input != Vector2.ZERO or (not talking and (Input.is_action_just_pressed("sit") or Input.is_action_just_pressed("attack"))):
 				mode = Mode.STANDING_UP
 				sprite.play("stand_up_" + _side())
 		Mode.SITTING_DOWN, Mode.STANDING_UP:
@@ -203,6 +204,11 @@ func _in_water() -> bool:
 func _interact() -> bool:
 	var game := get_node_or_null("/root/Game")
 	return game != null and game.has_method("interact") and game.interact(self)
+
+
+func _in_dialogue() -> bool:
+	var game := get_node_or_null("/root/Game")
+	return game != null and game.has_method("in_dialogue") and game.in_dialogue()
 
 
 func _ensure_input_actions() -> void:

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://characters/npcs/villager.gd" id="1_s"]
+[ext_resource type="Script" path="res://characters/npcs/village_woman/village_woman.gd" id="1_s"]
 [ext_resource type="SpriteFrames" path="village_woman_frames.tres" id="2_f"]
 
 [sub_resource type="CircleShape2D" id="Feet"]

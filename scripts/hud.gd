@@ -7,6 +7,27 @@ var _boss_box: VBoxContainer
 var _boss_bar: ProgressBar
 var _boss_name: Label
 var _banner: Label
+var _clock: Label
+var _part: Label
+var _sky: SkyIcon
+
+
+## Little sun (day) or crescent moon (night) next to the clock.
+class SkyIcon extends Control:
+	var night := false
+	var tint := Color(1, 0.85, 0.4)
+
+	func _draw() -> void:
+		var c := size * 0.5
+		var r := minf(size.x, size.y) * 0.5
+		if night:
+			draw_circle(c, r * 0.72, tint)
+			draw_circle(c + Vector2(r * 0.38, -r * 0.28), r * 0.6, Color(0.1, 0.06, 0.1))
+			return
+		for i in 8:
+			var d := Vector2.from_angle(TAU * i / 8.0)
+			draw_line(c + d * r * 0.62, c + d * r * 0.98, tint, 2.0, true)
+		draw_circle(c, r * 0.46, tint)
 
 
 func _ready() -> void:
@@ -31,6 +52,28 @@ func _ready() -> void:
 	_boss_box.add_child(_boss_bar)
 	_boss_box.visible = false
 	add_child(_boss_box)
+
+	# day clock, top middle: sun / moon icon, time, part of the day
+	var top := CenterContainer.new()
+	top.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	top.offset_top = 20
+	top.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(top)
+	var cbox := _panel(Vector2.ZERO, top)
+	var crow := HBoxContainer.new()
+	crow.add_theme_constant_override("separation", 8)
+	_sky = SkyIcon.new()
+	_sky.custom_minimum_size = Vector2(22, 22)
+	_sky.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_clock = _label("", 18)
+	_part = _label("", 13)
+	_part.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_part.add_theme_color_override("font_color", Color(0.95, 0.82, 0.6))
+	crow.add_child(_sky)
+	crow.add_child(_clock)
+	crow.add_child(_part)
+	cbox.add_child(crow)
+	_update_clock()
 
 	_banner = _label("", 56)
 	_banner.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -61,6 +104,25 @@ func watch_boss(b: Node) -> void:
 	b.defeated.connect(func():
 		show_banner("VICTORY", Color(1, 0.85, 0.45), 3.0)
 		get_tree().create_timer(2.5).timeout.connect(func(): _boss_box.visible = false))
+
+
+func _process(_delta: float) -> void:
+	_update_clock()
+
+
+## Shows Game.hour in 5-minute steps (a game minute is under half a real second).
+func _update_clock() -> void:
+	var h: float = Game.hour
+	var mins := floori(h * 12.0) * 5
+	_clock.text = "%02d:%02d" % [floori(mins / 60.0), mins % 60]
+	var tod: int = Game.time_of_day
+	_part.text = "Evening" if tod == 0 and h >= 12.0 else Game.TIME_NAMES[tod]
+	var night := tod == 2
+	var tint := Color(0.85, 0.9, 1.0) if night else (Color(1, 0.62, 0.3) if tod == 0 else Color(1, 0.86, 0.4))
+	if night != _sky.night or tint != _sky.tint:
+		_sky.night = night
+		_sky.tint = tint
+		_sky.queue_redraw()
 
 
 func show_banner(text: String, color: Color, secs: float) -> void:
@@ -109,7 +171,7 @@ func _label(text: String, size: int) -> Label:
 	return l
 
 
-func _panel(pos: Vector2) -> PanelContainer:
+func _panel(pos: Vector2, parent: Node = null) -> PanelContainer:
 	var p := PanelContainer.new()
 	p.position = pos
 	var s := StyleBoxFlat.new()
@@ -120,5 +182,5 @@ func _panel(pos: Vector2) -> PanelContainer:
 	s.content_margin_top = 6
 	s.content_margin_bottom = 6
 	p.add_theme_stylebox_override("panel", s)
-	add_child(p)
+	(parent if parent else self).add_child(p)
 	return p
