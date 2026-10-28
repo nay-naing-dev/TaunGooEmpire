@@ -1,0 +1,26 @@
+# Godot editor cache and imported assets (rebuilt when the project is opened)
+.godot/
+.import/
+
+# Exported builds and export settings (can hold signing passwords)
+/build/
+/export/
+export_presets.cfg
+export_credentials.cfg
+
+# C# / Mono build output
+.mono/
+data_*/
+mono_crash.*.json
+
+# Godot MCP editor plugin: local AI tooling, installed per machine
+/addons/godot_mcp/
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.swp
+.vscode/
+.claude/
