@@ -46,6 +46,11 @@ var _dialogue: CanvasLayer
 var inventory := Inventory.new()
 const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
 var inventory_menu: CanvasLayer
+## The player's quests. Tab shows them. Givers: quests.start / finish; objectives: complete_objective.
+var quests := QuestLog.new()
+const QUEST_MENU := preload("res://scripts/quests/quest_menu.gd")
+var quest_menu: CanvasLayer
+const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -99,14 +104,55 @@ func _ready() -> void:
 	_reflect_mat = ShaderMaterial.new()
 	_reflect_mat.shader = REFLECT_SHADER
 	reset_world_globals()
-	if not InputMap.has_action("inventory"):
-		InputMap.add_action("inventory")
-		var b := InputEventKey.new()
-		b.physical_keycode = KEY_B
-		InputMap.action_add_event("inventory", b)
+	_add_key_action("inventory", KEY_B)
+	_add_key_action("eat", KEY_F)
+	_add_key_action("quest_log", KEY_TAB)
 	inventory_menu = INVENTORY_MENU.new()
 	add_child(inventory_menu)
 	inventory_menu.set_inventory(inventory)
+	quest_menu = QUEST_MENU.new()
+	add_child(quest_menu)
+	quest_menu.set_quests(quests)
+	quests.started.connect(func(id: String):
+		player_says("Quest Added: %s" % quests.get_quest(id).title))
+	quests.completed.connect(func(id: String):
+		player_says("Quest Completed: %s" % quests.get_quest(id).title))
+
+
+func _add_key_action(action: StringName, key: Key) -> void:
+	if InputMap.has_action(action):
+		return
+	InputMap.add_action(action)
+	var e := InputEventKey.new()
+	e.physical_keycode = key
+	InputMap.action_add_event(action, e)
+
+
+## A line popping up over the player's head for a few seconds (quest news etc).
+func player_says(text: String, secs := 3.0) -> void:
+	var p := get_tree().get_first_node_in_group("player") as Node2D
+	if p == null:
+		return
+	var pop := p.get_node_or_null("NewsBubble") as SpeechBubble
+	if pop == null:
+		pop = SpeechBubble.new()
+		pop.name = "NewsBubble"
+		pop.tail = SpeechBubble.Tail.NONE
+		pop.head_height = 72.0
+		pop.font_size = 18
+		pop.max_width = 320.0
+		p.add_child(pop)
+	pop.say(text, secs)
+
+
+## The player eats one food item: heals by its heal_amount. False (nothing eaten)
+## when it isn't food or the player is already at full health. The caller takes it out of the bag.
+func eat(item: ItemData) -> bool:
+	var p := get_tree().get_first_node_in_group("player")
+	if p == null or item.type != ItemData.Type.FOOD or p.health >= p.max_health:
+		return false
+	p.heal(item.heal_amount(p.max_health))
+	return true
 
 
 func set_ascii(on: bool) -> void:

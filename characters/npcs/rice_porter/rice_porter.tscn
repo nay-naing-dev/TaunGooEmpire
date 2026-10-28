@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://characters/npcs/villager.gd" id="1_s"]
+[ext_resource type="Script" path="res://characters/npcs/rice_porter/rice_porter.gd" id="1_s"]
 [ext_resource type="SpriteFrames" path="rice_porter_frames.tres" id="2_f"]
 
 [sub_resource type="CircleShape2D" id="Feet"]

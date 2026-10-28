@@ -96,6 +96,11 @@ func remove(item: ItemData, count := 1) -> bool:
 	return true
 
 
+## remove() by id.
+func remove_id(item_id: String, count := 1) -> bool:
+	return remove(ItemData.find(item_id), count)
+
+
 func count_of(item: ItemData) -> int:
 	var n := 0
 	for s in slots:
@@ -113,6 +118,17 @@ func has_id(item_id: String, count := 1) -> bool:
 		if s != null and s.item.id == item_id:
 			count -= s.count
 	return count <= 0
+
+
+## How many more of item fit (topping up its stacks plus empty slots).
+func space_for(item: ItemData) -> int:
+	var n := 0
+	for s in slots:
+		if s == null:
+			n += item.max_stack
+		elif s.item == item:
+			n += item.max_stack - s.count
+	return n
 
 
 func is_full() -> bool:
