@@ -16,6 +16,70 @@
 [ext_resource type="Texture2D" uid="uid://chdepe6qmrqmh" path="res://characters/palace/king_bayinnaung/frames/idle_nw_0_n.png" id="n5"]
 [ext_resource type="Texture2D" uid="uid://cnuwexwkpqtkr" path="res://characters/palace/king_bayinnaung/frames/idle_n_0_n.png" id="n6"]
 [ext_resource type="Texture2D" uid="uid://d4pgej20xaur" path="res://characters/palace/king_bayinnaung/frames/idle_ne_0_n.png" id="n7"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_0.png" id="wd_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_0_n.png" id="wn_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_1.png" id="wd_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_1_n.png" id="wn_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_2.png" id="wd_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_2_n.png" id="wn_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_3.png" id="wd_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_e_3_n.png" id="wn_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_0.png" id="wd_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_0_n.png" id="wn_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_1.png" id="wd_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_1_n.png" id="wn_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_2.png" id="wd_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_2_n.png" id="wn_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_3.png" id="wd_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_se_3_n.png" id="wn_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_0.png" id="wd_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_0_n.png" id="wn_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_1.png" id="wd_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_1_n.png" id="wn_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_2.png" id="wd_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_2_n.png" id="wn_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_3.png" id="wd_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_s_3_n.png" id="wn_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_0.png" id="wd_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_0_n.png" id="wn_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_1.png" id="wd_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_1_n.png" id="wn_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_2.png" id="wd_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_2_n.png" id="wn_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_3.png" id="wd_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_sw_3_n.png" id="wn_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_0.png" id="wd_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_0_n.png" id="wn_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_1.png" id="wd_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_1_n.png" id="wn_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_2.png" id="wd_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_2_n.png" id="wn_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_3.png" id="wd_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_w_3_n.png" id="wn_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_0.png" id="wd_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_0_n.png" id="wn_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_1.png" id="wd_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_1_n.png" id="wn_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_2.png" id="wd_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_2_n.png" id="wn_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_3.png" id="wd_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_nw_3_n.png" id="wn_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_0.png" id="wd_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_0_n.png" id="wn_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_1.png" id="wd_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_1_n.png" id="wn_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_2.png" id="wd_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_2_n.png" id="wn_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_3.png" id="wd_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_n_3_n.png" id="wn_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_0.png" id="wd_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_0_n.png" id="wn_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_1.png" id="wd_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_1_n.png" id="wn_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_2.png" id="wd_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_2_n.png" id="wn_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_3.png" id="wd_ne3"]
+[ext_resource type="Texture2D" path="res://characters/palace/king_bayinnaung/frames/walk_ne_3_n.png" id="wn_ne3"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
@@ -48,6 +112,134 @@ normal_texture = ExtResource("n3")
 [sub_resource type="CanvasTexture" id="C4"]
 diffuse_texture = ExtResource("d4")
 normal_texture = ExtResource("n4")
+
+[sub_resource type="CanvasTexture" id="W_e0"]
+diffuse_texture = ExtResource("wd_e0")
+normal_texture = ExtResource("wn_e0")
+
+[sub_resource type="CanvasTexture" id="W_e1"]
+diffuse_texture = ExtResource("wd_e1")
+normal_texture = ExtResource("wn_e1")
+
+[sub_resource type="CanvasTexture" id="W_e2"]
+diffuse_texture = ExtResource("wd_e2")
+normal_texture = ExtResource("wn_e2")
+
+[sub_resource type="CanvasTexture" id="W_e3"]
+diffuse_texture = ExtResource("wd_e3")
+normal_texture = ExtResource("wn_e3")
+
+[sub_resource type="CanvasTexture" id="W_se0"]
+diffuse_texture = ExtResource("wd_se0")
+normal_texture = ExtResource("wn_se0")
+
+[sub_resource type="CanvasTexture" id="W_se1"]
+diffuse_texture = ExtResource("wd_se1")
+normal_texture = ExtResource("wn_se1")
+
+[sub_resource type="CanvasTexture" id="W_se2"]
+diffuse_texture = ExtResource("wd_se2")
+normal_texture = ExtResource("wn_se2")
+
+[sub_resource type="CanvasTexture" id="W_se3"]
+diffuse_texture = ExtResource("wd_se3")
+normal_texture = ExtResource("wn_se3")
+
+[sub_resource type="CanvasTexture" id="W_s0"]
+diffuse_texture = ExtResource("wd_s0")
+normal_texture = ExtResource("wn_s0")
+
+[sub_resource type="CanvasTexture" id="W_s1"]
+diffuse_texture = ExtResource("wd_s1")
+normal_texture = ExtResource("wn_s1")
+
+[sub_resource type="CanvasTexture" id="W_s2"]
+diffuse_texture = ExtResource("wd_s2")
+normal_texture = ExtResource("wn_s2")
+
+[sub_resource type="CanvasTexture" id="W_s3"]
+diffuse_texture = ExtResource("wd_s3")
+normal_texture = ExtResource("wn_s3")
+
+[sub_resource type="CanvasTexture" id="W_sw0"]
+diffuse_texture = ExtResource("wd_sw0")
+normal_texture = ExtResource("wn_sw0")
+
+[sub_resource type="CanvasTexture" id="W_sw1"]
+diffuse_texture = ExtResource("wd_sw1")
+normal_texture = ExtResource("wn_sw1")
+
+[sub_resource type="CanvasTexture" id="W_sw2"]
+diffuse_texture = ExtResource("wd_sw2")
+normal_texture = ExtResource("wn_sw2")
+
+[sub_resource type="CanvasTexture" id="W_sw3"]
+diffuse_texture = ExtResource("wd_sw3")
+normal_texture = ExtResource("wn_sw3")
+
+[sub_resource type="CanvasTexture" id="W_w0"]
+diffuse_texture = ExtResource("wd_w0")
+normal_texture = ExtResource("wn_w0")
+
+[sub_resource type="CanvasTexture" id="W_w1"]
+diffuse_texture = ExtResource("wd_w1")
+normal_texture = ExtResource("wn_w1")
+
+[sub_resource type="CanvasTexture" id="W_w2"]
+diffuse_texture = ExtResource("wd_w2")
+normal_texture = ExtResource("wn_w2")
+
+[sub_resource type="CanvasTexture" id="W_w3"]
+diffuse_texture = ExtResource("wd_w3")
+normal_texture = ExtResource("wn_w3")
+
+[sub_resource type="CanvasTexture" id="W_nw0"]
+diffuse_texture = ExtResource("wd_nw0")
+normal_texture = ExtResource("wn_nw0")
+
+[sub_resource type="CanvasTexture" id="W_nw1"]
+diffuse_texture = ExtResource("wd_nw1")
+normal_texture = ExtResource("wn_nw1")
+
+[sub_resource type="CanvasTexture" id="W_nw2"]
+diffuse_texture = ExtResource("wd_nw2")
+normal_texture = ExtResource("wn_nw2")
+
+[sub_resource type="CanvasTexture" id="W_nw3"]
+diffuse_texture = ExtResource("wd_nw3")
+normal_texture = ExtResource("wn_nw3")
+
+[sub_resource type="CanvasTexture" id="W_n0"]
+diffuse_texture = ExtResource("wd_n0")
+normal_texture = ExtResource("wn_n0")
+
+[sub_resource type="CanvasTexture" id="W_n1"]
+diffuse_texture = ExtResource("wd_n1")
+normal_texture = ExtResource("wn_n1")
+
+[sub_resource type="CanvasTexture" id="W_n2"]
+diffuse_texture = ExtResource("wd_n2")
+normal_texture = ExtResource("wn_n2")
+
+[sub_resource type="CanvasTexture" id="W_n3"]
+diffuse_texture = ExtResource("wd_n3")
+normal_texture = ExtResource("wn_n3")
+
+[sub_resource type="CanvasTexture" id="W_ne0"]
+diffuse_texture = ExtResource("wd_ne0")
+normal_texture = ExtResource("wn_ne0")
+
+[sub_resource type="CanvasTexture" id="W_ne1"]
+diffuse_texture = ExtResource("wd_ne1")
+normal_texture = ExtResource("wn_ne1")
+
+[sub_resource type="CanvasTexture" id="W_ne2"]
+diffuse_texture = ExtResource("wd_ne2")
+normal_texture = ExtResource("wn_ne2")
+
+[sub_resource type="CanvasTexture" id="W_ne3"]
+diffuse_texture = ExtResource("wd_ne3")
+normal_texture = ExtResource("wn_ne3")
 
 [resource]
 animations = [{
@@ -113,5 +305,141 @@ animations = [{
 }],
 "loop": 1,
 "name": &"idle_w",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_e0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_e3")
+}],
+"loop": true,
+"name": &"walk_e",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_se0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_se1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_se2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_se3")
+}],
+"loop": true,
+"name": &"walk_se",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_s2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_s3")
+}],
+"loop": true,
+"name": &"walk_s",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_sw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_sw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_sw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_sw3")
+}],
+"loop": true,
+"name": &"walk_sw",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_w3")
+}],
+"loop": true,
+"name": &"walk_w",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_nw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_nw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_nw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_nw3")
+}],
+"loop": true,
+"name": &"walk_nw",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_n1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_n3")
+}],
+"loop": true,
+"name": &"walk_n",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("W_ne0")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_ne1")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_ne2")
+}, {
+"duration": 1.0,
+"texture": SubResource("W_ne3")
+}],
+"loop": true,
+"name": &"walk_ne",
 "speed": 6.0
 }]
