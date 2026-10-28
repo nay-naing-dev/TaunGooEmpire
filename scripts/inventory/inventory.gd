@@ -96,6 +96,11 @@ func remove(item: ItemData, count := 1) -> bool:
 	return true
 
 
+## remove() by id.
+func remove_id(item_id: String, count := 1) -> bool:
+	return remove(ItemData.find(item_id), count)
+
+
 func count_of(item: ItemData) -> int:
 	var n := 0
 	for s in slots:

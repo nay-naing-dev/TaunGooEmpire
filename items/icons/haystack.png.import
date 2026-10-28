@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2vd07atcve7f"
-path="res://.godot/imported/tooltip.png-cab78eecd17e7a44d5003342e605a391.ctex"
+uid="uid://dkb7bt66np3il"
+path="res://.godot/imported/haystack.png-0818c4106f73dc793298d8792cec76ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/inventory/tooltip.png"
-dest_files=["res://.godot/imported/tooltip.png-cab78eecd17e7a44d5003342e605a391.ctex"]
+source_file="res://items/icons/haystack.png"
+dest_files=["res://.godot/imported/haystack.png-0818c4106f73dc793298d8792cec76ee.ctex"]
 
 [params]
 

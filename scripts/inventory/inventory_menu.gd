@@ -8,16 +8,16 @@ extends CanvasLayer
 ## Game creates it; it follows the bag's size, so a bigger bag just adds rows.
 
 ## Looks: carved teak frame on red lacquer, black-lacquer slot wells, a gilded name
-## board with a little spire, and palm-leaf tooltips (res://ui/inventory/, pixel art at 2x).
+## board with a little spire (res://ui/inventory/, pixel art at 2x). Hovering an item
+## shows a plain gray square with its name, type and description.
 
 const INK := Color(0.15, 0.06, 0.08)
-const NAME_INK := Color(0.5, 0.2, 0.1)
 const GOLD_TEXT := Color(1, 0.87, 0.5)
 const CREAM := Color(0.96, 0.88, 0.72)
+const TIP_GRAY := Color(0.32, 0.32, 0.34, 0.95)
 const PANEL_TEX := preload("res://ui/inventory/panel.png")
 const PLAQUE_TEX := preload("res://ui/inventory/plaque.png")
 const CREST_TEX := preload("res://ui/inventory/crest.png")
-const TIP_TEX := preload("res://ui/inventory/tooltip.png")
 const COLUMNS := 12
 const SLOT_SIZE := 56.0
 ## How far below the middle of the screen the window sits.
@@ -31,6 +31,7 @@ var _crest: TextureRect
 var _grid: GridContainer
 var _tip: PanelContainer
 var _tip_name: Label
+var _tip_type: Label
 var _tip_text: Label
 var _held_view: Slot
 var _held: Inventory.Stack
@@ -121,13 +122,20 @@ func _ready() -> void:
 	_root.add_child(_crest)
 	_panel.item_rect_changed.connect(_place_title)
 
-	_tip = _framed(TIP_TEX, 16, 14, 10, 14, 10)
+	_tip = PanelContainer.new()
+	_tip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var gray := StyleBoxFlat.new()
+	gray.bg_color = TIP_GRAY
+	gray.set_content_margin_all(10)
+	_tip.add_theme_stylebox_override("panel", gray)
 	var tbox := VBoxContainer.new()
-	_tip_name = _label("", 18, NAME_INK)
-	_tip_text = _label("", 15, INK)
+	_tip_name = _label("", 18, Color.WHITE)
+	_tip_type = _label("", 13, GOLD_TEXT)
+	_tip_text = _label("", 15, Color(0.9, 0.9, 0.9))
 	_tip_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_tip_text.custom_minimum_size.x = 240
 	tbox.add_child(_tip_name)
+	tbox.add_child(_tip_type)
 	tbox.add_child(_tip_text)
 	_tip.add_child(tbox)
 	_tip.visible = false
@@ -240,6 +248,7 @@ func _update_tip() -> void:
 	if not _tip.visible:
 		return
 	_tip_name.text = s.item.display_name
+	_tip_type.text = s.item.type_name()
 	_tip_text.text = s.item.description
 	_tip_text.visible = s.item.description != ""
 	_tip.reset_size()
