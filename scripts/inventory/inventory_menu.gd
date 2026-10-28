@@ -7,16 +7,27 @@ extends CanvasLayer
 ##   Keys:  W A S D / arrows move, E / Space / Enter = left click.
 ## Game creates it; it follows the bag's size, so a bigger bag just adds rows.
 
+## Looks: carved teak frame on red lacquer, black-lacquer slot wells, a gilded name
+## board with a little spire, and palm-leaf tooltips (res://ui/inventory/, pixel art at 2x).
+
 const INK := Color(0.15, 0.06, 0.08)
-const PAPER := Color(1, 1, 1, 0.97)
 const NAME_INK := Color(0.5, 0.2, 0.1)
-const SLOT_BG := Color(0.93, 0.85, 0.7)
-const GOLD := Color(0.85, 0.55, 0.1)
+const GOLD_TEXT := Color(1, 0.87, 0.5)
+const CREAM := Color(0.96, 0.88, 0.72)
+const PANEL_TEX := preload("res://ui/inventory/panel.png")
+const PLAQUE_TEX := preload("res://ui/inventory/plaque.png")
+const CREST_TEX := preload("res://ui/inventory/crest.png")
+const TIP_TEX := preload("res://ui/inventory/tooltip.png")
 const COLUMNS := 12
 const SLOT_SIZE := 56.0
+## How far below the middle of the screen the window sits.
+const DROP := 70.0
 
 var inventory: Inventory
 var _root: Control
+var _panel: PanelContainer
+var _plaque: PanelContainer
+var _crest: TextureRect
 var _grid: GridContainer
 var _tip: PanelContainer
 var _tip_name: Label
@@ -30,6 +41,9 @@ var _tw: Tween
 
 ## One square of the grid (also used for the stack held under the mouse).
 class Slot extends Control:
+	const WELL := preload("res://ui/inventory/slot.png")
+	const WELL_SELECTED := preload("res://ui/inventory/slot_selected.png")
+
 	var stack: Inventory.Stack
 	var selected := false
 	var plain := false  # no background: the held stack
@@ -37,16 +51,11 @@ class Slot extends Control:
 	func _draw() -> void:
 		var r := Rect2(Vector2.ZERO, size)
 		if not plain:
-			var bg := StyleBoxFlat.new()
-			bg.bg_color = Color(0.93, 0.85, 0.7)
-			bg.set_corner_radius_all(6)
-			bg.set_border_width_all(3 if selected else 2)
-			bg.border_color = Color(0.85, 0.55, 0.1) if selected else Color(0.15, 0.06, 0.08, 0.35)
-			draw_style_box(bg, r)
+			draw_texture_rect(WELL_SELECTED if selected else WELL, r, false)
 		if stack == null:
 			return
 		var font := ThemeDB.fallback_font
-		var inner := r.grow(-7.0)
+		var inner := r.grow(-9.0)
 		if stack.item.icon:
 			var t := stack.item.icon
 			var k := minf(inner.size.x / t.get_width(), inner.size.y / t.get_height())
@@ -55,7 +64,7 @@ class Slot extends Control:
 		else:
 			# no icon yet: the first letters of its name
 			var abbr := stack.item.display_name.substr(0, 3) if stack.item.display_name != "" else "?"
-			draw_string(font, Vector2(0, size.y * 0.5 + 6), abbr, HORIZONTAL_ALIGNMENT_CENTER, size.x, 16, Color(0.15, 0.06, 0.08))
+			draw_string(font, Vector2(0, size.y * 0.5 + 6), abbr, HORIZONTAL_ALIGNMENT_CENTER, size.x, 16, Color(0.96, 0.88, 0.72))
 		if stack.count > 1:
 			var p := Vector2(0, size.y - 5)
 			draw_string_outline(font, p, str(stack.count), HORIZONTAL_ALIGNMENT_RIGHT, size.x - 5, 15, 5, Color(0.15, 0.06, 0.08))
@@ -76,28 +85,43 @@ func _ready() -> void:
 	_root.add_child(dim)
 	var center := CenterContainer.new()
 	center.set_anchors_preset(Control.PRESET_FULL_RECT)
+	center.offset_top = DROP * 2.0  # centred in what is left, so DROP lower than the middle
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_root.add_child(center)
-	var panel := _paper_panel(20, 14)
-	center.add_child(panel)
+	_panel = _framed(PANEL_TEX, 32, 36, 40, 36, 32)
+	center.add_child(_panel)
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", 8)
-	panel.add_child(box)
-	box.add_child(_label("Inventory", 22, NAME_INK))
-	var rule := ColorRect.new()
-	rule.color = Color(INK, 0.25)
-	rule.custom_minimum_size = Vector2(0, 2)
-	box.add_child(rule)
+	_panel.add_child(box)
 	_grid = GridContainer.new()
 	_grid.columns = COLUMNS
 	_grid.add_theme_constant_override("h_separation", 4)
 	_grid.add_theme_constant_override("v_separation", 4)
 	box.add_child(_grid)
-	var help := _label("Click: pick up / put down     Right click: take one     B / Esc: close", 13, Color(INK, 0.6))
+	var help := _label("Click: pick up / put down     Right click: take one     B / Esc: close", 13, Color(CREAM, 0.75))
 	help.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(help)
 
-	_tip = _paper_panel(10, 6)
+	# the name board sits across the top of the frame, the spire on top of it
+	_plaque = _framed(PLAQUE_TEX, 0, 44, 6, 44, 6)
+	var board: StyleBoxTexture = _plaque.get_theme_stylebox("panel")
+	board.texture_margin_left = 36  # only the pointed ends stay unstretched
+	board.texture_margin_right = 36
+	_plaque.custom_minimum_size = Vector2(220, PLAQUE_TEX.get_height())
+	var title := _label("Inventory", 20, GOLD_TEXT)
+	title.add_theme_color_override("font_outline_color", INK)
+	title.add_theme_constant_override("outline_size", 4)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_plaque.add_child(title)
+	_root.add_child(_plaque)
+	_crest = TextureRect.new()
+	_crest.texture = CREST_TEX
+	_crest.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_root.add_child(_crest)
+	_panel.item_rect_changed.connect(_place_title)
+
+	_tip = _framed(TIP_TEX, 16, 14, 10, 14, 10)
 	var tbox := VBoxContainer.new()
 	_tip_name = _label("", 18, NAME_INK)
 	_tip_text = _label("", 15, INK)
@@ -117,23 +141,26 @@ func _ready() -> void:
 	visible = false
 
 
-func _paper_panel(margin_x: int, margin_y: int) -> PanelContainer:
+## A panel drawn with a 9-sliced texture: `edge` px of each side stay unstretched.
+func _framed(tex: Texture2D, edge: int, left: int, top: int, right: int, bottom: int) -> PanelContainer:
 	var p := PanelContainer.new()
 	p.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = PAPER
-	sb.border_color = INK
-	sb.set_border_width_all(3)
-	sb.set_corner_radius_all(8)
-	sb.content_margin_left = margin_x
-	sb.content_margin_right = margin_x
-	sb.content_margin_top = margin_y
-	sb.content_margin_bottom = margin_y
-	sb.shadow_color = Color(0, 0, 0, 0.35)
-	sb.shadow_size = 6
-	sb.shadow_offset = Vector2(0, 3)
+	var sb := StyleBoxTexture.new()
+	sb.texture = tex
+	sb.set_texture_margin_all(edge)
+	sb.content_margin_left = left
+	sb.content_margin_top = top
+	sb.content_margin_right = right
+	sb.content_margin_bottom = bottom
 	p.add_theme_stylebox_override("panel", sb)
 	return p
+
+
+func _place_title() -> void:
+	var r := _panel.get_global_rect()
+	_plaque.reset_size()
+	_plaque.position = Vector2(r.get_center().x - _plaque.size.x * 0.5, r.position.y + 10 - _plaque.size.y * 0.5)
+	_crest.position = Vector2(r.get_center().x - CREST_TEX.get_width() * 0.5, _plaque.position.y - CREST_TEX.get_height() + 8)
 
 
 func _label(text: String, size: int, color: Color) -> Label:
