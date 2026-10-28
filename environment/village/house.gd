@@ -43,7 +43,7 @@ func _player() -> Node2D:
 
 func _physics_process(delta: float) -> void:
 	var p := _player()
-	if p == null or _busy:
+	if p == null or _busy or Game.cutscene:
 		return
 	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if not is_inside:
@@ -82,6 +82,21 @@ func _switch(enter: bool) -> void:
 	var t := create_tween()
 	t.tween_property(_fade, "color:a", 1.0, 0.18)
 	await t.finished
+	_go(enter, p)
+	await get_tree().physics_frame
+	var t2 := create_tween()
+	t2.tween_property(_fade, "color:a", 0.0, 0.25)
+	await t2.finished
+	_busy = false
+
+
+## Story scenes: puts the player outside right away (no fade of its own).
+func leave_now() -> void:
+	if is_inside:
+		_go(false, _player())
+
+
+func _go(enter: bool, p: Node2D) -> void:
 	is_inside = enter
 	Game.set("indoors", enter)
 	outside.visible = not enter
@@ -102,8 +117,3 @@ func _switch(enter: bool) -> void:
 			var z: float = get_tree().current_scene.get("camera_zoom") if get_tree().current_scene.get("camera_zoom") else cam.zoom.x
 			cam.zoom = Vector2.ONE * (z * indoor_zoom if enter else z)
 			cam.reset_smoothing()
-	await get_tree().physics_frame
-	var t2 := create_tween()
-	t2.tween_property(_fade, "color:a", 0.0, 0.25)
-	await t2.finished
-	_busy = false

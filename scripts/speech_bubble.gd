@@ -142,6 +142,7 @@ func _process(delta: float) -> void:
 	if _who == null:
 		return
 	visible = _who.is_visible_in_tree()
+	_mark.visible = _mark.text != "" and not Game.cutscene  # no quest marks in cutscenes
 	if _left > 0.0:
 		_left -= delta
 		if _left <= 0.0:

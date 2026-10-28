@@ -20,6 +20,8 @@ var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
 var indoors := false
+## True while a cutscene plays: counts as being in a dialogue (no E, no menus).
+var cutscene := false
 ## Camera zoom picked with the mouse wheel (world.gd); 0 = the map's own default.
 var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
@@ -116,7 +118,9 @@ func _ready() -> void:
 	add_child(quest_menu)
 	quest_menu.set_quests(quests)
 	quests.started.connect(func(id: String):
-		player_says("Quest Added: %s" % quests.get_quest(id).title))
+		var q := quests.get_quest(id)
+		player_says("Quest Received: %s — %s" % [q.title, q.objectives[0]] if not q.objectives.is_empty() \
+				else "Quest Received: %s" % q.title))
 	quests.completed.connect(func(id: String):
 		player_says("Quest Completed: %s" % quests.get_quest(id).title))
 
@@ -334,7 +338,7 @@ func dialogue(speaker: String, lines: PackedStringArray, done := Callable(), cho
 ## True while the dialogue box or a prompt box is up (players stand still and E only
 ## turns its pages / picks its button).
 func in_dialogue() -> bool:
-	return (_dialogue != null and _dialogue.busy()) or (_prompt != null and _prompt.busy())
+	return cutscene or (_dialogue != null and _dialogue.busy()) or (_prompt != null and _prompt.busy())
 
 
 ## A box in the middle of the screen with text and buttons (default just OK). The world
@@ -348,6 +352,7 @@ func prompt(text: String, buttons := PackedStringArray(["OK"]), done := Callable
 
 func go(scene_path: String) -> void:
 	indoors = false
+	cutscene = false
 	if _dialogue:
 		_dialogue.close(false)
 	for n in _moved.keys():

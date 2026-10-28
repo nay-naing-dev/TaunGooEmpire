@@ -89,6 +89,7 @@
 [ext_resource type="PackedScene" path="res://environment/village/props/water_jars.tscn" id="v_water_jars"]
 [ext_resource type="PackedScene" path="res://environment/village/props/village_torch.tscn" id="v_village_torch"]
 [ext_resource type="PackedScene" path="res://environment/village/props/street_lamp.tscn" id="v_street_lamp"]
+[ext_resource type="Script" path="res://scripts/cutscenes/kings_levy.gd" id="sc_levy"]
 
 [sub_resource type="ShaderMaterial" id="M_atm"]
 shader = ExtResource("s_atm")
@@ -750,6 +751,54 @@ position = Vector2(330, 560)
 
 [node name="Crow3" parent="Objects" unique_id=1809805902 instance=ExtResource("p_crow")]
 position = Vector2(1420, 700)
+
+[node name="KingsLevy" type="Node2D" parent="."]
+script = ExtResource("sc_levy")
+
+[node name="Summoner" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1330, 925)
+
+[node name="Archer1" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1296, 902)
+
+[node name="Archer2" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1372, 942)
+
+[node name="FlagBearer" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1345, 888)
+
+[node name="Cavalry" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1410, 902)
+
+[node name="SummonerLeave" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1392, 914)
+
+[node name="PlayerStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1205, 882)
+
+[node name="MotherStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 888)
+
+[node name="Player" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1270, 975)
+
+[node name="Mother" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 963)
+
+[node name="RicePorter" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1336, 984)
+
+[node name="RicePorterStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1110, 940)
+
+[node name="VillageWoman" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1218, 940)
+
+[node name="VillageWomanStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1480, 850)
+
+[node name="PlayerHome" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1228, 884)
 
 [node name="Moon" type="DirectionalLight2D" parent="." unique_id=247661503]
 rotation = -2.3

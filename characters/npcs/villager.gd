@@ -5,6 +5,7 @@ extends CharacterBody2D
 ## - Turns to look at you when you come close and stops walking while you talk.
 ## - Has Lines: an "E" shows over the head when you are close; press it and
 ##   it says one of them. "{player}" in a line becomes Game.player_name.
+## - held = true (story scenes): it only stands and breathes; the scene moves it.
 
 ## World positions to walk between, in order (loops back and forth).
 @export var patrol_points: PackedVector2Array = PackedVector2Array()
@@ -25,6 +26,7 @@ var _wait := 0.0
 var _t := 0.0
 var _base := 0.0
 var _bubble: SpeechBubble
+var held := false
 
 
 func _ready() -> void:
@@ -45,7 +47,7 @@ func _near(p: Node2D) -> bool:
 
 ## Game.interact() asks these when the player presses E.
 func can_interact(who: Node2D) -> bool:
-	return _bubble != null and not Game.in_dialogue() and _near(who)
+	return _bubble != null and not held and not Game.in_dialogue() and _near(who)
 
 
 func interact(who: Node2D) -> void:
@@ -68,7 +70,9 @@ func _physics_process(delta: float) -> void:
 	if _bubble:
 		_bubble.hint(can_interact(p))
 	var moving := false
-	if near:
+	if held:
+		pass
+	elif near:
 		_face(p.global_position - global_position)
 	elif _bubble and _bubble.is_talking():
 		pass  # finish the sentence before walking off
