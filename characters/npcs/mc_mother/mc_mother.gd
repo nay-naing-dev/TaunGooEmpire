@@ -13,6 +13,9 @@ extends CharacterBody2D
 ##   bothered twice in a row, the first talk of a night, else one for the time of day.
 ## - crying = true: she stands, hides her face in her hands and sobs.
 ##   Call set_crying(true / false) from story scripts.
+## - Story scenes take her over with hold(): she comes outside and only stands and
+##   breathes; the scene moves her and sets `facing`. wait_in_yard() hands her back,
+##   standing in front of the house until the King's Levy talk is done.
 
 @export var home: NodePath
 @export var trip_interval := 180.0
@@ -56,6 +59,9 @@ const NIGHT_GREETING := "I was just about to put the lamp out. Sit for a moment,
 const REPEAT_LINE := "Have you run out of people to bother, or have you come to bother me twice?"
 const BACK_LINE := "There you are. I was beginning to wonder whether the forest had swallowed you."
 
+## While this quest is going she waits in the yard (the summoner has just been).
+const LEVY_QUEST := "kings_levy"
+
 const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 enum Trip { INSIDE, TO_DOOR, TO_YARD, YARD, TO_STAIRS, TO_HEARTH }
 const DIRS := ["e", "se", "s", "sw", "w", "nw", "n", "ne"]
@@ -76,6 +82,9 @@ var _bubble: SpeechBubble
 var _was_near := false
 var _back := false
 var _last_line := ""
+## A story scene is moving her (see hold()).
+var held := false
+var _stay_out := false
 
 
 func _ready() -> void:
@@ -97,7 +106,30 @@ func _ready() -> void:
 	if _house:
 		global_position = _hearth()
 		_set_inside(true)
+		if Game.quests.is_active(LEVY_QUEST):
+			wait_in_yard()
 	_play("cry" if crying else "idle")
+
+
+## A story scene takes her over: outside, visible, standing still until it moves her.
+func hold() -> void:
+	held = true
+	_set_inside(false)
+	visible = true
+	collision_layer = _layer
+
+
+## Back to herself, standing in the yard in front of the house (and staying there
+## while the King's Levy is going).
+func wait_in_yard() -> void:
+	held = false
+	_set_inside(false)
+	_stay_out = Game.quests.is_active(LEVY_QUEST)
+	_trip = Trip.YARD
+	_wait = yard_time
+	global_position = _house.global_position + yard_spot
+	if Game.flags.get("mother_intro_done", false):
+		_bubble.mark("")
 
 
 func set_crying(on: bool) -> void:
@@ -111,7 +143,7 @@ func _near(p: Node2D) -> bool:
 
 ## Game.interact() asks these when the player presses E.
 func can_interact(who: Node2D) -> bool:
-	return not crying and not Game.in_dialogue() and _near(who)
+	return not crying and not held and not Game.in_dialogue() and _near(who)
 
 
 func interact(who: Node2D) -> void:
@@ -239,7 +271,9 @@ func _home_step(delta: float) -> bool:
 			return true
 		Trip.YARD:
 			_wait -= delta
-			if _wait <= 0.0:
+			if _stay_out and not Game.quests.is_active(LEVY_QUEST):
+				_stay_out = false
+			if _wait <= 0.0 and not _stay_out:
 				_trip = Trip.TO_STAIRS
 		Trip.TO_STAIRS:
 			if _walk_to(_stairs(), delta):
@@ -264,6 +298,10 @@ func _physics_process(delta: float) -> void:
 	var p := get_tree().get_first_node_in_group("player") as Node2D
 	_bubble.hint(p != null and can_interact(p))
 	_watch_for_return(p)
+	if held:
+		_play("idle")
+		sprite.offset = _base + Vector2(0, -(0.5 + 0.5 * sin(_t * 1.8)) * 0.8)
+		return
 	if crying:
 		# shoulders shake with each sob, now and then a deeper breath
 		var sob := maxf(0.0, sin(_t * 9.0)) * (0.6 + 0.4 * sin(_t * 0.7))

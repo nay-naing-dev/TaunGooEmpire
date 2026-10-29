@@ -33,4 +33,4 @@ centered = false
 offset = Vector2(-113, -190)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(81, 0, 70, 18, 41, 32, 0, 37, -41, 32, -70, 18, -81, 0, -70, -18, -41, -32, 0, -37, 41, -32, 70, -18)
+polygon = PackedVector2Array(-97, -84, -13, -4, 105, -66, 21, -146)

@@ -87,6 +87,9 @@
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_right.tscn" id="v_ttree_right"]
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_top.tscn" id="v_ttree_top"]
 [ext_resource type="PackedScene" path="res://environment/village/props/water_jars.tscn" id="v_water_jars"]
+[ext_resource type="PackedScene" path="res://environment/village/props/village_torch.tscn" id="v_village_torch"]
+[ext_resource type="PackedScene" path="res://environment/village/props/street_lamp.tscn" id="v_street_lamp"]
+[ext_resource type="Script" path="res://scripts/cutscenes/kings_levy.gd" id="sc_levy"]
 
 [sub_resource type="ShaderMaterial" id="M_atm"]
 shader = ExtResource("s_atm")
@@ -276,6 +279,42 @@ position = Vector2(760, 1262)
 
 [node name="PavilionHouse1" parent="Objects" unique_id=907530225 instance=ExtResource("h_pavilion_house")]
 position = Vector2(1235, 1262)
+
+[node name="TorchMcHome" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1150, 852)
+
+[node name="LampMcHome" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1222, 862)
+
+[node name="TorchThatchHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1525, 650)
+
+[node name="LampThatchHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1600, 660)
+
+[node name="TorchRedRoofHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1872, 498)
+
+[node name="LampRedRoofHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1945, 505)
+
+[node name="TorchKitchenHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(722, 1275)
+
+[node name="LampKitchenHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(800, 1282)
+
+[node name="TorchPavilionHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1195, 1275)
+
+[node name="LampPavilionHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1275, 1282)
+
+[node name="LampFarm1" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(625, 390)
+
+[node name="LampFarm2" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(520, 478)
 
 [node name="FarmHut1" parent="Objects" unique_id=734904984 instance=ExtResource("v_farm_hut")]
 position = Vector2(760, 300)
@@ -712,6 +751,54 @@ position = Vector2(330, 560)
 
 [node name="Crow3" parent="Objects" unique_id=1809805902 instance=ExtResource("p_crow")]
 position = Vector2(1420, 700)
+
+[node name="KingsLevy" type="Node2D" parent="."]
+script = ExtResource("sc_levy")
+
+[node name="Summoner" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1330, 925)
+
+[node name="Archer1" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1296, 902)
+
+[node name="Archer2" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1372, 942)
+
+[node name="FlagBearer" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1345, 888)
+
+[node name="Cavalry" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1410, 902)
+
+[node name="SummonerLeave" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1392, 914)
+
+[node name="PlayerStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1205, 882)
+
+[node name="MotherStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 888)
+
+[node name="Player" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1270, 975)
+
+[node name="Mother" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 963)
+
+[node name="RicePorter" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1336, 984)
+
+[node name="RicePorterStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1110, 940)
+
+[node name="VillageWoman" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1218, 940)
+
+[node name="VillageWomanStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1480, 850)
+
+[node name="PlayerHome" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1228, 884)
 
 [node name="Moon" type="DirectionalLight2D" parent="." unique_id=247661503]
 rotation = -2.3
