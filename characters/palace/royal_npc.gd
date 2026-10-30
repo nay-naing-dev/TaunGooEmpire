@@ -3,12 +3,14 @@ extends CharacterBody2D
 ## cavalry, elephants, horses). 8 directions.
 ## - idle_anim: "idle" (stands, breathing) or e.g. "train" (trainer demonstrates).
 ## - Patrol Points: walks between them (uses "walk_<dir>" if the character has it,
-##   otherwise glides with a step bob).
+##   otherwise glides with a step bob). Back and forth, or round and round with patrol_loop.
 ## - look_at_player: turns toward the MC when he comes close (guards keep their post).
 
 @export var start_facing := "s"
 @export var idle_anim := "idle"
 @export var patrol_points: PackedVector2Array = PackedVector2Array()
+## After the last patrol point go on to the first again (a round) instead of turning back.
+@export var patrol_loop := false
 @export var walk_speed := 18.0
 @export var wait_time := 3.0
 @export var look_at_player := false
@@ -65,9 +67,13 @@ func _physics_process(delta: float) -> void:
 			var d := patrol_points[_i] - global_position
 			if d.length() < 2.0:
 				_wait = wait_time
-				if _i + _step >= patrol_points.size() or _i + _step < 0:
-					_step = -_step
-				_i += _step
+				if patrol_loop:
+					_i = (_i + 1) % patrol_points.size()
+				else:
+					if _i + _step >= patrol_points.size() or _i + _step < 0:
+						_step = -_step
+					_i += _step
+				moving = wait_time <= 0.0  # no stop: keep the walk going past the point
 			else:
 				velocity = d.normalized() * walk_speed * Vector2(1.0, 0.75)
 				move_and_slide()

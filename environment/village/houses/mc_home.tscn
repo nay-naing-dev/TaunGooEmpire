@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" path="res://environment/village/interior/items/basket_m.tscn" id="i_basket_m"]
 [ext_resource type="PackedScene" path="res://environment/village/interior/items/stool.tscn" id="i_stool"]
 [ext_resource type="PackedScene" path="res://environment/village/interior/items/lantern_wood.tscn" id="i_lantern_wood"]
+[ext_resource type="Script" path="res://environment/village/interior/bed_sleep.gd" id="s_sleep"]
 
 [sub_resource type="CanvasTexture" id="CTE"]
 diffuse_texture = ExtResource("2_e")
@@ -63,7 +64,7 @@ centered = false
 offset = Vector2(-280, -238)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Outside"]
-polygon = PackedVector2Array(-236, -67, -89, -104, 57, -49, -77, -18)
+polygon = PackedVector2Array(-242, -42, -80, 0, -22, -13, -10, -4, 14, -4, 10, -21, 58, -32, -104, -74)
 
 [node name="Inside" type="Node2D" parent="."]
 visible = false
@@ -117,6 +118,10 @@ position = Vector2(52, 46)
 
 [node name="Bed1" parent="Inside/Furniture" instance=ExtResource("i_bed")]
 position = Vector2(-68, 118)
+
+[node name="Sleep" type="Node2D" parent="Inside/Furniture/Bed1"]
+position = Vector2(0, -26)
+script = ExtResource("s_sleep")
 
 [node name="Table1" parent="Inside/Furniture" instance=ExtResource("i_table")]
 position = Vector2(16, 124)

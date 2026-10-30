@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" path="res://environment/palace/props/cooking_pot.tscn" id="k_cooking_pot"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/crates.tscn" id="k_crates"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/drum.tscn" id="k_drum"]
-[ext_resource type="PackedScene" path="res://environment/palace/props/fire_bowl.tscn" id="k_fire_bowl"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/flag_a.tscn" id="k_flag_a"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/flag_b.tscn" id="k_flag_b"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/flag_c.tscn" id="k_flag_c"]
@@ -27,7 +26,6 @@
 [ext_resource type="PackedScene" path="res://environment/taungoo/temple/golden_temple.tscn" id="k_golden_temple"]
 [ext_resource type="PackedScene" path="res://environment/palace/buildings/guard_tower.tscn" id="k_guard_tower"]
 [ext_resource type="PackedScene" path="res://environment/palace/props/jars.tscn" id="k_jars"]
-[ext_resource type="PackedScene" path="res://environment/palace/props/lantern_post.tscn" id="k_lantern_post"]
 [ext_resource type="PackedScene" path="res://environment/palace/walls/palace_gate_open.tscn" id="k_palace_gate"]
 [ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_dr.tscn" id="k_palace_wall_dr"]
 [ext_resource type="PackedScene" path="res://environment/palace/walls/palace_wall_ur.tscn" id="k_palace_wall_ur"]
@@ -52,15 +50,10 @@
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_b.tscn" id="k_tg_dummy_b"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_c.tscn" id="k_tg_dummy_c"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/dummy_d.tscn" id="k_tg_dummy_d"]
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/firepit.tscn" id="k_tg_firepit"]
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/hut.tscn" id="k_tg_hut"]
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/pavilion.tscn" id="k_tg_pavilion"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/rack.tscn" id="k_tg_rack"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_a.tscn" id="k_tg_target_a"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/target_b.tscn" id="k_tg_target_b"]
-[ext_resource type="PackedScene" path="res://environment/palace/training_ground/tent.tscn" id="k_tg_tent"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/tower.tscn" id="k_tg_tower"]
-[ext_resource type="PackedScene" path="res://environment/taungoo/nature/torch.tscn" id="k_torch"]
 [ext_resource type="PackedScene" path="res://environment/palace/walls/training_gate_open.tscn" id="k_training_gate_dr"]
 [ext_resource type="PackedScene" path="res://environment/forest/tree_gold.tscn" id="k_tree_gold"]
 [ext_resource type="PackedScene" path="res://environment/forest/tree_gold_f.tscn" id="k_tree_gold_f"]
@@ -88,6 +81,15 @@
 [ext_resource type="Texture2D" uid="uid://cqefl6kuqrn7q" path="res://scenes/world/art_palace/jetty.png" id="t_j"]
 [ext_resource type="Texture2D" uid="uid://1nqbwpu03bi4" path="res://scenes/world/art_palace/jetty_n.png" id="t_jn"]
 [ext_resource type="Texture2D" uid="uid://buujnhrh50eta" path="res://scenes/world/art_palace/water_map.png" id="t_w"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/stone_post.tscn" id="lamp_stone_post"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/carved_post.tscn" id="lamp_carved_post"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/double_post.tscn" id="lamp_double_post"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/royal_multi.tscn" id="lamp_royal_multi"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/torch_post.tscn" id="lamp_torch_post"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/tripod_torch.tscn" id="lamp_tripod_torch"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/stone_brazier.tscn" id="lamp_stone_brazier"]
+[ext_resource type="PackedScene" path="res://environment/palace/lamps/fire_bowl.tscn" id="lamp_fire_bowl"]
+[ext_resource type="PackedScene" path="res://characters/training/sparring_partner/sparring_partner.tscn" id="c_sparring_partner"]
 
 [sub_resource type="ShaderMaterial" id="M_atm"]
 shader = ExtResource("s_atm")
@@ -438,18 +440,6 @@ position = Vector2(1500, 940)
 [node name="Umbrella2" parent="Objects" unique_id=157468406 instance=ExtResource("k_umbrella")]
 position = Vector2(1705, 940)
 
-[node name="FireBowl1" parent="Objects" unique_id=1564578871 instance=ExtResource("k_fire_bowl")]
-position = Vector2(1540, 1450)
-
-[node name="FireBowl2" parent="Objects" unique_id=1436590607 instance=ExtResource("k_fire_bowl")]
-position = Vector2(1662, 1450)
-
-[node name="LanternPost1" parent="Objects" unique_id=604911960 instance=ExtResource("k_lantern_post")]
-position = Vector2(1440, 980)
-
-[node name="LanternPost2" parent="Objects" unique_id=1501303757 instance=ExtResource("k_lantern_post")]
-position = Vector2(1765, 980)
-
 [node name="Drum1" parent="Objects" unique_id=1923771650 instance=ExtResource("k_drum")]
 position = Vector2(1380, 950)
 
@@ -504,12 +494,6 @@ position = Vector2(640, 900)
 [node name="Palms2" parent="Objects" unique_id=2038523374 instance=ExtResource("k_palms")]
 position = Vector2(2560, 900)
 
-[node name="FireBowl3" parent="Objects" unique_id=1778808796 instance=ExtResource("k_fire_bowl")]
-position = Vector2(1420, 1460)
-
-[node name="FireBowl4" parent="Objects" unique_id=960761329 instance=ExtResource("k_fire_bowl")]
-position = Vector2(1780, 1460)
-
 [node name="Jars1" parent="Objects" unique_id=320394028 instance=ExtResource("k_jars")]
 position = Vector2(2620, 700)
 
@@ -548,12 +532,6 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(1850, 380)
 scale = Vector2(0.5, 0.5)
 
-[node name="TgPavilion1" parent="Objects" unique_id=877263162 instance=ExtResource("k_tg_pavilion")]
-position = Vector2(820, 1705)
-
-[node name="TgHut1" parent="Objects" unique_id=15864693 instance=ExtResource("k_tg_hut")]
-position = Vector2(560, 1790)
-
 [node name="TgTower1" parent="Objects" unique_id=1331165706 instance=ExtResource("k_tg_tower")]
 position = Vector2(330, 1890)
 
@@ -574,12 +552,6 @@ position = Vector2(1050, 1712)
 
 [node name="TgBannerB2" parent="Objects" unique_id=1156951143 instance=ExtResource("k_tg_banner_b")]
 position = Vector2(1150, 1765)
-
-[node name="TgFirepit1" parent="Objects" unique_id=456157351 instance=ExtResource("k_tg_firepit")]
-position = Vector2(650, 1770)
-
-[node name="TgFirepit2" parent="Objects" unique_id=1154047733 instance=ExtResource("k_tg_firepit")]
-position = Vector2(990, 1770)
 
 [node name="TgRack1" parent="Objects" unique_id=1724112511 instance=ExtResource("k_tg_rack")]
 position = Vector2(1010, 1840)
@@ -620,14 +592,8 @@ position = Vector2(1110, 1860)
 [node name="TgDrum1" parent="Objects" unique_id=1199186736 instance=ExtResource("k_tg_drum")]
 position = Vector2(600, 2045)
 
-[node name="TgTent1" parent="Objects" unique_id=1364764798 instance=ExtResource("k_tg_tent")]
-position = Vector2(1030, 2050)
-
 [node name="TgCrates1" parent="Objects" unique_id=1987978532 instance=ExtResource("k_tg_crates")]
 position = Vector2(1180, 1990)
-
-[node name="TgFirepit3" parent="Objects" unique_id=219444497 instance=ExtResource("k_tg_firepit")]
-position = Vector2(880, 2050)
 
 [node name="TBarrack1" parent="Objects" unique_id=666466773 instance=ExtResource("k_t_barrack")]
 position = Vector2(450, 1990)
@@ -662,24 +628,9 @@ position = Vector2(2560, 2080)
 [node name="CookingPot1" parent="Objects" unique_id=1283972552 instance=ExtResource("k_cooking_pot")]
 position = Vector2(1620, 2130)
 
-[node name="FireBowl5" parent="Objects" unique_id=1431941362 instance=ExtResource("k_fire_bowl")]
-position = Vector2(2950, 1060)
-
-[node name="LanternPost3" parent="Objects" unique_id=1667737801 instance=ExtResource("k_lantern_post")]
-position = Vector2(2990, 1350)
-
-[node name="LanternPost4" parent="Objects" unique_id=2064335234 instance=ExtResource("k_lantern_post")]
-position = Vector2(2990, 1420)
-
 [node name="GoldenTemple1" parent="Objects" unique_id=1386506952 instance=ExtResource("k_golden_temple")]
 position = Vector2(2760, 540)
 scale = Vector2(0.8, 0.8)
-
-[node name="Torch1" parent="Objects" unique_id=833637348 instance=ExtResource("k_torch")]
-position = Vector2(2630, 575)
-
-[node name="Torch2" parent="Objects" unique_id=2047090386 instance=ExtResource("k_torch")]
-position = Vector2(2890, 575)
 
 [node name="Palm1" parent="Objects" unique_id=1529108365 instance=ExtResource("k_palm")]
 position = Vector2(3067, 135)
@@ -1495,6 +1446,63 @@ patrol_points = PackedVector2Array(2800, 1880, 2550, 2010, 2250, 2010)
 speed = 14.0
 wait_time = 5.0
 start_facing = "w"
+
+[node name="RoyalLamp1" parent="Objects" instance=ExtResource("lamp_royal_multi")]
+position = Vector2(1440, 980)
+
+[node name="RoyalLamp2" parent="Objects" instance=ExtResource("lamp_royal_multi")]
+position = Vector2(1765, 980)
+
+[node name="FireBowl1" parent="Objects" instance=ExtResource("lamp_fire_bowl")]
+position = Vector2(1540, 1450)
+
+[node name="FireBowl2" parent="Objects" instance=ExtResource("lamp_fire_bowl")]
+position = Vector2(1662, 1450)
+
+[node name="StoneLamp1" parent="Objects" instance=ExtResource("lamp_stone_post")]
+position = Vector2(1420, 1460)
+
+[node name="StoneLamp2" parent="Objects" instance=ExtResource("lamp_stone_post")]
+position = Vector2(1780, 1460)
+
+[node name="Brazier1" parent="Objects" instance=ExtResource("lamp_stone_brazier")]
+position = Vector2(3020, 1095)
+
+[node name="JettyLamp1" parent="Objects" instance=ExtResource("lamp_carved_post")]
+position = Vector2(2990, 1350)
+
+[node name="JettyLamp2" parent="Objects" instance=ExtResource("lamp_carved_post")]
+position = Vector2(2990, 1420)
+
+[node name="TorchPost1" parent="Objects" instance=ExtResource("lamp_torch_post")]
+position = Vector2(2630, 575)
+
+[node name="TorchPost2" parent="Objects" instance=ExtResource("lamp_torch_post")]
+position = Vector2(2890, 575)
+
+[node name="TgTorch1" parent="Objects" instance=ExtResource("lamp_tripod_torch")]
+position = Vector2(650, 1770)
+
+[node name="TgTorch2" parent="Objects" instance=ExtResource("lamp_tripod_torch")]
+position = Vector2(990, 1770)
+
+[node name="TgTorch3" parent="Objects" instance=ExtResource("lamp_tripod_torch")]
+position = Vector2(880, 2050)
+
+[node name="RoadLamp1" parent="Objects" instance=ExtResource("lamp_double_post")]
+position = Vector2(730, 1525)
+
+[node name="RoadLamp2" parent="Objects" instance=ExtResource("lamp_double_post")]
+position = Vector2(2200, 1540)
+
+[node name="RoadLamp3" parent="Objects" instance=ExtResource("lamp_double_post")]
+position = Vector2(2660, 1495)
+
+[node name="PathLamp1" parent="Objects" instance=ExtResource("lamp_carved_post")]
+position = Vector2(1150, 1625)
+
+[node name="SparringPartner" parent="Objects" instance=ExtResource("c_sparring_partner")]
+position = Vector2(930, 1950)
 
 [node name="Moon" type="DirectionalLight2D" parent="." unique_id=1549912346]
 rotation = -2.3

@@ -125,6 +125,12 @@ func heal_full() -> void:
 	health_changed.emit(health, max_health)
 
 
+## Gives back amount health (up to max_health), e.g. from eating.
+func heal(amount: int) -> void:
+	health = mini(health + amount, max_health)
+	health_changed.emit(health, max_health)
+
+
 func _in_water() -> bool:
 	var game := get_node_or_null("/root/Game")
 	return game != null and game.has_method("is_water") and game.is_water(global_position)

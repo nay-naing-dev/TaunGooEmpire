@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://wtqctas2jsmo"]
+[gd_scene format=3 uid="uid://0ic1mcou8lrd"]
 
-[ext_resource type="Script" path="res://scripts/proximity_text.gd" id="sc_ptext"]
+[ext_resource type="Script" path="res://scripts/delivery_spot.gd" id="35_q8qfd"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/kitchen_house.tscn" id="h_kitchen_house"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/mc_home.tscn" id="h_mc_home"]
 [ext_resource type="PackedScene" path="res://environment/village/houses/pavilion_house.tscn" id="h_pavilion_house"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" path="res://characters/npcs/crow/crow.tscn" id="p_crow"]
 [ext_resource type="PackedScene" path="res://environment/grass/grass_field.tscn" id="p_grass"]
 [ext_resource type="PackedScene" path="res://characters/npcs/mc_mother/mc_mother.tscn" id="p_mom"]
-[ext_resource type="PackedScene" path="res://environment/taungoo/nature/palm.tscn" id="p_palm"]
 [ext_resource type="PackedScene" path="res://environment/village/pond/pond.tscn" id="p_pond"]
 [ext_resource type="PackedScene" path="res://characters/npcs/rice_porter/rice_porter.tscn" id="p_porter"]
 [ext_resource type="PackedScene" path="res://environment/nature/pool/reeds_0.tscn" id="p_reeds0"]
@@ -20,6 +19,7 @@
 [ext_resource type="PackedScene" path="res://characters/npcs/village_woman/village_woman.tscn" id="p_woman"]
 [ext_resource type="Script" uid="uid://daw7flvnn4fcx" path="res://scripts/map_exit.gd" id="sc_exit"]
 [ext_resource type="Script" uid="uid://dp4jcyfb1ead7" path="res://environment/fx/flicker.gd" id="sc_fl"]
+[ext_resource type="Script" uid="uid://diclexf34qvey" path="res://scripts/proximity_text.gd" id="sc_ptext"]
 [ext_resource type="Script" uid="uid://cv7spkwydyp44" path="res://scripts/world.gd" id="sc_w"]
 [ext_resource type="Shader" uid="uid://bne2lf5p8byq1" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
 [ext_resource type="Shader" uid="uid://b4wtdo1h25tog" path="res://environment/fx/water_natural.gdshader" id="s_w"]
@@ -65,6 +65,7 @@
 [ext_resource type="PackedScene" path="res://environment/village/props/rock_tall.tscn" id="v_rock_tall"]
 [ext_resource type="PackedScene" path="res://environment/village/props/sack.tscn" id="v_sack"]
 [ext_resource type="PackedScene" path="res://environment/village/props/scarecrow.tscn" id="v_scarecrow"]
+[ext_resource type="PackedScene" path="res://environment/village/trees/shade_tree.tscn" id="v_shade_tree"]
 [ext_resource type="PackedScene" path="res://environment/village/props/shrine_small.tscn" id="v_shrine_small"]
 [ext_resource type="PackedScene" path="res://environment/village/props/stone_lantern.tscn" id="v_stone_lantern"]
 [ext_resource type="PackedScene" path="res://environment/village/props/stone_lion.tscn" id="v_stone_lion"]
@@ -86,6 +87,9 @@
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_right.tscn" id="v_ttree_right"]
 [ext_resource type="PackedScene" path="res://environment/village/trees/ttree_top.tscn" id="v_ttree_top"]
 [ext_resource type="PackedScene" path="res://environment/village/props/water_jars.tscn" id="v_water_jars"]
+[ext_resource type="PackedScene" path="res://environment/village/props/village_torch.tscn" id="v_village_torch"]
+[ext_resource type="PackedScene" path="res://environment/village/props/street_lamp.tscn" id="v_street_lamp"]
+[ext_resource type="Script" path="res://scripts/cutscenes/kings_levy.gd" id="sc_levy"]
 
 [sub_resource type="ShaderMaterial" id="M_atm"]
 shader = ExtResource("s_atm")
@@ -132,6 +136,9 @@ b = Vector2(0, 1600)
 a = Vector2(0, 1600)
 b = Vector2(0, 0)
 
+[sub_resource type="RectangleShape2D" id="ShedR"]
+size = Vector2(300, 150)
+
 [sub_resource type="CanvasItemMaterial" id="M_add"]
 blend_mode = 1
 light_mode = 1
@@ -160,9 +167,6 @@ colors = PackedColorArray(1, 0.88, 0.6, 0, 1, 0.88, 0.6, 0.8, 1, 0.88, 0.6, 0.8,
 
 [sub_resource type="RectangleShape2D" id="ExitR"]
 size = Vector2(24, 150)
-
-[sub_resource type="RectangleShape2D" id="ShedR"]
-size = Vector2(300, 150)
 
 [node name="Village" type="Node2D" unique_id=2076396914]
 script = ExtResource("sc_w")
@@ -226,12 +230,12 @@ shape = SubResource("Seg3")
 [node name="Pond" parent="." unique_id=1679647269 instance=ExtResource("p_pond")]
 position = Vector2(1380, 960)
 
-[node name="LakeThought" type="Area2D" parent="Pond"]
+[node name="LakeThought" type="Area2D" parent="Pond" unique_id=743189156]
 script = ExtResource("sc_ptext")
 text = "This is the lake I used to play by when I was a kid"
 on_player = true
 
-[node name="Shape" type="CollisionPolygon2D" parent="Pond/LakeThought"]
+[node name="Shape" type="CollisionPolygon2D" parent="Pond/LakeThought" unique_id=492200813]
 polygon = PackedVector2Array(39, 281, 52, 293, 71, 302, 206, 328, 259, 330, 316, 325, 354, 325, 414, 330, 450, 328, 476, 321, 532, 288, 612, 248, 628, 228, 640, 183, 640, 166, 622, 147, 534, 112, 523, 105, 483, 69, 455, 54, 343, 25, 315, 22, 281, 24, 257, 30, 182, 58, 99, 78, 75, 96, 36, 168, 45, 227, 38, 264)
 
 [node name="Objects" type="Node2D" parent="." unique_id=861362750]
@@ -275,6 +279,42 @@ position = Vector2(760, 1262)
 
 [node name="PavilionHouse1" parent="Objects" unique_id=907530225 instance=ExtResource("h_pavilion_house")]
 position = Vector2(1235, 1262)
+
+[node name="TorchMcHome" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1150, 852)
+
+[node name="LampMcHome" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1222, 862)
+
+[node name="TorchThatchHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1525, 650)
+
+[node name="LampThatchHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1600, 660)
+
+[node name="TorchRedRoofHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1872, 498)
+
+[node name="LampRedRoofHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1945, 505)
+
+[node name="TorchKitchenHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(722, 1275)
+
+[node name="LampKitchenHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(800, 1282)
+
+[node name="TorchPavilionHouse" parent="Objects" instance=ExtResource("v_village_torch")]
+position = Vector2(1195, 1275)
+
+[node name="LampPavilionHouse" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(1275, 1282)
+
+[node name="LampFarm1" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(625, 390)
+
+[node name="LampFarm2" parent="Objects" instance=ExtResource("v_street_lamp")]
+position = Vector2(520, 478)
 
 [node name="FarmHut1" parent="Objects" unique_id=734904984 instance=ExtResource("v_farm_hut")]
 position = Vector2(760, 300)
@@ -345,14 +385,20 @@ position = Vector2(1300, 1275)
 [node name="AnimalShed1" parent="Objects" unique_id=1814529627 instance=ExtResource("v_animal_shed")]
 position = Vector2(1300, 1490)
 
-[node name="ShedNote" type="Area2D" parent="Objects/AnimalShed1"]
+[node name="ShedNote" type="Area2D" parent="Objects/AnimalShed1" unique_id=104428778]
 script = ExtResource("sc_ptext")
 text = "This shed provides eggs for the village"
 head_height = 110.0
 
-[node name="Shape" type="CollisionShape2D" parent="Objects/AnimalShed1/ShedNote"]
+[node name="Shape" type="CollisionShape2D" parent="Objects/AnimalShed1/ShedNote" unique_id=943165601]
 position = Vector2(0, 5)
 shape = SubResource("ShedR")
+
+[node name="HaystackDelivery" type="Node2D" parent="Objects/AnimalShed1" unique_id=823328489]
+position = Vector2(0, 30)
+script = ExtResource("35_q8qfd")
+quest = "haystack_quest"
+item_id = "haystack"
 
 [node name="Haystack3" parent="Objects" unique_id=1729028752 instance=ExtResource("v_haystack")]
 position = Vector2(1150, 1505)
@@ -643,50 +689,14 @@ position = Vector2(137, 1281)
 [node name="PebblesA6" parent="Objects" unique_id=389503220 instance=ExtResource("v_pebbles_a")]
 position = Vector2(1675, 1340)
 
-[node name="Palm1" parent="Objects" unique_id=224009789 instance=ExtResource("p_palm")]
-position = Vector2(1330, 760)
+[node name="ShadeTreeLake" parent="Objects" unique_id=1423139297 instance=ExtResource("v_shade_tree")]
+position = Vector2(1880, 975)
 
-[node name="Palm2" parent="Objects" unique_id=1314835997 instance=ExtResource("p_palm")]
-position = Vector2(1480, 700)
+[node name="ShadeTreeCreek" parent="Objects" unique_id=463606250 instance=ExtResource("v_shade_tree")]
+position = Vector2(300, 650)
 
-[node name="Palm3" parent="Objects" unique_id=1664615896 instance=ExtResource("p_palm")]
-position = Vector2(1750, 560)
-
-[node name="Palm4" parent="Objects" unique_id=1437805579 instance=ExtResource("p_palm")]
-position = Vector2(2030, 470)
-
-[node name="Palm5" parent="Objects" unique_id=1434219581 instance=ExtResource("p_palm")]
-position = Vector2(900, 1240)
-
-[node name="Palm6" parent="Objects" unique_id=417512823 instance=ExtResource("p_palm")]
-position = Vector2(1130, 1300)
-
-[node name="Palm7" parent="Objects" unique_id=1338482273 instance=ExtResource("p_palm")]
-position = Vector2(1380, 1310)
-
-[node name="Palm8" parent="Objects" unique_id=975937423 instance=ExtResource("p_palm")]
-position = Vector2(1360, 1040)
-
-[node name="Palm9" parent="Objects" unique_id=1302905555 instance=ExtResource("p_palm")]
-position = Vector2(2050, 1150)
-
-[node name="Palm10" parent="Objects" unique_id=461010911 instance=ExtResource("p_palm")]
-position = Vector2(2030, 1300)
-
-[node name="Palm11" parent="Objects" unique_id=11557046 instance=ExtResource("p_palm")]
-position = Vector2(520, 600)
-
-[node name="Palm12" parent="Objects" unique_id=220814945 instance=ExtResource("p_palm")]
-position = Vector2(250, 770)
-
-[node name="Palm13" parent="Objects" unique_id=450412519 instance=ExtResource("p_palm")]
-position = Vector2(980, 560)
-
-[node name="Palm14" parent="Objects" unique_id=262113163 instance=ExtResource("p_palm")]
-position = Vector2(1060, 420)
-
-[node name="Palm15" parent="Objects" unique_id=942304280 instance=ExtResource("p_palm")]
-position = Vector2(2300, 520)
+[node name="ShadeTreeCrossroads" parent="Objects" unique_id=109722904 instance=ExtResource("v_shade_tree")]
+position = Vector2(875, 815)
 
 [node name="PondReeds0" parent="Objects" unique_id=739805263 instance=ExtResource("p_reeds0")]
 position = Vector2(1430, 1060)
@@ -741,6 +751,54 @@ position = Vector2(330, 560)
 
 [node name="Crow3" parent="Objects" unique_id=1809805902 instance=ExtResource("p_crow")]
 position = Vector2(1420, 700)
+
+[node name="KingsLevy" type="Node2D" parent="."]
+script = ExtResource("sc_levy")
+
+[node name="Summoner" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1330, 925)
+
+[node name="Archer1" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1296, 902)
+
+[node name="Archer2" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1372, 942)
+
+[node name="FlagBearer" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1345, 888)
+
+[node name="Cavalry" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1410, 902)
+
+[node name="SummonerLeave" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1392, 914)
+
+[node name="PlayerStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1205, 882)
+
+[node name="MotherStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 888)
+
+[node name="Player" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1270, 975)
+
+[node name="Mother" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1240, 963)
+
+[node name="RicePorter" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1336, 984)
+
+[node name="RicePorterStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1110, 940)
+
+[node name="VillageWoman" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1218, 940)
+
+[node name="VillageWomanStart" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1480, 850)
+
+[node name="PlayerHome" type="Marker2D" parent="KingsLevy"]
+position = Vector2(1228, 884)
 
 [node name="Moon" type="DirectionalLight2D" parent="." unique_id=247661503]
 rotation = -2.3

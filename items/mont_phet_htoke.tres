@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://scripts/inventory/item_data.gd" id="1_item"]
+[ext_resource type="Texture2D" path="res://items/icons/mont_phet_htoke.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_item")
+id = "mont_phet_htoke"
+display_name = "Mont Phet Htoke"
+description = "A steaming, fragrant parcel of soft rice flour infused with rich palm jaggery and grated coconut, lovingly wrapped in a protective banana leaf."
+icon = ExtResource("2_icon")
+max_stack = 20
+type = 1
+heal_percent = 3.0

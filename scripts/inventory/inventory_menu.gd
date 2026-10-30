@@ -4,32 +4,43 @@ extends CanvasLayer
 ##   Mouse: hover for the item's name and description, left click picks a stack up
 ##          and puts it down (on an empty slot, the same item to stack, or another
 ##          item to swap), right click takes one.
-##   Keys:  W A S D / arrows move, E / Space / Enter = left click.
+##   Keys:  W A S D / arrows move, E / Space / Enter = left click, F = eat (food).
 ## Game creates it; it follows the bag's size, so a bigger bag just adds rows.
 
-const INK := Color(0.15, 0.06, 0.08)
-const PAPER := Color(1, 1, 1, 0.97)
-const NAME_INK := Color(0.5, 0.2, 0.1)
-const SLOT_BG := Color(0.93, 0.85, 0.7)
-const GOLD := Color(0.85, 0.55, 0.1)
+## Looks: the Lacquer window with black-lacquer slot wells (res://ui/inventory/,
+## pixel art at 2x). Hovering an item shows a plain gray square with its name, type
+## and description (food also says how much health it gives back).
+
+const TIP_GRAY := Color(0.32, 0.32, 0.34, 0.95)
+const HEAL_TEXT := Color(0.62, 0.92, 0.55)
+const HELP := "Click: pick up / put down     Right click: take one     F: eat     B / Esc: close"
 const COLUMNS := 12
 const SLOT_SIZE := 56.0
+## How far below the middle of the screen the window sits.
+const DROP := 70.0
 
 var inventory: Inventory
 var _root: Control
 var _grid: GridContainer
+var _help: Label
 var _tip: PanelContainer
 var _tip_name: Label
+var _tip_type: Label
 var _tip_text: Label
+var _tip_heal: Label
 var _held_view: Slot
 var _held: Inventory.Stack
 var _sel := 0
 var _mouse := true  # last moved with the mouse (else the keys)
 var _tw: Tween
+var _help_tw: Tween
 
 
 ## One square of the grid (also used for the stack held under the mouse).
 class Slot extends Control:
+	const WELL := preload("res://ui/inventory/slot.png")
+	const WELL_SELECTED := preload("res://ui/inventory/slot_selected.png")
+
 	var stack: Inventory.Stack
 	var selected := false
 	var plain := false  # no background: the held stack
@@ -37,16 +48,11 @@ class Slot extends Control:
 	func _draw() -> void:
 		var r := Rect2(Vector2.ZERO, size)
 		if not plain:
-			var bg := StyleBoxFlat.new()
-			bg.bg_color = Color(0.93, 0.85, 0.7)
-			bg.set_corner_radius_all(6)
-			bg.set_border_width_all(3 if selected else 2)
-			bg.border_color = Color(0.85, 0.55, 0.1) if selected else Color(0.15, 0.06, 0.08, 0.35)
-			draw_style_box(bg, r)
+			draw_texture_rect(WELL_SELECTED if selected else WELL, r, false)
 		if stack == null:
 			return
 		var font := ThemeDB.fallback_font
-		var inner := r.grow(-7.0)
+		var inner := r.grow(-9.0)
 		if stack.item.icon:
 			var t := stack.item.icon
 			var k := minf(inner.size.x / t.get_width(), inner.size.y / t.get_height())
@@ -55,7 +61,7 @@ class Slot extends Control:
 		else:
 			# no icon yet: the first letters of its name
 			var abbr := stack.item.display_name.substr(0, 3) if stack.item.display_name != "" else "?"
-			draw_string(font, Vector2(0, size.y * 0.5 + 6), abbr, HORIZONTAL_ALIGNMENT_CENTER, size.x, 16, Color(0.15, 0.06, 0.08))
+			draw_string(font, Vector2(0, size.y * 0.5 + 6), abbr, HORIZONTAL_ALIGNMENT_CENTER, size.x, 16, Color(0.96, 0.88, 0.72))
 		if stack.count > 1:
 			var p := Vector2(0, size.y - 5)
 			draw_string_outline(font, p, str(stack.count), HORIZONTAL_ALIGNMENT_RIGHT, size.x - 5, 15, 5, Color(0.15, 0.06, 0.08))
@@ -69,42 +75,36 @@ func _ready() -> void:
 	_root.set_anchors_preset(Control.PRESET_FULL_RECT)
 	_root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_root)
-	var dim := ColorRect.new()
-	dim.color = Color(0, 0, 0, 0.4)
-	dim.set_anchors_preset(Control.PRESET_FULL_RECT)
-	dim.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_root.add_child(dim)
-	var center := CenterContainer.new()
-	center.set_anchors_preset(Control.PRESET_FULL_RECT)
-	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_root.add_child(center)
-	var panel := _paper_panel(20, 14)
-	center.add_child(panel)
+	var panel := Lacquer.window(_root, "Inventory", DROP)
 	var box := VBoxContainer.new()
 	box.add_theme_constant_override("separation", 8)
 	panel.add_child(box)
-	box.add_child(_label("Inventory", 22, NAME_INK))
-	var rule := ColorRect.new()
-	rule.color = Color(INK, 0.25)
-	rule.custom_minimum_size = Vector2(0, 2)
-	box.add_child(rule)
 	_grid = GridContainer.new()
 	_grid.columns = COLUMNS
 	_grid.add_theme_constant_override("h_separation", 4)
 	_grid.add_theme_constant_override("v_separation", 4)
 	box.add_child(_grid)
-	var help := _label("Click: pick up / put down     Right click: take one     B / Esc: close", 13, Color(INK, 0.6))
-	help.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	box.add_child(help)
+	_help = Lacquer.label(HELP, 13, Color(Lacquer.CREAM, 0.75))
+	_help.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	box.add_child(_help)
 
-	_tip = _paper_panel(10, 6)
+	_tip = PanelContainer.new()
+	_tip.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var gray := StyleBoxFlat.new()
+	gray.bg_color = TIP_GRAY
+	gray.set_content_margin_all(10)
+	_tip.add_theme_stylebox_override("panel", gray)
 	var tbox := VBoxContainer.new()
-	_tip_name = _label("", 18, NAME_INK)
-	_tip_text = _label("", 15, INK)
+	_tip_name = Lacquer.label("", 18, Color.WHITE)
+	_tip_type = Lacquer.label("", 13, Lacquer.GOLD_TEXT)
+	_tip_text = Lacquer.label("", 15, Color(0.9, 0.9, 0.9))
 	_tip_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_tip_text.custom_minimum_size.x = 240
+	_tip_heal = Lacquer.label("", 14, HEAL_TEXT)
 	tbox.add_child(_tip_name)
+	tbox.add_child(_tip_type)
 	tbox.add_child(_tip_text)
+	tbox.add_child(_tip_heal)
 	_tip.add_child(tbox)
 	_tip.visible = false
 	_root.add_child(_tip)
@@ -115,33 +115,6 @@ func _ready() -> void:
 	_held_view.size = Vector2(SLOT_SIZE, SLOT_SIZE)
 	_root.add_child(_held_view)
 	visible = false
-
-
-func _paper_panel(margin_x: int, margin_y: int) -> PanelContainer:
-	var p := PanelContainer.new()
-	p.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var sb := StyleBoxFlat.new()
-	sb.bg_color = PAPER
-	sb.border_color = INK
-	sb.set_border_width_all(3)
-	sb.set_corner_radius_all(8)
-	sb.content_margin_left = margin_x
-	sb.content_margin_right = margin_x
-	sb.content_margin_top = margin_y
-	sb.content_margin_bottom = margin_y
-	sb.shadow_color = Color(0, 0, 0, 0.35)
-	sb.shadow_size = 6
-	sb.shadow_offset = Vector2(0, 3)
-	p.add_theme_stylebox_override("panel", sb)
-	return p
-
-
-func _label(text: String, size: int, color: Color) -> Label:
-	var l := Label.new()
-	l.text = text
-	l.add_theme_font_size_override("font_size", size)
-	l.add_theme_color_override("font_color", color)
-	return l
 
 
 func set_inventory(inv: Inventory) -> void:
@@ -213,8 +186,13 @@ func _update_tip() -> void:
 	if not _tip.visible:
 		return
 	_tip_name.text = s.item.display_name
+	_tip_type.text = s.item.type_name()
 	_tip_text.text = s.item.description
 	_tip_text.visible = s.item.description != ""
+	_tip_heal.visible = s.item.type == ItemData.Type.FOOD
+	if _tip_heal.visible:
+		var p := get_tree().get_first_node_in_group("player")
+		_tip_heal.text = "Restore %d health when consumed" % s.item.heal_amount(p.max_health if p else 100)
 	_tip.reset_size()
 
 
@@ -288,6 +266,8 @@ func _input(event: InputEvent) -> void:
 	elif _pressed(event, ["ui_accept", "interact"]):
 		_mouse = false
 		_click(_sel)
+	elif _pressed(event, ["eat"]):
+		_eat(_sel)
 
 
 func _key_move(dx: int, dy: int) -> void:
@@ -318,6 +298,30 @@ func _take_one(i: int) -> void:
 		inventory.split(i, 1)
 		_held.count += 1
 	_refresh()
+
+
+## F: eat one of the food in slot i (only when it would heal).
+func _eat(i: int) -> void:
+	var s: Inventory.Stack = inventory.get_stack(i)
+	if s == null or _held != null or s.item.type != ItemData.Type.FOOD:
+		return
+	if Game.eat(s.item):
+		inventory.split(i, 1)
+	else:
+		_note("You are already at full health.")
+
+
+## Shows a short note in place of the help line for a moment.
+func _note(text: String) -> void:
+	_help.text = text
+	_help.add_theme_color_override("font_color", Lacquer.GOLD_TEXT)
+	if _help_tw:
+		_help_tw.kill()
+	_help_tw = create_tween()
+	_help_tw.tween_interval(1.8)
+	_help_tw.tween_callback(func():
+		_help.text = HELP
+		_help.add_theme_color_override("font_color", Color(Lacquer.CREAM, 0.75)))
 
 
 func _process(_delta: float) -> void:

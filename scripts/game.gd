@@ -20,6 +20,8 @@ var ascii_mode := false
 var night_mode := false
 ## True while the player is inside a house (rain hides, etc).
 var indoors := false
+## True while a cutscene plays: counts as being in a dialogue (no E, no menus).
+var cutscene := false
 ## Camera zoom picked with the mouse wheel (world.gd); 0 = the map's own default.
 var camera_zoom := 0.0
 ## Marker2D name to arrive at in the next map (set by map exits).
@@ -42,10 +44,17 @@ var _skip: Tween
 var flags: Dictionary = {}
 const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
 var _dialogue: CanvasLayer
+const PROMPT_BOX := preload("res://scripts/ui/prompt_box.gd")
+var _prompt: CanvasLayer
 ## The player's bag (36 slots). B shows it. Quests: inventory.add / remove / has / item_added.
 var inventory := Inventory.new()
 const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
 var inventory_menu: CanvasLayer
+## The player's quests. Tab shows them. Givers: quests.start / finish; objectives: complete_objective.
+var quests := QuestLog.new()
+const QUEST_MENU := preload("res://scripts/quests/quest_menu.gd")
+var quest_menu: CanvasLayer
+const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 var _ascii_layer: CanvasLayer
 ## In ASCII mode, draw the player and bosses as normal sprites on top so they stay readable.
 var ascii_keep_characters_clear := true
@@ -99,14 +108,57 @@ func _ready() -> void:
 	_reflect_mat = ShaderMaterial.new()
 	_reflect_mat.shader = REFLECT_SHADER
 	reset_world_globals()
-	if not InputMap.has_action("inventory"):
-		InputMap.add_action("inventory")
-		var b := InputEventKey.new()
-		b.physical_keycode = KEY_B
-		InputMap.action_add_event("inventory", b)
+	_add_key_action("inventory", KEY_B)
+	_add_key_action("eat", KEY_F)
+	_add_key_action("quest_log", KEY_TAB)
 	inventory_menu = INVENTORY_MENU.new()
 	add_child(inventory_menu)
 	inventory_menu.set_inventory(inventory)
+	quest_menu = QUEST_MENU.new()
+	add_child(quest_menu)
+	quest_menu.set_quests(quests)
+	quests.started.connect(func(id: String):
+		var q := quests.get_quest(id)
+		player_says("Quest Received: %s — %s" % [q.title, q.objectives[0]] if not q.objectives.is_empty() \
+				else "Quest Received: %s" % q.title))
+	quests.completed.connect(func(id: String):
+		player_says("Quest Completed: %s" % quests.get_quest(id).title))
+
+
+func _add_key_action(action: StringName, key: Key) -> void:
+	if InputMap.has_action(action):
+		return
+	InputMap.add_action(action)
+	var e := InputEventKey.new()
+	e.physical_keycode = key
+	InputMap.action_add_event(action, e)
+
+
+## A line popping up over the player's head for a few seconds (quest news etc).
+func player_says(text: String, secs := 3.0) -> void:
+	var p := get_tree().get_first_node_in_group("player") as Node2D
+	if p == null:
+		return
+	var pop := p.get_node_or_null("NewsBubble") as SpeechBubble
+	if pop == null:
+		pop = SpeechBubble.new()
+		pop.name = "NewsBubble"
+		pop.tail = SpeechBubble.Tail.NONE
+		pop.head_height = 72.0
+		pop.font_size = 18
+		pop.max_width = 320.0
+		p.add_child(pop)
+	pop.say(text, secs)
+
+
+## The player eats one food item: heals by its heal_amount. False (nothing eaten)
+## when it isn't food or the player is already at full health. The caller takes it out of the bag.
+func eat(item: ItemData) -> bool:
+	var p := get_tree().get_first_node_in_group("player")
+	if p == null or item.type != ItemData.Type.FOOD or p.health >= p.max_health:
+		return false
+	p.heal(item.heal_amount(p.max_health))
+	return true
 
 
 func set_ascii(on: bool) -> void:
@@ -283,13 +335,24 @@ func dialogue(speaker: String, lines: PackedStringArray, done := Callable(), cho
 	_dialogue.open(speaker, lines, done, choices)
 
 
-## True while the dialogue box is up (players stand still and E only turns its pages).
+## True while the dialogue box or a prompt box is up (players stand still and E only
+## turns its pages / picks its button).
 func in_dialogue() -> bool:
-	return _dialogue != null and _dialogue.busy()
+	return cutscene or (_dialogue != null and _dialogue.busy()) or (_prompt != null and _prompt.busy())
+
+
+## A box in the middle of the screen with text and buttons (default just OK). The world
+## is paused and greyed out behind it until a button is picked, then done(index) is called.
+func prompt(text: String, buttons := PackedStringArray(["OK"]), done := Callable()) -> void:
+	if _prompt == null:
+		_prompt = PROMPT_BOX.new()
+		add_child(_prompt)
+	_prompt.open(text, buttons, done)
 
 
 func go(scene_path: String) -> void:
 	indoors = false
+	cutscene = false
 	if _dialogue:
 		_dialogue.close(false)
 	for n in _moved.keys():
