@@ -1,405 +1,473 @@
-[gd_resource type="SpriteFrames" load_steps=601 format=3]
+[gd_resource type="SpriteFrames" load_steps=703 format=3]
 
-[ext_resource type="Texture2D" path="frames/idle_e_0.png" id="d0"]
-[ext_resource type="Texture2D" path="frames/idle_e_0_n.png" id="n0"]
-[ext_resource type="Texture2D" path="frames/idle_e_1.png" id="d1"]
-[ext_resource type="Texture2D" path="frames/idle_e_1_n.png" id="n1"]
-[ext_resource type="Texture2D" path="frames/idle_e_2.png" id="d2"]
-[ext_resource type="Texture2D" path="frames/idle_e_2_n.png" id="n2"]
-[ext_resource type="Texture2D" path="frames/idle_e_3.png" id="d3"]
-[ext_resource type="Texture2D" path="frames/idle_e_3_n.png" id="n3"]
-[ext_resource type="Texture2D" path="frames/idle_e_4.png" id="d4"]
-[ext_resource type="Texture2D" path="frames/idle_e_4_n.png" id="n4"]
-[ext_resource type="Texture2D" path="frames/run2_e_0.png" id="d5"]
-[ext_resource type="Texture2D" path="frames/run2_e_0_n.png" id="n5"]
-[ext_resource type="Texture2D" path="frames/run2_e_1.png" id="d6"]
-[ext_resource type="Texture2D" path="frames/run2_e_1_n.png" id="n6"]
-[ext_resource type="Texture2D" path="frames/run2_e_2.png" id="d7"]
-[ext_resource type="Texture2D" path="frames/run2_e_2_n.png" id="n7"]
-[ext_resource type="Texture2D" path="frames/run2_e_3.png" id="d8"]
-[ext_resource type="Texture2D" path="frames/run2_e_3_n.png" id="n8"]
-[ext_resource type="Texture2D" path="frames/run2_e_4.png" id="d9"]
-[ext_resource type="Texture2D" path="frames/run2_e_4_n.png" id="n9"]
-[ext_resource type="Texture2D" path="frames/atk_e_0.png" id="d10"]
-[ext_resource type="Texture2D" path="frames/atk_e_0_n.png" id="n10"]
-[ext_resource type="Texture2D" path="frames/atk_e_1.png" id="d11"]
-[ext_resource type="Texture2D" path="frames/atk_e_1_n.png" id="n11"]
-[ext_resource type="Texture2D" path="frames/atk_e_2.png" id="d12"]
-[ext_resource type="Texture2D" path="frames/atk_e_2_n.png" id="n12"]
-[ext_resource type="Texture2D" path="frames/atk_e_3.png" id="d13"]
-[ext_resource type="Texture2D" path="frames/atk_e_3_n.png" id="n13"]
-[ext_resource type="Texture2D" path="frames/atk_e_4.png" id="d14"]
-[ext_resource type="Texture2D" path="frames/atk_e_4_n.png" id="n14"]
-[ext_resource type="Texture2D" path="frames/parry_e_0.png" id="d15"]
-[ext_resource type="Texture2D" path="frames/parry_e_0_n.png" id="n15"]
-[ext_resource type="Texture2D" path="frames/parry_e_1.png" id="d16"]
-[ext_resource type="Texture2D" path="frames/parry_e_1_n.png" id="n16"]
-[ext_resource type="Texture2D" path="frames/parry_e_2.png" id="d17"]
-[ext_resource type="Texture2D" path="frames/parry_e_2_n.png" id="n17"]
-[ext_resource type="Texture2D" path="frames/parry_e_3.png" id="d18"]
-[ext_resource type="Texture2D" path="frames/parry_e_3_n.png" id="n18"]
-[ext_resource type="Texture2D" path="frames/parry_e_4.png" id="d19"]
-[ext_resource type="Texture2D" path="frames/parry_e_4_n.png" id="n19"]
-[ext_resource type="Texture2D" path="frames/dodge_e_0.png" id="d20"]
-[ext_resource type="Texture2D" path="frames/dodge_e_0_n.png" id="n20"]
-[ext_resource type="Texture2D" path="frames/dodge_e_1.png" id="d21"]
-[ext_resource type="Texture2D" path="frames/dodge_e_1_n.png" id="n21"]
-[ext_resource type="Texture2D" path="frames/dodge_e_2.png" id="d22"]
-[ext_resource type="Texture2D" path="frames/dodge_e_2_n.png" id="n22"]
-[ext_resource type="Texture2D" path="frames/dodge_e_3.png" id="d23"]
-[ext_resource type="Texture2D" path="frames/dodge_e_3_n.png" id="n23"]
-[ext_resource type="Texture2D" path="frames/dodge_e_4.png" id="d24"]
-[ext_resource type="Texture2D" path="frames/dodge_e_4_n.png" id="n24"]
-[ext_resource type="Texture2D" path="frames/idle_se_0.png" id="d25"]
-[ext_resource type="Texture2D" path="frames/idle_se_0_n.png" id="n25"]
-[ext_resource type="Texture2D" path="frames/idle_se_1.png" id="d26"]
-[ext_resource type="Texture2D" path="frames/idle_se_1_n.png" id="n26"]
-[ext_resource type="Texture2D" path="frames/idle_se_2.png" id="d27"]
-[ext_resource type="Texture2D" path="frames/idle_se_2_n.png" id="n27"]
-[ext_resource type="Texture2D" path="frames/idle_se_3.png" id="d28"]
-[ext_resource type="Texture2D" path="frames/idle_se_3_n.png" id="n28"]
-[ext_resource type="Texture2D" path="frames/idle_se_4.png" id="d29"]
-[ext_resource type="Texture2D" path="frames/idle_se_4_n.png" id="n29"]
-[ext_resource type="Texture2D" path="frames/run_se_0.png" id="d30"]
-[ext_resource type="Texture2D" path="frames/run_se_0_n.png" id="n30"]
-[ext_resource type="Texture2D" path="frames/run_se_1.png" id="d31"]
-[ext_resource type="Texture2D" path="frames/run_se_1_n.png" id="n31"]
-[ext_resource type="Texture2D" path="frames/run_se_2.png" id="d32"]
-[ext_resource type="Texture2D" path="frames/run_se_2_n.png" id="n32"]
-[ext_resource type="Texture2D" path="frames/run_se_3.png" id="d33"]
-[ext_resource type="Texture2D" path="frames/run_se_3_n.png" id="n33"]
-[ext_resource type="Texture2D" path="frames/run_se_4.png" id="d34"]
-[ext_resource type="Texture2D" path="frames/run_se_4_n.png" id="n34"]
-[ext_resource type="Texture2D" path="frames/atk_se_0.png" id="d35"]
-[ext_resource type="Texture2D" path="frames/atk_se_0_n.png" id="n35"]
-[ext_resource type="Texture2D" path="frames/atk_se_1.png" id="d36"]
-[ext_resource type="Texture2D" path="frames/atk_se_1_n.png" id="n36"]
-[ext_resource type="Texture2D" path="frames/atk_se_2.png" id="d37"]
-[ext_resource type="Texture2D" path="frames/atk_se_2_n.png" id="n37"]
-[ext_resource type="Texture2D" path="frames/atk_se_3.png" id="d38"]
-[ext_resource type="Texture2D" path="frames/atk_se_3_n.png" id="n38"]
-[ext_resource type="Texture2D" path="frames/atk_se_4.png" id="d39"]
-[ext_resource type="Texture2D" path="frames/atk_se_4_n.png" id="n39"]
-[ext_resource type="Texture2D" path="frames/parry_se_0.png" id="d40"]
-[ext_resource type="Texture2D" path="frames/parry_se_0_n.png" id="n40"]
-[ext_resource type="Texture2D" path="frames/parry_se_1.png" id="d41"]
-[ext_resource type="Texture2D" path="frames/parry_se_1_n.png" id="n41"]
-[ext_resource type="Texture2D" path="frames/parry_se_2.png" id="d42"]
-[ext_resource type="Texture2D" path="frames/parry_se_2_n.png" id="n42"]
-[ext_resource type="Texture2D" path="frames/parry_se_3.png" id="d43"]
-[ext_resource type="Texture2D" path="frames/parry_se_3_n.png" id="n43"]
-[ext_resource type="Texture2D" path="frames/parry_se_4.png" id="d44"]
-[ext_resource type="Texture2D" path="frames/parry_se_4_n.png" id="n44"]
-[ext_resource type="Texture2D" path="frames/dodge_se_0.png" id="d45"]
-[ext_resource type="Texture2D" path="frames/dodge_se_0_n.png" id="n45"]
-[ext_resource type="Texture2D" path="frames/dodge_se_1.png" id="d46"]
-[ext_resource type="Texture2D" path="frames/dodge_se_1_n.png" id="n46"]
-[ext_resource type="Texture2D" path="frames/dodge_se_2.png" id="d47"]
-[ext_resource type="Texture2D" path="frames/dodge_se_2_n.png" id="n47"]
-[ext_resource type="Texture2D" path="frames/dodge_se_3.png" id="d48"]
-[ext_resource type="Texture2D" path="frames/dodge_se_3_n.png" id="n48"]
-[ext_resource type="Texture2D" path="frames/dodge_se_4.png" id="d49"]
-[ext_resource type="Texture2D" path="frames/dodge_se_4_n.png" id="n49"]
-[ext_resource type="Texture2D" path="frames/idle_s_0.png" id="d50"]
-[ext_resource type="Texture2D" path="frames/idle_s_0_n.png" id="n50"]
-[ext_resource type="Texture2D" path="frames/idle_s_1.png" id="d51"]
-[ext_resource type="Texture2D" path="frames/idle_s_1_n.png" id="n51"]
-[ext_resource type="Texture2D" path="frames/idle_s_2.png" id="d52"]
-[ext_resource type="Texture2D" path="frames/idle_s_2_n.png" id="n52"]
-[ext_resource type="Texture2D" path="frames/idle_s_3.png" id="d53"]
-[ext_resource type="Texture2D" path="frames/idle_s_3_n.png" id="n53"]
-[ext_resource type="Texture2D" path="frames/idle_s_4.png" id="d54"]
-[ext_resource type="Texture2D" path="frames/idle_s_4_n.png" id="n54"]
-[ext_resource type="Texture2D" path="frames/run_s_0.png" id="d55"]
-[ext_resource type="Texture2D" path="frames/run_s_0_n.png" id="n55"]
-[ext_resource type="Texture2D" path="frames/run_s_1.png" id="d56"]
-[ext_resource type="Texture2D" path="frames/run_s_1_n.png" id="n56"]
-[ext_resource type="Texture2D" path="frames/run_s_2.png" id="d57"]
-[ext_resource type="Texture2D" path="frames/run_s_2_n.png" id="n57"]
-[ext_resource type="Texture2D" path="frames/run_s_3.png" id="d58"]
-[ext_resource type="Texture2D" path="frames/run_s_3_n.png" id="n58"]
-[ext_resource type="Texture2D" path="frames/run_s_4.png" id="d59"]
-[ext_resource type="Texture2D" path="frames/run_s_4_n.png" id="n59"]
-[ext_resource type="Texture2D" path="frames/atk_s_0.png" id="d60"]
-[ext_resource type="Texture2D" path="frames/atk_s_0_n.png" id="n60"]
-[ext_resource type="Texture2D" path="frames/atk_s_1.png" id="d61"]
-[ext_resource type="Texture2D" path="frames/atk_s_1_n.png" id="n61"]
-[ext_resource type="Texture2D" path="frames/atk_s_2.png" id="d62"]
-[ext_resource type="Texture2D" path="frames/atk_s_2_n.png" id="n62"]
-[ext_resource type="Texture2D" path="frames/atk_s_3.png" id="d63"]
-[ext_resource type="Texture2D" path="frames/atk_s_3_n.png" id="n63"]
-[ext_resource type="Texture2D" path="frames/atk_s_4.png" id="d64"]
-[ext_resource type="Texture2D" path="frames/atk_s_4_n.png" id="n64"]
-[ext_resource type="Texture2D" path="frames/parry_s_0.png" id="d65"]
-[ext_resource type="Texture2D" path="frames/parry_s_0_n.png" id="n65"]
-[ext_resource type="Texture2D" path="frames/parry_s_1.png" id="d66"]
-[ext_resource type="Texture2D" path="frames/parry_s_1_n.png" id="n66"]
-[ext_resource type="Texture2D" path="frames/parry_s_2.png" id="d67"]
-[ext_resource type="Texture2D" path="frames/parry_s_2_n.png" id="n67"]
-[ext_resource type="Texture2D" path="frames/parry_s_3.png" id="d68"]
-[ext_resource type="Texture2D" path="frames/parry_s_3_n.png" id="n68"]
-[ext_resource type="Texture2D" path="frames/parry_s_4.png" id="d69"]
-[ext_resource type="Texture2D" path="frames/parry_s_4_n.png" id="n69"]
-[ext_resource type="Texture2D" path="frames/dodge_s_0.png" id="d70"]
-[ext_resource type="Texture2D" path="frames/dodge_s_0_n.png" id="n70"]
-[ext_resource type="Texture2D" path="frames/dodge_s_1.png" id="d71"]
-[ext_resource type="Texture2D" path="frames/dodge_s_1_n.png" id="n71"]
-[ext_resource type="Texture2D" path="frames/dodge_s_2.png" id="d72"]
-[ext_resource type="Texture2D" path="frames/dodge_s_2_n.png" id="n72"]
-[ext_resource type="Texture2D" path="frames/dodge_s_3.png" id="d73"]
-[ext_resource type="Texture2D" path="frames/dodge_s_3_n.png" id="n73"]
-[ext_resource type="Texture2D" path="frames/dodge_s_4.png" id="d74"]
-[ext_resource type="Texture2D" path="frames/dodge_s_4_n.png" id="n74"]
-[ext_resource type="Texture2D" path="frames/idle_se_0_f.png" id="d75"]
-[ext_resource type="Texture2D" path="frames/idle_se_0_f_n.png" id="n75"]
-[ext_resource type="Texture2D" path="frames/idle_se_1_f.png" id="d76"]
-[ext_resource type="Texture2D" path="frames/idle_se_1_f_n.png" id="n76"]
-[ext_resource type="Texture2D" path="frames/idle_se_2_f.png" id="d77"]
-[ext_resource type="Texture2D" path="frames/idle_se_2_f_n.png" id="n77"]
-[ext_resource type="Texture2D" path="frames/idle_se_3_f.png" id="d78"]
-[ext_resource type="Texture2D" path="frames/idle_se_3_f_n.png" id="n78"]
-[ext_resource type="Texture2D" path="frames/idle_se_4_f.png" id="d79"]
-[ext_resource type="Texture2D" path="frames/idle_se_4_f_n.png" id="n79"]
-[ext_resource type="Texture2D" path="frames/run_se_0_f.png" id="d80"]
-[ext_resource type="Texture2D" path="frames/run_se_0_f_n.png" id="n80"]
-[ext_resource type="Texture2D" path="frames/run_se_1_f.png" id="d81"]
-[ext_resource type="Texture2D" path="frames/run_se_1_f_n.png" id="n81"]
-[ext_resource type="Texture2D" path="frames/run_se_2_f.png" id="d82"]
-[ext_resource type="Texture2D" path="frames/run_se_2_f_n.png" id="n82"]
-[ext_resource type="Texture2D" path="frames/run_se_3_f.png" id="d83"]
-[ext_resource type="Texture2D" path="frames/run_se_3_f_n.png" id="n83"]
-[ext_resource type="Texture2D" path="frames/run_se_4_f.png" id="d84"]
-[ext_resource type="Texture2D" path="frames/run_se_4_f_n.png" id="n84"]
-[ext_resource type="Texture2D" path="frames/atk_se_0_f.png" id="d85"]
-[ext_resource type="Texture2D" path="frames/atk_se_0_f_n.png" id="n85"]
-[ext_resource type="Texture2D" path="frames/atk_se_1_f.png" id="d86"]
-[ext_resource type="Texture2D" path="frames/atk_se_1_f_n.png" id="n86"]
-[ext_resource type="Texture2D" path="frames/atk_se_2_f.png" id="d87"]
-[ext_resource type="Texture2D" path="frames/atk_se_2_f_n.png" id="n87"]
-[ext_resource type="Texture2D" path="frames/atk_se_3_f.png" id="d88"]
-[ext_resource type="Texture2D" path="frames/atk_se_3_f_n.png" id="n88"]
-[ext_resource type="Texture2D" path="frames/atk_se_4_f.png" id="d89"]
-[ext_resource type="Texture2D" path="frames/atk_se_4_f_n.png" id="n89"]
-[ext_resource type="Texture2D" path="frames/parry_se_0_f.png" id="d90"]
-[ext_resource type="Texture2D" path="frames/parry_se_0_f_n.png" id="n90"]
-[ext_resource type="Texture2D" path="frames/parry_se_1_f.png" id="d91"]
-[ext_resource type="Texture2D" path="frames/parry_se_1_f_n.png" id="n91"]
-[ext_resource type="Texture2D" path="frames/parry_se_2_f.png" id="d92"]
-[ext_resource type="Texture2D" path="frames/parry_se_2_f_n.png" id="n92"]
-[ext_resource type="Texture2D" path="frames/parry_se_3_f.png" id="d93"]
-[ext_resource type="Texture2D" path="frames/parry_se_3_f_n.png" id="n93"]
-[ext_resource type="Texture2D" path="frames/parry_se_4_f.png" id="d94"]
-[ext_resource type="Texture2D" path="frames/parry_se_4_f_n.png" id="n94"]
-[ext_resource type="Texture2D" path="frames/dodge_se_0_f.png" id="d95"]
-[ext_resource type="Texture2D" path="frames/dodge_se_0_f_n.png" id="n95"]
-[ext_resource type="Texture2D" path="frames/dodge_se_1_f.png" id="d96"]
-[ext_resource type="Texture2D" path="frames/dodge_se_1_f_n.png" id="n96"]
-[ext_resource type="Texture2D" path="frames/dodge_se_2_f.png" id="d97"]
-[ext_resource type="Texture2D" path="frames/dodge_se_2_f_n.png" id="n97"]
-[ext_resource type="Texture2D" path="frames/dodge_se_3_f.png" id="d98"]
-[ext_resource type="Texture2D" path="frames/dodge_se_3_f_n.png" id="n98"]
-[ext_resource type="Texture2D" path="frames/dodge_se_4_f.png" id="d99"]
-[ext_resource type="Texture2D" path="frames/dodge_se_4_f_n.png" id="n99"]
-[ext_resource type="Texture2D" path="frames/idle_e_0_f.png" id="d100"]
-[ext_resource type="Texture2D" path="frames/idle_e_0_f_n.png" id="n100"]
-[ext_resource type="Texture2D" path="frames/idle_e_1_f.png" id="d101"]
-[ext_resource type="Texture2D" path="frames/idle_e_1_f_n.png" id="n101"]
-[ext_resource type="Texture2D" path="frames/idle_e_2_f.png" id="d102"]
-[ext_resource type="Texture2D" path="frames/idle_e_2_f_n.png" id="n102"]
-[ext_resource type="Texture2D" path="frames/idle_e_3_f.png" id="d103"]
-[ext_resource type="Texture2D" path="frames/idle_e_3_f_n.png" id="n103"]
-[ext_resource type="Texture2D" path="frames/idle_e_4_f.png" id="d104"]
-[ext_resource type="Texture2D" path="frames/idle_e_4_f_n.png" id="n104"]
-[ext_resource type="Texture2D" path="frames/run2_e_0_f.png" id="d105"]
-[ext_resource type="Texture2D" path="frames/run2_e_0_f_n.png" id="n105"]
-[ext_resource type="Texture2D" path="frames/run2_e_1_f.png" id="d106"]
-[ext_resource type="Texture2D" path="frames/run2_e_1_f_n.png" id="n106"]
-[ext_resource type="Texture2D" path="frames/run2_e_2_f.png" id="d107"]
-[ext_resource type="Texture2D" path="frames/run2_e_2_f_n.png" id="n107"]
-[ext_resource type="Texture2D" path="frames/run2_e_3_f.png" id="d108"]
-[ext_resource type="Texture2D" path="frames/run2_e_3_f_n.png" id="n108"]
-[ext_resource type="Texture2D" path="frames/run2_e_4_f.png" id="d109"]
-[ext_resource type="Texture2D" path="frames/run2_e_4_f_n.png" id="n109"]
-[ext_resource type="Texture2D" path="frames/atk_w_0.png" id="d110"]
-[ext_resource type="Texture2D" path="frames/atk_w_0_n.png" id="n110"]
-[ext_resource type="Texture2D" path="frames/atk_w_1.png" id="d111"]
-[ext_resource type="Texture2D" path="frames/atk_w_1_n.png" id="n111"]
-[ext_resource type="Texture2D" path="frames/atk_w_2.png" id="d112"]
-[ext_resource type="Texture2D" path="frames/atk_w_2_n.png" id="n112"]
-[ext_resource type="Texture2D" path="frames/atk_w_3.png" id="d113"]
-[ext_resource type="Texture2D" path="frames/atk_w_3_n.png" id="n113"]
-[ext_resource type="Texture2D" path="frames/atk_w_4.png" id="d114"]
-[ext_resource type="Texture2D" path="frames/atk_w_4_n.png" id="n114"]
-[ext_resource type="Texture2D" path="frames/parry_e_0_f.png" id="d115"]
-[ext_resource type="Texture2D" path="frames/parry_e_0_f_n.png" id="n115"]
-[ext_resource type="Texture2D" path="frames/parry_e_1_f.png" id="d116"]
-[ext_resource type="Texture2D" path="frames/parry_e_1_f_n.png" id="n116"]
-[ext_resource type="Texture2D" path="frames/parry_e_2_f.png" id="d117"]
-[ext_resource type="Texture2D" path="frames/parry_e_2_f_n.png" id="n117"]
-[ext_resource type="Texture2D" path="frames/parry_e_3_f.png" id="d118"]
-[ext_resource type="Texture2D" path="frames/parry_e_3_f_n.png" id="n118"]
-[ext_resource type="Texture2D" path="frames/parry_e_4_f.png" id="d119"]
-[ext_resource type="Texture2D" path="frames/parry_e_4_f_n.png" id="n119"]
-[ext_resource type="Texture2D" path="frames/dodge_e_0_f.png" id="d120"]
-[ext_resource type="Texture2D" path="frames/dodge_e_0_f_n.png" id="n120"]
-[ext_resource type="Texture2D" path="frames/dodge_e_1_f.png" id="d121"]
-[ext_resource type="Texture2D" path="frames/dodge_e_1_f_n.png" id="n121"]
-[ext_resource type="Texture2D" path="frames/dodge_e_2_f.png" id="d122"]
-[ext_resource type="Texture2D" path="frames/dodge_e_2_f_n.png" id="n122"]
-[ext_resource type="Texture2D" path="frames/dodge_e_3_f.png" id="d123"]
-[ext_resource type="Texture2D" path="frames/dodge_e_3_f_n.png" id="n123"]
-[ext_resource type="Texture2D" path="frames/dodge_e_4_f.png" id="d124"]
-[ext_resource type="Texture2D" path="frames/dodge_e_4_f_n.png" id="n124"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0_f.png" id="d125"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0_f_n.png" id="n125"]
-[ext_resource type="Texture2D" path="frames/idle_ne_1_f.png" id="d126"]
-[ext_resource type="Texture2D" path="frames/idle_ne_1_f_n.png" id="n126"]
-[ext_resource type="Texture2D" path="frames/idle_ne_2_f.png" id="d127"]
-[ext_resource type="Texture2D" path="frames/idle_ne_2_f_n.png" id="n127"]
-[ext_resource type="Texture2D" path="frames/idle_ne_3_f.png" id="d128"]
-[ext_resource type="Texture2D" path="frames/idle_ne_3_f_n.png" id="n128"]
-[ext_resource type="Texture2D" path="frames/idle_ne_4_f.png" id="d129"]
-[ext_resource type="Texture2D" path="frames/idle_ne_4_f_n.png" id="n129"]
-[ext_resource type="Texture2D" path="frames/run3_b_0_f.png" id="d130"]
-[ext_resource type="Texture2D" path="frames/run3_b_0_f_n.png" id="n130"]
-[ext_resource type="Texture2D" path="frames/run3_b_1_f.png" id="d131"]
-[ext_resource type="Texture2D" path="frames/run3_b_1_f_n.png" id="n131"]
-[ext_resource type="Texture2D" path="frames/run3_b_2_f.png" id="d132"]
-[ext_resource type="Texture2D" path="frames/run3_b_2_f_n.png" id="n132"]
-[ext_resource type="Texture2D" path="frames/run3_b_3_f.png" id="d133"]
-[ext_resource type="Texture2D" path="frames/run3_b_3_f_n.png" id="n133"]
-[ext_resource type="Texture2D" path="frames/run3_b_4_f.png" id="d134"]
-[ext_resource type="Texture2D" path="frames/run3_b_4_f_n.png" id="n134"]
-[ext_resource type="Texture2D" path="frames/atk_ne_0_f.png" id="d135"]
-[ext_resource type="Texture2D" path="frames/atk_ne_0_f_n.png" id="n135"]
-[ext_resource type="Texture2D" path="frames/atk_ne_1_f.png" id="d136"]
-[ext_resource type="Texture2D" path="frames/atk_ne_1_f_n.png" id="n136"]
-[ext_resource type="Texture2D" path="frames/atk_ne_2_f.png" id="d137"]
-[ext_resource type="Texture2D" path="frames/atk_ne_2_f_n.png" id="n137"]
-[ext_resource type="Texture2D" path="frames/atk_ne_3_f.png" id="d138"]
-[ext_resource type="Texture2D" path="frames/atk_ne_3_f_n.png" id="n138"]
-[ext_resource type="Texture2D" path="frames/atk_ne_4_f.png" id="d139"]
-[ext_resource type="Texture2D" path="frames/atk_ne_4_f_n.png" id="n139"]
-[ext_resource type="Texture2D" path="frames/parry_ne_0_f.png" id="d140"]
-[ext_resource type="Texture2D" path="frames/parry_ne_0_f_n.png" id="n140"]
-[ext_resource type="Texture2D" path="frames/parry_ne_1_f.png" id="d141"]
-[ext_resource type="Texture2D" path="frames/parry_ne_1_f_n.png" id="n141"]
-[ext_resource type="Texture2D" path="frames/parry_ne_2_f.png" id="d142"]
-[ext_resource type="Texture2D" path="frames/parry_ne_2_f_n.png" id="n142"]
-[ext_resource type="Texture2D" path="frames/parry_ne_3_f.png" id="d143"]
-[ext_resource type="Texture2D" path="frames/parry_ne_3_f_n.png" id="n143"]
-[ext_resource type="Texture2D" path="frames/parry_ne_4_f.png" id="d144"]
-[ext_resource type="Texture2D" path="frames/parry_ne_4_f_n.png" id="n144"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_0_f.png" id="d145"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_0_f_n.png" id="n145"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_1_f.png" id="d146"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_1_f_n.png" id="n146"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_2_f.png" id="d147"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_2_f_n.png" id="n147"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_3_f.png" id="d148"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_3_f_n.png" id="n148"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_4_f.png" id="d149"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_4_f_n.png" id="n149"]
-[ext_resource type="Texture2D" path="frames/idle_n_0.png" id="d150"]
-[ext_resource type="Texture2D" path="frames/idle_n_0_n.png" id="n150"]
-[ext_resource type="Texture2D" path="frames/idle_n_1.png" id="d151"]
-[ext_resource type="Texture2D" path="frames/idle_n_1_n.png" id="n151"]
-[ext_resource type="Texture2D" path="frames/idle_n_2.png" id="d152"]
-[ext_resource type="Texture2D" path="frames/idle_n_2_n.png" id="n152"]
-[ext_resource type="Texture2D" path="frames/idle_n_3.png" id="d153"]
-[ext_resource type="Texture2D" path="frames/idle_n_3_n.png" id="n153"]
-[ext_resource type="Texture2D" path="frames/idle_n_4.png" id="d154"]
-[ext_resource type="Texture2D" path="frames/idle_n_4_n.png" id="n154"]
-[ext_resource type="Texture2D" path="frames/run2_n_0.png" id="d155"]
-[ext_resource type="Texture2D" path="frames/run2_n_0_n.png" id="n155"]
-[ext_resource type="Texture2D" path="frames/run2_n_1.png" id="d156"]
-[ext_resource type="Texture2D" path="frames/run2_n_1_n.png" id="n156"]
-[ext_resource type="Texture2D" path="frames/run2_n_2.png" id="d157"]
-[ext_resource type="Texture2D" path="frames/run2_n_2_n.png" id="n157"]
-[ext_resource type="Texture2D" path="frames/run2_n_3.png" id="d158"]
-[ext_resource type="Texture2D" path="frames/run2_n_3_n.png" id="n158"]
-[ext_resource type="Texture2D" path="frames/run2_n_4.png" id="d159"]
-[ext_resource type="Texture2D" path="frames/run2_n_4_n.png" id="n159"]
-[ext_resource type="Texture2D" path="frames/atk_n_0.png" id="d160"]
-[ext_resource type="Texture2D" path="frames/atk_n_0_n.png" id="n160"]
-[ext_resource type="Texture2D" path="frames/atk_n_1.png" id="d161"]
-[ext_resource type="Texture2D" path="frames/atk_n_1_n.png" id="n161"]
-[ext_resource type="Texture2D" path="frames/atk_n_2.png" id="d162"]
-[ext_resource type="Texture2D" path="frames/atk_n_2_n.png" id="n162"]
-[ext_resource type="Texture2D" path="frames/atk_n_3.png" id="d163"]
-[ext_resource type="Texture2D" path="frames/atk_n_3_n.png" id="n163"]
-[ext_resource type="Texture2D" path="frames/atk_n_4.png" id="d164"]
-[ext_resource type="Texture2D" path="frames/atk_n_4_n.png" id="n164"]
-[ext_resource type="Texture2D" path="frames/parry_n_0.png" id="d165"]
-[ext_resource type="Texture2D" path="frames/parry_n_0_n.png" id="n165"]
-[ext_resource type="Texture2D" path="frames/parry_n_1.png" id="d166"]
-[ext_resource type="Texture2D" path="frames/parry_n_1_n.png" id="n166"]
-[ext_resource type="Texture2D" path="frames/parry_n_2.png" id="d167"]
-[ext_resource type="Texture2D" path="frames/parry_n_2_n.png" id="n167"]
-[ext_resource type="Texture2D" path="frames/parry_n_3.png" id="d168"]
-[ext_resource type="Texture2D" path="frames/parry_n_3_n.png" id="n168"]
-[ext_resource type="Texture2D" path="frames/parry_n_4.png" id="d169"]
-[ext_resource type="Texture2D" path="frames/parry_n_4_n.png" id="n169"]
-[ext_resource type="Texture2D" path="frames/dodge_n_0.png" id="d170"]
-[ext_resource type="Texture2D" path="frames/dodge_n_0_n.png" id="n170"]
-[ext_resource type="Texture2D" path="frames/dodge_n_1.png" id="d171"]
-[ext_resource type="Texture2D" path="frames/dodge_n_1_n.png" id="n171"]
-[ext_resource type="Texture2D" path="frames/dodge_n_2.png" id="d172"]
-[ext_resource type="Texture2D" path="frames/dodge_n_2_n.png" id="n172"]
-[ext_resource type="Texture2D" path="frames/dodge_n_3.png" id="d173"]
-[ext_resource type="Texture2D" path="frames/dodge_n_3_n.png" id="n173"]
-[ext_resource type="Texture2D" path="frames/dodge_n_4.png" id="d174"]
-[ext_resource type="Texture2D" path="frames/dodge_n_4_n.png" id="n174"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0.png" id="d175"]
-[ext_resource type="Texture2D" path="frames/idle_ne_0_n.png" id="n175"]
-[ext_resource type="Texture2D" path="frames/idle_ne_1.png" id="d176"]
-[ext_resource type="Texture2D" path="frames/idle_ne_1_n.png" id="n176"]
-[ext_resource type="Texture2D" path="frames/idle_ne_2.png" id="d177"]
-[ext_resource type="Texture2D" path="frames/idle_ne_2_n.png" id="n177"]
-[ext_resource type="Texture2D" path="frames/idle_ne_3.png" id="d178"]
-[ext_resource type="Texture2D" path="frames/idle_ne_3_n.png" id="n178"]
-[ext_resource type="Texture2D" path="frames/idle_ne_4.png" id="d179"]
-[ext_resource type="Texture2D" path="frames/idle_ne_4_n.png" id="n179"]
-[ext_resource type="Texture2D" path="frames/run3_b_0.png" id="d180"]
-[ext_resource type="Texture2D" path="frames/run3_b_0_n.png" id="n180"]
-[ext_resource type="Texture2D" path="frames/run3_b_1.png" id="d181"]
-[ext_resource type="Texture2D" path="frames/run3_b_1_n.png" id="n181"]
-[ext_resource type="Texture2D" path="frames/run3_b_2.png" id="d182"]
-[ext_resource type="Texture2D" path="frames/run3_b_2_n.png" id="n182"]
-[ext_resource type="Texture2D" path="frames/run3_b_3.png" id="d183"]
-[ext_resource type="Texture2D" path="frames/run3_b_3_n.png" id="n183"]
-[ext_resource type="Texture2D" path="frames/run3_b_4.png" id="d184"]
-[ext_resource type="Texture2D" path="frames/run3_b_4_n.png" id="n184"]
-[ext_resource type="Texture2D" path="frames/atk_ne_0.png" id="d185"]
-[ext_resource type="Texture2D" path="frames/atk_ne_0_n.png" id="n185"]
-[ext_resource type="Texture2D" path="frames/atk_ne_1.png" id="d186"]
-[ext_resource type="Texture2D" path="frames/atk_ne_1_n.png" id="n186"]
-[ext_resource type="Texture2D" path="frames/atk_ne_2.png" id="d187"]
-[ext_resource type="Texture2D" path="frames/atk_ne_2_n.png" id="n187"]
-[ext_resource type="Texture2D" path="frames/atk_ne_3.png" id="d188"]
-[ext_resource type="Texture2D" path="frames/atk_ne_3_n.png" id="n188"]
-[ext_resource type="Texture2D" path="frames/atk_ne_4.png" id="d189"]
-[ext_resource type="Texture2D" path="frames/atk_ne_4_n.png" id="n189"]
-[ext_resource type="Texture2D" path="frames/parry_ne_0.png" id="d190"]
-[ext_resource type="Texture2D" path="frames/parry_ne_0_n.png" id="n190"]
-[ext_resource type="Texture2D" path="frames/parry_ne_1.png" id="d191"]
-[ext_resource type="Texture2D" path="frames/parry_ne_1_n.png" id="n191"]
-[ext_resource type="Texture2D" path="frames/parry_ne_2.png" id="d192"]
-[ext_resource type="Texture2D" path="frames/parry_ne_2_n.png" id="n192"]
-[ext_resource type="Texture2D" path="frames/parry_ne_3.png" id="d193"]
-[ext_resource type="Texture2D" path="frames/parry_ne_3_n.png" id="n193"]
-[ext_resource type="Texture2D" path="frames/parry_ne_4.png" id="d194"]
-[ext_resource type="Texture2D" path="frames/parry_ne_4_n.png" id="n194"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_0.png" id="d195"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_0_n.png" id="n195"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_1.png" id="d196"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_1_n.png" id="n196"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_2.png" id="d197"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_2_n.png" id="n197"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_3.png" id="d198"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_3_n.png" id="n198"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_4.png" id="d199"]
-[ext_resource type="Texture2D" path="frames/dodge_ne_4_n.png" id="n199"]
+[ext_resource type="Texture2D" path="frames/idle2_e_0.png" id="d0"]
+[ext_resource type="Texture2D" path="frames/idle2_e_0_n.png" id="n0"]
+[ext_resource type="Texture2D" path="frames/idle2_e_1.png" id="d1"]
+[ext_resource type="Texture2D" path="frames/idle2_e_1_n.png" id="n1"]
+[ext_resource type="Texture2D" path="frames/idle_e_0.png" id="d2"]
+[ext_resource type="Texture2D" path="frames/idle_e_0_n.png" id="n2"]
+[ext_resource type="Texture2D" path="frames/idle_e_1.png" id="d3"]
+[ext_resource type="Texture2D" path="frames/idle_e_1_n.png" id="n3"]
+[ext_resource type="Texture2D" path="frames/idle_e_2.png" id="d4"]
+[ext_resource type="Texture2D" path="frames/idle_e_2_n.png" id="n4"]
+[ext_resource type="Texture2D" path="frames/idle_e_3.png" id="d5"]
+[ext_resource type="Texture2D" path="frames/idle_e_3_n.png" id="n5"]
+[ext_resource type="Texture2D" path="frames/idle_e_4.png" id="d6"]
+[ext_resource type="Texture2D" path="frames/idle_e_4_n.png" id="n6"]
+[ext_resource type="Texture2D" path="frames/nrun_e_0.png" id="d7"]
+[ext_resource type="Texture2D" path="frames/nrun_e_0_n.png" id="n7"]
+[ext_resource type="Texture2D" path="frames/nrun_e_1.png" id="d8"]
+[ext_resource type="Texture2D" path="frames/nrun_e_1_n.png" id="n8"]
+[ext_resource type="Texture2D" path="frames/nrun_e_2.png" id="d9"]
+[ext_resource type="Texture2D" path="frames/nrun_e_2_n.png" id="n9"]
+[ext_resource type="Texture2D" path="frames/nrun_e_3.png" id="d10"]
+[ext_resource type="Texture2D" path="frames/nrun_e_3_n.png" id="n10"]
+[ext_resource type="Texture2D" path="frames/nrun_e_4.png" id="d11"]
+[ext_resource type="Texture2D" path="frames/nrun_e_4_n.png" id="n11"]
+[ext_resource type="Texture2D" path="frames/nrun_e_5.png" id="d12"]
+[ext_resource type="Texture2D" path="frames/nrun_e_5_n.png" id="n12"]
+[ext_resource type="Texture2D" path="frames/nrun_e_6.png" id="d13"]
+[ext_resource type="Texture2D" path="frames/nrun_e_6_n.png" id="n13"]
+[ext_resource type="Texture2D" path="frames/atk_e_0.png" id="d14"]
+[ext_resource type="Texture2D" path="frames/atk_e_0_n.png" id="n14"]
+[ext_resource type="Texture2D" path="frames/atk_e_1.png" id="d15"]
+[ext_resource type="Texture2D" path="frames/atk_e_1_n.png" id="n15"]
+[ext_resource type="Texture2D" path="frames/atk_e_2.png" id="d16"]
+[ext_resource type="Texture2D" path="frames/atk_e_2_n.png" id="n16"]
+[ext_resource type="Texture2D" path="frames/atk_e_3.png" id="d17"]
+[ext_resource type="Texture2D" path="frames/atk_e_3_n.png" id="n17"]
+[ext_resource type="Texture2D" path="frames/atk_e_4.png" id="d18"]
+[ext_resource type="Texture2D" path="frames/atk_e_4_n.png" id="n18"]
+[ext_resource type="Texture2D" path="frames/parry_e_0.png" id="d19"]
+[ext_resource type="Texture2D" path="frames/parry_e_0_n.png" id="n19"]
+[ext_resource type="Texture2D" path="frames/parry_e_1.png" id="d20"]
+[ext_resource type="Texture2D" path="frames/parry_e_1_n.png" id="n20"]
+[ext_resource type="Texture2D" path="frames/parry_e_2.png" id="d21"]
+[ext_resource type="Texture2D" path="frames/parry_e_2_n.png" id="n21"]
+[ext_resource type="Texture2D" path="frames/parry_e_3.png" id="d22"]
+[ext_resource type="Texture2D" path="frames/parry_e_3_n.png" id="n22"]
+[ext_resource type="Texture2D" path="frames/parry_e_4.png" id="d23"]
+[ext_resource type="Texture2D" path="frames/parry_e_4_n.png" id="n23"]
+[ext_resource type="Texture2D" path="frames/dodge_e_0.png" id="d24"]
+[ext_resource type="Texture2D" path="frames/dodge_e_0_n.png" id="n24"]
+[ext_resource type="Texture2D" path="frames/dodge_e_1.png" id="d25"]
+[ext_resource type="Texture2D" path="frames/dodge_e_1_n.png" id="n25"]
+[ext_resource type="Texture2D" path="frames/dodge_e_2.png" id="d26"]
+[ext_resource type="Texture2D" path="frames/dodge_e_2_n.png" id="n26"]
+[ext_resource type="Texture2D" path="frames/dodge_e_3.png" id="d27"]
+[ext_resource type="Texture2D" path="frames/dodge_e_3_n.png" id="n27"]
+[ext_resource type="Texture2D" path="frames/dodge_e_4.png" id="d28"]
+[ext_resource type="Texture2D" path="frames/dodge_e_4_n.png" id="n28"]
+[ext_resource type="Texture2D" path="frames/idle2_se_0.png" id="d29"]
+[ext_resource type="Texture2D" path="frames/idle2_se_0_n.png" id="n29"]
+[ext_resource type="Texture2D" path="frames/idle2_se_1.png" id="d30"]
+[ext_resource type="Texture2D" path="frames/idle2_se_1_n.png" id="n30"]
+[ext_resource type="Texture2D" path="frames/idle_se_0.png" id="d31"]
+[ext_resource type="Texture2D" path="frames/idle_se_0_n.png" id="n31"]
+[ext_resource type="Texture2D" path="frames/idle_se_1.png" id="d32"]
+[ext_resource type="Texture2D" path="frames/idle_se_1_n.png" id="n32"]
+[ext_resource type="Texture2D" path="frames/idle_se_2.png" id="d33"]
+[ext_resource type="Texture2D" path="frames/idle_se_2_n.png" id="n33"]
+[ext_resource type="Texture2D" path="frames/idle_se_3.png" id="d34"]
+[ext_resource type="Texture2D" path="frames/idle_se_3_n.png" id="n34"]
+[ext_resource type="Texture2D" path="frames/idle_se_4.png" id="d35"]
+[ext_resource type="Texture2D" path="frames/idle_se_4_n.png" id="n35"]
+[ext_resource type="Texture2D" path="frames/nrun_se_0.png" id="d36"]
+[ext_resource type="Texture2D" path="frames/nrun_se_0_n.png" id="n36"]
+[ext_resource type="Texture2D" path="frames/nrun_se_1.png" id="d37"]
+[ext_resource type="Texture2D" path="frames/nrun_se_1_n.png" id="n37"]
+[ext_resource type="Texture2D" path="frames/nrun_se_2.png" id="d38"]
+[ext_resource type="Texture2D" path="frames/nrun_se_2_n.png" id="n38"]
+[ext_resource type="Texture2D" path="frames/nrun_se_3.png" id="d39"]
+[ext_resource type="Texture2D" path="frames/nrun_se_3_n.png" id="n39"]
+[ext_resource type="Texture2D" path="frames/nrun_se_4.png" id="d40"]
+[ext_resource type="Texture2D" path="frames/nrun_se_4_n.png" id="n40"]
+[ext_resource type="Texture2D" path="frames/nrun_se_5.png" id="d41"]
+[ext_resource type="Texture2D" path="frames/nrun_se_5_n.png" id="n41"]
+[ext_resource type="Texture2D" path="frames/nrun_se_6.png" id="d42"]
+[ext_resource type="Texture2D" path="frames/nrun_se_6_n.png" id="n42"]
+[ext_resource type="Texture2D" path="frames/natk_se_0.png" id="d43"]
+[ext_resource type="Texture2D" path="frames/natk_se_0_n.png" id="n43"]
+[ext_resource type="Texture2D" path="frames/natk_se_1.png" id="d44"]
+[ext_resource type="Texture2D" path="frames/natk_se_1_n.png" id="n44"]
+[ext_resource type="Texture2D" path="frames/natk_se_2.png" id="d45"]
+[ext_resource type="Texture2D" path="frames/natk_se_2_n.png" id="n45"]
+[ext_resource type="Texture2D" path="frames/natk_se_3.png" id="d46"]
+[ext_resource type="Texture2D" path="frames/natk_se_3_n.png" id="n46"]
+[ext_resource type="Texture2D" path="frames/natk_se_4.png" id="d47"]
+[ext_resource type="Texture2D" path="frames/natk_se_4_n.png" id="n47"]
+[ext_resource type="Texture2D" path="frames/parry_se_0.png" id="d48"]
+[ext_resource type="Texture2D" path="frames/parry_se_0_n.png" id="n48"]
+[ext_resource type="Texture2D" path="frames/parry_se_1.png" id="d49"]
+[ext_resource type="Texture2D" path="frames/parry_se_1_n.png" id="n49"]
+[ext_resource type="Texture2D" path="frames/parry_se_2.png" id="d50"]
+[ext_resource type="Texture2D" path="frames/parry_se_2_n.png" id="n50"]
+[ext_resource type="Texture2D" path="frames/parry_se_3.png" id="d51"]
+[ext_resource type="Texture2D" path="frames/parry_se_3_n.png" id="n51"]
+[ext_resource type="Texture2D" path="frames/parry_se_4.png" id="d52"]
+[ext_resource type="Texture2D" path="frames/parry_se_4_n.png" id="n52"]
+[ext_resource type="Texture2D" path="frames/dodge_se_0.png" id="d53"]
+[ext_resource type="Texture2D" path="frames/dodge_se_0_n.png" id="n53"]
+[ext_resource type="Texture2D" path="frames/dodge_se_1.png" id="d54"]
+[ext_resource type="Texture2D" path="frames/dodge_se_1_n.png" id="n54"]
+[ext_resource type="Texture2D" path="frames/dodge_se_2.png" id="d55"]
+[ext_resource type="Texture2D" path="frames/dodge_se_2_n.png" id="n55"]
+[ext_resource type="Texture2D" path="frames/dodge_se_3.png" id="d56"]
+[ext_resource type="Texture2D" path="frames/dodge_se_3_n.png" id="n56"]
+[ext_resource type="Texture2D" path="frames/dodge_se_4.png" id="d57"]
+[ext_resource type="Texture2D" path="frames/dodge_se_4_n.png" id="n57"]
+[ext_resource type="Texture2D" path="frames/idle2_s_0.png" id="d58"]
+[ext_resource type="Texture2D" path="frames/idle2_s_0_n.png" id="n58"]
+[ext_resource type="Texture2D" path="frames/idle2_s_1.png" id="d59"]
+[ext_resource type="Texture2D" path="frames/idle2_s_1_n.png" id="n59"]
+[ext_resource type="Texture2D" path="frames/idle_s_0.png" id="d60"]
+[ext_resource type="Texture2D" path="frames/idle_s_0_n.png" id="n60"]
+[ext_resource type="Texture2D" path="frames/idle_s_1.png" id="d61"]
+[ext_resource type="Texture2D" path="frames/idle_s_1_n.png" id="n61"]
+[ext_resource type="Texture2D" path="frames/idle_s_2.png" id="d62"]
+[ext_resource type="Texture2D" path="frames/idle_s_2_n.png" id="n62"]
+[ext_resource type="Texture2D" path="frames/idle_s_3.png" id="d63"]
+[ext_resource type="Texture2D" path="frames/idle_s_3_n.png" id="n63"]
+[ext_resource type="Texture2D" path="frames/idle_s_4.png" id="d64"]
+[ext_resource type="Texture2D" path="frames/idle_s_4_n.png" id="n64"]
+[ext_resource type="Texture2D" path="frames/nrun_s_0.png" id="d65"]
+[ext_resource type="Texture2D" path="frames/nrun_s_0_n.png" id="n65"]
+[ext_resource type="Texture2D" path="frames/nrun_s_1.png" id="d66"]
+[ext_resource type="Texture2D" path="frames/nrun_s_1_n.png" id="n66"]
+[ext_resource type="Texture2D" path="frames/nrun_s_2.png" id="d67"]
+[ext_resource type="Texture2D" path="frames/nrun_s_2_n.png" id="n67"]
+[ext_resource type="Texture2D" path="frames/nrun_s_3.png" id="d68"]
+[ext_resource type="Texture2D" path="frames/nrun_s_3_n.png" id="n68"]
+[ext_resource type="Texture2D" path="frames/nrun_s_4.png" id="d69"]
+[ext_resource type="Texture2D" path="frames/nrun_s_4_n.png" id="n69"]
+[ext_resource type="Texture2D" path="frames/nrun_s_5.png" id="d70"]
+[ext_resource type="Texture2D" path="frames/nrun_s_5_n.png" id="n70"]
+[ext_resource type="Texture2D" path="frames/nrun_s_6.png" id="d71"]
+[ext_resource type="Texture2D" path="frames/nrun_s_6_n.png" id="n71"]
+[ext_resource type="Texture2D" path="frames/nrun_s_7.png" id="d72"]
+[ext_resource type="Texture2D" path="frames/nrun_s_7_n.png" id="n72"]
+[ext_resource type="Texture2D" path="frames/natk_s_0.png" id="d73"]
+[ext_resource type="Texture2D" path="frames/natk_s_0_n.png" id="n73"]
+[ext_resource type="Texture2D" path="frames/natk_s_1.png" id="d74"]
+[ext_resource type="Texture2D" path="frames/natk_s_1_n.png" id="n74"]
+[ext_resource type="Texture2D" path="frames/natk_s_2.png" id="d75"]
+[ext_resource type="Texture2D" path="frames/natk_s_2_n.png" id="n75"]
+[ext_resource type="Texture2D" path="frames/natk_s_3.png" id="d76"]
+[ext_resource type="Texture2D" path="frames/natk_s_3_n.png" id="n76"]
+[ext_resource type="Texture2D" path="frames/natk_s_4.png" id="d77"]
+[ext_resource type="Texture2D" path="frames/natk_s_4_n.png" id="n77"]
+[ext_resource type="Texture2D" path="frames/parry_s_0.png" id="d78"]
+[ext_resource type="Texture2D" path="frames/parry_s_0_n.png" id="n78"]
+[ext_resource type="Texture2D" path="frames/parry_s_1.png" id="d79"]
+[ext_resource type="Texture2D" path="frames/parry_s_1_n.png" id="n79"]
+[ext_resource type="Texture2D" path="frames/parry_s_2.png" id="d80"]
+[ext_resource type="Texture2D" path="frames/parry_s_2_n.png" id="n80"]
+[ext_resource type="Texture2D" path="frames/parry_s_3.png" id="d81"]
+[ext_resource type="Texture2D" path="frames/parry_s_3_n.png" id="n81"]
+[ext_resource type="Texture2D" path="frames/parry_s_4.png" id="d82"]
+[ext_resource type="Texture2D" path="frames/parry_s_4_n.png" id="n82"]
+[ext_resource type="Texture2D" path="frames/dodge_s_0.png" id="d83"]
+[ext_resource type="Texture2D" path="frames/dodge_s_0_n.png" id="n83"]
+[ext_resource type="Texture2D" path="frames/dodge_s_1.png" id="d84"]
+[ext_resource type="Texture2D" path="frames/dodge_s_1_n.png" id="n84"]
+[ext_resource type="Texture2D" path="frames/dodge_s_2.png" id="d85"]
+[ext_resource type="Texture2D" path="frames/dodge_s_2_n.png" id="n85"]
+[ext_resource type="Texture2D" path="frames/dodge_s_3.png" id="d86"]
+[ext_resource type="Texture2D" path="frames/dodge_s_3_n.png" id="n86"]
+[ext_resource type="Texture2D" path="frames/dodge_s_4.png" id="d87"]
+[ext_resource type="Texture2D" path="frames/dodge_s_4_n.png" id="n87"]
+[ext_resource type="Texture2D" path="frames/idle2_sw_0.png" id="d88"]
+[ext_resource type="Texture2D" path="frames/idle2_sw_0_n.png" id="n88"]
+[ext_resource type="Texture2D" path="frames/idle2_sw_1.png" id="d89"]
+[ext_resource type="Texture2D" path="frames/idle2_sw_1_n.png" id="n89"]
+[ext_resource type="Texture2D" path="frames/idle_se_0_f.png" id="d90"]
+[ext_resource type="Texture2D" path="frames/idle_se_0_f_n.png" id="n90"]
+[ext_resource type="Texture2D" path="frames/idle_se_1_f.png" id="d91"]
+[ext_resource type="Texture2D" path="frames/idle_se_1_f_n.png" id="n91"]
+[ext_resource type="Texture2D" path="frames/idle_se_2_f.png" id="d92"]
+[ext_resource type="Texture2D" path="frames/idle_se_2_f_n.png" id="n92"]
+[ext_resource type="Texture2D" path="frames/idle_se_3_f.png" id="d93"]
+[ext_resource type="Texture2D" path="frames/idle_se_3_f_n.png" id="n93"]
+[ext_resource type="Texture2D" path="frames/idle_se_4_f.png" id="d94"]
+[ext_resource type="Texture2D" path="frames/idle_se_4_f_n.png" id="n94"]
+[ext_resource type="Texture2D" path="frames/nrun_se_0_f.png" id="d95"]
+[ext_resource type="Texture2D" path="frames/nrun_se_0_f_n.png" id="n95"]
+[ext_resource type="Texture2D" path="frames/nrun_se_1_f.png" id="d96"]
+[ext_resource type="Texture2D" path="frames/nrun_se_1_f_n.png" id="n96"]
+[ext_resource type="Texture2D" path="frames/nrun_se_2_f.png" id="d97"]
+[ext_resource type="Texture2D" path="frames/nrun_se_2_f_n.png" id="n97"]
+[ext_resource type="Texture2D" path="frames/nrun_se_3_f.png" id="d98"]
+[ext_resource type="Texture2D" path="frames/nrun_se_3_f_n.png" id="n98"]
+[ext_resource type="Texture2D" path="frames/nrun_se_4_f.png" id="d99"]
+[ext_resource type="Texture2D" path="frames/nrun_se_4_f_n.png" id="n99"]
+[ext_resource type="Texture2D" path="frames/nrun_se_5_f.png" id="d100"]
+[ext_resource type="Texture2D" path="frames/nrun_se_5_f_n.png" id="n100"]
+[ext_resource type="Texture2D" path="frames/nrun_se_6_f.png" id="d101"]
+[ext_resource type="Texture2D" path="frames/nrun_se_6_f_n.png" id="n101"]
+[ext_resource type="Texture2D" path="frames/natk_se_0_f.png" id="d102"]
+[ext_resource type="Texture2D" path="frames/natk_se_0_f_n.png" id="n102"]
+[ext_resource type="Texture2D" path="frames/natk_se_1_f.png" id="d103"]
+[ext_resource type="Texture2D" path="frames/natk_se_1_f_n.png" id="n103"]
+[ext_resource type="Texture2D" path="frames/natk_se_2_f.png" id="d104"]
+[ext_resource type="Texture2D" path="frames/natk_se_2_f_n.png" id="n104"]
+[ext_resource type="Texture2D" path="frames/natk_se_3_f.png" id="d105"]
+[ext_resource type="Texture2D" path="frames/natk_se_3_f_n.png" id="n105"]
+[ext_resource type="Texture2D" path="frames/natk_se_4_f.png" id="d106"]
+[ext_resource type="Texture2D" path="frames/natk_se_4_f_n.png" id="n106"]
+[ext_resource type="Texture2D" path="frames/parry_se_0_f.png" id="d107"]
+[ext_resource type="Texture2D" path="frames/parry_se_0_f_n.png" id="n107"]
+[ext_resource type="Texture2D" path="frames/parry_se_1_f.png" id="d108"]
+[ext_resource type="Texture2D" path="frames/parry_se_1_f_n.png" id="n108"]
+[ext_resource type="Texture2D" path="frames/parry_se_2_f.png" id="d109"]
+[ext_resource type="Texture2D" path="frames/parry_se_2_f_n.png" id="n109"]
+[ext_resource type="Texture2D" path="frames/parry_se_3_f.png" id="d110"]
+[ext_resource type="Texture2D" path="frames/parry_se_3_f_n.png" id="n110"]
+[ext_resource type="Texture2D" path="frames/parry_se_4_f.png" id="d111"]
+[ext_resource type="Texture2D" path="frames/parry_se_4_f_n.png" id="n111"]
+[ext_resource type="Texture2D" path="frames/dodge_se_0_f.png" id="d112"]
+[ext_resource type="Texture2D" path="frames/dodge_se_0_f_n.png" id="n112"]
+[ext_resource type="Texture2D" path="frames/dodge_se_1_f.png" id="d113"]
+[ext_resource type="Texture2D" path="frames/dodge_se_1_f_n.png" id="n113"]
+[ext_resource type="Texture2D" path="frames/dodge_se_2_f.png" id="d114"]
+[ext_resource type="Texture2D" path="frames/dodge_se_2_f_n.png" id="n114"]
+[ext_resource type="Texture2D" path="frames/dodge_se_3_f.png" id="d115"]
+[ext_resource type="Texture2D" path="frames/dodge_se_3_f_n.png" id="n115"]
+[ext_resource type="Texture2D" path="frames/dodge_se_4_f.png" id="d116"]
+[ext_resource type="Texture2D" path="frames/dodge_se_4_f_n.png" id="n116"]
+[ext_resource type="Texture2D" path="frames/idle2_w_0.png" id="d117"]
+[ext_resource type="Texture2D" path="frames/idle2_w_0_n.png" id="n117"]
+[ext_resource type="Texture2D" path="frames/idle2_w_1.png" id="d118"]
+[ext_resource type="Texture2D" path="frames/idle2_w_1_n.png" id="n118"]
+[ext_resource type="Texture2D" path="frames/idle_e_0_f.png" id="d119"]
+[ext_resource type="Texture2D" path="frames/idle_e_0_f_n.png" id="n119"]
+[ext_resource type="Texture2D" path="frames/idle_e_1_f.png" id="d120"]
+[ext_resource type="Texture2D" path="frames/idle_e_1_f_n.png" id="n120"]
+[ext_resource type="Texture2D" path="frames/idle_e_2_f.png" id="d121"]
+[ext_resource type="Texture2D" path="frames/idle_e_2_f_n.png" id="n121"]
+[ext_resource type="Texture2D" path="frames/idle_e_3_f.png" id="d122"]
+[ext_resource type="Texture2D" path="frames/idle_e_3_f_n.png" id="n122"]
+[ext_resource type="Texture2D" path="frames/idle_e_4_f.png" id="d123"]
+[ext_resource type="Texture2D" path="frames/idle_e_4_f_n.png" id="n123"]
+[ext_resource type="Texture2D" path="frames/nrun_e_0_f.png" id="d124"]
+[ext_resource type="Texture2D" path="frames/nrun_e_0_f_n.png" id="n124"]
+[ext_resource type="Texture2D" path="frames/nrun_e_1_f.png" id="d125"]
+[ext_resource type="Texture2D" path="frames/nrun_e_1_f_n.png" id="n125"]
+[ext_resource type="Texture2D" path="frames/nrun_e_2_f.png" id="d126"]
+[ext_resource type="Texture2D" path="frames/nrun_e_2_f_n.png" id="n126"]
+[ext_resource type="Texture2D" path="frames/nrun_e_3_f.png" id="d127"]
+[ext_resource type="Texture2D" path="frames/nrun_e_3_f_n.png" id="n127"]
+[ext_resource type="Texture2D" path="frames/nrun_e_4_f.png" id="d128"]
+[ext_resource type="Texture2D" path="frames/nrun_e_4_f_n.png" id="n128"]
+[ext_resource type="Texture2D" path="frames/nrun_e_5_f.png" id="d129"]
+[ext_resource type="Texture2D" path="frames/nrun_e_5_f_n.png" id="n129"]
+[ext_resource type="Texture2D" path="frames/nrun_e_6_f.png" id="d130"]
+[ext_resource type="Texture2D" path="frames/nrun_e_6_f_n.png" id="n130"]
+[ext_resource type="Texture2D" path="frames/atk_w_0.png" id="d131"]
+[ext_resource type="Texture2D" path="frames/atk_w_0_n.png" id="n131"]
+[ext_resource type="Texture2D" path="frames/atk_w_1.png" id="d132"]
+[ext_resource type="Texture2D" path="frames/atk_w_1_n.png" id="n132"]
+[ext_resource type="Texture2D" path="frames/atk_w_2.png" id="d133"]
+[ext_resource type="Texture2D" path="frames/atk_w_2_n.png" id="n133"]
+[ext_resource type="Texture2D" path="frames/atk_w_3.png" id="d134"]
+[ext_resource type="Texture2D" path="frames/atk_w_3_n.png" id="n134"]
+[ext_resource type="Texture2D" path="frames/atk_w_4.png" id="d135"]
+[ext_resource type="Texture2D" path="frames/atk_w_4_n.png" id="n135"]
+[ext_resource type="Texture2D" path="frames/parry_e_0_f.png" id="d136"]
+[ext_resource type="Texture2D" path="frames/parry_e_0_f_n.png" id="n136"]
+[ext_resource type="Texture2D" path="frames/parry_e_1_f.png" id="d137"]
+[ext_resource type="Texture2D" path="frames/parry_e_1_f_n.png" id="n137"]
+[ext_resource type="Texture2D" path="frames/parry_e_2_f.png" id="d138"]
+[ext_resource type="Texture2D" path="frames/parry_e_2_f_n.png" id="n138"]
+[ext_resource type="Texture2D" path="frames/parry_e_3_f.png" id="d139"]
+[ext_resource type="Texture2D" path="frames/parry_e_3_f_n.png" id="n139"]
+[ext_resource type="Texture2D" path="frames/parry_e_4_f.png" id="d140"]
+[ext_resource type="Texture2D" path="frames/parry_e_4_f_n.png" id="n140"]
+[ext_resource type="Texture2D" path="frames/dodge_e_0_f.png" id="d141"]
+[ext_resource type="Texture2D" path="frames/dodge_e_0_f_n.png" id="n141"]
+[ext_resource type="Texture2D" path="frames/dodge_e_1_f.png" id="d142"]
+[ext_resource type="Texture2D" path="frames/dodge_e_1_f_n.png" id="n142"]
+[ext_resource type="Texture2D" path="frames/dodge_e_2_f.png" id="d143"]
+[ext_resource type="Texture2D" path="frames/dodge_e_2_f_n.png" id="n143"]
+[ext_resource type="Texture2D" path="frames/dodge_e_3_f.png" id="d144"]
+[ext_resource type="Texture2D" path="frames/dodge_e_3_f_n.png" id="n144"]
+[ext_resource type="Texture2D" path="frames/dodge_e_4_f.png" id="d145"]
+[ext_resource type="Texture2D" path="frames/dodge_e_4_f_n.png" id="n145"]
+[ext_resource type="Texture2D" path="frames/idle2_nw_0.png" id="d146"]
+[ext_resource type="Texture2D" path="frames/idle2_nw_0_n.png" id="n146"]
+[ext_resource type="Texture2D" path="frames/idle2_nw_1.png" id="d147"]
+[ext_resource type="Texture2D" path="frames/idle2_nw_1_n.png" id="n147"]
+[ext_resource type="Texture2D" path="frames/idle_ne_0_f.png" id="d148"]
+[ext_resource type="Texture2D" path="frames/idle_ne_0_f_n.png" id="n148"]
+[ext_resource type="Texture2D" path="frames/idle_ne_1_f.png" id="d149"]
+[ext_resource type="Texture2D" path="frames/idle_ne_1_f_n.png" id="n149"]
+[ext_resource type="Texture2D" path="frames/idle_ne_2_f.png" id="d150"]
+[ext_resource type="Texture2D" path="frames/idle_ne_2_f_n.png" id="n150"]
+[ext_resource type="Texture2D" path="frames/idle_ne_3_f.png" id="d151"]
+[ext_resource type="Texture2D" path="frames/idle_ne_3_f_n.png" id="n151"]
+[ext_resource type="Texture2D" path="frames/idle_ne_4_f.png" id="d152"]
+[ext_resource type="Texture2D" path="frames/idle_ne_4_f_n.png" id="n152"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_0.png" id="d153"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_0_n.png" id="n153"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_1.png" id="d154"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_1_n.png" id="n154"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_2.png" id="d155"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_2_n.png" id="n155"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_3.png" id="d156"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_3_n.png" id="n156"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_4.png" id="d157"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_4_n.png" id="n157"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_5.png" id="d158"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_5_n.png" id="n158"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_6.png" id="d159"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_6_n.png" id="n159"]
+[ext_resource type="Texture2D" path="frames/atk_ne_0_f.png" id="d160"]
+[ext_resource type="Texture2D" path="frames/atk_ne_0_f_n.png" id="n160"]
+[ext_resource type="Texture2D" path="frames/atk_ne_1_f.png" id="d161"]
+[ext_resource type="Texture2D" path="frames/atk_ne_1_f_n.png" id="n161"]
+[ext_resource type="Texture2D" path="frames/atk_ne_2_f.png" id="d162"]
+[ext_resource type="Texture2D" path="frames/atk_ne_2_f_n.png" id="n162"]
+[ext_resource type="Texture2D" path="frames/atk_ne_3_f.png" id="d163"]
+[ext_resource type="Texture2D" path="frames/atk_ne_3_f_n.png" id="n163"]
+[ext_resource type="Texture2D" path="frames/atk_ne_4_f.png" id="d164"]
+[ext_resource type="Texture2D" path="frames/atk_ne_4_f_n.png" id="n164"]
+[ext_resource type="Texture2D" path="frames/parry_ne_0_f.png" id="d165"]
+[ext_resource type="Texture2D" path="frames/parry_ne_0_f_n.png" id="n165"]
+[ext_resource type="Texture2D" path="frames/parry_ne_1_f.png" id="d166"]
+[ext_resource type="Texture2D" path="frames/parry_ne_1_f_n.png" id="n166"]
+[ext_resource type="Texture2D" path="frames/parry_ne_2_f.png" id="d167"]
+[ext_resource type="Texture2D" path="frames/parry_ne_2_f_n.png" id="n167"]
+[ext_resource type="Texture2D" path="frames/parry_ne_3_f.png" id="d168"]
+[ext_resource type="Texture2D" path="frames/parry_ne_3_f_n.png" id="n168"]
+[ext_resource type="Texture2D" path="frames/parry_ne_4_f.png" id="d169"]
+[ext_resource type="Texture2D" path="frames/parry_ne_4_f_n.png" id="n169"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_0_f.png" id="d170"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_0_f_n.png" id="n170"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_1_f.png" id="d171"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_1_f_n.png" id="n171"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_2_f.png" id="d172"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_2_f_n.png" id="n172"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_3_f.png" id="d173"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_3_f_n.png" id="n173"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_4_f.png" id="d174"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_4_f_n.png" id="n174"]
+[ext_resource type="Texture2D" path="frames/idle2_n_0.png" id="d175"]
+[ext_resource type="Texture2D" path="frames/idle2_n_0_n.png" id="n175"]
+[ext_resource type="Texture2D" path="frames/idle2_n_1.png" id="d176"]
+[ext_resource type="Texture2D" path="frames/idle2_n_1_n.png" id="n176"]
+[ext_resource type="Texture2D" path="frames/idle_n_0.png" id="d177"]
+[ext_resource type="Texture2D" path="frames/idle_n_0_n.png" id="n177"]
+[ext_resource type="Texture2D" path="frames/idle_n_1.png" id="d178"]
+[ext_resource type="Texture2D" path="frames/idle_n_1_n.png" id="n178"]
+[ext_resource type="Texture2D" path="frames/idle_n_2.png" id="d179"]
+[ext_resource type="Texture2D" path="frames/idle_n_2_n.png" id="n179"]
+[ext_resource type="Texture2D" path="frames/idle_n_3.png" id="d180"]
+[ext_resource type="Texture2D" path="frames/idle_n_3_n.png" id="n180"]
+[ext_resource type="Texture2D" path="frames/idle_n_4.png" id="d181"]
+[ext_resource type="Texture2D" path="frames/idle_n_4_n.png" id="n181"]
+[ext_resource type="Texture2D" path="frames/nrun_n_0.png" id="d182"]
+[ext_resource type="Texture2D" path="frames/nrun_n_0_n.png" id="n182"]
+[ext_resource type="Texture2D" path="frames/nrun_n_1.png" id="d183"]
+[ext_resource type="Texture2D" path="frames/nrun_n_1_n.png" id="n183"]
+[ext_resource type="Texture2D" path="frames/nrun_n_2.png" id="d184"]
+[ext_resource type="Texture2D" path="frames/nrun_n_2_n.png" id="n184"]
+[ext_resource type="Texture2D" path="frames/nrun_n_3.png" id="d185"]
+[ext_resource type="Texture2D" path="frames/nrun_n_3_n.png" id="n185"]
+[ext_resource type="Texture2D" path="frames/nrun_n_4.png" id="d186"]
+[ext_resource type="Texture2D" path="frames/nrun_n_4_n.png" id="n186"]
+[ext_resource type="Texture2D" path="frames/nrun_n_5.png" id="d187"]
+[ext_resource type="Texture2D" path="frames/nrun_n_5_n.png" id="n187"]
+[ext_resource type="Texture2D" path="frames/nrun_n_6.png" id="d188"]
+[ext_resource type="Texture2D" path="frames/nrun_n_6_n.png" id="n188"]
+[ext_resource type="Texture2D" path="frames/nrun_n_7.png" id="d189"]
+[ext_resource type="Texture2D" path="frames/nrun_n_7_n.png" id="n189"]
+[ext_resource type="Texture2D" path="frames/atk_n_0.png" id="d190"]
+[ext_resource type="Texture2D" path="frames/atk_n_0_n.png" id="n190"]
+[ext_resource type="Texture2D" path="frames/atk_n_1.png" id="d191"]
+[ext_resource type="Texture2D" path="frames/atk_n_1_n.png" id="n191"]
+[ext_resource type="Texture2D" path="frames/atk_n_2.png" id="d192"]
+[ext_resource type="Texture2D" path="frames/atk_n_2_n.png" id="n192"]
+[ext_resource type="Texture2D" path="frames/atk_n_3.png" id="d193"]
+[ext_resource type="Texture2D" path="frames/atk_n_3_n.png" id="n193"]
+[ext_resource type="Texture2D" path="frames/atk_n_4.png" id="d194"]
+[ext_resource type="Texture2D" path="frames/atk_n_4_n.png" id="n194"]
+[ext_resource type="Texture2D" path="frames/parry_n_0.png" id="d195"]
+[ext_resource type="Texture2D" path="frames/parry_n_0_n.png" id="n195"]
+[ext_resource type="Texture2D" path="frames/parry_n_1.png" id="d196"]
+[ext_resource type="Texture2D" path="frames/parry_n_1_n.png" id="n196"]
+[ext_resource type="Texture2D" path="frames/parry_n_2.png" id="d197"]
+[ext_resource type="Texture2D" path="frames/parry_n_2_n.png" id="n197"]
+[ext_resource type="Texture2D" path="frames/parry_n_3.png" id="d198"]
+[ext_resource type="Texture2D" path="frames/parry_n_3_n.png" id="n198"]
+[ext_resource type="Texture2D" path="frames/parry_n_4.png" id="d199"]
+[ext_resource type="Texture2D" path="frames/parry_n_4_n.png" id="n199"]
+[ext_resource type="Texture2D" path="frames/dodge_n_0.png" id="d200"]
+[ext_resource type="Texture2D" path="frames/dodge_n_0_n.png" id="n200"]
+[ext_resource type="Texture2D" path="frames/dodge_n_1.png" id="d201"]
+[ext_resource type="Texture2D" path="frames/dodge_n_1_n.png" id="n201"]
+[ext_resource type="Texture2D" path="frames/dodge_n_2.png" id="d202"]
+[ext_resource type="Texture2D" path="frames/dodge_n_2_n.png" id="n202"]
+[ext_resource type="Texture2D" path="frames/dodge_n_3.png" id="d203"]
+[ext_resource type="Texture2D" path="frames/dodge_n_3_n.png" id="n203"]
+[ext_resource type="Texture2D" path="frames/dodge_n_4.png" id="d204"]
+[ext_resource type="Texture2D" path="frames/dodge_n_4_n.png" id="n204"]
+[ext_resource type="Texture2D" path="frames/idle2_ne_0.png" id="d205"]
+[ext_resource type="Texture2D" path="frames/idle2_ne_0_n.png" id="n205"]
+[ext_resource type="Texture2D" path="frames/idle2_ne_1.png" id="d206"]
+[ext_resource type="Texture2D" path="frames/idle2_ne_1_n.png" id="n206"]
+[ext_resource type="Texture2D" path="frames/idle_ne_0.png" id="d207"]
+[ext_resource type="Texture2D" path="frames/idle_ne_0_n.png" id="n207"]
+[ext_resource type="Texture2D" path="frames/idle_ne_1.png" id="d208"]
+[ext_resource type="Texture2D" path="frames/idle_ne_1_n.png" id="n208"]
+[ext_resource type="Texture2D" path="frames/idle_ne_2.png" id="d209"]
+[ext_resource type="Texture2D" path="frames/idle_ne_2_n.png" id="n209"]
+[ext_resource type="Texture2D" path="frames/idle_ne_3.png" id="d210"]
+[ext_resource type="Texture2D" path="frames/idle_ne_3_n.png" id="n210"]
+[ext_resource type="Texture2D" path="frames/idle_ne_4.png" id="d211"]
+[ext_resource type="Texture2D" path="frames/idle_ne_4_n.png" id="n211"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_0_f.png" id="d212"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_0_f_n.png" id="n212"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_1_f.png" id="d213"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_1_f_n.png" id="n213"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_2_f.png" id="d214"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_2_f_n.png" id="n214"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_3_f.png" id="d215"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_3_f_n.png" id="n215"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_4_f.png" id="d216"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_4_f_n.png" id="n216"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_5_f.png" id="d217"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_5_f_n.png" id="n217"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_6_f.png" id="d218"]
+[ext_resource type="Texture2D" path="frames/nrun_nw_6_f_n.png" id="n218"]
+[ext_resource type="Texture2D" path="frames/atk_ne_0.png" id="d219"]
+[ext_resource type="Texture2D" path="frames/atk_ne_0_n.png" id="n219"]
+[ext_resource type="Texture2D" path="frames/atk_ne_1.png" id="d220"]
+[ext_resource type="Texture2D" path="frames/atk_ne_1_n.png" id="n220"]
+[ext_resource type="Texture2D" path="frames/atk_ne_2.png" id="d221"]
+[ext_resource type="Texture2D" path="frames/atk_ne_2_n.png" id="n221"]
+[ext_resource type="Texture2D" path="frames/atk_ne_3.png" id="d222"]
+[ext_resource type="Texture2D" path="frames/atk_ne_3_n.png" id="n222"]
+[ext_resource type="Texture2D" path="frames/atk_ne_4.png" id="d223"]
+[ext_resource type="Texture2D" path="frames/atk_ne_4_n.png" id="n223"]
+[ext_resource type="Texture2D" path="frames/parry_ne_0.png" id="d224"]
+[ext_resource type="Texture2D" path="frames/parry_ne_0_n.png" id="n224"]
+[ext_resource type="Texture2D" path="frames/parry_ne_1.png" id="d225"]
+[ext_resource type="Texture2D" path="frames/parry_ne_1_n.png" id="n225"]
+[ext_resource type="Texture2D" path="frames/parry_ne_2.png" id="d226"]
+[ext_resource type="Texture2D" path="frames/parry_ne_2_n.png" id="n226"]
+[ext_resource type="Texture2D" path="frames/parry_ne_3.png" id="d227"]
+[ext_resource type="Texture2D" path="frames/parry_ne_3_n.png" id="n227"]
+[ext_resource type="Texture2D" path="frames/parry_ne_4.png" id="d228"]
+[ext_resource type="Texture2D" path="frames/parry_ne_4_n.png" id="n228"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_0.png" id="d229"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_0_n.png" id="n229"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_1.png" id="d230"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_1_n.png" id="n230"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_2.png" id="d231"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_2_n.png" id="n231"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_3.png" id="d232"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_3_n.png" id="n232"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_4.png" id="d233"]
+[ext_resource type="Texture2D" path="frames/dodge_ne_4_n.png" id="n233"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
@@ -1201,35 +1269,176 @@ normal_texture = ExtResource("n198")
 diffuse_texture = ExtResource("d199")
 normal_texture = ExtResource("n199")
 
+[sub_resource type="CanvasTexture" id="C200"]
+diffuse_texture = ExtResource("d200")
+normal_texture = ExtResource("n200")
+
+[sub_resource type="CanvasTexture" id="C201"]
+diffuse_texture = ExtResource("d201")
+normal_texture = ExtResource("n201")
+
+[sub_resource type="CanvasTexture" id="C202"]
+diffuse_texture = ExtResource("d202")
+normal_texture = ExtResource("n202")
+
+[sub_resource type="CanvasTexture" id="C203"]
+diffuse_texture = ExtResource("d203")
+normal_texture = ExtResource("n203")
+
+[sub_resource type="CanvasTexture" id="C204"]
+diffuse_texture = ExtResource("d204")
+normal_texture = ExtResource("n204")
+
+[sub_resource type="CanvasTexture" id="C205"]
+diffuse_texture = ExtResource("d205")
+normal_texture = ExtResource("n205")
+
+[sub_resource type="CanvasTexture" id="C206"]
+diffuse_texture = ExtResource("d206")
+normal_texture = ExtResource("n206")
+
+[sub_resource type="CanvasTexture" id="C207"]
+diffuse_texture = ExtResource("d207")
+normal_texture = ExtResource("n207")
+
+[sub_resource type="CanvasTexture" id="C208"]
+diffuse_texture = ExtResource("d208")
+normal_texture = ExtResource("n208")
+
+[sub_resource type="CanvasTexture" id="C209"]
+diffuse_texture = ExtResource("d209")
+normal_texture = ExtResource("n209")
+
+[sub_resource type="CanvasTexture" id="C210"]
+diffuse_texture = ExtResource("d210")
+normal_texture = ExtResource("n210")
+
+[sub_resource type="CanvasTexture" id="C211"]
+diffuse_texture = ExtResource("d211")
+normal_texture = ExtResource("n211")
+
+[sub_resource type="CanvasTexture" id="C212"]
+diffuse_texture = ExtResource("d212")
+normal_texture = ExtResource("n212")
+
+[sub_resource type="CanvasTexture" id="C213"]
+diffuse_texture = ExtResource("d213")
+normal_texture = ExtResource("n213")
+
+[sub_resource type="CanvasTexture" id="C214"]
+diffuse_texture = ExtResource("d214")
+normal_texture = ExtResource("n214")
+
+[sub_resource type="CanvasTexture" id="C215"]
+diffuse_texture = ExtResource("d215")
+normal_texture = ExtResource("n215")
+
+[sub_resource type="CanvasTexture" id="C216"]
+diffuse_texture = ExtResource("d216")
+normal_texture = ExtResource("n216")
+
+[sub_resource type="CanvasTexture" id="C217"]
+diffuse_texture = ExtResource("d217")
+normal_texture = ExtResource("n217")
+
+[sub_resource type="CanvasTexture" id="C218"]
+diffuse_texture = ExtResource("d218")
+normal_texture = ExtResource("n218")
+
+[sub_resource type="CanvasTexture" id="C219"]
+diffuse_texture = ExtResource("d219")
+normal_texture = ExtResource("n219")
+
+[sub_resource type="CanvasTexture" id="C220"]
+diffuse_texture = ExtResource("d220")
+normal_texture = ExtResource("n220")
+
+[sub_resource type="CanvasTexture" id="C221"]
+diffuse_texture = ExtResource("d221")
+normal_texture = ExtResource("n221")
+
+[sub_resource type="CanvasTexture" id="C222"]
+diffuse_texture = ExtResource("d222")
+normal_texture = ExtResource("n222")
+
+[sub_resource type="CanvasTexture" id="C223"]
+diffuse_texture = ExtResource("d223")
+normal_texture = ExtResource("n223")
+
+[sub_resource type="CanvasTexture" id="C224"]
+diffuse_texture = ExtResource("d224")
+normal_texture = ExtResource("n224")
+
+[sub_resource type="CanvasTexture" id="C225"]
+diffuse_texture = ExtResource("d225")
+normal_texture = ExtResource("n225")
+
+[sub_resource type="CanvasTexture" id="C226"]
+diffuse_texture = ExtResource("d226")
+normal_texture = ExtResource("n226")
+
+[sub_resource type="CanvasTexture" id="C227"]
+diffuse_texture = ExtResource("d227")
+normal_texture = ExtResource("n227")
+
+[sub_resource type="CanvasTexture" id="C228"]
+diffuse_texture = ExtResource("d228")
+normal_texture = ExtResource("n228")
+
+[sub_resource type="CanvasTexture" id="C229"]
+diffuse_texture = ExtResource("d229")
+normal_texture = ExtResource("n229")
+
+[sub_resource type="CanvasTexture" id="C230"]
+diffuse_texture = ExtResource("d230")
+normal_texture = ExtResource("n230")
+
+[sub_resource type="CanvasTexture" id="C231"]
+diffuse_texture = ExtResource("d231")
+normal_texture = ExtResource("n231")
+
+[sub_resource type="CanvasTexture" id="C232"]
+diffuse_texture = ExtResource("d232")
+normal_texture = ExtResource("n232")
+
+[sub_resource type="CanvasTexture" id="C233"]
+diffuse_texture = ExtResource("d233")
+normal_texture = ExtResource("n233")
+
 [resource]
 animations = [{
 "frames": [{
-"duration": 6.0,
+"duration": 1.6,
 "texture": SubResource("C0")
 }, {
-"duration": 2.0,
+"duration": 1.4,
 "texture": SubResource("C1")
-}, {
-"duration": 2.5,
-"texture": SubResource("C2")
-}, {
-"duration": 3.0,
-"texture": SubResource("C3")
-}, {
-"duration": 4.0,
-"texture": SubResource("C4")
 }],
 "loop": true,
 "name": &"idle_e",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("C2")
+}, {
+"duration": 2.0,
+"texture": SubResource("C3")
+}, {
+"duration": 2.5,
+"texture": SubResource("C4")
+}, {
+"duration": 3.0,
+"texture": SubResource("C5")
+}, {
+"duration": 4.0,
+"texture": SubResource("C6")
+}],
+"loop": true,
+"name": &"smoke_e",
 "speed": 4.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("C5")
-}, {
-"duration": 1.0,
-"texture": SubResource("C6")
-}, {
 "duration": 1.0,
 "texture": SubResource("C7")
 }, {
@@ -1238,6 +1447,18 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("C9")
+}, {
+"duration": 1.0,
+"texture": SubResource("C10")
+}, {
+"duration": 1.0,
+"texture": SubResource("C11")
+}, {
+"duration": 1.0,
+"texture": SubResource("C12")
+}, {
+"duration": 1.0,
+"texture": SubResource("C13")
 }],
 "loop": true,
 "name": &"run_e",
@@ -1245,19 +1466,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.9,
-"texture": SubResource("C10")
+"texture": SubResource("C14")
 }, {
 "duration": 1.1,
-"texture": SubResource("C11")
+"texture": SubResource("C15")
 }, {
 "duration": 0.8,
-"texture": SubResource("C12")
+"texture": SubResource("C16")
 }, {
 "duration": 1.0,
-"texture": SubResource("C13")
+"texture": SubResource("C17")
 }, {
 "duration": 1.6,
-"texture": SubResource("C14")
+"texture": SubResource("C18")
 }],
 "loop": false,
 "name": &"attack_e",
@@ -1265,13 +1486,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.5,
-"texture": SubResource("C15")
+"texture": SubResource("C19")
 }, {
 "duration": 1.6,
-"texture": SubResource("C16")
+"texture": SubResource("C20")
 }, {
 "duration": 1.4,
-"texture": SubResource("C15")
+"texture": SubResource("C19")
 }],
 "loop": false,
 "name": &"parry_e",
@@ -1279,13 +1500,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C17")
+"texture": SubResource("C21")
 }, {
 "duration": 1.0,
-"texture": SubResource("C18")
+"texture": SubResource("C22")
 }, {
 "duration": 1.4,
-"texture": SubResource("C19")
+"texture": SubResource("C23")
 }],
 "loop": false,
 "name": &"counter_e",
@@ -1293,59 +1514,76 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C20")
-}, {
-"duration": 1.0,
-"texture": SubResource("C21")
-}, {
-"duration": 1.0,
-"texture": SubResource("C22")
-}, {
-"duration": 1.0,
-"texture": SubResource("C23")
-}, {
-"duration": 1.0,
 "texture": SubResource("C24")
+}, {
+"duration": 1.0,
+"texture": SubResource("C25")
+}, {
+"duration": 1.0,
+"texture": SubResource("C26")
+}, {
+"duration": 1.0,
+"texture": SubResource("C27")
+}, {
+"duration": 1.0,
+"texture": SubResource("C28")
 }],
 "loop": false,
 "name": &"dodge_e",
 "speed": 14.0
 }, {
 "frames": [{
-"duration": 6.0,
-"texture": SubResource("C25")
-}, {
-"duration": 2.0,
-"texture": SubResource("C26")
-}, {
-"duration": 2.5,
-"texture": SubResource("C27")
-}, {
-"duration": 3.0,
-"texture": SubResource("C28")
-}, {
-"duration": 4.0,
+"duration": 1.6,
 "texture": SubResource("C29")
+}, {
+"duration": 1.4,
+"texture": SubResource("C30")
 }],
 "loop": true,
 "name": &"idle_se",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("C31")
+}, {
+"duration": 2.0,
+"texture": SubResource("C32")
+}, {
+"duration": 2.5,
+"texture": SubResource("C33")
+}, {
+"duration": 3.0,
+"texture": SubResource("C34")
+}, {
+"duration": 4.0,
+"texture": SubResource("C35")
+}],
+"loop": true,
+"name": &"smoke_se",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C30")
+"texture": SubResource("C36")
 }, {
 "duration": 1.0,
-"texture": SubResource("C31")
+"texture": SubResource("C37")
 }, {
 "duration": 1.0,
-"texture": SubResource("C32")
+"texture": SubResource("C38")
 }, {
 "duration": 1.0,
-"texture": SubResource("C33")
+"texture": SubResource("C39")
 }, {
 "duration": 1.0,
-"texture": SubResource("C34")
+"texture": SubResource("C40")
+}, {
+"duration": 1.0,
+"texture": SubResource("C41")
+}, {
+"duration": 1.0,
+"texture": SubResource("C42")
 }],
 "loop": true,
 "name": &"run_se",
@@ -1353,19 +1591,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.9,
-"texture": SubResource("C35")
+"texture": SubResource("C43")
 }, {
 "duration": 1.1,
-"texture": SubResource("C36")
+"texture": SubResource("C44")
 }, {
 "duration": 0.8,
-"texture": SubResource("C37")
+"texture": SubResource("C45")
 }, {
 "duration": 1.0,
-"texture": SubResource("C38")
+"texture": SubResource("C46")
 }, {
 "duration": 1.6,
-"texture": SubResource("C39")
+"texture": SubResource("C47")
 }],
 "loop": false,
 "name": &"attack_se",
@@ -1373,13 +1611,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.5,
-"texture": SubResource("C40")
+"texture": SubResource("C48")
 }, {
 "duration": 1.6,
-"texture": SubResource("C41")
+"texture": SubResource("C49")
 }, {
 "duration": 1.4,
-"texture": SubResource("C40")
+"texture": SubResource("C48")
 }],
 "loop": false,
 "name": &"parry_se",
@@ -1387,13 +1625,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C42")
+"texture": SubResource("C50")
 }, {
 "duration": 1.0,
-"texture": SubResource("C43")
+"texture": SubResource("C51")
 }, {
 "duration": 1.4,
-"texture": SubResource("C44")
+"texture": SubResource("C52")
 }],
 "loop": false,
 "name": &"counter_se",
@@ -1401,45 +1639,11 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C45")
-}, {
-"duration": 1.0,
-"texture": SubResource("C46")
-}, {
-"duration": 1.0,
-"texture": SubResource("C47")
-}, {
-"duration": 1.0,
-"texture": SubResource("C48")
-}, {
-"duration": 1.0,
-"texture": SubResource("C49")
-}],
-"loop": false,
-"name": &"dodge_se",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 6.0,
-"texture": SubResource("C50")
-}, {
-"duration": 2.0,
-"texture": SubResource("C51")
-}, {
-"duration": 2.5,
-"texture": SubResource("C52")
-}, {
-"duration": 3.0,
 "texture": SubResource("C53")
 }, {
-"duration": 4.0,
+"duration": 1.0,
 "texture": SubResource("C54")
-}],
-"loop": true,
-"name": &"idle_s",
-"speed": 4.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("C55")
 }, {
@@ -1448,66 +1652,58 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("C57")
+}],
+"loop": false,
+"name": &"dodge_se",
+"speed": 14.0
 }, {
-"duration": 1.0,
+"frames": [{
+"duration": 1.6,
 "texture": SubResource("C58")
 }, {
-"duration": 1.0,
+"duration": 1.4,
 "texture": SubResource("C59")
 }],
 "loop": true,
-"name": &"run_s",
-"speed": 12.0
+"name": &"idle_s",
+"speed": 1.0
 }, {
 "frames": [{
-"duration": 0.9,
+"duration": 6.0,
 "texture": SubResource("C60")
 }, {
-"duration": 1.1,
+"duration": 2.0,
 "texture": SubResource("C61")
 }, {
-"duration": 0.8,
+"duration": 2.5,
 "texture": SubResource("C62")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("C63")
 }, {
-"duration": 1.6,
+"duration": 4.0,
 "texture": SubResource("C64")
 }],
-"loop": false,
-"name": &"attack_s",
-"speed": 16.0
+"loop": true,
+"name": &"smoke_s",
+"speed": 4.0
 }, {
 "frames": [{
-"duration": 0.5,
+"duration": 1.0,
 "texture": SubResource("C65")
 }, {
-"duration": 1.6,
+"duration": 1.0,
 "texture": SubResource("C66")
 }, {
-"duration": 1.4,
-"texture": SubResource("C65")
-}],
-"loop": false,
-"name": &"parry_s",
-"speed": 12.0
-}, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("C67")
 }, {
 "duration": 1.0,
 "texture": SubResource("C68")
 }, {
-"duration": 1.4,
+"duration": 1.0,
 "texture": SubResource("C69")
-}],
-"loop": false,
-"name": &"counter_s",
-"speed": 14.0
 }, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("C70")
 }, {
@@ -1516,36 +1712,44 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("C72")
-}, {
-"duration": 1.0,
-"texture": SubResource("C73")
-}, {
-"duration": 1.0,
-"texture": SubResource("C74")
-}],
-"loop": false,
-"name": &"dodge_s",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 6.0,
-"texture": SubResource("C75")
-}, {
-"duration": 2.0,
-"texture": SubResource("C76")
-}, {
-"duration": 2.5,
-"texture": SubResource("C77")
-}, {
-"duration": 3.0,
-"texture": SubResource("C78")
-}, {
-"duration": 4.0,
-"texture": SubResource("C79")
 }],
 "loop": true,
-"name": &"idle_sw",
-"speed": 4.0
+"name": &"run_s",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("C73")
+}, {
+"duration": 1.1,
+"texture": SubResource("C74")
+}, {
+"duration": 0.8,
+"texture": SubResource("C75")
+}, {
+"duration": 1.0,
+"texture": SubResource("C76")
+}, {
+"duration": 1.6,
+"texture": SubResource("C77")
+}],
+"loop": false,
+"name": &"attack_s",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("C78")
+}, {
+"duration": 1.6,
+"texture": SubResource("C79")
+}, {
+"duration": 1.4,
+"texture": SubResource("C78")
+}],
+"loop": false,
+"name": &"parry_s",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1554,66 +1758,63 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("C81")
 }, {
-"duration": 1.0,
+"duration": 1.4,
 "texture": SubResource("C82")
+}],
+"loop": false,
+"name": &"counter_s",
+"speed": 14.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("C83")
 }, {
 "duration": 1.0,
 "texture": SubResource("C84")
-}],
-"loop": true,
-"name": &"run_sw",
-"speed": 12.0
 }, {
-"frames": [{
-"duration": 0.9,
+"duration": 1.0,
 "texture": SubResource("C85")
 }, {
-"duration": 1.1,
+"duration": 1.0,
 "texture": SubResource("C86")
 }, {
-"duration": 0.8,
-"texture": SubResource("C87")
-}, {
 "duration": 1.0,
+"texture": SubResource("C87")
+}],
+"loop": false,
+"name": &"dodge_s",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.6,
 "texture": SubResource("C88")
 }, {
-"duration": 1.6,
+"duration": 1.4,
 "texture": SubResource("C89")
 }],
-"loop": false,
-"name": &"attack_sw",
-"speed": 16.0
+"loop": true,
+"name": &"idle_sw",
+"speed": 1.0
 }, {
 "frames": [{
-"duration": 0.5,
+"duration": 6.0,
 "texture": SubResource("C90")
 }, {
-"duration": 1.6,
+"duration": 2.0,
 "texture": SubResource("C91")
 }, {
-"duration": 1.4,
-"texture": SubResource("C90")
-}],
-"loop": false,
-"name": &"parry_sw",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
+"duration": 2.5,
 "texture": SubResource("C92")
 }, {
-"duration": 1.0,
+"duration": 3.0,
 "texture": SubResource("C93")
 }, {
-"duration": 1.4,
+"duration": 4.0,
 "texture": SubResource("C94")
 }],
-"loop": false,
-"name": &"counter_sw",
-"speed": 14.0
+"loop": true,
+"name": &"smoke_sw",
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1630,46 +1831,137 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("C99")
+}, {
+"duration": 1.0,
+"texture": SubResource("C100")
+}, {
+"duration": 1.0,
+"texture": SubResource("C101")
+}],
+"loop": true,
+"name": &"run_sw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("C102")
+}, {
+"duration": 1.1,
+"texture": SubResource("C103")
+}, {
+"duration": 0.8,
+"texture": SubResource("C104")
+}, {
+"duration": 1.0,
+"texture": SubResource("C105")
+}, {
+"duration": 1.6,
+"texture": SubResource("C106")
+}],
+"loop": false,
+"name": &"attack_sw",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("C107")
+}, {
+"duration": 1.6,
+"texture": SubResource("C108")
+}, {
+"duration": 1.4,
+"texture": SubResource("C107")
+}],
+"loop": false,
+"name": &"parry_sw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C109")
+}, {
+"duration": 1.0,
+"texture": SubResource("C110")
+}, {
+"duration": 1.4,
+"texture": SubResource("C111")
+}],
+"loop": false,
+"name": &"counter_sw",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C112")
+}, {
+"duration": 1.0,
+"texture": SubResource("C113")
+}, {
+"duration": 1.0,
+"texture": SubResource("C114")
+}, {
+"duration": 1.0,
+"texture": SubResource("C115")
+}, {
+"duration": 1.0,
+"texture": SubResource("C116")
 }],
 "loop": false,
 "name": &"dodge_sw",
 "speed": 14.0
 }, {
 "frames": [{
-"duration": 6.0,
-"texture": SubResource("C100")
+"duration": 1.6,
+"texture": SubResource("C117")
 }, {
-"duration": 2.0,
-"texture": SubResource("C101")
-}, {
-"duration": 2.5,
-"texture": SubResource("C102")
-}, {
-"duration": 3.0,
-"texture": SubResource("C103")
-}, {
-"duration": 4.0,
-"texture": SubResource("C104")
+"duration": 1.4,
+"texture": SubResource("C118")
 }],
 "loop": true,
 "name": &"idle_w",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("C119")
+}, {
+"duration": 2.0,
+"texture": SubResource("C120")
+}, {
+"duration": 2.5,
+"texture": SubResource("C121")
+}, {
+"duration": 3.0,
+"texture": SubResource("C122")
+}, {
+"duration": 4.0,
+"texture": SubResource("C123")
+}],
+"loop": true,
+"name": &"smoke_w",
 "speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C105")
+"texture": SubResource("C124")
 }, {
 "duration": 1.0,
-"texture": SubResource("C106")
+"texture": SubResource("C125")
 }, {
 "duration": 1.0,
-"texture": SubResource("C107")
+"texture": SubResource("C126")
 }, {
 "duration": 1.0,
-"texture": SubResource("C108")
+"texture": SubResource("C127")
 }, {
 "duration": 1.0,
-"texture": SubResource("C109")
+"texture": SubResource("C128")
+}, {
+"duration": 1.0,
+"texture": SubResource("C129")
+}, {
+"duration": 1.0,
+"texture": SubResource("C130")
 }],
 "loop": true,
 "name": &"run_w",
@@ -1677,19 +1969,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.9,
-"texture": SubResource("C110")
+"texture": SubResource("C131")
 }, {
 "duration": 1.1,
-"texture": SubResource("C111")
+"texture": SubResource("C132")
 }, {
 "duration": 0.8,
-"texture": SubResource("C112")
+"texture": SubResource("C133")
 }, {
 "duration": 1.0,
-"texture": SubResource("C113")
+"texture": SubResource("C134")
 }, {
 "duration": 1.6,
-"texture": SubResource("C114")
+"texture": SubResource("C135")
 }],
 "loop": false,
 "name": &"attack_w",
@@ -1697,13 +1989,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.5,
-"texture": SubResource("C115")
+"texture": SubResource("C136")
 }, {
 "duration": 1.6,
-"texture": SubResource("C116")
+"texture": SubResource("C137")
 }, {
 "duration": 1.4,
-"texture": SubResource("C115")
+"texture": SubResource("C136")
 }],
 "loop": false,
 "name": &"parry_w",
@@ -1711,13 +2003,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C117")
+"texture": SubResource("C138")
 }, {
 "duration": 1.0,
-"texture": SubResource("C118")
+"texture": SubResource("C139")
 }, {
 "duration": 1.4,
-"texture": SubResource("C119")
+"texture": SubResource("C140")
 }],
 "loop": false,
 "name": &"counter_w",
@@ -1725,153 +2017,62 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C120")
-}, {
-"duration": 1.0,
-"texture": SubResource("C121")
-}, {
-"duration": 1.0,
-"texture": SubResource("C122")
-}, {
-"duration": 1.0,
-"texture": SubResource("C123")
-}, {
-"duration": 1.0,
-"texture": SubResource("C124")
-}],
-"loop": false,
-"name": &"dodge_w",
-"speed": 14.0
-}, {
-"frames": [{
-"duration": 6.0,
-"texture": SubResource("C125")
-}, {
-"duration": 2.0,
-"texture": SubResource("C126")
-}, {
-"duration": 2.5,
-"texture": SubResource("C127")
-}, {
-"duration": 3.0,
-"texture": SubResource("C128")
-}, {
-"duration": 4.0,
-"texture": SubResource("C129")
-}],
-"loop": true,
-"name": &"idle_nw",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("C130")
-}, {
-"duration": 1.0,
-"texture": SubResource("C131")
-}, {
-"duration": 1.0,
-"texture": SubResource("C132")
-}, {
-"duration": 1.0,
-"texture": SubResource("C133")
-}, {
-"duration": 1.0,
-"texture": SubResource("C134")
-}],
-"loop": true,
-"name": &"run_nw",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 0.9,
-"texture": SubResource("C135")
-}, {
-"duration": 1.1,
-"texture": SubResource("C136")
-}, {
-"duration": 0.8,
-"texture": SubResource("C137")
-}, {
-"duration": 1.0,
-"texture": SubResource("C138")
-}, {
-"duration": 1.6,
-"texture": SubResource("C139")
-}],
-"loop": false,
-"name": &"attack_nw",
-"speed": 16.0
-}, {
-"frames": [{
-"duration": 0.5,
-"texture": SubResource("C140")
-}, {
-"duration": 1.6,
 "texture": SubResource("C141")
 }, {
-"duration": 1.4,
-"texture": SubResource("C140")
-}],
-"loop": false,
-"name": &"parry_nw",
-"speed": 12.0
-}, {
-"frames": [{
 "duration": 1.0,
 "texture": SubResource("C142")
 }, {
 "duration": 1.0,
 "texture": SubResource("C143")
 }, {
-"duration": 1.4,
+"duration": 1.0,
 "texture": SubResource("C144")
+}, {
+"duration": 1.0,
+"texture": SubResource("C145")
 }],
 "loop": false,
-"name": &"counter_nw",
+"name": &"dodge_w",
 "speed": 14.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("C145")
-}, {
-"duration": 1.0,
+"duration": 1.6,
 "texture": SubResource("C146")
 }, {
-"duration": 1.0,
+"duration": 1.4,
 "texture": SubResource("C147")
-}, {
-"duration": 1.0,
-"texture": SubResource("C148")
-}, {
-"duration": 1.0,
-"texture": SubResource("C149")
 }],
-"loop": false,
-"name": &"dodge_nw",
-"speed": 14.0
+"loop": true,
+"name": &"idle_nw",
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 6.0,
-"texture": SubResource("C150")
+"texture": SubResource("C148")
 }, {
 "duration": 2.0,
-"texture": SubResource("C151")
+"texture": SubResource("C149")
 }, {
 "duration": 2.5,
-"texture": SubResource("C152")
+"texture": SubResource("C150")
 }, {
 "duration": 3.0,
-"texture": SubResource("C153")
+"texture": SubResource("C151")
 }, {
 "duration": 4.0,
-"texture": SubResource("C154")
+"texture": SubResource("C152")
 }],
 "loop": true,
-"name": &"idle_n",
+"name": &"smoke_nw",
 "speed": 4.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("C153")
+}, {
+"duration": 1.0,
+"texture": SubResource("C154")
+}, {
 "duration": 1.0,
 "texture": SubResource("C155")
 }, {
@@ -1888,7 +2089,7 @@ animations = [{
 "texture": SubResource("C159")
 }],
 "loop": true,
-"name": &"run_n",
+"name": &"run_nw",
 "speed": 12.0
 }, {
 "frames": [{
@@ -1908,7 +2109,7 @@ animations = [{
 "texture": SubResource("C164")
 }],
 "loop": false,
-"name": &"attack_n",
+"name": &"attack_nw",
 "speed": 16.0
 }, {
 "frames": [{
@@ -1922,7 +2123,7 @@ animations = [{
 "texture": SubResource("C165")
 }],
 "loop": false,
-"name": &"parry_n",
+"name": &"parry_nw",
 "speed": 12.0
 }, {
 "frames": [{
@@ -1936,7 +2137,7 @@ animations = [{
 "texture": SubResource("C169")
 }],
 "loop": false,
-"name": &"counter_n",
+"name": &"counter_nw",
 "speed": 14.0
 }, {
 "frames": [{
@@ -1956,36 +2157,41 @@ animations = [{
 "texture": SubResource("C174")
 }],
 "loop": false,
-"name": &"dodge_n",
+"name": &"dodge_nw",
 "speed": 14.0
 }, {
 "frames": [{
-"duration": 6.0,
+"duration": 1.6,
 "texture": SubResource("C175")
 }, {
-"duration": 2.0,
+"duration": 1.4,
 "texture": SubResource("C176")
-}, {
-"duration": 2.5,
-"texture": SubResource("C177")
-}, {
-"duration": 3.0,
-"texture": SubResource("C178")
-}, {
-"duration": 4.0,
-"texture": SubResource("C179")
 }],
 "loop": true,
-"name": &"idle_ne",
+"name": &"idle_n",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("C177")
+}, {
+"duration": 2.0,
+"texture": SubResource("C178")
+}, {
+"duration": 2.5,
+"texture": SubResource("C179")
+}, {
+"duration": 3.0,
+"texture": SubResource("C180")
+}, {
+"duration": 4.0,
+"texture": SubResource("C181")
+}],
+"loop": true,
+"name": &"smoke_n",
 "speed": 4.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("C180")
-}, {
-"duration": 1.0,
-"texture": SubResource("C181")
-}, {
 "duration": 1.0,
 "texture": SubResource("C182")
 }, {
@@ -1994,6 +2200,146 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("C184")
+}, {
+"duration": 1.0,
+"texture": SubResource("C185")
+}, {
+"duration": 1.0,
+"texture": SubResource("C186")
+}, {
+"duration": 1.0,
+"texture": SubResource("C187")
+}, {
+"duration": 1.0,
+"texture": SubResource("C188")
+}, {
+"duration": 1.0,
+"texture": SubResource("C189")
+}],
+"loop": true,
+"name": &"run_n",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 0.9,
+"texture": SubResource("C190")
+}, {
+"duration": 1.1,
+"texture": SubResource("C191")
+}, {
+"duration": 0.8,
+"texture": SubResource("C192")
+}, {
+"duration": 1.0,
+"texture": SubResource("C193")
+}, {
+"duration": 1.6,
+"texture": SubResource("C194")
+}],
+"loop": false,
+"name": &"attack_n",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("C195")
+}, {
+"duration": 1.6,
+"texture": SubResource("C196")
+}, {
+"duration": 1.4,
+"texture": SubResource("C195")
+}],
+"loop": false,
+"name": &"parry_n",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C197")
+}, {
+"duration": 1.0,
+"texture": SubResource("C198")
+}, {
+"duration": 1.4,
+"texture": SubResource("C199")
+}],
+"loop": false,
+"name": &"counter_n",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C200")
+}, {
+"duration": 1.0,
+"texture": SubResource("C201")
+}, {
+"duration": 1.0,
+"texture": SubResource("C202")
+}, {
+"duration": 1.0,
+"texture": SubResource("C203")
+}, {
+"duration": 1.0,
+"texture": SubResource("C204")
+}],
+"loop": false,
+"name": &"dodge_n",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.6,
+"texture": SubResource("C205")
+}, {
+"duration": 1.4,
+"texture": SubResource("C206")
+}],
+"loop": true,
+"name": &"idle_ne",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": SubResource("C207")
+}, {
+"duration": 2.0,
+"texture": SubResource("C208")
+}, {
+"duration": 2.5,
+"texture": SubResource("C209")
+}, {
+"duration": 3.0,
+"texture": SubResource("C210")
+}, {
+"duration": 4.0,
+"texture": SubResource("C211")
+}],
+"loop": true,
+"name": &"smoke_ne",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("C212")
+}, {
+"duration": 1.0,
+"texture": SubResource("C213")
+}, {
+"duration": 1.0,
+"texture": SubResource("C214")
+}, {
+"duration": 1.0,
+"texture": SubResource("C215")
+}, {
+"duration": 1.0,
+"texture": SubResource("C216")
+}, {
+"duration": 1.0,
+"texture": SubResource("C217")
+}, {
+"duration": 1.0,
+"texture": SubResource("C218")
 }],
 "loop": true,
 "name": &"run_ne",
@@ -2001,19 +2347,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.9,
-"texture": SubResource("C185")
+"texture": SubResource("C219")
 }, {
 "duration": 1.1,
-"texture": SubResource("C186")
+"texture": SubResource("C220")
 }, {
 "duration": 0.8,
-"texture": SubResource("C187")
+"texture": SubResource("C221")
 }, {
 "duration": 1.0,
-"texture": SubResource("C188")
+"texture": SubResource("C222")
 }, {
 "duration": 1.6,
-"texture": SubResource("C189")
+"texture": SubResource("C223")
 }],
 "loop": false,
 "name": &"attack_ne",
@@ -2021,13 +2367,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 0.5,
-"texture": SubResource("C190")
+"texture": SubResource("C224")
 }, {
 "duration": 1.6,
-"texture": SubResource("C191")
+"texture": SubResource("C225")
 }, {
 "duration": 1.4,
-"texture": SubResource("C190")
+"texture": SubResource("C224")
 }],
 "loop": false,
 "name": &"parry_ne",
@@ -2035,13 +2381,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C192")
+"texture": SubResource("C226")
 }, {
 "duration": 1.0,
-"texture": SubResource("C193")
+"texture": SubResource("C227")
 }, {
 "duration": 1.4,
-"texture": SubResource("C194")
+"texture": SubResource("C228")
 }],
 "loop": false,
 "name": &"counter_ne",
@@ -2049,19 +2395,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C195")
+"texture": SubResource("C229")
 }, {
 "duration": 1.0,
-"texture": SubResource("C196")
+"texture": SubResource("C230")
 }, {
 "duration": 1.0,
-"texture": SubResource("C197")
+"texture": SubResource("C231")
 }, {
 "duration": 1.0,
-"texture": SubResource("C198")
+"texture": SubResource("C232")
 }, {
 "duration": 1.0,
-"texture": SubResource("C199")
+"texture": SubResource("C233")
 }],
 "loop": false,
 "name": &"dodge_ne",

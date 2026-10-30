@@ -47,6 +47,8 @@ var health := 0
 var dead := false
 var facing := 2
 var state := FREE
+var _smoking := false            # F: light the cheroot (old smoking idle), any move/action stops it
+var _f_down := false
 var _combo := 0                 # 0..2 index of the current / last swing
 var _queued := false
 var _combo_timer := 0.0
@@ -92,6 +94,12 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 		return
 	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var f_now := Input.is_physical_key_pressed(KEY_F)
+	if f_now and not _f_down and state == FREE:
+		_smoking = not _smoking
+	_f_down = f_now
+	if state != FREE or input != Vector2.ZERO:
+		_smoking = false
 	match state:
 		FREE:
 			if Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0:
@@ -150,7 +158,7 @@ func _move(input: Vector2, delta: float) -> void:
 		sprite.offset = _base_offset
 	else:
 		_still += delta
-		_play("idle_" + _dir())
+		_play(("smoke_" if _smoking else "idle_") + _dir())
 		sprite.speed_scale = 1.0
 		sprite.offset = _base_offset
 
