@@ -10,6 +10,7 @@ var _banner: Label
 var _clock: Label
 var _part: Label
 var _sky: SkyIcon
+var _foe: Node
 
 
 ## Little sun (day) or crescent moon (night) next to the clock.
@@ -104,6 +105,29 @@ func watch_boss(b: Node) -> void:
 	b.defeated.connect(func():
 		show_banner("VICTORY", Color(1, 0.85, 0.45), 3.0)
 		get_tree().create_timer(2.5).timeout.connect(func(): _boss_box.visible = false))
+
+
+## The bottom bar for someone the player is fighting outside a boss fight (a spar):
+## they need display_name, health, max_health and health_changed. hide_foe() removes it.
+func show_foe(f: Node) -> void:
+	hide_foe()
+	_foe = f
+	_boss_name.text = f.display_name
+	_boss_bar.max_value = f.max_health
+	_boss_bar.value = f.health
+	_boss_box.visible = true
+	f.health_changed.connect(_on_foe_health)
+
+
+func hide_foe() -> void:
+	if is_instance_valid(_foe) and _foe.health_changed.is_connected(_on_foe_health):
+		_foe.health_changed.disconnect(_on_foe_health)
+	_foe = null
+	_boss_box.visible = false
+
+
+func _on_foe_health(current: int, maximum: int) -> void:
+	_tween_bar(_boss_bar, current, maximum)
 
 
 func _process(_delta: float) -> void:
