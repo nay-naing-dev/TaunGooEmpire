@@ -102,6 +102,12 @@ func _physics_process(delta: float) -> void:
 		return
 	_talk = 0.15 if Game.in_dialogue() else maxf(_talk - delta, 0.0)
 	var input := Vector2.ZERO if _talk > 0.0 else Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var f_now := Input.is_physical_key_pressed(KEY_F)
+	if f_now and not _f_down and state == FREE and _talk <= 0.0:
+		_smoking = not _smoking
+	_f_down = f_now
+	if state != FREE or input != Vector2.ZERO:
+		_smoking = false
 	match state:
 		FREE:
 			if _talk > 0.0 or (Input.is_action_just_pressed("interact") and Game.interact(self)):
