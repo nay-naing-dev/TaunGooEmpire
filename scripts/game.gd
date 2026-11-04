@@ -46,6 +46,8 @@ const DIALOGUE_BOX := preload("res://scripts/dialogue_box.gd")
 var _dialogue: CanvasLayer
 const PROMPT_BOX := preload("res://scripts/ui/prompt_box.gd")
 var _prompt: CanvasLayer
+var _black: ColorRect
+var _fading: Tween
 ## The player's bag (36 slots). B shows it. Quests: inventory.add / remove / has / item_added.
 var inventory := Inventory.new()
 const INVENTORY_MENU := preload("res://scripts/inventory/inventory_menu.gd")
@@ -350,9 +352,32 @@ func prompt(text: String, buttons := PackedStringArray(["OK"]), done := Callable
 	_prompt.open(text, buttons, done)
 
 
+## Fades the screen to black (to = 1) or back (to = 0) over secs. Story scenes use it;
+## it lives here so a black screen lasts through a change of map.
+func fade(to: float, secs: float) -> void:
+	if _black == null:
+		var layer := CanvasLayer.new()
+		layer.layer = 20
+		add_child(layer)
+		_black = ColorRect.new()
+		_black.color = Color(0, 0, 0, 0)
+		_black.set_anchors_preset(Control.PRESET_FULL_RECT)
+		_black.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		layer.add_child(_black)
+	if _fading:
+		_fading.kill()
+	_fading = _black.create_tween()
+	_fading.tween_property(_black, "color:a", to, secs)
+	await _fading.finished
+
+
 func go(scene_path: String) -> void:
 	indoors = false
 	cutscene = false
+	if scene_path == TITLE and _black:  # left in the middle of a story scene
+		if _fading:
+			_fading.kill()
+		_black.color.a = 0.0
 	if _dialogue:
 		_dialogue.close(false)
 	for n in _moved.keys():

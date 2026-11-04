@@ -15,6 +15,8 @@ extends Node2D
 ## Set this to play a specific character when you run this scene directly (F6).
 @export_enum("village_boy", "black_cat") var test_character: String = ""
 
+## Health bars, clock and banners (made in _ready when there is a player).
+var hud: CanvasLayer
 var _pan_cam: Camera2D
 var _cam: Camera2D
 var _shade_vp: SubViewport
@@ -59,11 +61,37 @@ func _ready() -> void:
 	player.add_child(cam)
 	cam.make_current()
 
-	var hud := preload("res://scripts/hud.gd").new()
+	hud = preload("res://scripts/hud.gd").new()
+	hud.name = "HUD"
 	add_child(hud)
 	hud.watch_player(player)
 	for boss in get_tree().get_nodes_in_group("boss"):
 		hud.watch_boss(boss)
+
+
+## Swaps the player for another character (a Game.TOPDOWN key) right where he stands,
+## facing the same way; the camera and the HUD go over to the new one, and later
+## maps spawn him too. Returns the new player.
+func swap_player(key: String) -> Node2D:
+	var old := get_tree().get_first_node_in_group("player") as Node2D
+	var p: Node2D = load(Game.TOPDOWN[key]).instantiate()
+	Game.topdown_character = key
+	old.remove_from_group("player")
+	p.position = old.position
+	old.add_sibling(p)
+	p.set("facing", old.get("facing"))
+	_add_sun_shadows(p)
+	var cam := old.get_node_or_null("Camera2D")
+	if cam:
+		cam.reparent(p, false)
+		cam.make_current()
+	# stop turning the old one's shadows with the sun
+	_casts = _casts.filter(func(e): return not old.is_ancestor_of(e[0]))
+	_anim_casts = _anim_casts.filter(func(e): return not old.is_ancestor_of(e[1]))
+	old.queue_free()
+	if hud:
+		hud.watch_player(p)
+	return p
 
 
 func _process(delta: float) -> void:

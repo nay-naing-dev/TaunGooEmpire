@@ -73,6 +73,8 @@
 [ext_resource type="Script" uid="uid://daw7flvnn4fcx" path="res://scripts/map_exit.gd" id="sc_exit"]
 [ext_resource type="Script" uid="uid://dp4jcyfb1ead7" path="res://environment/fx/flicker.gd" id="sc_fl"]
 [ext_resource type="Script" uid="uid://cv7spkwydyp44" path="res://scripts/world.gd" id="sc_w"]
+[ext_resource type="Script" path="res://scripts/cutscenes/training_day.gd" id="sc_training"]
+[ext_resource type="PackedScene" path="res://environment/palace/training_ground/training_dummy.tscn" id="k_tg_training_dummy"]
 [ext_resource type="Shader" uid="uid://bne2lf5p8byq1" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
 [ext_resource type="Shader" uid="uid://b4wtdo1h25tog" path="res://environment/fx/water_natural.gdshader" id="s_w"]
 [ext_resource type="Texture2D" uid="uid://dj5vgb12v8nb8" path="res://scenes/world/art_palace/ground.png" id="t_g"]
@@ -1199,6 +1201,9 @@ start_facing = "ne"
 position = Vector2(820, 1790)
 idle_anim = "train"
 
+[node name="TrainingDummy" parent="Objects" instance=ExtResource("k_tg_training_dummy")]
+position = Vector2(925, 1835)
+
 [node name="SpearGuard21" parent="Objects" unique_id=39511419 instance=ExtResource("c_spear_guard")]
 position = Vector2(740, 1880)
 start_facing = "n"
@@ -1727,6 +1732,27 @@ position = Vector2(1600, 1570)
 
 [node name="FromVillage" type="Marker2D" parent="." unique_id=184713405]
 position = Vector2(70, 1562)
+
+[node name="TrainingDay" type="Node2D" parent="."]
+script = ExtResource("sc_training")
+
+[node name="PlayerArrive" type="Marker2D" parent="TrainingDay"]
+position = Vector2(870, 1797)
+
+[node name="Trainer" type="Marker2D" parent="TrainingDay"]
+position = Vector2(820, 1790)
+
+[node name="TrainerWatch" type="Marker2D" parent="TrainingDay"]
+position = Vector2(850, 1790)
+
+[node name="PlayerLesson" type="Marker2D" parent="TrainingDay"]
+position = Vector2(905, 1852)
+
+[node name="DuelTrainer" type="Marker2D" parent="TrainingDay"]
+position = Vector2(785, 1772)
+
+[node name="DuelPlayer" type="Marker2D" parent="TrainingDay"]
+position = Vector2(862, 1792)
 
 [node name="Sun" type="DirectionalLight2D" parent="." unique_id=749239030]
 rotation = 2.356
