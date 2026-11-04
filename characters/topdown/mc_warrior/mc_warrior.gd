@@ -53,6 +53,8 @@ var health := 0
 var dead := false
 var facing := 2
 var state := FREE
+var _smoking := false            # F: light the cheroot (old smoking idle), any move/action stops it
+var _f_down := false
 var _combo := 0                 # 0..2 index of the current / last swing
 var _queued := false
 var _combo_timer := 0.0
@@ -160,7 +162,7 @@ func _move(input: Vector2, delta: float) -> void:
 		sprite.offset = _base_offset
 	else:
 		_still += delta
-		_play("idle_" + _dir())
+		_play(("smoke_" if _smoking else "idle_") + _dir())
 		sprite.speed_scale = 1.0
 		sprite.offset = _base_offset
 
