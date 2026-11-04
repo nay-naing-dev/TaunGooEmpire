@@ -1,6 +1,8 @@
 extends CharacterBody2D
-## MC version 2: the warrior (test build, story unlock comes later).
+## MC version 2: the warrior. The trainer hands him his sword on the training ground
+## (scripts/cutscenes/training_day.gd); until then he is the village boy.
 ##   WASD / arrows : move (hold Shift to run fast)
+##   E                : talk to whoever is in reach (Game.interact)
 ##   J / left mouse   : attack.  Press again during a swing for a 3-hit combo:
 ##                      slash -> quick return slash -> heavy finisher (lunges forward)
 ##                      Sparks fly off the blade on every swing, more on a hit.
@@ -18,6 +20,10 @@ extends CharacterBody2D
 signal health_changed(current: int, maximum: int)
 signal died
 signal perfect_parry(enemy: Node)
+## A blow landed while parrying: perfect (in the parry window) or a late, half block.
+signal parried(perfect: bool)
+## moving: a direction was held (a dodge that way), else he blinked backwards.
+signal dodged(moving: bool)
 
 @export var walk_speed := 70.0
 @export var run_speed := 135.0
@@ -60,6 +66,7 @@ var _knockback := Vector2.ZERO
 var _t := 0.0
 var _base_offset := Vector2.ZERO
 var _still := 0.0
+var _talk := 0.0                # in a dialogue (and a moment after, so the closing click doesn't swing)
 @onready var slash_sparks: CPUParticles2D = $SlashSparks
 
 
@@ -91,10 +98,13 @@ func _physics_process(delta: float) -> void:
 		_knockback = _knockback.move_toward(Vector2.ZERO, 500.0 * delta)
 		move_and_slide()
 		return
-	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	_talk = 0.15 if Game.in_dialogue() else maxf(_talk - delta, 0.0)
+	var input := Vector2.ZERO if _talk > 0.0 else Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	match state:
 		FREE:
-			if Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0:
+			if _talk > 0.0 or (Input.is_action_just_pressed("interact") and Game.interact(self)):
+				_move(Vector2.ZERO, delta)
+			elif Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0:
 				_start_dodge(input)
 			elif Input.is_action_just_pressed("parry"):
 				_start_parry()
@@ -103,9 +113,9 @@ func _physics_process(delta: float) -> void:
 			else:
 				_move(input, delta)
 		ATTACK:
-			if Input.is_action_just_pressed("attack"):
+			if Input.is_action_just_pressed("attack") and _talk <= 0.0:
 				_queued = true
-			if Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0:
+			if Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0 and _talk <= 0.0:
 				_start_dodge(input)          # dodge-cancel out of a swing
 			velocity = velocity.move_toward(Vector2.ZERO, friction * 0.6 * delta)
 		PARRY:
@@ -357,6 +367,7 @@ func _start_dodge(input: Vector2) -> void:
 	sprite.play("dodge_" + _dir())
 	sprite.frame = 0
 	sprite.pause()                     # crouch, then vanish
+	dodged.emit(input != Vector2.ZERO)
 
 
 func _vanish() -> void:
@@ -462,8 +473,10 @@ func take_hit(amount: int, from_position: Vector2) -> void:
 	if state == PARRY:
 		if _parry_t < parry_window:
 			_do_perfect_parry(from_position)
+			parried.emit(true)
 			return
 		amount = int(ceil(amount * 0.5))       # late parry still blocks half
+		parried.emit(false)
 	if _invulnerable > 0.0 or state == DODGE or state == COUNTER:
 		return
 	health = max(health - amount, 0)
@@ -486,8 +499,28 @@ func take_hit(amount: int, from_position: Vector2) -> void:
 		died.emit()
 
 
+## Story scenes: drops whatever he is doing (swing, parry, dodge) and stands.
+func stand() -> void:
+	state = FREE
+	_queued = false
+	_combo_timer = 0.0
+	_vanished = false
+	velocity = Vector2.ZERO
+	_knockback = Vector2.ZERO
+	dust.emitting = false
+	sprite.modulate = Color.WHITE
+	sprite.speed_scale = 1.0
+	sprite.offset = _base_offset
+
+
 func heal_full() -> void:
 	health = max_health
+	health_changed.emit(health, max_health)
+
+
+## Gives back amount health (up to max_health), e.g. from eating.
+func heal(amount: int) -> void:
+	health = mini(health + amount, max_health)
 	health_changed.emit(health, max_health)
 
 
@@ -517,6 +550,7 @@ func _ensure_input_actions() -> void:
 	_add("attack", [KEY_J], MOUSE_BUTTON_LEFT)
 	_add("parry", [KEY_K], MOUSE_BUTTON_RIGHT)
 	_add("dodge", [KEY_SPACE])
+	_add("interact", [KEY_E])
 
 
 func _add(action: StringName, keys: Array, mouse := 0) -> void:
