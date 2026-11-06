@@ -8,7 +8,7 @@ class_name TrainingDay
 ##    dummy's swinging arm, Space while moving to dodge.
 ## 3. A spar with the trainer. When either of them is near death (NEAR_DEATH of his
 ##    health) the trainer stops it and tells the player he is ready to fight in
-##    the King's battles; the quest is done.
+##    the King's battles; the quest is done and grain_orders.gd takes over.
 ## How far it got is kept in Game.flags[STAGE]. Leave the palace halfway and the
 ## trainer has a "!" over him when you come back: talk to him (E) to go on.
 ## The Marker2D children are where everyone stands; move them in the editor.
@@ -347,7 +347,7 @@ func _duel() -> void:
 	Game.quests.finish(QUEST)
 	Game.flags[STAGE] = DONE
 	_dummy().add_to_group("enemy")
-	t.return_to(_at("Trainer"))  # back to drilling at his post
+	Game.flags[GrainQuest.STAGE] = GrainQuest.ORDERS  # he stays here for the Quartermaster
 	p.set_physics_process(true)
 	Game.cutscene = false
 

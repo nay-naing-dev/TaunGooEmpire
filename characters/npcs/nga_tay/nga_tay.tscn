@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://characters/npcs/bandit_brute/bandit_brute.tscn" id="1_b"]
+[ext_resource type="Script" path="res://characters/npcs/nga_tay/nga_tay.gd" id="2_s"]
+
+[node name="NgaTay" instance=ExtResource("1_b")]
+script = ExtResource("2_s")
+variant = 0
+max_health = 200
+notice_radius = 500.0
+chase_radius = 1200.0

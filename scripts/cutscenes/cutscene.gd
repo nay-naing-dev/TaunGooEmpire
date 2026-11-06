@@ -12,6 +12,7 @@ const DIRS := ["e", "se", "s", "sw", "w", "nw", "n", "ne"]
 @export var walk_speed := 34.0
 
 signal _said
+signal _picked(index: int)
 
 
 func _player() -> Node2D:
@@ -33,6 +34,12 @@ func _wait(secs: float) -> void:
 func _say(who: String, lines: Array) -> void:
 	Game.dialogue(who, PackedStringArray(lines), func(): _said.emit())
 	await _said
+
+
+## The lines with choices under the last one; returns the index the player picked.
+func _ask(who: String, lines: Array, choices: Array) -> int:
+	Game.dialogue(who, PackedStringArray(lines), func(i: int): _picked.emit(i), PackedStringArray(choices))
+	return await _picked
 
 
 ## Black screen in (to = 1) or out (to = 0). It stays black through a change of map.

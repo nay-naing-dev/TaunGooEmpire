@@ -366,6 +366,9 @@ func fade(to: float, secs: float) -> void:
 		layer.add_child(_black)
 	if _fading:
 		_fading.kill()
+	if secs <= 0.0:  # at once, in this very frame
+		_black.color.a = to
+		return
 	_fading = _black.create_tween()
 	_fading.tween_property(_black, "color:a", to, secs)
 	await _fading.finished

@@ -31,6 +31,8 @@ signal dodged(moving: bool)
 @export var friction := 1300.0
 @export var iso_vertical_ratio := 0.5
 @export var max_health := 120
+## How fast he walks with a rice bag on his shoulder (x walk_speed).
+@export var carry_speed := 0.75
 
 @export_group("Combat")
 @export var combo_damage: PackedInt32Array = PackedInt32Array([10, 12, 22])
@@ -44,6 +46,8 @@ signal dodged(moving: bool)
 @export var dodge_cooldown := 0.35
 
 const DIRS := ["e", "se", "s", "sw", "w", "nw", "n", "ne"]
+const CARRY_FLAG := "carrying_rice"
+const SACK_TEXTURE := preload("res://environment/village/props/sack.png")
 enum { FREE, ATTACK, PARRY, DODGE, COUNTER }
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dust: CPUParticles2D = $Dust
@@ -55,6 +59,9 @@ var facing := 2
 var state := FREE
 var _smoking := false            # F: light the cheroot (old smoking idle), any move/action stops it
 var _f_down := false
+## A rice bag on his shoulder (a story scene: set_carrying): he can only walk.
+var carrying := false
+var _sack: Sprite2D
 var _combo := 0                 # 0..2 index of the current / last swing
 var _queued := false
 var _combo_timer := 0.0
@@ -80,6 +87,7 @@ func _ready() -> void:
 	sprite.animation_finished.connect(_on_anim_finished)
 	sprite.frame_changed.connect(_on_frame_changed)
 	sprite.play("idle_s")
+	set_carrying(Game.flags.get(CARRY_FLAG, false))
 
 
 func _dir() -> String:
@@ -103,7 +111,7 @@ func _physics_process(delta: float) -> void:
 	_talk = 0.15 if Game.in_dialogue() else maxf(_talk - delta, 0.0)
 	var input := Vector2.ZERO if _talk > 0.0 else Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var f_now := Input.is_physical_key_pressed(KEY_F)
-	if f_now and not _f_down and state == FREE and _talk <= 0.0:
+	if f_now and not _f_down and state == FREE and _talk <= 0.0 and not carrying:
 		_smoking = not _smoking
 	_f_down = f_now
 	if state != FREE or input != Vector2.ZERO:
@@ -112,6 +120,8 @@ func _physics_process(delta: float) -> void:
 		FREE:
 			if _talk > 0.0 or (Input.is_action_just_pressed("interact") and Game.interact(self)):
 				_move(Vector2.ZERO, delta)
+			elif carrying:
+				_move(input, delta)
 			elif Input.is_action_just_pressed("dodge") and _dodge_cd <= 0.0:
 				_start_dodge(input)
 			elif Input.is_action_just_pressed("parry"):
@@ -147,7 +157,7 @@ func _physics_process(delta: float) -> void:
 					state = FREE
 		COUNTER:
 			velocity = velocity.move_toward(Vector2.ZERO, friction * 0.8 * delta)
-	dust.emitting = (state == DODGE) or (state == FREE and Input.is_action_pressed("run") and input != Vector2.ZERO)
+	dust.emitting = (state == DODGE) or (state == FREE and Input.is_action_pressed("run") and input != Vector2.ZERO and not carrying)
 	var push := _knockback
 	velocity += push
 	move_and_slide()
@@ -156,13 +166,14 @@ func _physics_process(delta: float) -> void:
 
 
 func _move(input: Vector2, delta: float) -> void:
-	var running := Input.is_action_pressed("run")
-	var target := Vector2(input.x, input.y * iso_vertical_ratio) * (run_speed if running else walk_speed)
+	var running := Input.is_action_pressed("run") and not carrying
+	var target := Vector2(input.x, input.y * iso_vertical_ratio) * (run_speed if running else walk_speed * (carry_speed if carrying else 1.0))
 	velocity = velocity.move_toward(target, (acceleration if input != Vector2.ZERO else friction) * delta)
 	if input != Vector2.ZERO:
 		_still = 0.0
 		facing = wrapi(roundi(input.angle() / (TAU / 8.0)), 0, 8)
 		_play("run_" + _dir(), true)
+		_fit_sack()
 		var ground := Vector2(velocity.x, velocity.y / iso_vertical_ratio).length()
 		sprite.speed_scale = clampf(ground / run_speed, 0.45, 1.15) * (1.0 if running else 0.8)
 		sprite.offset = _base_offset
@@ -171,6 +182,32 @@ func _move(input: Vector2, delta: float) -> void:
 		_play(("smoke_" if _smoking else "idle_") + _dir())
 		sprite.speed_scale = 1.0
 		sprite.offset = _base_offset
+
+
+## Story scenes: he picks up (or puts down) the rice bag. It stays with him across maps.
+func set_carrying(on: bool) -> void:
+	carrying = on
+	Game.flags[CARRY_FLAG] = on
+	_smoking = false
+	if on and _sack == null:
+		_sack = Sprite2D.new()
+		_sack.name = "CarriedSack"
+		_sack.texture = SACK_TEXTURE
+		_sack.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		_sack.scale = Vector2(0.9, 0.9)
+		add_child(_sack)
+	if _sack:
+		_sack.visible = on
+		_fit_sack()
+
+
+## On the shoulder away from where he is heading.
+func _fit_sack() -> void:
+	if _sack == null:
+		return
+	var side := -1.0 if _dir() in ["w", "nw", "sw"] else 1.0
+	_sack.position = Vector2(side * 9.0, -58.0)
+	_sack.rotation = side * 0.3
 
 
 func _play(anim: String, keep_phase := false) -> void:
