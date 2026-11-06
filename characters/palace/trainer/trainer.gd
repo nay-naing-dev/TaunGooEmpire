@@ -6,13 +6,12 @@ extends "res://characters/palace/royal_npc.gd"
 ## - talk: set it and an "E" shows over him when the player is close; E calls it.
 ## - say(text): a line over his head. return_to(pos): walks back there and drills again.
 ## - start_spar() / stop_spar(): he fights the player (group "enemy" meanwhile):
-##   steps in, coils (a glint: the moment to parry) and thrusts. His guard takes
-##   half of every blow; only the first of a run makes him flinch (none while he is
-##   coiled), he backs off after three, and now and then he turns one aside and
+##   steps in, raises his sword (a glint: the moment to parry) and cuts. His guard takes
+##   half of every blow; only the first of a run makes him flinch (none while his
+##   sword is up), he backs off after three, and now and then he turns one aside and
 ##   answers at once. A perfect parry stuns him (stun()): then blows land in full.
 ##   Never drops below 1 health and never takes the player below 1 either; the
 ##   story scene decides when it is over (health_changed).
-## His "train" frames are drawn smaller than his standing ones: train_scale evens them out.
 
 signal health_changed(current: int, maximum: int)
 
@@ -20,23 +19,25 @@ signal health_changed(current: int, maximum: int)
 @export var max_health := 200
 @export var damage := 12
 @export var spar_speed := 58.0
-## Starts his thrust from this close (ground distance, up / down counts double).
+## Starts his cut from this close (ground distance, up / down counts double).
 @export var attack_range := 40.0
-## His staff hits up to this far.
+## His sword hits up to this far.
 @export var strike_reach := 50.0
 @export var windup_time := 0.5
 ## Chance he turns a blow aside when it catches him standing ready.
 @export_range(0.0, 1.0, 0.05) var block_chance := 0.3
 ## How much of a blow gets through his guard (all of it while a perfect parry has him reeling).
 @export_range(0.0, 1.0, 0.05) var guard := 0.5
-@export var train_scale := 1.22
 
 const SpeechBubble := preload("res://scripts/speech_bubble.gd")
 enum { READY, WIND_UP, STRIKE, RECOVER, BACK_OFF, STAGGER, STUNNED }
-## Frames of his "train" animation: open stance, coiled guard, thrust with the staff.
+## Frames of his "train" animation: open stance, drawing back, sword up, the cut, its follow-through, settling.
 const OPEN := 0
 const COIL := 1
-const THRUST := 2
+const RAISED := 2
+const CUT := 3
+const FOLLOW := 4
+const SETTLE := 5
 
 var held := false
 ## While held: keeps turning to the player (watching a lesson).
@@ -52,7 +53,6 @@ var _hits_taken := 0
 var _hits_clock := 0.0
 var _away := Vector2.ZERO
 var _bubble: SpeechBubble
-var _scale := Vector2.ONE
 var _post := Vector2.INF       # where return_to() is taking him
 var _walk_t := 0.0
 var _arena := Vector2.INF
@@ -63,16 +63,9 @@ func _ready() -> void:
 	super()
 	health = max_health
 	add_to_group("interactable")
-	_scale = sprite.scale
-	sprite.animation_changed.connect(_fit_scale)
-	_fit_scale()
 	_bubble = SpeechBubble.new()
 	_bubble.head_height = 82.0
 	add_child(_bubble)
-
-
-func _fit_scale() -> void:
-	sprite.scale = _scale * (train_scale if String(sprite.animation).begins_with("train") else 1.0)
 
 
 func say(text: String) -> void:
@@ -136,8 +129,8 @@ func _walk_back(delta: float) -> void:
 	velocity = d.normalized() * spar_speed * 0.7 * Vector2(1.0, 0.75)
 	move_and_slide()
 	_face(d)
-	_play("idle")
-	sprite.offset = _base + Vector2(0, -absf(sin(_t * 7.0)) * 1.2)  # no walk frames: step bob
+	_play("walk")
+	sprite.offset = _base
 
 
 # ------------------------------------------------------------------ spar
@@ -203,13 +196,13 @@ func take_hit(amount: int, from_position: Vector2) -> void:
 		_enter(BACK_OFF, 0.32)      # out of the combo, then straight back in
 		_cool = 0.0
 	elif _hits_taken == 1 and _state != STRIKE and _state != WIND_UP:
-		# only the first blow of a run makes him flinch, and never once he is coiled
-		# to thrust: then it is parry or dodge
+		# only the first blow of a run makes him flinch, and never once his sword is
+		# up: then it is parry or dodge
 		_enter(STAGGER, 0.28)
 		_pose(COIL)
 
 
-## From his ready stance he turns a blow aside with his staff and answers at once.
+## From his ready stance he turns a blow aside with his sword and answers at once.
 func _block(from_position: Vector2) -> void:
 	_face(from_position - global_position)
 	_enter(WIND_UP, windup_time * 0.7)
@@ -253,18 +246,20 @@ func _spar(delta: float, p: Node2D) -> void:
 			_pose(OPEN if _state == READY else COIL)
 		WIND_UP:
 			_face(to)
-			_pose(COIL)
+			_pose(RAISED if _left < windup_time * 0.5 else COIL)
 			sprite.offset.x = _base.x + sin(_t * 60.0) * 0.5
 			if _left <= 0.0:
 				_enter(STRIKE, 0.22)
-				_pose(THRUST)
-				_thrust(p, to, dist)
+				_pose(CUT)
+				_cut(p, to, dist)
 		STRIKE:
+			_pose(FOLLOW if _left < 0.11 else CUT)
 			var f := _facing_vec()
 			velocity = Vector2(f.x, f.y * 0.5) * 140.0 * clampf(_left / 0.22, 0.0, 1.0)
 			if _left <= 0.0:
 				_enter(RECOVER, 0.5)
 		RECOVER:
+			_pose(SETTLE)
 			if _left <= 0.0:
 				_cool = randf_range(0.5, 1.1)
 				if randf() < 0.4:
@@ -293,8 +288,8 @@ func _spar(delta: float, p: Node2D) -> void:
 	move_and_slide()
 
 
-## Lands the thrust if the player is in reach and in front of him.
-func _thrust(p: Node2D, to: Vector2, dist: float) -> void:
+## Lands the cut if the player is in reach and in front of him.
+func _cut(p: Node2D, to: Vector2, dist: float) -> void:
 	if dist > strike_reach or p.get("dead") == true or not p.has_method("take_hit"):
 		return
 	if dist > 12.0 and Vector2(to.x, to.y * 2.0).normalized().dot(_facing_vec()) < 0.3:

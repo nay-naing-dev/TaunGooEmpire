@@ -74,6 +74,7 @@
 [ext_resource type="Script" uid="uid://dp4jcyfb1ead7" path="res://environment/fx/flicker.gd" id="sc_fl"]
 [ext_resource type="Script" uid="uid://cv7spkwydyp44" path="res://scripts/world.gd" id="sc_w"]
 [ext_resource type="Script" path="res://scripts/cutscenes/training_day.gd" id="sc_training"]
+[ext_resource type="Script" path="res://scripts/cutscenes/grain_orders.gd" id="sc_grain_orders"]
 [ext_resource type="PackedScene" path="res://environment/palace/training_ground/training_dummy.tscn" id="k_tg_training_dummy"]
 [ext_resource type="Shader" uid="uid://bne2lf5p8byq1" path="res://environment/fx/atmosphere.gdshader" id="s_atm"]
 [ext_resource type="Shader" uid="uid://b4wtdo1h25tog" path="res://environment/fx/water_natural.gdshader" id="s_w"]
@@ -1732,6 +1733,21 @@ position = Vector2(1600, 1570)
 
 [node name="FromVillage" type="Marker2D" parent="." unique_id=184713405]
 position = Vector2(70, 1562)
+
+[node name="GrainOrders" type="Node2D" parent="."]
+script = ExtResource("sc_grain_orders")
+
+[node name="Trainer" type="Marker2D" parent="GrainOrders"]
+position = Vector2(795, 1775)
+
+[node name="Player" type="Marker2D" parent="GrainOrders"]
+position = Vector2(855, 1790)
+
+[node name="Quartermaster" type="Marker2D" parent="GrainOrders"]
+position = Vector2(830, 1745)
+
+[node name="QuartermasterStart" type="Marker2D" parent="GrainOrders"]
+position = Vector2(960, 1700)
 
 [node name="TrainingDay" type="Node2D" parent="."]
 script = ExtResource("sc_training")

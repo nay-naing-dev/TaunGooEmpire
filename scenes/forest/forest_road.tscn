@@ -1,6 +1,7 @@
-[gd_scene load_steps=62 format=3]
+[gd_scene load_steps=63 format=3]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="sc_w"]
+[ext_resource type="Script" path="res://scripts/cutscenes/grain_quest.gd" id="sc_grain"]
 
 [ext_resource type="Texture2D" path="art/ground.png" id="t_g"]
 
@@ -214,6 +215,39 @@ shape = SubResource("Seg2")
 
 [node name="Edge3" type="CollisionShape2D" parent="MapEdges"]
 shape = SubResource("Seg3")
+
+[node name="GrainQuest" type="Node2D" parent="."]
+script = ExtResource("sc_grain")
+
+[node name="Ambush" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1585, 985)
+
+[node name="Bag" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1595, 992)
+
+[node name="Retry" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1690, 1020)
+
+[node name="NgaTayStart" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1480, 955)
+
+[node name="NgaTay" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1540, 975)
+
+[node name="Bandit1" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1545, 925)
+
+[node name="Bandit2" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1590, 1035)
+
+[node name="Bandit3" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1640, 945)
+
+[node name="Bandit4" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1650, 1005)
+
+[node name="Bandit5" type="Marker2D" parent="GrainQuest"]
+position = Vector2(1595, 925)
 
 [node name="Objects" type="Node2D" parent="."]
 y_sort_enabled = true

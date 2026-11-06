@@ -305,17 +305,17 @@ func _shadow_vec(f: float) -> Vector2:
 func _update_shadows(v: Vector2, k: float) -> void:
 	var len_k := v.length() / SHADOW_REF
 	for e in _casts:
-		var s: Node2D = e[0]
-		if not is_instance_valid(s):
+		if not is_instance_valid(e[0]):
 			continue
+		var s: Node2D = e[0]
 		s.skew = atan2(v.x * e[3], -v.y)
 		s.scale = Vector2(e[1].x, e[1].y * len_k)
 		s.modulate.a = e[2] * k
 	for e in _anim_casts:
+		if not is_instance_valid(e[0]) or not is_instance_valid(e[1]):
+			continue
 		var sh: AnimatedSprite2D = e[0]
 		var b: AnimatedSprite2D = e[1]
-		if not is_instance_valid(b):
-			continue
 		if sh.animation != b.animation:
 			sh.animation = b.animation
 		sh.frame = b.frame

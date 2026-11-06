@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://environment/weather/weather.gd" id="1_w"]
+[ext_resource type="PackedScene" path="res://environment/weather/wet/wet_ground.tscn" id="2_wet"]
 
 [node name="Weather" type="Node2D"]
 script = ExtResource("1_w")
+
+[node name="WetGround" parent="." instance=ExtResource("2_wet")]

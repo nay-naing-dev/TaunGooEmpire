@@ -17,8 +17,6 @@
 [ext_resource type="PackedScene" path="res://environment/palace/interior/items/lantern.tscn" id="i_lantern"]
 
 [ext_resource type="PackedScene" path="res://characters/palace/king_bayinnaung/king_bayinnaung.tscn" id="c_king"]
-[ext_resource type="PackedScene" path="res://characters/palace/court_dancer/court_dancer.tscn" id="c_dan"]
-[ext_resource type="PackedScene" path="res://characters/palace/court_dancer_green/court_dancer_green.tscn" id="c_dang"]
 [ext_resource type="PackedScene" path="res://characters/palace/spear_guard/spear_guard.tscn" id="c_spear"]
 
 [sub_resource type="CanvasTexture" id="CTE"]
@@ -192,32 +190,3 @@ start_facing = "nw"
 position = Vector2(160, 300)
 start_facing = "nw"
 
-[node name="Dancer1" parent="Inside/Furniture" instance=ExtResource("c_dan")]
-position = Vector2(52, 170)
-start_facing = "w"
-idle_anim = "fan"
-breathe = 1.4
-
-[node name="Dancer2" parent="Inside/Furniture" instance=ExtResource("c_dan")]
-position = Vector2(0, 196)
-start_facing = "e"
-idle_anim = "fan"
-breathe = 1.4
-
-[node name="Dancer3" parent="Inside/Furniture" instance=ExtResource("c_dang")]
-position = Vector2(116, 190)
-start_facing = "nw"
-idle_anim = "walk"
-breathe = 1.4
-
-[node name="Dancer4" parent="Inside/Furniture" instance=ExtResource("c_dang")]
-position = Vector2(40, 228)
-start_facing = "sw"
-idle_anim = "walk"
-breathe = 1.4
-
-[node name="Dancer5" parent="Inside/Furniture" instance=ExtResource("c_dan")]
-position = Vector2(130, 235)
-start_facing = "nw"
-idle_anim = "walk"
-breathe = 1.4

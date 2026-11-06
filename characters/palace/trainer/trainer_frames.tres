@@ -8,12 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://htk0um22o8v0" path="res://characters/palace/trainer/frames/idle_nw_0.png" id="d5"]
 [ext_resource type="Texture2D" uid="uid://2kng5svo36w2" path="res://characters/palace/trainer/frames/idle_n_0.png" id="d6"]
 [ext_resource type="Texture2D" uid="uid://b1auecpr8mivr" path="res://characters/palace/trainer/frames/idle_ne_0.png" id="d7"]
-[ext_resource type="Texture2D" uid="uid://ecpjmwnn4kos" path="res://characters/palace/trainer/frames/train_e_0.png" id="d8"]
-[ext_resource type="Texture2D" uid="uid://bg7fowntwuvkw" path="res://characters/palace/trainer/frames/train_e_1.png" id="d9"]
-[ext_resource type="Texture2D" uid="uid://b32cv8ojqvapt" path="res://characters/palace/trainer/frames/train_e_2.png" id="d10"]
-[ext_resource type="Texture2D" uid="uid://bgdxooribq45x" path="res://characters/palace/trainer/frames/train_sw_0.png" id="d11"]
-[ext_resource type="Texture2D" uid="uid://o7wjy2o0c4qq" path="res://characters/palace/trainer/frames/train_sw_1.png" id="d12"]
-[ext_resource type="Texture2D" uid="uid://crcgkp7ywciqg" path="res://characters/palace/trainer/frames/train_sw_2.png" id="d13"]
 [ext_resource type="Texture2D" uid="uid://bvwxvvot7fpy3" path="res://characters/palace/trainer/frames/idle_e_0_n.png" id="n0"]
 [ext_resource type="Texture2D" uid="uid://bslm2b11pbcn5" path="res://characters/palace/trainer/frames/idle_se_0_n.png" id="n1"]
 [ext_resource type="Texture2D" uid="uid://hmuvkxa2rtjo" path="res://characters/palace/trainer/frames/idle_s_0_n.png" id="n2"]
@@ -22,36 +16,210 @@
 [ext_resource type="Texture2D" uid="uid://chvvknetc7dwq" path="res://characters/palace/trainer/frames/idle_nw_0_n.png" id="n5"]
 [ext_resource type="Texture2D" uid="uid://btsyql7kssvxb" path="res://characters/palace/trainer/frames/idle_n_0_n.png" id="n6"]
 [ext_resource type="Texture2D" uid="uid://dfc1wrvxmxf38" path="res://characters/palace/trainer/frames/idle_ne_0_n.png" id="n7"]
-[ext_resource type="Texture2D" uid="uid://do8jjeud5rgug" path="res://characters/palace/trainer/frames/train_e_0_n.png" id="n8"]
-[ext_resource type="Texture2D" uid="uid://djwtvouok35i4" path="res://characters/palace/trainer/frames/train_e_1_n.png" id="n9"]
-[ext_resource type="Texture2D" uid="uid://unbrf4gbshgw" path="res://characters/palace/trainer/frames/train_e_2_n.png" id="n10"]
-[ext_resource type="Texture2D" uid="uid://pkobmrg3ayrb" path="res://characters/palace/trainer/frames/train_sw_0_n.png" id="n11"]
-[ext_resource type="Texture2D" uid="uid://cb6nrmafpivyy" path="res://characters/palace/trainer/frames/train_sw_1_n.png" id="n12"]
-[ext_resource type="Texture2D" uid="uid://b0n6da0ybwv50" path="res://characters/palace/trainer/frames/train_sw_2_n.png" id="n13"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_0.png" id="f_t_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_0_n.png" id="fn_t_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_1.png" id="f_t_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_1_n.png" id="fn_t_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_2.png" id="f_t_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_2_n.png" id="fn_t_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_3.png" id="f_t_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_3_n.png" id="fn_t_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_4.png" id="f_t_e4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_4_n.png" id="fn_t_e4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_5.png" id="f_t_e5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_e_5_n.png" id="fn_t_e5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_0.png" id="f_t_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_0_n.png" id="fn_t_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_1.png" id="f_t_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_1_n.png" id="fn_t_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_2.png" id="f_t_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_2_n.png" id="fn_t_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_3.png" id="f_t_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_3_n.png" id="fn_t_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_4.png" id="f_t_n4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_4_n.png" id="fn_t_n4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_5.png" id="f_t_n5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_n_5_n.png" id="fn_t_n5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_0.png" id="f_t_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_0_n.png" id="fn_t_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_1.png" id="f_t_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_1_n.png" id="fn_t_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_2.png" id="f_t_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_2_n.png" id="fn_t_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_3.png" id="f_t_ne3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_3_n.png" id="fn_t_ne3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_4.png" id="f_t_ne4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_4_n.png" id="fn_t_ne4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_5.png" id="f_t_ne5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_ne_5_n.png" id="fn_t_ne5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_0.png" id="f_t_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_0_n.png" id="fn_t_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_1.png" id="f_t_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_1_n.png" id="fn_t_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_2.png" id="f_t_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_2_n.png" id="fn_t_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_3.png" id="f_t_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_3_n.png" id="fn_t_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_4.png" id="f_t_nw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_4_n.png" id="fn_t_nw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_5.png" id="f_t_nw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_nw_5_n.png" id="fn_t_nw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_0.png" id="f_t_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_0_n.png" id="fn_t_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_1.png" id="f_t_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_1_n.png" id="fn_t_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_2.png" id="f_t_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_2_n.png" id="fn_t_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_3.png" id="f_t_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_3_n.png" id="fn_t_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_4.png" id="f_t_s4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_4_n.png" id="fn_t_s4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_5.png" id="f_t_s5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_s_5_n.png" id="fn_t_s5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_0.png" id="f_t_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_0_n.png" id="fn_t_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_1.png" id="f_t_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_1_n.png" id="fn_t_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_2.png" id="f_t_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_2_n.png" id="fn_t_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_3.png" id="f_t_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_3_n.png" id="fn_t_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_4.png" id="f_t_se4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_4_n.png" id="fn_t_se4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_5.png" id="f_t_se5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_se_5_n.png" id="fn_t_se5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_0.png" id="f_t_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_0_n.png" id="fn_t_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_1.png" id="f_t_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_1_n.png" id="fn_t_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_2.png" id="f_t_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_2_n.png" id="fn_t_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_3.png" id="f_t_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_3_n.png" id="fn_t_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_4.png" id="f_t_sw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_4_n.png" id="fn_t_sw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_5.png" id="f_t_sw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_sw_5_n.png" id="fn_t_sw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_0.png" id="f_t_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_0_n.png" id="fn_t_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_1.png" id="f_t_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_1_n.png" id="fn_t_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_2.png" id="f_t_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_2_n.png" id="fn_t_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_3.png" id="f_t_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_3_n.png" id="fn_t_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_4.png" id="f_t_w4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_4_n.png" id="fn_t_w4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_5.png" id="f_t_w5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/train_w_5_n.png" id="fn_t_w5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_0.png" id="f_w_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_0_n.png" id="fn_w_e0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_1.png" id="f_w_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_1_n.png" id="fn_w_e1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_2.png" id="f_w_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_2_n.png" id="fn_w_e2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_3.png" id="f_w_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_3_n.png" id="fn_w_e3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_4.png" id="f_w_e4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_4_n.png" id="fn_w_e4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_5.png" id="f_w_e5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_e_5_n.png" id="fn_w_e5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_0.png" id="f_w_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_0_n.png" id="fn_w_n0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_1.png" id="f_w_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_1_n.png" id="fn_w_n1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_2.png" id="f_w_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_2_n.png" id="fn_w_n2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_3.png" id="f_w_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_3_n.png" id="fn_w_n3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_4.png" id="f_w_n4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_4_n.png" id="fn_w_n4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_5.png" id="f_w_n5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_n_5_n.png" id="fn_w_n5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_0.png" id="f_w_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_0_n.png" id="fn_w_ne0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_1.png" id="f_w_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_1_n.png" id="fn_w_ne1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_2.png" id="f_w_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_2_n.png" id="fn_w_ne2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_3.png" id="f_w_ne3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_3_n.png" id="fn_w_ne3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_4.png" id="f_w_ne4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_4_n.png" id="fn_w_ne4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_5.png" id="f_w_ne5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_ne_5_n.png" id="fn_w_ne5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_0.png" id="f_w_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_0_n.png" id="fn_w_nw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_1.png" id="f_w_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_1_n.png" id="fn_w_nw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_2.png" id="f_w_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_2_n.png" id="fn_w_nw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_3.png" id="f_w_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_3_n.png" id="fn_w_nw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_4.png" id="f_w_nw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_4_n.png" id="fn_w_nw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_5.png" id="f_w_nw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_nw_5_n.png" id="fn_w_nw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_0.png" id="f_w_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_0_n.png" id="fn_w_s0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_1.png" id="f_w_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_1_n.png" id="fn_w_s1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_2.png" id="f_w_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_2_n.png" id="fn_w_s2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_3.png" id="f_w_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_3_n.png" id="fn_w_s3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_4.png" id="f_w_s4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_4_n.png" id="fn_w_s4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_5.png" id="f_w_s5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_s_5_n.png" id="fn_w_s5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_0.png" id="f_w_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_0_n.png" id="fn_w_se0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_1.png" id="f_w_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_1_n.png" id="fn_w_se1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_2.png" id="f_w_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_2_n.png" id="fn_w_se2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_3.png" id="f_w_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_3_n.png" id="fn_w_se3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_4.png" id="f_w_se4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_4_n.png" id="fn_w_se4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_5.png" id="f_w_se5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_se_5_n.png" id="fn_w_se5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_0.png" id="f_w_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_0_n.png" id="fn_w_sw0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_1.png" id="f_w_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_1_n.png" id="fn_w_sw1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_2.png" id="f_w_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_2_n.png" id="fn_w_sw2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_3.png" id="f_w_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_3_n.png" id="fn_w_sw3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_4.png" id="f_w_sw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_4_n.png" id="fn_w_sw4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_5.png" id="f_w_sw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_sw_5_n.png" id="fn_w_sw5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_0.png" id="f_w_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_0_n.png" id="fn_w_w0"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_1.png" id="f_w_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_1_n.png" id="fn_w_w1"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_2.png" id="f_w_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_2_n.png" id="fn_w_w2"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_3.png" id="f_w_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_3_n.png" id="fn_w_w3"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_4.png" id="f_w_w4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_4_n.png" id="fn_w_w4"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_5.png" id="f_w_w5"]
+[ext_resource type="Texture2D" path="res://characters/palace/trainer/frames/walk_w_5_n.png" id="fn_w_w5"]
 
 [sub_resource type="CanvasTexture" id="C0"]
 diffuse_texture = ExtResource("d0")
 normal_texture = ExtResource("n0")
 
-[sub_resource type="CanvasTexture" id="C6"]
-diffuse_texture = ExtResource("d6")
-normal_texture = ExtResource("n6")
-
-[sub_resource type="CanvasTexture" id="C7"]
-diffuse_texture = ExtResource("d7")
-normal_texture = ExtResource("n7")
-
-[sub_resource type="CanvasTexture" id="C5"]
-diffuse_texture = ExtResource("d5")
-normal_texture = ExtResource("n5")
+[sub_resource type="CanvasTexture" id="C1"]
+diffuse_texture = ExtResource("d1")
+normal_texture = ExtResource("n1")
 
 [sub_resource type="CanvasTexture" id="C2"]
 diffuse_texture = ExtResource("d2")
 normal_texture = ExtResource("n2")
-
-[sub_resource type="CanvasTexture" id="C1"]
-diffuse_texture = ExtResource("d1")
-normal_texture = ExtResource("n1")
 
 [sub_resource type="CanvasTexture" id="C3"]
 diffuse_texture = ExtResource("d3")
@@ -61,29 +229,401 @@ normal_texture = ExtResource("n3")
 diffuse_texture = ExtResource("d4")
 normal_texture = ExtResource("n4")
 
-[sub_resource type="CanvasTexture" id="C8"]
-diffuse_texture = ExtResource("d8")
-normal_texture = ExtResource("n8")
+[sub_resource type="CanvasTexture" id="C5"]
+diffuse_texture = ExtResource("d5")
+normal_texture = ExtResource("n5")
 
-[sub_resource type="CanvasTexture" id="C9"]
-diffuse_texture = ExtResource("d9")
-normal_texture = ExtResource("n9")
+[sub_resource type="CanvasTexture" id="C6"]
+diffuse_texture = ExtResource("d6")
+normal_texture = ExtResource("n6")
 
-[sub_resource type="CanvasTexture" id="C10"]
-diffuse_texture = ExtResource("d10")
-normal_texture = ExtResource("n10")
+[sub_resource type="CanvasTexture" id="C7"]
+diffuse_texture = ExtResource("d7")
+normal_texture = ExtResource("n7")
 
-[sub_resource type="CanvasTexture" id="C11"]
-diffuse_texture = ExtResource("d11")
-normal_texture = ExtResource("n11")
+[sub_resource type="CanvasTexture" id="T_t_e0"]
+diffuse_texture = ExtResource("f_t_e0")
+normal_texture = ExtResource("fn_t_e0")
 
-[sub_resource type="CanvasTexture" id="C12"]
-diffuse_texture = ExtResource("d12")
-normal_texture = ExtResource("n12")
+[sub_resource type="CanvasTexture" id="T_t_e1"]
+diffuse_texture = ExtResource("f_t_e1")
+normal_texture = ExtResource("fn_t_e1")
 
-[sub_resource type="CanvasTexture" id="C13"]
-diffuse_texture = ExtResource("d13")
-normal_texture = ExtResource("n13")
+[sub_resource type="CanvasTexture" id="T_t_e2"]
+diffuse_texture = ExtResource("f_t_e2")
+normal_texture = ExtResource("fn_t_e2")
+
+[sub_resource type="CanvasTexture" id="T_t_e3"]
+diffuse_texture = ExtResource("f_t_e3")
+normal_texture = ExtResource("fn_t_e3")
+
+[sub_resource type="CanvasTexture" id="T_t_e4"]
+diffuse_texture = ExtResource("f_t_e4")
+normal_texture = ExtResource("fn_t_e4")
+
+[sub_resource type="CanvasTexture" id="T_t_e5"]
+diffuse_texture = ExtResource("f_t_e5")
+normal_texture = ExtResource("fn_t_e5")
+
+[sub_resource type="CanvasTexture" id="T_t_n0"]
+diffuse_texture = ExtResource("f_t_n0")
+normal_texture = ExtResource("fn_t_n0")
+
+[sub_resource type="CanvasTexture" id="T_t_n1"]
+diffuse_texture = ExtResource("f_t_n1")
+normal_texture = ExtResource("fn_t_n1")
+
+[sub_resource type="CanvasTexture" id="T_t_n2"]
+diffuse_texture = ExtResource("f_t_n2")
+normal_texture = ExtResource("fn_t_n2")
+
+[sub_resource type="CanvasTexture" id="T_t_n3"]
+diffuse_texture = ExtResource("f_t_n3")
+normal_texture = ExtResource("fn_t_n3")
+
+[sub_resource type="CanvasTexture" id="T_t_n4"]
+diffuse_texture = ExtResource("f_t_n4")
+normal_texture = ExtResource("fn_t_n4")
+
+[sub_resource type="CanvasTexture" id="T_t_n5"]
+diffuse_texture = ExtResource("f_t_n5")
+normal_texture = ExtResource("fn_t_n5")
+
+[sub_resource type="CanvasTexture" id="T_t_ne0"]
+diffuse_texture = ExtResource("f_t_ne0")
+normal_texture = ExtResource("fn_t_ne0")
+
+[sub_resource type="CanvasTexture" id="T_t_ne1"]
+diffuse_texture = ExtResource("f_t_ne1")
+normal_texture = ExtResource("fn_t_ne1")
+
+[sub_resource type="CanvasTexture" id="T_t_ne2"]
+diffuse_texture = ExtResource("f_t_ne2")
+normal_texture = ExtResource("fn_t_ne2")
+
+[sub_resource type="CanvasTexture" id="T_t_ne3"]
+diffuse_texture = ExtResource("f_t_ne3")
+normal_texture = ExtResource("fn_t_ne3")
+
+[sub_resource type="CanvasTexture" id="T_t_ne4"]
+diffuse_texture = ExtResource("f_t_ne4")
+normal_texture = ExtResource("fn_t_ne4")
+
+[sub_resource type="CanvasTexture" id="T_t_ne5"]
+diffuse_texture = ExtResource("f_t_ne5")
+normal_texture = ExtResource("fn_t_ne5")
+
+[sub_resource type="CanvasTexture" id="T_t_nw0"]
+diffuse_texture = ExtResource("f_t_nw0")
+normal_texture = ExtResource("fn_t_nw0")
+
+[sub_resource type="CanvasTexture" id="T_t_nw1"]
+diffuse_texture = ExtResource("f_t_nw1")
+normal_texture = ExtResource("fn_t_nw1")
+
+[sub_resource type="CanvasTexture" id="T_t_nw2"]
+diffuse_texture = ExtResource("f_t_nw2")
+normal_texture = ExtResource("fn_t_nw2")
+
+[sub_resource type="CanvasTexture" id="T_t_nw3"]
+diffuse_texture = ExtResource("f_t_nw3")
+normal_texture = ExtResource("fn_t_nw3")
+
+[sub_resource type="CanvasTexture" id="T_t_nw4"]
+diffuse_texture = ExtResource("f_t_nw4")
+normal_texture = ExtResource("fn_t_nw4")
+
+[sub_resource type="CanvasTexture" id="T_t_nw5"]
+diffuse_texture = ExtResource("f_t_nw5")
+normal_texture = ExtResource("fn_t_nw5")
+
+[sub_resource type="CanvasTexture" id="T_t_s0"]
+diffuse_texture = ExtResource("f_t_s0")
+normal_texture = ExtResource("fn_t_s0")
+
+[sub_resource type="CanvasTexture" id="T_t_s1"]
+diffuse_texture = ExtResource("f_t_s1")
+normal_texture = ExtResource("fn_t_s1")
+
+[sub_resource type="CanvasTexture" id="T_t_s2"]
+diffuse_texture = ExtResource("f_t_s2")
+normal_texture = ExtResource("fn_t_s2")
+
+[sub_resource type="CanvasTexture" id="T_t_s3"]
+diffuse_texture = ExtResource("f_t_s3")
+normal_texture = ExtResource("fn_t_s3")
+
+[sub_resource type="CanvasTexture" id="T_t_s4"]
+diffuse_texture = ExtResource("f_t_s4")
+normal_texture = ExtResource("fn_t_s4")
+
+[sub_resource type="CanvasTexture" id="T_t_s5"]
+diffuse_texture = ExtResource("f_t_s5")
+normal_texture = ExtResource("fn_t_s5")
+
+[sub_resource type="CanvasTexture" id="T_t_se0"]
+diffuse_texture = ExtResource("f_t_se0")
+normal_texture = ExtResource("fn_t_se0")
+
+[sub_resource type="CanvasTexture" id="T_t_se1"]
+diffuse_texture = ExtResource("f_t_se1")
+normal_texture = ExtResource("fn_t_se1")
+
+[sub_resource type="CanvasTexture" id="T_t_se2"]
+diffuse_texture = ExtResource("f_t_se2")
+normal_texture = ExtResource("fn_t_se2")
+
+[sub_resource type="CanvasTexture" id="T_t_se3"]
+diffuse_texture = ExtResource("f_t_se3")
+normal_texture = ExtResource("fn_t_se3")
+
+[sub_resource type="CanvasTexture" id="T_t_se4"]
+diffuse_texture = ExtResource("f_t_se4")
+normal_texture = ExtResource("fn_t_se4")
+
+[sub_resource type="CanvasTexture" id="T_t_se5"]
+diffuse_texture = ExtResource("f_t_se5")
+normal_texture = ExtResource("fn_t_se5")
+
+[sub_resource type="CanvasTexture" id="T_t_sw0"]
+diffuse_texture = ExtResource("f_t_sw0")
+normal_texture = ExtResource("fn_t_sw0")
+
+[sub_resource type="CanvasTexture" id="T_t_sw1"]
+diffuse_texture = ExtResource("f_t_sw1")
+normal_texture = ExtResource("fn_t_sw1")
+
+[sub_resource type="CanvasTexture" id="T_t_sw2"]
+diffuse_texture = ExtResource("f_t_sw2")
+normal_texture = ExtResource("fn_t_sw2")
+
+[sub_resource type="CanvasTexture" id="T_t_sw3"]
+diffuse_texture = ExtResource("f_t_sw3")
+normal_texture = ExtResource("fn_t_sw3")
+
+[sub_resource type="CanvasTexture" id="T_t_sw4"]
+diffuse_texture = ExtResource("f_t_sw4")
+normal_texture = ExtResource("fn_t_sw4")
+
+[sub_resource type="CanvasTexture" id="T_t_sw5"]
+diffuse_texture = ExtResource("f_t_sw5")
+normal_texture = ExtResource("fn_t_sw5")
+
+[sub_resource type="CanvasTexture" id="T_t_w0"]
+diffuse_texture = ExtResource("f_t_w0")
+normal_texture = ExtResource("fn_t_w0")
+
+[sub_resource type="CanvasTexture" id="T_t_w1"]
+diffuse_texture = ExtResource("f_t_w1")
+normal_texture = ExtResource("fn_t_w1")
+
+[sub_resource type="CanvasTexture" id="T_t_w2"]
+diffuse_texture = ExtResource("f_t_w2")
+normal_texture = ExtResource("fn_t_w2")
+
+[sub_resource type="CanvasTexture" id="T_t_w3"]
+diffuse_texture = ExtResource("f_t_w3")
+normal_texture = ExtResource("fn_t_w3")
+
+[sub_resource type="CanvasTexture" id="T_t_w4"]
+diffuse_texture = ExtResource("f_t_w4")
+normal_texture = ExtResource("fn_t_w4")
+
+[sub_resource type="CanvasTexture" id="T_t_w5"]
+diffuse_texture = ExtResource("f_t_w5")
+normal_texture = ExtResource("fn_t_w5")
+
+[sub_resource type="CanvasTexture" id="T_w_e0"]
+diffuse_texture = ExtResource("f_w_e0")
+normal_texture = ExtResource("fn_w_e0")
+
+[sub_resource type="CanvasTexture" id="T_w_e1"]
+diffuse_texture = ExtResource("f_w_e1")
+normal_texture = ExtResource("fn_w_e1")
+
+[sub_resource type="CanvasTexture" id="T_w_e2"]
+diffuse_texture = ExtResource("f_w_e2")
+normal_texture = ExtResource("fn_w_e2")
+
+[sub_resource type="CanvasTexture" id="T_w_e3"]
+diffuse_texture = ExtResource("f_w_e3")
+normal_texture = ExtResource("fn_w_e3")
+
+[sub_resource type="CanvasTexture" id="T_w_e4"]
+diffuse_texture = ExtResource("f_w_e4")
+normal_texture = ExtResource("fn_w_e4")
+
+[sub_resource type="CanvasTexture" id="T_w_e5"]
+diffuse_texture = ExtResource("f_w_e5")
+normal_texture = ExtResource("fn_w_e5")
+
+[sub_resource type="CanvasTexture" id="T_w_n0"]
+diffuse_texture = ExtResource("f_w_n0")
+normal_texture = ExtResource("fn_w_n0")
+
+[sub_resource type="CanvasTexture" id="T_w_n1"]
+diffuse_texture = ExtResource("f_w_n1")
+normal_texture = ExtResource("fn_w_n1")
+
+[sub_resource type="CanvasTexture" id="T_w_n2"]
+diffuse_texture = ExtResource("f_w_n2")
+normal_texture = ExtResource("fn_w_n2")
+
+[sub_resource type="CanvasTexture" id="T_w_n3"]
+diffuse_texture = ExtResource("f_w_n3")
+normal_texture = ExtResource("fn_w_n3")
+
+[sub_resource type="CanvasTexture" id="T_w_n4"]
+diffuse_texture = ExtResource("f_w_n4")
+normal_texture = ExtResource("fn_w_n4")
+
+[sub_resource type="CanvasTexture" id="T_w_n5"]
+diffuse_texture = ExtResource("f_w_n5")
+normal_texture = ExtResource("fn_w_n5")
+
+[sub_resource type="CanvasTexture" id="T_w_ne0"]
+diffuse_texture = ExtResource("f_w_ne0")
+normal_texture = ExtResource("fn_w_ne0")
+
+[sub_resource type="CanvasTexture" id="T_w_ne1"]
+diffuse_texture = ExtResource("f_w_ne1")
+normal_texture = ExtResource("fn_w_ne1")
+
+[sub_resource type="CanvasTexture" id="T_w_ne2"]
+diffuse_texture = ExtResource("f_w_ne2")
+normal_texture = ExtResource("fn_w_ne2")
+
+[sub_resource type="CanvasTexture" id="T_w_ne3"]
+diffuse_texture = ExtResource("f_w_ne3")
+normal_texture = ExtResource("fn_w_ne3")
+
+[sub_resource type="CanvasTexture" id="T_w_ne4"]
+diffuse_texture = ExtResource("f_w_ne4")
+normal_texture = ExtResource("fn_w_ne4")
+
+[sub_resource type="CanvasTexture" id="T_w_ne5"]
+diffuse_texture = ExtResource("f_w_ne5")
+normal_texture = ExtResource("fn_w_ne5")
+
+[sub_resource type="CanvasTexture" id="T_w_nw0"]
+diffuse_texture = ExtResource("f_w_nw0")
+normal_texture = ExtResource("fn_w_nw0")
+
+[sub_resource type="CanvasTexture" id="T_w_nw1"]
+diffuse_texture = ExtResource("f_w_nw1")
+normal_texture = ExtResource("fn_w_nw1")
+
+[sub_resource type="CanvasTexture" id="T_w_nw2"]
+diffuse_texture = ExtResource("f_w_nw2")
+normal_texture = ExtResource("fn_w_nw2")
+
+[sub_resource type="CanvasTexture" id="T_w_nw3"]
+diffuse_texture = ExtResource("f_w_nw3")
+normal_texture = ExtResource("fn_w_nw3")
+
+[sub_resource type="CanvasTexture" id="T_w_nw4"]
+diffuse_texture = ExtResource("f_w_nw4")
+normal_texture = ExtResource("fn_w_nw4")
+
+[sub_resource type="CanvasTexture" id="T_w_nw5"]
+diffuse_texture = ExtResource("f_w_nw5")
+normal_texture = ExtResource("fn_w_nw5")
+
+[sub_resource type="CanvasTexture" id="T_w_s0"]
+diffuse_texture = ExtResource("f_w_s0")
+normal_texture = ExtResource("fn_w_s0")
+
+[sub_resource type="CanvasTexture" id="T_w_s1"]
+diffuse_texture = ExtResource("f_w_s1")
+normal_texture = ExtResource("fn_w_s1")
+
+[sub_resource type="CanvasTexture" id="T_w_s2"]
+diffuse_texture = ExtResource("f_w_s2")
+normal_texture = ExtResource("fn_w_s2")
+
+[sub_resource type="CanvasTexture" id="T_w_s3"]
+diffuse_texture = ExtResource("f_w_s3")
+normal_texture = ExtResource("fn_w_s3")
+
+[sub_resource type="CanvasTexture" id="T_w_s4"]
+diffuse_texture = ExtResource("f_w_s4")
+normal_texture = ExtResource("fn_w_s4")
+
+[sub_resource type="CanvasTexture" id="T_w_s5"]
+diffuse_texture = ExtResource("f_w_s5")
+normal_texture = ExtResource("fn_w_s5")
+
+[sub_resource type="CanvasTexture" id="T_w_se0"]
+diffuse_texture = ExtResource("f_w_se0")
+normal_texture = ExtResource("fn_w_se0")
+
+[sub_resource type="CanvasTexture" id="T_w_se1"]
+diffuse_texture = ExtResource("f_w_se1")
+normal_texture = ExtResource("fn_w_se1")
+
+[sub_resource type="CanvasTexture" id="T_w_se2"]
+diffuse_texture = ExtResource("f_w_se2")
+normal_texture = ExtResource("fn_w_se2")
+
+[sub_resource type="CanvasTexture" id="T_w_se3"]
+diffuse_texture = ExtResource("f_w_se3")
+normal_texture = ExtResource("fn_w_se3")
+
+[sub_resource type="CanvasTexture" id="T_w_se4"]
+diffuse_texture = ExtResource("f_w_se4")
+normal_texture = ExtResource("fn_w_se4")
+
+[sub_resource type="CanvasTexture" id="T_w_se5"]
+diffuse_texture = ExtResource("f_w_se5")
+normal_texture = ExtResource("fn_w_se5")
+
+[sub_resource type="CanvasTexture" id="T_w_sw0"]
+diffuse_texture = ExtResource("f_w_sw0")
+normal_texture = ExtResource("fn_w_sw0")
+
+[sub_resource type="CanvasTexture" id="T_w_sw1"]
+diffuse_texture = ExtResource("f_w_sw1")
+normal_texture = ExtResource("fn_w_sw1")
+
+[sub_resource type="CanvasTexture" id="T_w_sw2"]
+diffuse_texture = ExtResource("f_w_sw2")
+normal_texture = ExtResource("fn_w_sw2")
+
+[sub_resource type="CanvasTexture" id="T_w_sw3"]
+diffuse_texture = ExtResource("f_w_sw3")
+normal_texture = ExtResource("fn_w_sw3")
+
+[sub_resource type="CanvasTexture" id="T_w_sw4"]
+diffuse_texture = ExtResource("f_w_sw4")
+normal_texture = ExtResource("fn_w_sw4")
+
+[sub_resource type="CanvasTexture" id="T_w_sw5"]
+diffuse_texture = ExtResource("f_w_sw5")
+normal_texture = ExtResource("fn_w_sw5")
+
+[sub_resource type="CanvasTexture" id="T_w_w0"]
+diffuse_texture = ExtResource("f_w_w0")
+normal_texture = ExtResource("fn_w_w0")
+
+[sub_resource type="CanvasTexture" id="T_w_w1"]
+diffuse_texture = ExtResource("f_w_w1")
+normal_texture = ExtResource("fn_w_w1")
+
+[sub_resource type="CanvasTexture" id="T_w_w2"]
+diffuse_texture = ExtResource("f_w_w2")
+normal_texture = ExtResource("fn_w_w2")
+
+[sub_resource type="CanvasTexture" id="T_w_w3"]
+diffuse_texture = ExtResource("f_w_w3")
+normal_texture = ExtResource("fn_w_w3")
+
+[sub_resource type="CanvasTexture" id="T_w_w4"]
+diffuse_texture = ExtResource("f_w_w4")
+normal_texture = ExtResource("fn_w_w4")
+
+[sub_resource type="CanvasTexture" id="T_w_w5"]
+diffuse_texture = ExtResource("f_w_w5")
+normal_texture = ExtResource("fn_w_w5")
 
 [resource]
 animations = [{
@@ -153,137 +693,369 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C8")
+"texture": SubResource("T_t_e0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_e1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C10")
+"texture": SubResource("T_t_e2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_e5")
 }],
 "loop": 1,
 "name": &"train_e",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C8")
+"texture": SubResource("T_t_n0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_n1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C10")
+"texture": SubResource("T_t_n2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_n5")
 }],
 "loop": 1,
 "name": &"train_n",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C8")
+"texture": SubResource("T_t_ne0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_ne1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C10")
+"texture": SubResource("T_t_ne2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_ne3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_ne4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_ne5")
 }],
 "loop": 1,
 "name": &"train_ne",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C11")
+"texture": SubResource("T_t_nw0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_nw1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C13")
+"texture": SubResource("T_t_nw2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_nw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_nw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_nw5")
 }],
 "loop": 1,
 "name": &"train_nw",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C8")
+"texture": SubResource("T_t_s0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_s1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C10")
+"texture": SubResource("T_t_s2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_s5")
 }],
 "loop": 1,
 "name": &"train_s",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C8")
+"texture": SubResource("T_t_se0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_se1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C10")
+"texture": SubResource("T_t_se2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C9")
+"texture": SubResource("T_t_se3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_se4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_se5")
 }],
 "loop": 1,
 "name": &"train_se",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C11")
+"texture": SubResource("T_t_sw0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_sw1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C13")
+"texture": SubResource("T_t_sw2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_sw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_sw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_sw5")
 }],
 "loop": 1,
 "name": &"train_sw",
-"speed": 2.5
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("C11")
+"texture": SubResource("T_t_w0")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_w1")
 }, {
 "duration": 1.0,
-"texture": SubResource("C13")
+"texture": SubResource("T_t_w2")
 }, {
 "duration": 1.0,
-"texture": SubResource("C12")
+"texture": SubResource("T_t_w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_t_w5")
 }],
 "loop": 1,
 "name": &"train_w",
-"speed": 2.5
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_e0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_e1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_e2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_e5")
+}],
+"loop": 1,
+"name": &"walk_e",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_n0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_n1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_n2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_n4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_n5")
+}],
+"loop": 1,
+"name": &"walk_n",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_ne0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_ne1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_ne2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_ne3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_ne4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_ne5")
+}],
+"loop": 1,
+"name": &"walk_ne",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_nw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_nw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_nw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_nw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_nw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_nw5")
+}],
+"loop": 1,
+"name": &"walk_nw",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_s2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_s3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_s5")
+}],
+"loop": 1,
+"name": &"walk_s",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_se0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_se1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_se2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_se3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_se4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_se5")
+}],
+"loop": 1,
+"name": &"walk_se",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_sw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_sw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_sw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_sw3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_sw4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_sw5")
+}],
+"loop": 1,
+"name": &"walk_sw",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("T_w_w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("T_w_w5")
+}],
+"loop": 1,
+"name": &"walk_w",
+"speed": 9.0
 }]
